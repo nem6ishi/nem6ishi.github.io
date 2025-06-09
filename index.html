@@ -10,393 +10,176 @@
         /* Interフォントを適用します */
         body {
             font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex; /* Flexboxを使ってbodyの内容を中央に寄せます */
-            justify-content: center; /* 水平方向の中央寄せ */
-            align-items: flex-start; /* 垂直方向の上寄せ (固定ヘッダーがあるため) */
-            min-height: 100vh; /* ビューポートの高さいっぱいを使用 */
-            background-color: #f8f8f8; /* 背景色をより明るく */
-            padding-top: 64px; /* 固定ナビバーの高さ分、上部に余白を追加 */
-        }
-
-        /* 固定ヘッダーのスタイル */
-        .fixed-navbar {
-            position: fixed; /* 画面上部に固定 */
-            top: 0;
-            left: 0;
-            width: 100%; /* 全幅を占める */
-            height: 64px; /* 固定の高さ */
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* ソフトな影 */
-            z-index: 1000; /* 他のコンテンツの上に表示 */
-            display: flex;
-            justify-content: center; /* 中央に内部コンテナを配置 */
-            align-items: center; /* 垂直方向中央揃え */
-        }
-
-        /* 固定ナビバー内部のコンテナ (メインボディと幅を合わせる) */
-        .fixed-navbar-inner-container {
-            max-width: 768px; /* メインボディの最大幅に合わせる */
-            width: 90%; /* メインボディの相対幅に合わせる */
-            height: 100%; /* 親のナビバーの高さに合わせる */
-            display: flex;
-            align-items: center; /* 垂直方向中央揃え */
-            justify-content: flex-start; /* リンクを左寄せ */
-            padding: 0 1.5rem; /* 左右のパディング (コンテナの端からリンクまでの余白) */
-            box-sizing: border-box; /* paddingがwidthに含まれるように */
-        }
-
-
-        .fixed-navbar-links {
-            display: flex;
-            gap: 1.25rem; /* リンク間のスペース */
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: #555;
-            font-size: 1rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: #007bff;
-        }
-
-
-        .profile-container {
-            /* 最大幅を設定し、画面サイズに応じて調整します */
-            max-width: 768px; /* プロフィールページの一般的な幅 */
-            width: 90%; /* 幅を親要素の90%に設定 */
-            background-color: #ffffff; /* コンテナの背景色 */
-            padding: 2.5rem; /* 内側の余白を少し増やす */
-            border-radius: 0.75rem; /* 角を丸くする */
-            /* 影をよりソフトに */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            text-align: left; /* コンテナ内のテキストをデフォルトで左寄せにします */
-        }
-
-        /* プロフィールヘッダーのスタイルをFlexbox用に修正 */
-        .profile-header {
-            display: flex; /* Flexboxを適用 */
-            justify-content: space-between; /* 要素を左右に配置 */
-            align-items: center;    /* 垂直方向の中央揃え */
-            margin-bottom: 2rem; /* ソーシャルリンクとの間に余白 */
-            padding-bottom: 0.75rem; /* ヘッダー下部のパディングを調整 */
-            border-bottom: 1px solid #e0e0e0; /* ヘッダー下部の区切り線を細く、明るく */
-        }
-
-        /* ヘッダー内の名前と肩書きのテキストアラインメント */
-        .profile-header h1 {
-            font-size: 2.5rem; /* 名前を調整 */
-            font-weight: 700;
-            color: #222;
-            margin-bottom: 0.5rem; /* 微調整 */
-            text-align: left; /* 明示的に左寄せ */
-        }
-        .profile-header p {
-            font-size: 1.1rem; /* 肩書きを調整 */
-            color: #555;
-            text-align: left; /* 明示的に左寄せ */
-        }
-
-
-        /* プロフィール画像のスタイル */
-        .profile-image-right {
-            width: 90px; /* 画像の幅を少し小さく */
-            height: 90px; /* 画像の高さを少し小さく */
-            border-radius: 9999px; /* 真円にする */
-            object-fit: cover; /* 画像がはみ出さないように調整 */
-            border: 3px solid #3b82f6; /* 青い枠線 */
-            flex-shrink: 0; /* 画像が縮小しないように設定 */
-            margin-left: 1.5rem; /* テキストとの間に余白 */
-        }
-
-        .section-title {
-            font-size: 1.6rem; /* 見出しのフォントサイズを調整 */
-            font-weight: 700; /* 太字 */
-            color: #222; /* 見出しの色を濃いグレーに */
-            margin-bottom: 0.75rem; /* マージンを調整 */
-            border-bottom: 1px solid #e0e0e0; /* 下線を細く、明るく */
-            padding-bottom: 0.25rem; /* パディングを調整 */
-            text-align: left; /* 見出しは左寄せ */
-        }
-
-        .section-content {
-            margin-bottom: 1.75rem; /* セクション間の余白を微調整 */
-        }
-
-        .experience-list,
-        .education-list,
-        .publication-list {
-            list-style-type: disc; /* デフォルトのディスク（黒丸）を維持 */
-            padding-left: 1.5rem; /* デフォルトのパディングを維持 */
-            color: #555; /* リストのテキスト色を調整 */
-        }
-
-        .experience-list li,
-        .education-list li,
-        .publication-list li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* 経歴・学歴項目の共通スタイル */
-        .experience-item,
-        .education-item {
-            margin-bottom: 1.25rem; /* 各項目間の余白を微調整 */
-        }
-
-        .item-primary-line {
-            font-size: 1.15rem; /* 役職・機関名などのフォントサイズを調整 */
-            font-weight: 600; /* 少し太字 */
-            color: #333; /* 色を濃いグレーに */
-            margin-bottom: 0.25rem; /* 次の行との間に少し余白 */
-        }
-
-        .item-date {
-            display: block; /* 日付を新しい行に表示 */
-            font-size: 0.95rem; /* 日付のフォントサイズを調整 */
-            color: #777; /* 日付の色を薄いグレーに */
-        }
-
-        .item-secondary-line { /* 学歴の指導教員名用 */
-            display: block; /* 新しい行に表示 */
-            font-size: 0.95rem; /* 調整 */
-            color: #777; /* 色を薄いグレーに */
-            margin-top: 0.25rem; /* 上の行との間に少し余白 */
-        }
-
-        .degree-info { /* 学位情報 */
-            font-weight: normal; /* 太字にならないように */
-            color: #555; /* 親要素の色を継承 */
-            margin-left: 0.5rem; /* 前のテキストとのスペース */
-        }
-
-        /* 論文セクション内のサブタイトル */
-        .publication-section-subtitle {
-            font-size: 1.25rem; /* H3より少し小さく */
-            font-weight: 600; /* 太字 */
-            color: #444; /* 色を濃いグレーに */
-            margin-top: 1.5rem; /* 上に余白を微調整 */
-            margin-bottom: 0.75rem; /* 下に余白を維持 */
-            border-bottom: 1px solid #e0e0e0; /* 下線を細く、明るく */
-            padding-bottom: 0.25rem;
-        }
-
-
-        .publication-item {
-            margin-bottom: 0.75rem; /* 論文項目間の余白を微調整 */
-        }
-
-        .publication-item strong {
-            display: block;
-            font-size: 1.1rem; /* 論文タイトルを調整 */
-            color: #333; /* 色を濃いグレーに */
-        }
-        .publication-item span {
-            display: block; /* 各情報を新しい行に表示 */
-            font-size: 0.95rem; /* 詳細情報を調整 */
-            color: #777; /* 色を薄いグレーに */
-            margin-top: 0.2rem; /* 上の行との間に少し余白 */
-        }
-        .publication-item span:first-of-type {
-            margin-top: 0; /* 最初のspanには上の余白を適用しない */
-        }
-
-
-        .social-links {
-            display: flex;
-            justify-content: left; /* 左寄せ */
-            gap: 1.25rem; /* アイコン間のスペースを微調整 */
-            margin-bottom: 1.75rem; /* 自己紹介セクションとの間に余白を微調整 */
-        }
-
-        .social-link-item {
-            display: inline-flex; /* アイコンとテキストをインラインで配置 */
-            align-items: center;
-            color: #007bff; /* リンクの色を維持 */
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            font-size: 0.95rem; /* リンクのテキストサイズを調整 */
-        }
-
-        .social-link-item:hover {
-            color: #0056b3; /* ホバー時の色を調整 */
-        }
-
-        /* SVGアイコンのスタイル */
-        .social-link-item svg {
-            width: 1.2rem; /* アイコンのサイズを調整 */
-            height: 1.2rem; /* アイコンのサイズを調整 */
-            margin-right: 0.4rem; /* テキストとの間に余白 */
-            fill: currentColor; /* テキストの色に合わせる */
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
     <!-- 固定ナビゲーションバー -->
-    <nav class="fixed-navbar">
-        <div class="fixed-navbar-inner-container">
-            <div class="fixed-navbar-links">
-                <a href="index.html" class="nav-link">プロフィール</a>
-                <a href="hobbies.html" class="nav-link">趣味</a>
+    <nav class="fixed top-0 left-0 w-full h-16 bg-white shadow-sm z-50 flex justify-center items-center">
+        <!-- ナビゲーションバー内部のコンテナをFlexboxで左右に配置 -->
+        <div class="max-w-4xl w-11/12 md:w-full flex items-center justify-between px-4 md:px-0">
+            <div class="flex items-center">
+                <!-- タイトルを左に配置 -->
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI</h1>
+                <!-- プロフィール画像を名前の右側に移動し、指定されたsrcに更新 -->
+                <img src="images/profile.jpg" alt="プロフィール画像" class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
+            </div>
+            <!-- リンクを右に配置 -->
+            <div class="flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
+                <a href="hobbies.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
             </div>
         </div>
     </nav>
 
     <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
-    <div class="profile-container">
-        <!-- プロフィールヘッダー -->
-        <header class="profile-header">
-            <div class="flex-grow">
-                <h1 class="text-4xl font-bold text-gray-800 mb-2">根石 将人 / Masato NEISHI</h1>
-            </div>
-            <!-- プロフィール画像を右側に追加 -->
-            <img src="images/profile.jpg" alt="プロフィール画像" class="profile-image-right">
-        </header>
-
+    <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-20 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
         <!-- ソーシャルリンクセクション -->
-        <div class="social-links">
-            <a href="https://github.com/nem6ishi" class="social-link-item" target="_blank" rel="noopener noreferrer">
+        <section class="social-links flex flex-wrap gap-x-6 gap-y-2 mb-8 justify-center sm:justify-start">
+            <a href="https://github.com/nem6ishi" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-base transition-colors duration-200 rounded-md py-1 px-2" target="_blank" rel="noopener noreferrer">
                 <!-- GitHubアイコンのSVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.741.083-.725.083-.725 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.372-12-12-12z"/>
                 </svg>
                 GitHub
             </a>
-        </div>
+            <!-- 他のソーシャルリンクをここに追加できます -->
+        </section>
 
-        <!-- 経歴セクション -->
-        <section class="section-content">
-            <h2 class="section-title">経歴</h2>
-            <ul class="experience-list">
-                <li class="experience-item">
-                    <div class="item-primary-line">
+        <!-- 職歴セクション -->
+        <section class="section-content mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">職歴</h2>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li class="mb-6">
+                    <div class="text-xl font-semibold text-gray-800 mb-1">
                         <strong>シニアリサーチエンジニア</strong>, 株式会社みらい翻訳
                     </div>
-                    <span class="item-date">2024/04 - 現在</span>
+                    <span class="block text-sm text-gray-500 mb-1">2024/04 - 現在</span>
                 </li>
-                <li class="experience-item">
-                    <div class="item-primary-line">
+                <li class="mb-6">
+                    <div class="text-xl font-semibold text-gray-800 mb-1">
                         <strong>リサーチサイエンティスト インターン</strong>, Megagon Labs
                     </div>
-                    <span class="item-date">2019/06 - 2021/03</span>
+                    <span class="block text-sm text-gray-500 mb-1">2019/06 - 2021/03</span>
                 </li>
-                <li class="experience-item">
-                    <div class="item-primary-line">
+                <li class="mb-6">
+                    <div class="text-xl font-semibold text-gray-800 mb-1">
                         <strong>リサーチサイエンティスト インターン</strong>, リクルートテクノロジーズ
                     </div>
-                    <span class="item-date">2018/11 - 2019/02</span>
+                    <span class="block text-sm text-gray-500 mb-1">2018/11 - 2019/02</span>
                 </li>
             </ul>
         </section>
 
-        <!-- 学歴セクションの追加 -->
-        <section class="section-content">
-            <h2 class="section-title">学歴</h2>
-            <ul class="education-list">
-                <li class="education-item">
-                    <div class="item-primary-line">
-                        <strong>東京大学大学院 情報理工学系研究科 電子情報学専攻</strong><span class="degree-info">, 修士、博士（情報理工学）</span>
+        <!-- 学歴セクション -->
+        <section class="section-content mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">学歴</h2>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li class="mb-6">
+                    <div class="text-xl font-semibold text-gray-800 mb-1">
+                        <strong>東京大学大学院 情報理工学系研究科 電子情報学専攻</strong><span class="font-normal text-gray-600 ml-2">, 修士、博士（情報理工学）</span>
                     </div>
-                    <span class="item-date">2017/04 - 2024/03</span>
-                    <span class="item-secondary-line">(指導教員: 吉永直樹)</span>
+                    <span class="block text-sm text-gray-500 mb-1">2017/04 - 2024/03</span>
+                    <span class="block text-sm text-gray-600 mt-1">(指導教員: 吉永直樹)</span>
                 </li>
-                <li class="education-item">
-                    <div class="item-primary-line">
-                        <strong>東京大学 工学部 電気電子工学科</strong><span class="degree-info">, 学士（工学）</span>
+                <li class="mb-6">
+                    <div class="text-xl font-semibold text-gray-800 mb-1">
+                        <strong>東京大学 工学部 電気電子工学科</strong><span class="font-normal text-gray-600 ml-2">, 学士（工学）</span>
                     </div>
-                    <span class="item-date">2015/04 - 2017/03</span>
-                    <span class="item-secondary-line">(指導教員: 藤田昌宏)</span>
+                    <span class="block text-sm text-gray-500 mb-1">2015/04 - 2017/03</span>
+                    <span class="block text-sm text-gray-600 mt-1">(指導教員: 藤田昌宏)</span>
                 </li>
-                <li class="education-item">
-                    <div class="item-primary-line">
-                        <strong>東京大学 文学部 言語文化学科</strong><span class="degree-info">, 学士（文学）</span>
+                <li class="mb-6">
+                    <div class="text-xl font-semibold text-gray-800 mb-1">
+                        <strong>東京大学 文学部 言語文化学科</strong><span class="font-normal text-gray-600 ml-2">, 学士（文学）</span>
                     </div>
-                    <span class="item-date">2013/04 - 2015/03</span>
-                    <span class="item-secondary-line">(指導教員: 小林正人)</span>
+                    <span class="block text-sm text-gray-500 mb-1">2013/04 - 2015/03</span>
+                    <span class="block text-sm text-gray-600 mt-1">(指導教員: 小林正人)</span>
                 </li>
             </ul>
         </section>
 
         <!-- 論文セクション -->
         <section class="section-content">
-            <h2 class="section-title">論文</h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">論文</h2>
 
-            <h3 class="publication-section-subtitle">Refereed</h3>
-            <ul class="publication-list">
-                <li class="publication-item">
-                    <strong>You May Like This Hotel Because ...: Identifying Evidence for Explainable Recommendations</strong>
-                    <span>Shin Kanouchi, Masato Neishi, Yuta Hayashibe, Hiroki Ouchi, Naoaki Okazaki</span>
-                    <span>The 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing (AACL-IJCNLP 2020), Online, December 2020.</span>
-                    <span>Acceptance rate: 28.3%</span>
-                    <span>[Dataset]</span>
+            <h3 class="text-xl font-semibold text-gray-700 mt-8 mb-4 pb-2 border-b border-gray-200">Refereed</h3>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">You May Like This Hotel Because ...: Identifying Evidence for Explainable Recommendations</strong>
+                    <span class="block text-sm text-gray-600 mt-1">Shin Kanouchi, Masato Neishi, Yuta Hayashibe, Hiroki Ouchi, Naoaki Okazaki</span>
+                    <span class="block text-sm text-gray-600 mt-1">The 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing (AACL-IJCNLP 2020), Online, December 2020.</span>
+                    <span class="block text-sm text-gray-600 mt-1">Acceptance rate: 28.3%</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Dataset]</span>
                 </li>
-                <li class="publication-item">
-                    <strong>On the Relation between Position Information and Sentence Length in Neural Machine Translation</strong>
-                    <span>Masato Neishi, Naoki Yoshinaga</span>
-                    <span>The 23rd Conference on Computational Natural Language Learning (CoNLL 2019), Hong Kong, Novermber 2019.</span>
-                    <span>Acceptance rate: 22.66%</span>
-                    <span>[Poster] [Code]</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">On the Relation between Position Information and Sentence Length in Neural Machine Translation</strong>
+                    <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Naoki Yoshinaga</span>
+                    <span class="block text-sm text-gray-600 mt-1">The 23rd Conference on Computational Natural Language Learning (CoNLL 2019), Hong Kong, Novermber 2019.</span>
+                    <span class="block text-sm text-gray-600 mt-1">Acceptance rate: 22.66%</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster] [Code]</span>
                 </li>
-                <li class="publication-item">
-                    <strong>A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
-                    <span>Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
-                    <span>2018 Asian Universities Alliance Postgraduate Academic Forum (AUAPAF 2018), Beijing, October 2018.</span>
-                    <span>[Slide]</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
+                    <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
+                    <span class="block text-sm text-gray-600 mt-1">2018 Asian Universities Alliance Postgraduate Academic Forum (AUAPAF 2018), Beijing, October 2018.</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Slide]</span>
                 </li>
             </ul>
 
-            <h3 class="publication-section-subtitle">Non-Refereed</h3>
-            <ul class="publication-list">
-                <li class="publication-item">
-                    <strong>ニューラル機械翻訳のためのノイズ寛容なアンカー学習</strong>
-                    <span>根石 将人, 吉永 直樹</span>
-                    <span>言語処理学会第29回年次大会, 沖縄, 2023年3月</span>
-                    <span>[Poster]</span>
+            <h3 class="text-xl font-semibold text-gray-700 mt-8 mb-4 pb-2 border-b border-gray-200">Non-Refereed</h3>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">日付入りLLM文書翻訳評価用データセット</strong>
+                    <span class="block text-sm text-gray-600 mt-1">岩月憲一, 根石 将人</span>
+                    <span class="block text-sm text-gray-600 mt-1">言語処理学会第31回年次大会, 長崎, 2025年3月</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster]</span>
                 </li>
-                <li class="publication-item">
-                    <strong>宿の推薦根拠説明システムにおける魅力度の考慮と実用を見据えた評価</strong>
-                    <span>叶内 晨, 根石 将人, 林部 祐太, 大内 啓樹, 岡崎 直観</span>
-                    <span>言語処理学会第27回年次大会, オンライン, 2021年3月</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">ニューラル機械翻訳のためのノイズ寛容なアンカー学習</strong>
+                    <span class="block text-sm text-gray-600 mt-1">根石 将人, 吉永 直樹</span>
+                    <span class="block text-sm text-gray-600 mt-1">言語処理学会第29回年次大会, 沖縄, 2023年3月</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster]</span>
                 </li>
-                <li class="publication-item">
-                    <strong>宿推薦における抽象的な要求に対する根拠付き推薦文の生成のためのレビュー返信文の活用</strong>
-                    <span>根石 将人, 叶内晨, 大内啓樹</span>
-                    <span>NLP 若手の会(YANS) 第15回シンポジウム, オンライン, 2020年9月</span>
-                    <span>[Poster]</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">宿の推薦根拠説明システムにおける魅力度の考慮と実用を見据えた評価</strong>
+                    <span class="block text-sm text-gray-600 mt-1">叶内 晨, 根石 将人, 林部 祐太, 大内 啓樹, 岡崎 直観</span>
+                    <span class="block text-sm text-gray-600 mt-1">言語処理学会第27回年次大会, オンライン, 2021年3月</span>
                 </li>
-                <li class="publication-item">
-                    <strong>旅行情報サイトのレビューを用いた抽象的な要求に対する根拠付き推薦文の生成</strong>
-                    <span>叶内 晨, 根石 将人, 林部 祐太, 岡崎 直観</span>
-                    <span>言語処理学会第26回年次大会, オンライン, 2020年3月</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">宿推薦における抽象的な要求に対する根拠付き推薦文の生成のためのレビュー返信文の活用</strong>
+                    <span class="block text-sm text-gray-600 mt-1">根石 将人, 叶内晨, 大内啓樹</span>
+                    <span class="block text-sm text-gray-600 mt-1">NLP 若手の会(YANS) 第15回シンポジウム, オンライン, 2020年9月</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster]</span>
                 </li>
-                <li class="publication-item">
-                    <strong>英日翻訳タスクにおけるスワップモデルを通した seq2seq と Transformer の比較</strong>
-                    <span>根石 将人, 吉永 直樹</span>
-                    <span>言語処理学会第25回年次大会, 名古屋, 2019年3月</span>
-                    <span>[Poster] [予稿論文の訂正]</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">旅行情報サイトのレビューを用いた抽象的な要求に対する根拠付き推薦文の生成</strong>
+                    <span class="block text-sm text-gray-600 mt-1">叶内 晨, 根石 将人, 林部 祐太, 岡崎 直観</span>
+                    <span class="block text-sm text-gray-600 mt-1">言語処理学会第26回年次大会, オンライン, 2020年3月</span>
                 </li>
-                <li class="publication-item">
-                    <strong>高性能なオートエンコーダとのマルチタスク学習を利用したニューラル機械翻訳</strong>
-                    <span>根石 将人, 吉永 直樹</span>
-                    <span>NLP 若手の会(YANS) 第13回シンポジウム, 岡山, 2018年8月</span>
-                    <span>[Poster]</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">英日翻訳タスクにおけるスワップモデルを通した seq2seq と Transformer の比較</strong>
+                    <span class="block text-sm text-gray-600 mt-1">根石 将人, 吉永 直樹</span>
+                    <span class="block text-sm text-gray-600 mt-1">言語処理学会第25回年次大会, 名古屋, 2019年3月</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster] [予稿論文の訂正]</span>
                 </li>
-                <li class="publication-item">
-                    <strong>A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
-                    <span>Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
-                    <span>The 4th Workshop on Asian Translation (WAT 2017), Taipei, November 2017.</span>
-                    <span>[Poster] [Code]</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">高性能なオートエンコーダとのマルチタスク学習を利用したニューラル機械翻訳</strong>
+                    <span class="block text-sm text-gray-600 mt-1">根石 将人, 吉永 直樹</span>
+                    <span class="block text-sm text-gray-600 mt-1">NLP 若手の会(YANS) 第13回シンポジウム, 岡山, 2018年8月</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster]</span>
                 </li>
-                <li class="publication-item">
-                    <strong>ニューラル機械翻訳における埋め込み層の教師なし事前学習</strong>
-                    <span>根石 将人, 佐久間 仁, 遠田 哲史, 石渡 祥之佑, 吉永 直樹, 豊田 正史</span>
-                    <span>第233回 自然言語処理研究会, 沖縄, 2017年10月</span>
-                    <span>[Slide]</span>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
+                    <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
+                    <span class="block text-sm text-gray-600 mt-1">The 4th Workshop on Asian Translation (WAT 2017), Taipei, November 2017.</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster] [Code]</span>
+                </li>
+                <li class="mb-6">
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">ニューラル機械翻訳における埋め込み層の教師なし事前学習</strong>
+                    <span class="block text-sm text-gray-600 mt-1">根石 将人, 佐久間 仁, 遠田 哲史, 石渡 祥之佑, 吉永 直樹, 豊田 正史</span>
+                    <span class="block text-sm text-gray-600 mt-1">第233回 自然言語処理研究会, 沖縄, 2017年10月</span>
+                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Slide]</span>
                 </li>
             </ul>
         </section>
