@@ -14,10 +14,57 @@
             padding: 0;
             display: flex; /* Flexboxを使ってbodyの内容を中央に寄せます */
             justify-content: center; /* 水平方向の中央寄せ */
-            align-items: center;    /* 垂直方向の中央寄せ */
+            align-items: flex-start; /* 垂直方向の上寄せ (固定ヘッダーがあるため) */
             min-height: 100vh; /* ビューポートの高さいっぱいを使用 */
             background-color: #f8f8f8; /* 背景色をより明るく */
+            padding-top: 64px; /* 固定ナビバーの高さ分、上部に余白を追加 */
         }
+
+        /* 固定ヘッダーのスタイル */
+        .fixed-navbar {
+            position: fixed; /* 画面上部に固定 */
+            top: 0;
+            left: 0;
+            width: 100%; /* 全幅を占める */
+            height: 64px; /* 固定の高さ */
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* ソフトな影 */
+            z-index: 1000; /* 他のコンテンツの上に表示 */
+            display: flex;
+            justify-content: center; /* 中央に内部コンテナを配置 */
+            align-items: center; /* 垂直方向中央揃え */
+        }
+
+        /* 固定ナビバー内部のコンテナ (メインボディと幅を合わせる) */
+        .fixed-navbar-inner-container {
+            max-width: 768px; /* メインボディの最大幅に合わせる */
+            width: 90%; /* メインボディの相対幅に合わせる */
+            height: 100%; /* 親のナビバーの高さに合わせる */
+            display: flex;
+            align-items: center; /* 垂直方向中央揃え */
+            justify-content: flex-start; /* リンクを左寄せ */
+            padding: 0 1.5rem; /* 左右のパディング (コンテナの端からリンクまでの余白) */
+            box-sizing: border-box; /* paddingがwidthに含まれるように */
+        }
+
+
+        .fixed-navbar-links {
+            display: flex;
+            gap: 1.25rem; /* リンク間のスペース */
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #555;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #007bff;
+        }
+
 
         .profile-container {
             /* 最大幅を設定し、画面サイズに応じて調整します */
@@ -42,15 +89,24 @@
         }
 
         /* ヘッダー内の名前と肩書きのテキストアラインメント */
-        .profile-header h1,
+        .profile-header h1 {
+            font-size: 2.5rem; /* 名前を調整 */
+            font-weight: 700;
+            color: #222;
+            margin-bottom: 0.5rem; /* 微調整 */
+            text-align: left; /* 明示的に左寄せ */
+        }
         .profile-header p {
+            font-size: 1.1rem; /* 肩書きを調整 */
+            color: #555;
             text-align: left; /* 明示的に左寄せ */
         }
 
+
         /* プロフィール画像のスタイル */
         .profile-image-right {
-            width: 100px; /* 画像の幅 */
-            height: 100px; /* 画像の高さ */
+            width: 90px; /* 画像の幅を少し小さく */
+            height: 90px; /* 画像の高さを少し小さく */
             border-radius: 9999px; /* 真円にする */
             object-fit: cover; /* 画像がはみ出さないように調整 */
             border: 3px solid #3b82f6; /* 青い枠線 */
@@ -59,7 +115,7 @@
         }
 
         .section-title {
-            font-size: 1.5rem; /* 見出しのフォントサイズ */
+            font-size: 1.6rem; /* 見出しのフォントサイズを調整 */
             font-weight: 700; /* 太字 */
             color: #222; /* 見出しの色を濃いグレーに */
             margin-bottom: 0.75rem; /* マージンを調整 */
@@ -69,7 +125,7 @@
         }
 
         .section-content {
-            margin-bottom: 2rem; /* セクション間の余白を増やす */
+            margin-bottom: 1.75rem; /* セクション間の余白を微調整 */
         }
 
         .experience-list,
@@ -89,11 +145,11 @@
         /* 経歴・学歴項目の共通スタイル */
         .experience-item,
         .education-item {
-            margin-bottom: 1.5rem; /* 各項目間の余白を維持 */
+            margin-bottom: 1.25rem; /* 各項目間の余白を微調整 */
         }
 
         .item-primary-line {
-            font-size: 1.1rem; /* 役職・機関名などのフォントサイズ */
+            font-size: 1.15rem; /* 役職・機関名などのフォントサイズを調整 */
             font-weight: 600; /* 少し太字 */
             color: #333; /* 色を濃いグレーに */
             margin-bottom: 0.25rem; /* 次の行との間に少し余白 */
@@ -101,13 +157,13 @@
 
         .item-date {
             display: block; /* 日付を新しい行に表示 */
-            font-size: 0.9rem; /* 日付のフォントサイズを小さく */
+            font-size: 0.95rem; /* 日付のフォントサイズを調整 */
             color: #777; /* 日付の色を薄いグレーに */
         }
 
         .item-secondary-line { /* 学歴の指導教員名用 */
             display: block; /* 新しい行に表示 */
-            font-size: 0.95rem;
+            font-size: 0.95rem; /* 調整 */
             color: #777; /* 色を薄いグレーに */
             margin-top: 0.25rem; /* 上の行との間に少し余白 */
         }
@@ -123,7 +179,7 @@
             font-size: 1.25rem; /* H3より少し小さく */
             font-weight: 600; /* 太字 */
             color: #444; /* 色を濃いグレーに */
-            margin-top: 1.75rem; /* 上に余白を増やす */
+            margin-top: 1.5rem; /* 上に余白を微調整 */
             margin-bottom: 0.75rem; /* 下に余白を維持 */
             border-bottom: 1px solid #e0e0e0; /* 下線を細く、明るく */
             padding-bottom: 0.25rem;
@@ -131,19 +187,19 @@
 
 
         .publication-item {
-            margin-bottom: 1rem;
+            margin-bottom: 0.75rem; /* 論文項目間の余白を微調整 */
         }
 
         .publication-item strong {
             display: block;
-            font-size: 1.1rem;
+            font-size: 1.1rem; /* 論文タイトルを調整 */
             color: #333; /* 色を濃いグレーに */
         }
         .publication-item span {
             display: block; /* 各情報を新しい行に表示 */
-            font-size: 0.95rem;
+            font-size: 0.95rem; /* 詳細情報を調整 */
             color: #777; /* 色を薄いグレーに */
-            margin-top: 0.25rem; /* 上の行との間に少し余白 */
+            margin-top: 0.2rem; /* 上の行との間に少し余白 */
         }
         .publication-item span:first-of-type {
             margin-top: 0; /* 最初のspanには上の余白を適用しない */
@@ -153,8 +209,8 @@
         .social-links {
             display: flex;
             justify-content: left; /* 左寄せ */
-            gap: 1.5rem; /* アイコン間のスペース */
-            margin-bottom: 2rem; /* 自己紹介セクションとの間に余白 */
+            gap: 1.25rem; /* アイコン間のスペースを微調整 */
+            margin-bottom: 1.75rem; /* 自己紹介セクションとの間に余白を微調整 */
         }
 
         .social-link-item {
@@ -164,43 +220,33 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
+            font-size: 0.95rem; /* リンクのテキストサイズを調整 */
         }
 
         .social-link-item:hover {
             color: #0056b3; /* ホバー時の色を調整 */
         }
 
-        /* アイコンの代わりとして、テキストで表示 */
-        .social-link-item span {
-            font-size: 1.2rem; /* アイコンの代わりの文字サイズ */
-            margin-right: 0.5rem;
-        }
-
-        /* 趣味のページへのリンクのスタイル */
-        .hobbies-link-section {
-            text-align: center; /* リンクを中央寄せ */
-            margin-top: 4rem; /* 上に多めの余白をさらに増やす */
-            padding-top: 1.5rem; /* 上にパディング */
-            border-top: 1px solid #e0e0e0; /* 上に区切り線を細く、明るく */
-        }
-
-        .hobbies-link {
-            display: inline-block; /* ボタンのように見せるため */
-            background-color: #6c757d; /* 背景色をより落ち着いたグレーに */
-            color: white; /* 文字色 */
-            padding: 0.75rem 1.5rem; /* パディング */
-            border-radius: 0.5rem; /* 角を丸くする */
-            text-decoration: none; /* 下線をなくす */
-            font-weight: 600; /* 太字 */
-            transition: background-color 0.3s ease; /* ホバー時のアニメーション */
-        }
-
-        .hobbies-link:hover {
-            background-color: #5a6268; /* ホバー時の背景色を調整 */
+        /* SVGアイコンのスタイル */
+        .social-link-item svg {
+            width: 1.2rem; /* アイコンのサイズを調整 */
+            height: 1.2rem; /* アイコンのサイズを調整 */
+            margin-right: 0.4rem; /* テキストとの間に余白 */
+            fill: currentColor; /* テキストの色に合わせる */
         }
     </style>
 </head>
 <body>
+    <!-- 固定ナビゲーションバー -->
+    <nav class="fixed-navbar">
+        <div class="fixed-navbar-inner-container">
+            <div class="fixed-navbar-links">
+                <a href="index.html" class="nav-link">プロフィール</a>
+                <a href="hobbies.html" class="nav-link">趣味</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
     <div class="profile-container">
         <!-- プロフィールヘッダー -->
@@ -209,13 +255,17 @@
                 <h1 class="text-4xl font-bold text-gray-800 mb-2">根石 将人 / Masato NEISHI</h1>
             </div>
             <!-- プロフィール画像を右側に追加 -->
-            <img src="https://placehold.co/100x100/aabbcc/ffffff?text=User" alt="プロフィール画像" class="profile-image-right">
+            <img src="images/profile.jpg" alt="プロフィール画像" class="profile-image-right">
         </header>
 
         <!-- ソーシャルリンクセクション -->
         <div class="social-links">
-            <a href="https://github.com/nem6ishi" class="social-link-item">
-                <span>🔗</span> GitHub
+            <a href="https://github.com/nem6ishi" class="social-link-item" target="_blank" rel="noopener noreferrer">
+                <!-- GitHubアイコンのSVG -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.741.083-.725.083-.725 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.372-12-12-12z"/>
+                </svg>
+                GitHub
             </a>
         </div>
 
@@ -231,9 +281,15 @@
                 </li>
                 <li class="experience-item">
                     <div class="item-primary-line">
-                        <strong>データサイエンティスト インターン</strong>, Megagon Labs
+                        <strong>リサーチサイエンティスト インターン</strong>, Megagon Labs
                     </div>
                     <span class="item-date">2019/06 - 2021/03</span>
+                </li>
+                <li class="experience-item">
+                    <div class="item-primary-line">
+                        <strong>リサーチサイエンティスト インターン</strong>, リクルートテクノロジーズ
+                    </div>
+                    <span class="item-date">2018/11 - 2019/02</span>
                 </li>
             </ul>
         </section>
@@ -344,11 +400,6 @@
                 </li>
             </ul>
         </section>
-
-        <!-- 趣味のページへのリンクを追加 -->
-        <div class="hobbies-link-section">
-            <a href="hobbies.html" class="hobbies-link">趣味のページを見る</a>
-        </div>
     </div>
 </body>
 </html>
