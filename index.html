@@ -16,7 +16,7 @@
             justify-content: center; /* 水平方向の中央寄せ */
             align-items: center;    /* 垂直方向の中央寄せ */
             min-height: 100vh; /* ビューポートの高さいっぱいを使用 */
-            background-color: #f0f4f8; /* 背景色 */
+            background-color: #f8f8f8; /* 背景色をより明るく */
         }
 
         .profile-container {
@@ -24,9 +24,10 @@
             max-width: 768px; /* プロフィールページの一般的な幅 */
             width: 90%; /* 幅を親要素の90%に設定 */
             background-color: #ffffff; /* コンテナの背景色 */
-            padding: 2rem; /* 内側の余白 */
+            padding: 2.5rem; /* 内側の余白を少し増やす */
             border-radius: 0.75rem; /* 角を丸くする */
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* 影 */
+            /* 影をよりソフトに */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
             text-align: left; /* コンテナ内のテキストをデフォルトで左寄せにします */
         }
 
@@ -36,8 +37,8 @@
             justify-content: space-between; /* 要素を左右に配置 */
             align-items: center;    /* 垂直方向の中央揃え */
             margin-bottom: 2rem; /* ソーシャルリンクとの間に余白 */
-            padding-bottom: 1rem; /* ヘッダー下部のパディング */
-            border-bottom: 2px solid #e2e8f0; /* ヘッダー下部の区切り線 */
+            padding-bottom: 0.75rem; /* ヘッダー下部のパディングを調整 */
+            border-bottom: 1px solid #e0e0e0; /* ヘッダー下部の区切り線を細く、明るく */
         }
 
         /* ヘッダー内の名前と肩書きのテキストアラインメント */
@@ -60,23 +61,23 @@
         .section-title {
             font-size: 1.5rem; /* 見出しのフォントサイズ */
             font-weight: 700; /* 太字 */
-            color: #334155; /* 見出しの色 */
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e2e8f0; /* 下線 */
-            padding-bottom: 0.5rem;
+            color: #222; /* 見出しの色を濃いグレーに */
+            margin-bottom: 0.75rem; /* マージンを調整 */
+            border-bottom: 1px solid #e0e0e0; /* 下線を細く、明るく */
+            padding-bottom: 0.25rem; /* パディングを調整 */
             text-align: left; /* 見出しは左寄せ */
         }
 
         .section-content {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem; /* セクション間の余白を増やす */
         }
 
         .experience-list,
         .education-list,
         .publication-list {
-            list-style-type: disc; /* デフォルトのディスク（黒丸）に戻しました */
-            padding-left: 1.5rem; /* デフォルトのパディングを追加 (ブラウザのデフォルトに合わせる) */
-            color: #4a5568;
+            list-style-type: disc; /* デフォルトのディスク（黒丸）を維持 */
+            padding-left: 1.5rem; /* デフォルトのパディングを維持 */
+            color: #555; /* リストのテキスト色を調整 */
         }
 
         .experience-list li,
@@ -88,32 +89,32 @@
         /* 経歴・学歴項目の共通スタイル */
         .experience-item,
         .education-item {
-            margin-bottom: 1.5rem; /* 各項目間の余白を調整 */
+            margin-bottom: 1.5rem; /* 各項目間の余白を維持 */
         }
 
         .item-primary-line {
             font-size: 1.1rem; /* 役職・機関名などのフォントサイズ */
             font-weight: 600; /* 少し太字 */
-            color: #1a202c; /* 色 */
+            color: #333; /* 色を濃いグレーに */
             margin-bottom: 0.25rem; /* 次の行との間に少し余白 */
         }
 
         .item-date {
             display: block; /* 日付を新しい行に表示 */
             font-size: 0.9rem; /* 日付のフォントサイズを小さく */
-            color: #64748b; /* 日付の色を薄く */
+            color: #777; /* 日付の色を薄いグレーに */
         }
 
         .item-secondary-line { /* 学歴の指導教員名用 */
             display: block; /* 新しい行に表示 */
             font-size: 0.95rem;
-            color: #64748b;
+            color: #777; /* 色を薄いグレーに */
             margin-top: 0.25rem; /* 上の行との間に少し余白 */
         }
 
         .degree-info { /* 学位情報 */
             font-weight: normal; /* 太字にならないように */
-            color: #4a5568; /* 親要素の色を継承 */
+            color: #555; /* 親要素の色を継承 */
             margin-left: 0.5rem; /* 前のテキストとのスペース */
         }
 
@@ -121,10 +122,10 @@
         .publication-section-subtitle {
             font-size: 1.25rem; /* H3より少し小さく */
             font-weight: 600; /* 太字 */
-            color: #334155;
-            margin-top: 1.5rem; /* 上に余白 */
-            margin-bottom: 0.75rem; /* 下に余白 */
-            border-bottom: 1px dashed #e2e8f0; /* 点線の下線 */
+            color: #444; /* 色を濃いグレーに */
+            margin-top: 1.75rem; /* 上に余白を増やす */
+            margin-bottom: 0.75rem; /* 下に余白を維持 */
+            border-bottom: 1px solid #e0e0e0; /* 下線を細く、明るく */
             padding-bottom: 0.25rem;
         }
 
@@ -136,12 +137,12 @@
         .publication-item strong {
             display: block;
             font-size: 1.1rem;
-            color: #1a202c;
+            color: #333; /* 色を濃いグレーに */
         }
         .publication-item span {
             display: block; /* 各情報を新しい行に表示 */
             font-size: 0.95rem;
-            color: #64748b;
+            color: #777; /* 色を薄いグレーに */
             margin-top: 0.25rem; /* 上の行との間に少し余白 */
         }
         .publication-item span:first-of-type {
@@ -159,14 +160,14 @@
         .social-link-item {
             display: inline-flex; /* アイコンとテキストをインラインで配置 */
             align-items: center;
-            color: #3b82f6; /* リンクの色 */
+            color: #007bff; /* リンクの色を維持 */
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .social-link-item:hover {
-            color: #2563eb;
+            color: #0056b3; /* ホバー時の色を調整 */
         }
 
         /* アイコンの代わりとして、テキストで表示 */
@@ -178,14 +179,14 @@
         /* 趣味のページへのリンクのスタイル */
         .hobbies-link-section {
             text-align: center; /* リンクを中央寄せ */
-            margin-top: 3rem; /* 上に多めの余白 */
+            margin-top: 4rem; /* 上に多めの余白をさらに増やす */
             padding-top: 1.5rem; /* 上にパディング */
-            border-top: 1px solid #e2e8f0; /* 上に区切り線 */
+            border-top: 1px solid #e0e0e0; /* 上に区切り線を細く、明るく */
         }
 
         .hobbies-link {
             display: inline-block; /* ボタンのように見せるため */
-            background-color: #4a5568; /* 背景色 */
+            background-color: #6c757d; /* 背景色をより落ち着いたグレーに */
             color: white; /* 文字色 */
             padding: 0.75rem 1.5rem; /* パディング */
             border-radius: 0.5rem; /* 角を丸くする */
@@ -195,7 +196,7 @@
         }
 
         .hobbies-link:hover {
-            background-color: #2d3748; /* ホバー時の背景色 */
+            background-color: #5a6268; /* ホバー時の背景色を調整 */
         }
     </style>
 </head>
@@ -217,8 +218,6 @@
                 <span>🔗</span> GitHub
             </a>
         </div>
-
-        <!-- 興味・関心セクションを削除しました -->
 
         <!-- 経歴セクション -->
         <section class="section-content">
