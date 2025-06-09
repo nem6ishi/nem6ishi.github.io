@@ -1,42 +1,355 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ポートフォリオ | あなたの名前</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>根石 将人 / Masato NEISHI</title>
+    <!-- Tailwind CSS CDNを読み込みます。これにより、一般的なスタイリングが簡単に適用できます。 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Interフォントを適用します */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Flexboxを使ってbodyの内容を中央に寄せます */
+            justify-content: center; /* 水平方向の中央寄せ */
+            align-items: center;    /* 垂直方向の中央寄せ */
+            min-height: 100vh; /* ビューポートの高さいっぱいを使用 */
+            background-color: #f0f4f8; /* 背景色 */
+        }
+
+        .profile-container {
+            /* 最大幅を設定し、画面サイズに応じて調整します */
+            max-width: 768px; /* プロフィールページの一般的な幅 */
+            width: 90%; /* 幅を親要素の90%に設定 */
+            background-color: #ffffff; /* コンテナの背景色 */
+            padding: 2rem; /* 内側の余白 */
+            border-radius: 0.75rem; /* 角を丸くする */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* 影 */
+            text-align: left; /* コンテナ内のテキストをデフォルトで左寄せにします */
+        }
+
+        /* プロフィールヘッダーのスタイルをFlexbox用に修正 */
+        .profile-header {
+            display: flex; /* Flexboxを適用 */
+            justify-content: space-between; /* 要素を左右に配置 */
+            align-items: center;    /* 垂直方向の中央揃え */
+            margin-bottom: 2rem; /* ソーシャルリンクとの間に余白 */
+            padding-bottom: 1rem; /* ヘッダー下部のパディング */
+            border-bottom: 2px solid #e2e8f0; /* ヘッダー下部の区切り線 */
+        }
+
+        /* ヘッダー内の名前と肩書きのテキストアラインメント */
+        .profile-header h1,
+        .profile-header p {
+            text-align: left; /* 明示的に左寄せ */
+        }
+
+        /* プロフィール画像のスタイル */
+        .profile-image-right {
+            width: 100px; /* 画像の幅 */
+            height: 100px; /* 画像の高さ */
+            border-radius: 9999px; /* 真円にする */
+            object-fit: cover; /* 画像がはみ出さないように調整 */
+            border: 3px solid #3b82f6; /* 青い枠線 */
+            flex-shrink: 0; /* 画像が縮小しないように設定 */
+            margin-left: 1.5rem; /* テキストとの間に余白 */
+        }
+
+        .section-title {
+            font-size: 1.5rem; /* 見出しのフォントサイズ */
+            font-weight: 700; /* 太字 */
+            color: #334155; /* 見出しの色 */
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #e2e8f0; /* 下線 */
+            padding-bottom: 0.5rem;
+            text-align: left; /* 見出しは左寄せ */
+        }
+
+        .section-content {
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-list,
+        .education-list,
+        .publication-list {
+            list-style-type: disc; /* デフォルトのディスク（黒丸）に戻しました */
+            padding-left: 1.5rem; /* デフォルトのパディングを追加 (ブラウザのデフォルトに合わせる) */
+            color: #4a5568;
+        }
+
+        .experience-list li,
+        .education-list li,
+        .publication-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* 経歴・学歴項目の共通スタイル */
+        .experience-item,
+        .education-item {
+            margin-bottom: 1.5rem; /* 各項目間の余白を調整 */
+        }
+
+        .item-primary-line {
+            font-size: 1.1rem; /* 役職・機関名などのフォントサイズ */
+            font-weight: 600; /* 少し太字 */
+            color: #1a202c; /* 色 */
+            margin-bottom: 0.25rem; /* 次の行との間に少し余白 */
+        }
+
+        .item-date {
+            display: block; /* 日付を新しい行に表示 */
+            font-size: 0.9rem; /* 日付のフォントサイズを小さく */
+            color: #64748b; /* 日付の色を薄く */
+        }
+
+        .item-secondary-line { /* 学歴の指導教員名用 */
+            display: block; /* 新しい行に表示 */
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-top: 0.25rem; /* 上の行との間に少し余白 */
+        }
+
+        .degree-info { /* 学位情報 */
+            font-weight: normal; /* 太字にならないように */
+            color: #4a5568; /* 親要素の色を継承 */
+            margin-left: 0.5rem; /* 前のテキストとのスペース */
+        }
+
+        /* 論文セクション内のサブタイトル */
+        .publication-section-subtitle {
+            font-size: 1.25rem; /* H3より少し小さく */
+            font-weight: 600; /* 太字 */
+            color: #334155;
+            margin-top: 1.5rem; /* 上に余白 */
+            margin-bottom: 0.75rem; /* 下に余白 */
+            border-bottom: 1px dashed #e2e8f0; /* 点線の下線 */
+            padding-bottom: 0.25rem;
+        }
+
+
+        .publication-item {
+            margin-bottom: 1rem;
+        }
+
+        .publication-item strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #1a202c;
+        }
+        .publication-item span {
+            display: block; /* 各情報を新しい行に表示 */
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-top: 0.25rem; /* 上の行との間に少し余白 */
+        }
+        .publication-item span:first-of-type {
+            margin-top: 0; /* 最初のspanには上の余白を適用しない */
+        }
+
+
+        .social-links {
+            display: flex;
+            justify-content: left; /* 左寄せ */
+            gap: 1.5rem; /* アイコン間のスペース */
+            margin-bottom: 2rem; /* 自己紹介セクションとの間に余白 */
+        }
+
+        .social-link-item {
+            display: inline-flex; /* アイコンとテキストをインラインで配置 */
+            align-items: center;
+            color: #3b82f6; /* リンクの色 */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .social-link-item:hover {
+            color: #2563eb;
+        }
+
+        /* アイコンの代わりとして、テキストで表示 */
+        .social-link-item span {
+            font-size: 1.2rem; /* アイコンの代わりの文字サイズ */
+            margin-right: 0.5rem;
+        }
+
+        /* 趣味のページへのリンクのスタイル */
+        .hobbies-link-section {
+            text-align: center; /* リンクを中央寄せ */
+            margin-top: 3rem; /* 上に多めの余白 */
+            padding-top: 1.5rem; /* 上にパディング */
+            border-top: 1px solid #e2e8f0; /* 上に区切り線 */
+        }
+
+        .hobbies-link {
+            display: inline-block; /* ボタンのように見せるため */
+            background-color: #4a5568; /* 背景色 */
+            color: white; /* 文字色 */
+            padding: 0.75rem 1.5rem; /* パディング */
+            border-radius: 0.5rem; /* 角を丸くする */
+            text-decoration: none; /* 下線をなくす */
+            font-weight: 600; /* 太字 */
+            transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+        }
+
+        .hobbies-link:hover {
+            background-color: #2d3748; /* ホバー時の背景色 */
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>あなたの名前</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">自己紹介</a></li>
-        <li><a href="#works">作品</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section id="about">
-      <h2>自己紹介</h2>
-      <p>ここに自己紹介文を記載してください。</p>
-    </section>
-    <section id="works">
-      <h2>作品</h2>
-      <ul>
-        <li>作品1の説明</li>
-        <li>作品2の説明</li>
-        <li>作品3の説明</li>
-      </ul>
-    </section>
-    <section id="contact">
-      <h2>お問い合わせ</h2>
-      <p>メール: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 あなたの名前</p>
-  </footer>
+    <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
+    <div class="profile-container">
+        <!-- プロフィールヘッダー -->
+        <header class="profile-header">
+            <div class="flex-grow">
+                <h1 class="text-4xl font-bold text-gray-800 mb-2">根石 将人 / Masato NEISHI</h1>
+            </div>
+            <!-- プロフィール画像を右側に追加 -->
+            <img src="https://placehold.co/100x100/aabbcc/ffffff?text=User" alt="プロフィール画像" class="profile-image-right">
+        </header>
+
+        <!-- ソーシャルリンクセクション -->
+        <div class="social-links">
+            <a href="https://github.com/nem6ishi" class="social-link-item">
+                <span>🔗</span> GitHub
+            </a>
+        </div>
+
+        <!-- 興味・関心セクションを削除しました -->
+
+        <!-- 経歴セクション -->
+        <section class="section-content">
+            <h2 class="section-title">経歴</h2>
+            <ul class="experience-list">
+                <li class="experience-item">
+                    <div class="item-primary-line">
+                        <strong>シニアリサーチエンジニア</strong>, 株式会社みらい翻訳
+                    </div>
+                    <span class="item-date">2024/04 - 現在</span>
+                </li>
+                <li class="experience-item">
+                    <div class="item-primary-line">
+                        <strong>データサイエンティスト インターン</strong>, Megagon Labs
+                    </div>
+                    <span class="item-date">2019/06 - 2021/03</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 学歴セクションの追加 -->
+        <section class="section-content">
+            <h2 class="section-title">学歴</h2>
+            <ul class="education-list">
+                <li class="education-item">
+                    <div class="item-primary-line">
+                        <strong>東京大学大学院 情報理工学系研究科 電子情報学専攻</strong><span class="degree-info">, 修士、博士（情報理工学）</span>
+                    </div>
+                    <span class="item-date">2017/04 - 2024/03</span>
+                    <span class="item-secondary-line">(指導教員: 吉永直樹)</span>
+                </li>
+                <li class="education-item">
+                    <div class="item-primary-line">
+                        <strong>東京大学 工学部 電気電子工学科</strong><span class="degree-info">, 学士（工学）</span>
+                    </div>
+                    <span class="item-date">2015/04 - 2017/03</span>
+                    <span class="item-secondary-line">(指導教員: 藤田昌宏)</span>
+                </li>
+                <li class="education-item">
+                    <div class="item-primary-line">
+                        <strong>東京大学 文学部 言語文化学科</strong><span class="degree-info">, 学士（文学）</span>
+                    </div>
+                    <span class="item-date">2013/04 - 2015/03</span>
+                    <span class="item-secondary-line">(指導教員: 小林正人)</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 論文セクション -->
+        <section class="section-content">
+            <h2 class="section-title">論文</h2>
+
+            <h3 class="publication-section-subtitle">Refereed</h3>
+            <ul class="publication-list">
+                <li class="publication-item">
+                    <strong>You May Like This Hotel Because ...: Identifying Evidence for Explainable Recommendations</strong>
+                    <span>Shin Kanouchi, Masato Neishi, Yuta Hayashibe, Hiroki Ouchi, Naoaki Okazaki</span>
+                    <span>The 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing (AACL-IJCNLP 2020), Online, December 2020.</span>
+                    <span>Acceptance rate: 28.3%</span>
+                    <span>[Dataset]</span>
+                </li>
+                <li class="publication-item">
+                    <strong>On the Relation between Position Information and Sentence Length in Neural Machine Translation</strong>
+                    <span>Masato Neishi, Naoki Yoshinaga</span>
+                    <span>The 23rd Conference on Computational Natural Language Learning (CoNLL 2019), Hong Kong, Novermber 2019.</span>
+                    <span>Acceptance rate: 22.66%</span>
+                    <span>[Poster] [Code]</span>
+                </li>
+                <li class="publication-item">
+                    <strong>A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
+                    <span>Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
+                    <span>2018 Asian Universities Alliance Postgraduate Academic Forum (AUAPAF 2018), Beijing, October 2018.</span>
+                    <span>[Slide]</span>
+                </li>
+            </ul>
+
+            <h3 class="publication-section-subtitle">Non-Refereed</h3>
+            <ul class="publication-list">
+                <li class="publication-item">
+                    <strong>ニューラル機械翻訳のためのノイズ寛容なアンカー学習</strong>
+                    <span>根石 将人, 吉永 直樹</span>
+                    <span>言語処理学会第29回年次大会, 沖縄, 2023年3月</span>
+                    <span>[Poster]</span>
+                </li>
+                <li class="publication-item">
+                    <strong>宿の推薦根拠説明システムにおける魅力度の考慮と実用を見据えた評価</strong>
+                    <span>叶内 晨, 根石 将人, 林部 祐太, 大内 啓樹, 岡崎 直観</span>
+                    <span>言語処理学会第27回年次大会, オンライン, 2021年3月</span>
+                </li>
+                <li class="publication-item">
+                    <strong>宿推薦における抽象的な要求に対する根拠付き推薦文の生成のためのレビュー返信文の活用</strong>
+                    <span>根石 将人, 叶内晨, 大内啓樹</span>
+                    <span>NLP 若手の会(YANS) 第15回シンポジウム, オンライン, 2020年9月</span>
+                    <span>[Poster]</span>
+                </li>
+                <li class="publication-item">
+                    <strong>旅行情報サイトのレビューを用いた抽象的な要求に対する根拠付き推薦文の生成</strong>
+                    <span>叶内 晨, 根石 将人, 林部 祐太, 岡崎 直観</span>
+                    <span>言語処理学会第26回年次大会, オンライン, 2020年3月</span>
+                </li>
+                <li class="publication-item">
+                    <strong>英日翻訳タスクにおけるスワップモデルを通した seq2seq と Transformer の比較</strong>
+                    <span>根石 将人, 吉永 直樹</span>
+                    <span>言語処理学会第25回年次大会, 名古屋, 2019年3月</span>
+                    <span>[Poster] [予稿論文の訂正]</span>
+                </li>
+                <li class="publication-item">
+                    <strong>高性能なオートエンコーダとのマルチタスク学習を利用したニューラル機械翻訳</strong>
+                    <span>根石 将人, 吉永 直樹</span>
+                    <span>NLP 若手の会(YANS) 第13回シンポジウム, 岡山, 2018年8月</span>
+                    <span>[Poster]</span>
+                </li>
+                <li class="publication-item">
+                    <strong>A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
+                    <span>Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
+                    <span>The 4th Workshop on Asian Translation (WAT 2017), Taipei, November 2017.</span>
+                    <span>[Poster] [Code]</span>
+                </li>
+                <li class="publication-item">
+                    <strong>ニューラル機械翻訳における埋め込み層の教師なし事前学習</strong>
+                    <span>根石 将人, 佐久間 仁, 遠田 哲史, 石渡 祥之佑, 吉永 直樹, 豊田 正史</span>
+                    <span>第233回 自然言語処理研究会, 沖縄, 2017年10月</span>
+                    <span>[Slide]</span>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 趣味のページへのリンクを追加 -->
+        <div class="hobbies-link-section">
+            <a href="hobbies.html" class="hobbies-link">趣味のページを見る</a>
+        </div>
+    </div>
 </body>
 </html>
