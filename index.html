@@ -6,26 +6,23 @@
     <title>根石 将人 / Masato NEISHI</title>
     <!-- Tailwind CSS CDNを読み込みます。これにより、一般的なスタイリングが簡単に適用できます。 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Interフォントを適用します */
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
+    <!-- 共通スタイルシートを読み込みます -->
+    <link rel="stylesheet" href="common.css">
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
     <!-- 固定ナビゲーションバー -->
-    <nav class="fixed top-0 left-0 w-full h-16 bg-white shadow-sm z-50 flex justify-center items-center">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
         <!-- ナビゲーションバー内部のコンテナをFlexboxで左右に配置 -->
-        <div class="max-w-4xl w-11/12 md:w-full flex items-center justify-between px-4 md:px-0">
-            <div class="flex items-center">
+        <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3">
+            <!-- 一段目: 名前と画像 -->
+            <div class="flex items-center justify-start mb-2">
                 <!-- タイトルを左に配置 -->
                 <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI</h1>
                 <!-- プロフィール画像を名前の右側に移動し、指定されたsrcに更新 -->
                 <img src="images/profile.jpg" alt="プロフィール画像" class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
             </div>
-            <!-- リンクを右に配置 -->
-            <div class="flex space-x-6">
+            <!-- 二段目: リンク -->
+            <div class="flex space-x-6 justify-start">
                 <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
                 <a href="hobbies.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
             </div>
@@ -33,7 +30,9 @@
     </nav>
 
     <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
-    <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-20 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+    <!-- ナビゲーションバーの高さが増えたため、mt-20 から mt-28 に変更 -->
+    <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+        <h1 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">プロフィール / Profile</h1>
         <!-- ソーシャルリンクセクション -->
         <section class="social-links flex flex-wrap gap-x-6 gap-y-2 mb-8 justify-center sm:justify-start">
             <a href="https://github.com/nem6ishi" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-base transition-colors duration-200 rounded-md py-1 px-2" target="_blank" rel="noopener noreferrer">
@@ -51,20 +50,20 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">職歴</h2>
             <ul class="list-disc pl-6 text-gray-700">
                 <li class="mb-6">
-                    <div class="text-xl font-semibold text-gray-800 mb-1">
-                        <strong>シニアリサーチエンジニア</strong>, 株式会社みらい翻訳
+                    <div class="text-xl text-gray-800 mb-1">
+                        シニアリサーチエンジニア, 株式会社みらい翻訳
                     </div>
                     <span class="block text-sm text-gray-500 mb-1">2024/04 - 現在</span>
                 </li>
                 <li class="mb-6">
-                    <div class="text-xl font-semibold text-gray-800 mb-1">
-                        <strong>リサーチサイエンティスト インターン</strong>, Megagon Labs
+                    <div class="text-xl text-gray-800 mb-1">
+                        リサーチサイエンティスト インターン, Megagon Labs
                     </div>
                     <span class="block text-sm text-gray-500 mb-1">2019/06 - 2021/03</span>
                 </li>
                 <li class="mb-6">
-                    <div class="text-xl font-semibold text-gray-800 mb-1">
-                        <strong>リサーチサイエンティスト インターン</strong>, リクルートテクノロジーズ
+                    <div class="text-xl text-gray-800 mb-1">
+                        リサーチエンジニア インターン, リクルートテクノロジーズ
                     </div>
                     <span class="block text-sm text-gray-500 mb-1">2018/11 - 2019/02</span>
                 </li>
@@ -76,22 +75,22 @@
             <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">学歴</h2>
             <ul class="list-disc pl-6 text-gray-700">
                 <li class="mb-6">
-                    <div class="text-xl font-semibold text-gray-800 mb-1">
-                        <strong>東京大学大学院 情報理工学系研究科 電子情報学専攻</strong><span class="font-normal text-gray-600 ml-2">, 修士、博士（情報理工学）</span>
+                    <div class="text-xl text-gray-800 mb-1">
+                        東京大学大学院 情報理工学系研究科 電子情報学専攻<span class="font-normal text-gray-600 ml-2">, 修士、博士（情報理工学）</span>
                     </div>
                     <span class="block text-sm text-gray-500 mb-1">2017/04 - 2024/03</span>
                     <span class="block text-sm text-gray-600 mt-1">(指導教員: 吉永直樹)</span>
                 </li>
                 <li class="mb-6">
-                    <div class="text-xl font-semibold text-gray-800 mb-1">
-                        <strong>東京大学 工学部 電気電子工学科</strong><span class="font-normal text-gray-600 ml-2">, 学士（工学）</span>
+                    <div class="text-xl text-gray-800 mb-1">
+                        東京大学 工学部 電気電子工学科<span class="font-normal text-gray-600 ml-2">, 学士（工学）</span>
                     </div>
                     <span class="block text-sm text-gray-500 mb-1">2015/04 - 2017/03</span>
                     <span class="block text-sm text-gray-600 mt-1">(指導教員: 藤田昌宏)</span>
                 </li>
                 <li class="mb-6">
-                    <div class="text-xl font-semibold text-gray-800 mb-1">
-                        <strong>東京大学 文学部 言語文化学科</strong><span class="font-normal text-gray-600 ml-2">, 学士（文学）</span>
+                    <div class="text-xl text-gray-800 mb-1">
+                        東京大学 文学部 言語文化学科<span class="font-normal text-gray-600 ml-2">, 学士（文学）</span>
                     </div>
                     <span class="block text-sm text-gray-500 mb-1">2013/04 - 2015/03</span>
                     <span class="block text-sm text-gray-600 mt-1">(指導教員: 小林正人)</span>

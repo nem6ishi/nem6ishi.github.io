@@ -1,0 +1,4 @@
+/* Interフォントを適用します */
+body {
+    font-family: 'Inter', sans-serif;
+}
