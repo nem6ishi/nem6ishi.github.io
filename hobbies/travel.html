@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>趣味 / Hobbies - 根石 将人</title>
+    <!-- Tailwind CSS CDNを読み込みます。これにより、一般的なスタイリングが簡単に適用できます。 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 共通スタイルシートのパスを修正 -->
+    <link rel="stylesheet" href="../common.css">
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
+    <!-- 固定ナビゲーションバー -->
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <!-- ナビゲーションバー内部のコンテナをFlexboxで左右に配置 -->
+        <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3">
+            <!-- 一段目: 名前と画像 -->
+            <div class="flex items-center justify-start mb-2">
+                <!-- タイトルを左に配置 -->
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI</h1>
+                <!-- プロフィール画像のパスを修正 -->
+                <img src="../images/profile.jpg" alt="プロフィール画像" class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
+            </div>
+            <!-- 二段目: リンク -->
+            <div class="flex space-x-6 justify-start">
+                <!-- ナビゲーションリンクのパスを修正 -->
+                <a href="../index.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
+                <a href="../hobbies.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
+    <!-- ナビゲーションバーの高さが増えたため、mt-20 から mt-28 に変更 -->
+    <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+        <!-- パンくずリスト -->
+        <nav class="text-sm mb-6 text-gray-500">
+            <a href="../index.html" class="hover:text-blue-600">トップ</a> &gt;
+            <a href="../hobbies.html" class="hover:text-blue-600">趣味</a> &gt;
+            <span>海外旅行</span>
+        </nav>
+
+        <!-- ページタイトル -->
+        <div class="mb-8 pb-2 border-b border-gray-200">
+            <h1 class="text-2xl font-bold text-gray-800">海外旅行 / Overseas travel</h1>
+            <p class="text-sm text-gray-500 font-normal mt-1">Total: 250 days</p>
+        </div>
+
+        <section>
+            <ul>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2024/08/23 - 2024/08/30 (8 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">韓国</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>ソウル（首爾）</li>
+                        <li>スウォン（水原）</li>
+                        <li>チュンチョン（春川）</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2019/11/02 - 2019/11/08 (7 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">香港</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>香港</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2019/03/15 - 2019/03/28 (14 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">ベトナム</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>ホーチミン</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2018/10/19 - 2018/10/23 (5 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">中国</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>北京</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2017/12/30 - 2018/01/02 (4 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">台湾</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>高雄</li>
+                        <li>台南</li>
+                        <li>台北</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2017/11/26 - 2017/12/04 (9 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">台湾</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>台北</li>
+                        <li>彰化</li>
+                        <li>鹿港</li>
+                        <li>台中</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2017/02/16 - 2017/04/04 (48 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">マレーシア、タイ、ラオス、ベトナム、台湾</h3>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">マレーシア</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>クアラルンプール</li>
+                        </ul>
+
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">タイ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>バンコク</li>
+                            <li>ナコーンラーチャシーマー</li>
+                            <li>ウボンラーチャターニー</li>
+                        </ul>
+
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">ラオス</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>パークセー</li>
+                            <li>シーパンドン</li>
+                            <li>ヴィエンチャン</li>
+                            <li>ヴァンヴィエン</li>
+                            <li>ルアンパバーン</li>
+                        </ul>
+
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">ベトナム</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ハノイ</li>
+                            <li>フエ</li>
+                            <li>ホイアン</li>
+                            <li>ニャチャン</li>
+                            <li>ホーチミン</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">台湾</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>台北</li>
+                            <li>花蓮</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2016/07/17 - 2016/07/31 (15 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">中国、モンゴル、ロシア</h3>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">中国</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>上海</li>
+                            <li>北京</li>
+                            <li>エレンホト</li>
+                        </ul>
+
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">モンゴル</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ザミンウード</li>
+                            <li>ウランバートル</li>
+                        </ul>
+
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">ロシア</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>イルクーツク</li>
+                            <li>リストヴャンカ</li>
+                            <li>ウラジオストク</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2016/02/18 - 2016/03/01 (13 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">台湾</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>台北</li>
+                        <li>花蓮</li>
+                        <li>台東</li>
+                        <li>台南</li>
+                        <li>墾丁</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2015/03/06 - 2015/03/23 (18 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">中国、バングラデシュ</h3>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">中国</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>上海</li>
+                        </ul>
+
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">バングラデシュ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ダッカ</li>
+                            <li>シレット</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2014/05/05 - 2014/05/13 (9 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">台湾</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>台北</li>
+                        <li>台南</li>
+                        <li>南投</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2012/12/26 - 2013/01/08 (14 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">台湾</h3>
+                    </div>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        <li>台北</li>
+                        <li>基隆</li>
+                        <li>蘇澳</li>
+                        <li>花蓮</li>
+                        <li>台東</li>
+                        <li>台南</li>
+                        <li>台中</li>
+                    </ul>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2012/08/07 - 2012/09/17 (41 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">インド、バングラデシュ</h3>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">インド</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ニューデリー</li>
+                            <li>アーグラ</li>
+                            <li>カジュラーホー</li>
+                            <li>バラナシ</li>
+                            <li>ガヤー</li>
+                            <li>コルカタ</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">バングラデシュ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ジョソール</li>
+                            <li>クルナ</li>
+                            <li>モレルガンジ</li> 
+                            <li>ダッカ</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2012/03/22 - 2012/03/28 (7 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">タイ、カンボジア</h3>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">タイ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>バンコク</li>
+                            <li>アランヤプラテート</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">カンボジア</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ポイペト</li>
+                            <li>シェムリアップ</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2012/02/20 - 2012/03/20 (30 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">アメリカ、メキシコ、グアテマラ、ホンジュラス</h3>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">アメリカ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ロサンゼルス</li>
+                            <li>サンディエゴ</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">メキシコ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ティファナ</li>
+                            <li>グアダラハラ</li>
+                            <li>グアナファト</li>
+                            <li>メキシコシティ</li>
+                            <li>サン・クリストバル・デ・ラス・カサス</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">グアテマラ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ケツァルテナンゴ</li>
+                            <li>グアテマラシティ</li>
+                            <li>ホコタン</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">ホンジュラス</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>コパン・ルイナス</li>
+                            <li>ウティラ</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mb-6 border border-gray-200 rounded-lg p-4">
+                    <div class="mb-2">
+                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">2011/09/27 - 2011/10/04 (8 days)</span>
+                        <h3 class="text-lg font-medium text-gray-800">タイ、ラオス</h3>
+                    </div>
+                    <div class="mt-3 ml-4 mb-3 border border-gray-100 rounded-md p-3 bg-gray-50 shadow-sm">
+                        <p class="text-sm text-gray-600 leading-relaxed">
+                        　初めての単独海外旅行。勝手が全く分からずHISの実店舗で相談して航空券と初日のホテルを予約。確か北京トランジットで、飛行機を降りた所でどうしていいか分からずにいてCAさんに助けて貰った。トランジットはかなり時間に余裕があり、同じく暇していたコロンビアのおっちゃんと写真を見せ合い暇を潰した。<br>
+                        　バンコクの空港からホテルまでタクシーに乗ったら、空港発の正規タクシーには追加料金(確か50B程度)がかかることを知らず、降車時に運転手と揉めて、結局払わなかった。今思うと大変申し訳無い。ホテルの朝食食べてたら、他の客に飲み物くれと言われ渡したけど、どうもスタッフと間違えられたらしい。白人はアジア人見分けられないんだなと実感。自分も他の人種分からんしね。<br>
+                        　バンコクではカオサンのさくらゲストハウスに宿泊し、出会った日本人の人に色々教えて貰った。その延長線上で合計3人で一緒にラオスに行くことになり、人生初の寝台列車でタイの国境のノーンカーイまで。国境越えは電車を乗り換えた。<br>
+                        　ヴィエンチャンで、ルアンパバーンまでと、ルアンパバーンからバンコクまでの航空券を購入。何も知らないまま世界遺産らしいルアンパバーンに行き、何も知らないままタイとは違うカオソーイを食べた。<br>
+                        　帰りのバンコクからはまた単独になり、少し寂しい気持ちになった。以降、海外旅行を繰り返す事になった切っ掛けの旅行。
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">タイ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>バンコク</li>
+                            <li>ノーンカーイ</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">ラオス</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>ヴィエンチャン</li>
+                            <li>ルアンパバーン</li>
+                        </ul>
+                        <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">タイ</h4>
+                        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                            <li>バンコク</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
