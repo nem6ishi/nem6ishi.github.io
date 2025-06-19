@@ -24,7 +24,7 @@
             <!-- 二段目: リンク -->
             <div class="flex space-x-6 justify-start">
                 <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
-                <a href="hobbies.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
+                <a href="hobbies.html" class="text-blue-600 hover:text-blue-800 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
             </div>
         </div>
     </nav>
@@ -32,6 +32,11 @@
     <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
     <!-- ナビゲーションバーの高さが増えたため、mt-20 から mt-28 に変更 -->
     <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+        <!-- パンくずリスト -->
+        <nav class="text-sm mb-6 text-gray-500">
+            <a href="index.html" class="hover:text-blue-600">トップ</a> &gt;
+            <span>趣味</span>
+        </nav>
         <h1 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">趣味 / Hobbies</h1>
         
         <section>
@@ -40,33 +45,49 @@
                     <a href="hobbies/travel.html" class="text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
                         海外旅行 / Overseas travel
                     </a>
-                    <p class="text-sm text-gray-600 mt-1 leading-relaxed">
-                        大学入学後、長期休みを利用して度々海外旅行に行くようになった。その記録。
-                    </p>
-                </li>
-                <li>
-                    <span class="text-xl font-medium text-gray-800">
-                        音楽 / Music
-                    </span>
-                    <p class="text-sm text-gray-600 mt-1 leading-relaxed">
-                        <!-- ここに音楽の説明文を記述 -->
-                    </p>
                 </li>
                 <li>
                     <span class="text-xl font-medium text-gray-800">
                         クラフトビール / Craft Beer
                     </span>
-                    <p class="text-sm text-gray-600 mt-1 leading-relaxed">
-                        <!-- ここにクラフトビールの説明文を記述 -->
-                    </p>
                 </li>
                 <li>
                     <span class="text-xl font-medium text-gray-800">
                         沖縄 / Okinawa
                     </span>
-                    <p class="text-sm text-gray-600 mt-1 leading-relaxed">
-                        <!-- ここに沖縄の説明文を記述 -->
-                    </p>
+                </li>
+                <li>
+                    <span class="text-xl font-medium text-gray-800">
+                        料理 / Cooking
+                    </span>
+                </li>
+                <li>
+                    <span class="text-xl font-medium text-gray-800">
+                        音楽 / Music
+                    </span>
+                </li>
+                <li>
+                    <span class="text-xl font-medium text-gray-800">
+                        いつかやりたいことリスト / Someday List
+                    </span>
+                    <ul class="list-disc pl-5 mt-2 space-y-1">
+                        <li>
+                            <span class="text-lg font-medium text-gray-700">
+                                燻製 / Smoking Food
+                            </span>
+                            <p class="text-sm text-gray-600 mt-0.5 leading-relaxed">
+                                <!-- ここに燻製の説明文を記述 -->
+                            </p>
+                        </li>
+                        <li>
+                            <span class="text-lg font-medium text-gray-700">
+                                レザークラフト / Leather Craft
+                            </span>
+                            <p class="text-sm text-gray-600 mt-0.5 leading-relaxed">
+                                <!-- ここにレザークラフトの説明文を記述 -->
+                            </p>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </section>
