@@ -56,74 +56,93 @@
     <main id="main-content"
         class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
         <h1 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">プロフィール / Profile</h1>
-        <section class="social-links flex flex-wrap gap-x-6 gap-y-2 mb-8 justify-center sm:justify-start">
-            <a href="https://github.com/nem6ishi"
-                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-base transition-colors duration-200 rounded-md py-1 px-2"
-                target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor"
-                    stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round">
-                    <path
-                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.741.083-.725.083-.725 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.372-12-12-12z" />
-                </svg>
-                GitHub
-            </a>
+        <section class="mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="https://github.com/nem6ishi"
+                    class="social-card flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200"
+                    target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-gray-700" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.741.083-.725.083-.725 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.372-12-12-12z" />
+                    </svg>
+                    <div class="ml-4">
+                        <div class="font-semibold text-gray-800 text-lg">GitHub</div>
+                        <div class="text-sm text-gray-500">@nem6ishi</div>
+                    </div>
+                </a>
+            </div>
         </section>
 
         <section class="section-content mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">WORK, EXPERIENCE</h2>
-            <ul class="list-disc pl-6 text-gray-700">
-                <li class="mb-6">
-                    <div class="text-xl text-gray-800 mb-1">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">WORK EXPERIENCE</h2>
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+                    <div class="text-xl font-semibold text-gray-800 mb-2">
                         シニアリサーチエンジニア, 株式会社みらい翻訳
                     </div>
-                    <span class="block text-sm text-gray-500 mb-1">2024/04 - 現在</span>
-                </li>
-                <li class="mb-6">
-                    <div class="text-xl text-gray-800 mb-1">
+                    <span class="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">
+                        2024/04 - 現在
+                    </span>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+                    <div class="text-xl font-semibold text-gray-800 mb-2">
                         NLP若手の会 運営委員
                     </div>
-                    <span class="block text-sm text-gray-500 mb-1">2023/04 - 2025/03</span>
-                </li>
-                <li class="mb-6">
-                    <div class="text-xl text-gray-800 mb-1">
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">
+                        2023/04 - 2025/03
+                    </span>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+                    <div class="text-xl font-semibold text-gray-800 mb-2">
                         リサーチサイエンティスト インターン, Megagon Labs
                     </div>
-                    <span class="block text-sm text-gray-500 mb-1">2019/06 - 2021/03</span>
-                </li>
-                <li class="mb-6">
-                    <div class="text-xl text-gray-800 mb-1">
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">
+                        2019/06 - 2021/03
+                    </span>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+                    <div class="text-xl font-semibold text-gray-800 mb-2">
                         リサーチエンジニア インターン, リクルートテクノロジーズ
                     </div>
-                    <span class="block text-sm text-gray-500 mb-1">2018/11 - 2019/02</span>
-                </li>
-            </ul>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full">
+                        2018/11 - 2019/02
+                    </span>
+                </div>
+            </div>
         </section>
 
         <section class="section-content mb-8">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4 pb-2 border-b border-gray-200">EDUCATION</h2>
-            <ul class="list-disc pl-6 text-gray-700">
-                <li class="mb-6">
-                    <div class="text-xl text-gray-800 mb-1">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">EDUCATION</h2>
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+                    <div class="text-xl font-semibold text-gray-800 mb-2">
                         東京大学大学院 情報理工学系研究科 電子情報学専攻<span class="font-normal text-gray-600 ml-2">, 修士、博士（情報理工学）</span>
                     </div>
-                    <span class="block text-sm text-gray-500 mb-1">2017/04 - 2024/03</span>
-                    <span class="block text-sm text-gray-600 mt-1">(指導教員: 吉永直樹)</span>
-                </li>
-                <li class="mb-6">
-                    <div class="text-xl text-gray-800 mb-1">
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full mb-2">
+                        2017/04 - 2024/03
+                    </span>
+                    <div class="text-sm text-gray-600">(指導教員: 吉永直樹)</div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+                    <div class="text-xl font-semibold text-gray-800 mb-2">
                         東京大学 工学部 電気電子工学科<span class="font-normal text-gray-600 ml-2">, 学士（工学）</span>
                     </div>
-                    <span class="block text-sm text-gray-500 mb-1">2015/04 - 2017/03</span>
-                    <span class="block text-sm text-gray-600 mt-1">(指導教員: 藤田昌宏)</span>
-                </li>
-                <li class="mb-6">
-                    <div class="text-xl text-gray-800 mb-1">
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full mb-2">
+                        2015/04 - 2017/03
+                    </span>
+                    <div class="text-sm text-gray-600">(指導教員: 藤田昌宏)</div>
+                </div>
+                <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+                    <div class="text-xl font-semibold text-gray-800 mb-2">
                         東京大学 文学部 言語文化学科<span class="font-normal text-gray-600 ml-2">, 学士（文学）</span>
                     </div>
-                    <span class="block text-sm text-gray-500 mb-1">2013/04 - 2015/03</span>
-                    <span class="block text-sm text-gray-600 mt-1">(指導教員: 小林正人)</span>
-                </li>
-            </ul>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full mb-2">
+                        2013/04 - 2015/03
+                    </span>
+                    <div class="text-sm text-gray-600">(指導教員: 小林正人)</div>
+                </div>
+            </div>
         </section>
 
         <section class="section-content">
