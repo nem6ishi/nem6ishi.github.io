@@ -1,48 +1,79 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、沖縄、料理、音楽などの趣味について掲載。">
+    <meta name="author" content="Masato NEISHI">
     <title>趣味 / Hobbies - 根石 将人</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nem6ishi.github.io/hobbies.html">
+    <meta property="og:title" content="趣味 / Hobbies - 根石 将人">
+    <meta property="og:description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、沖縄、料理、音楽などの趣味について掲載。">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://nem6ishi.github.io/hobbies.html">
+    <meta property="twitter:title" content="趣味 / Hobbies - 根石 将人">
+    <meta property="twitter:description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、沖縄、料理、音楽などの趣味について掲載。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- Tailwind CSS CDNを読み込みます。これにより、一般的なスタイリングが簡単に適用できます。 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 共通スタイルシートを読み込みます -->
     <link rel="stylesheet" href="common.css">
 </head>
+
 <body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
     <!-- 固定ナビゲーションバー -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="navigation" aria-label="メインナビゲーション">
         <!-- ナビゲーションバー内部のコンテナをFlexboxで左右に配置 -->
         <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3">
             <!-- 一段目: 名前と画像 -->
             <div class="flex items-center justify-start mb-2">
                 <!-- タイトルを左に配置 -->
-                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI</h1>
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI
+                </h1>
                 <!-- プロフィール画像を名前の右側に移動し、指定されたsrcに更新 -->
-                <img src="images/profile.jpg" alt="プロフィール画像" class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
+                <img src="images/profile.jpg" alt="プロフィール画像"
+                    class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
             </div>
             <!-- 二段目: リンク -->
             <div class="flex space-x-6 justify-start">
-                <a href="index.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
-                <a href="hobbies.html" class="text-blue-600 hover:text-blue-800 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
+                <a href="index.html"
+                    class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
+                <a href="hobbies.html"
+                    class="text-blue-600 hover:text-blue-800 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
             </div>
         </div>
     </nav>
 
     <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
     <!-- ナビゲーションバーの高さが増えたため、mt-20 から mt-28 に変更 -->
-    <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+    <main id="main-content"
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
         <!-- パンくずリスト -->
-        <nav class="text-sm mb-6 text-gray-500">
+        <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
             <a href="index.html" class="hover:text-blue-600">トップ</a> &gt;
             <span>趣味</span>
         </nav>
         <h1 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">趣味 / Hobbies</h1>
-        
+
         <section>
             <ul class="list-disc pl-5 space-y-3">
                 <li>
-                    <a href="hobbies/travel.html" class="text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
+                    <a href="hobbies/travel.html"
+                        class="text-xl font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
                         海外旅行 / Overseas travel
                     </a>
                 </li>
@@ -92,6 +123,7 @@
             </ul>
         </section>
 
-    </div>
+    </main>
 </body>
+
 </html>

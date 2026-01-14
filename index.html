@@ -3,15 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="根石将人（Masato NEISHI）のプロフィールページ。自然言語処理研究者、株式会社みらい翻訳シニアリサーチエンジニア。専門はニューラル機械翻訳。">
+    <meta name="author" content="Masato NEISHI">
     <title>根石 将人 / Masato NEISHI</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nem6ishi.github.io/">
+    <meta property="og:title" content="根石 将人 / Masato NEISHI">
+    <meta property="og:description" content="根石将人（Masato NEISHI）のプロフィールページ。自然言語処理研究者、株式会社みらい翻訳シニアリサーチエンジニア。">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://nem6ishi.github.io/">
+    <meta property="twitter:title" content="根石 将人 / Masato NEISHI">
+    <meta property="twitter:description" content="根石将人（Masato NEISHI）のプロフィールページ。自然言語処理研究者、株式会社みらい翻訳シニアリサーチエンジニア。">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Tailwind CSS CDNを読み込みます。これにより、一般的なスタイリングが簡単に適用できます。 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 共通スタイルシートを読み込みます -->
     <link rel="stylesheet" href="common.css">
 </head>
 <body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    
     <!-- 固定ナビゲーションバー -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="navigation" aria-label="メインナビゲーション">
         <!-- ナビゲーションバー内部のコンテナをFlexboxで左右に配置 -->
         <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3">
             <!-- 一段目: 名前と画像 -->
@@ -31,7 +54,7 @@
 
     <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
     <!-- ナビゲーションバーの高さが増えたため、mt-20 から mt-28 に変更 -->
-    <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+    <main id="main-content" class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
         <h1 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">プロフィール / Profile</h1>
         <!-- ソーシャルリンクセクション -->
         <section class="social-links flex flex-wrap gap-x-6 gap-y-2 mb-8 justify-center sm:justify-start">
@@ -193,6 +216,6 @@
                 </li>
             </ul>
         </section>
-    </div>
+    </main>
 </body>
 </html>
