@@ -25,9 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS CDNを読み込みます。これにより、一般的なスタイリングが簡単に適用できます。 -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 共通スタイルシートを読み込みます -->
     <link rel="stylesheet" href="common.css">
 </head>
 
@@ -37,18 +35,13 @@
 
     <!-- 固定ナビゲーションバー -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="navigation" aria-label="メインナビゲーション">
-        <!-- ナビゲーションバー内部のコンテナをFlexboxで左右に配置 -->
         <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3">
-            <!-- 一段目: 名前と画像 -->
             <div class="flex items-center justify-start mb-2">
-                <!-- タイトルを左に配置 -->
                 <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI
                 </h1>
-                <!-- プロフィール画像を名前の右側に移動し、指定されたsrcに更新 -->
                 <img src="images/profile.jpg" alt="プロフィール画像"
                     class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
             </div>
-            <!-- 二段目: リンク -->
             <div class="flex space-x-6 justify-start">
                 <a href="index.html"
                     class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
@@ -60,22 +53,21 @@
         </div>
     </nav>
 
-    <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
     <main id="main-content"
         class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
-        <!-- パンくずリスト -->
         <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
             <a href="index.html" class="hover:text-blue-600">トップ</a> &gt;
             <span>ブログ</span>
         </nav>
-        <!-- ページタイトル -->
         <div class="mb-8 pb-2 border-b border-gray-200">
             <h1 class="text-2xl font-bold text-gray-800">ブログ / Blog</h1>
         </div>
 
-        <section>
-            <ul>
-            </ul>
+        <section class="text-center py-12">
+            <div class="inline-block bg-blue-50 border border-blue-200 rounded-lg px-8 py-6">
+                <p class="text-lg text-gray-600 mb-2">🛠️ 準備中 / Under Construction</p>
+                <p class="text-sm text-gray-500">コンテンツを現在準備中です。しばらくお待ちください。</p>
+            </div>
         </section>
     </main>
 </body>
