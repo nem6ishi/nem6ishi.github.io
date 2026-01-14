@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="根石将人（Masato NEISHI）のプロフィールページ。自然言語処理研究者、株式会社みらい翻訳シニアリサーチエンジニア。専門はニューラル機械翻訳。">
     <meta name="author" content="Masato NEISHI">
     <title>根石 将人 / Masato NEISHI</title>
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nem6ishi.github.io/">
     <meta property="og:title" content="根石 将人 / Masato NEISHI">
     <meta property="og:description" content="根石将人（Masato NEISHI）のプロフィールページ。自然言語処理研究者、株式会社みらい翻訳シニアリサーチエンジニア。">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://nem6ishi.github.io/">
     <meta property="twitter:title" content="根石 将人 / Masato NEISHI">
     <meta property="twitter:description" content="根石将人（Masato NEISHI）のプロフィールページ。自然言語処理研究者、株式会社みらい翻訳シニアリサーチエンジニア。">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Tailwind CSS CDNを読み込みます。これにより、一般的なスタイリングが簡単に適用できます。 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- 共通スタイルシートを読み込みます -->
     <link rel="stylesheet" href="common.css">
 </head>
+
 <body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
     <!-- スキップリンク -->
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-    
+
     <!-- 固定ナビゲーションバー -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="navigation" aria-label="メインナビゲーション">
         <!-- ナビゲーションバー内部のコンテナをFlexboxで左右に配置 -->
@@ -40,28 +42,37 @@
             <!-- 一段目: 名前と画像 -->
             <div class="flex items-center justify-start mb-2">
                 <!-- タイトルを左に配置 -->
-                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI</h1>
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI
+                </h1>
                 <!-- プロフィール画像を名前の右側に移動し、指定されたsrcに更新 -->
-                <img src="images/profile.jpg" alt="プロフィール画像" class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
+                <img src="images/profile.jpg" alt="プロフィール画像"
+                    class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
             </div>
             <!-- 二段目: リンク -->
             <div class="flex space-x-6 justify-start">
-                <a href="index.html" class="text-blue-600 hover:text-blue-800 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
-                <a href="hobbies.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
+                <a href="index.html"
+                    class="text-blue-600 hover:text-blue-800 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
+                <a href="hobbies.html"
+                    class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
             </div>
         </div>
     </nav>
 
     <!-- ページ全体のコンテンツを中央に配置するためのコンテナ -->
     <!-- ナビゲーションバーの高さが増えたため、mt-20 から mt-28 に変更 -->
-    <main id="main-content" class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+    <main id="main-content"
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
         <h1 class="text-2xl font-bold text-gray-800 mb-6 pb-2 border-b border-gray-200">プロフィール / Profile</h1>
         <!-- ソーシャルリンクセクション -->
         <section class="social-links flex flex-wrap gap-x-6 gap-y-2 mb-8 justify-center sm:justify-start">
-            <a href="https://github.com/nem6ishi" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-base transition-colors duration-200 rounded-md py-1 px-2" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/nem6ishi"
+                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-base transition-colors duration-200 rounded-md py-1 px-2"
+                target="_blank" rel="noopener noreferrer">
                 <!-- GitHubアイコンのSVG -->
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor" stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.741.083-.725.083-.725 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.372-12-12-12z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor"
+                    stroke="none" stroke-width="0" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.082-.741.083-.725.083-.725 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.118-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.293-1.552 3.3-1.23 3.3-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.923.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.372-12-12-12z" />
                 </svg>
                 GitHub
             </a>
@@ -134,29 +145,52 @@
             <h3 class="text-xl font-semibold text-gray-700 mt-8 mb-4 pb-2 border-b border-gray-200">Refereed</h3>
             <ul class="list-disc pl-6 text-gray-700">
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">Revisiting Pre-training of Embedding Layers in Transformer-based Neural Machine Translation</strong>
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">Revisiting Pre-training of Embedding
+                        Layers in Transformer-based Neural Machine Translation</strong>
                     <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Naoki Yoshinaga</span>
-                    <span class="block text-sm text-gray-600 mt-1">Journal of Natural Language Processing 31 (2), 534-567, 2024.</span>
+                    <span class="block text-sm text-gray-600 mt-1">Journal of Natural Language Processing 31 (2),
+                        534-567, 2024.</span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">You May Like This Hotel Because ...: Identifying Evidence for Explainable Recommendations</strong>
-                    <span class="block text-sm text-gray-600 mt-1">Shin Kanouchi, Masato Neishi, Yuta Hayashibe, Hiroki Ouchi, Naoaki Okazaki</span>
-                    <span class="block text-sm text-gray-600 mt-1">The 1st Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 10th International Joint Conference on Natural Language Processing (AACL-IJCNLP 2020), Online, December 2020.</span>
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">You May Like This Hotel Because ...:
+                        Identifying Evidence for Explainable Recommendations</strong>
+                    <span class="block text-sm text-gray-600 mt-1">Shin Kanouchi, Masato Neishi, Yuta Hayashibe, Hiroki
+                        Ouchi, Naoaki Okazaki</span>
+                    <span class="block text-sm text-gray-600 mt-1">The 1st Conference of the Asia-Pacific Chapter of the
+                        Association for Computational Linguistics and the 10th International Joint Conference on Natural
+                        Language Processing (AACL-IJCNLP 2020), Online, December 2020.</span>
                     <span class="block text-sm text-gray-600 mt-1">Acceptance rate: 28.3%</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Dataset]</span>
+                    <span class="block text-sm mt-1">
+                        <a href="https://github.com/megagonlabs/ebe-dataset" class="text-blue-600 hover:text-blue-800"
+                            target="_blank" rel="noopener noreferrer">[Dataset]</a>
+                    </span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">On the Relation between Position Information and Sentence Length in Neural Machine Translation</strong>
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">On the Relation between Position
+                        Information and Sentence Length in Neural Machine Translation</strong>
                     <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Naoki Yoshinaga</span>
-                    <span class="block text-sm text-gray-600 mt-1">The 23rd Conference on Computational Natural Language Learning (CoNLL 2019), Hong Kong, Novermber 2019.</span>
+                    <span class="block text-sm text-gray-600 mt-1">The 23rd Conference on Computational Natural Language
+                        Learning (CoNLL 2019), Hong Kong, Novermber 2019.</span>
                     <span class="block text-sm text-gray-600 mt-1">Acceptance rate: 22.66%</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster] [Code]</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/conll2019_poster.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Poster]</a>
+                        <a href="https://github.com/nem6ishi/conll19_relative_transformer"
+                            class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Code]</a>
+                    </span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
-                    <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
-                    <span class="block text-sm text-gray-600 mt-1">2018 Asian Universities Alliance Postgraduate Academic Forum (AUAPAF 2018), Beijing, October 2018.</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Slide]</span>
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">A Bag of Useful Tricks for Practical
+                        Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
+                    <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke
+                        Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
+                    <span class="block text-sm text-gray-600 mt-1">2018 Asian Universities Alliance Postgraduate
+                        Academic Forum (AUAPAF 2018), Beijing, October 2018.</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/auapaf2018_slide.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Slide]</a>
+                    </span>
                 </li>
             </ul>
 
@@ -172,50 +206,81 @@
                     <strong class="block text-lg font-medium text-gray-800 mb-1">ニューラル機械翻訳のためのノイズ寛容なアンカー学習</strong>
                     <span class="block text-sm text-gray-600 mt-1">根石 将人, 吉永 直樹</span>
                     <span class="block text-sm text-gray-600 mt-1">言語処理学会第29回年次大会, 沖縄, 2023年3月</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster]</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/nlp2023_poster.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Poster]</a>
+                    </span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">宿の推薦根拠説明システムにおける魅力度の考慮と実用を見据えた評価</strong>
+                    <strong
+                        class="block text-lg font-medium text-gray-800 mb-1">宿の推薦根拠説明システムにおける魅力度の考慮と実用を見据えた評価</strong>
                     <span class="block text-sm text-gray-600 mt-1">叶内 晨, 根石 将人, 林部 祐太, 大内 啓樹, 岡崎 直観</span>
                     <span class="block text-sm text-gray-600 mt-1">言語処理学会第27回年次大会, オンライン, 2021年3月</span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">宿推薦における抽象的な要求に対する根拠付き推薦文の生成のためのレビュー返信文の活用</strong>
+                    <strong
+                        class="block text-lg font-medium text-gray-800 mb-1">宿推薦における抽象的な要求に対する根拠付き推薦文の生成のためのレビュー返信文の活用</strong>
                     <span class="block text-sm text-gray-600 mt-1">根石 将人, 叶内晨, 大内啓樹</span>
                     <span class="block text-sm text-gray-600 mt-1">NLP 若手の会(YANS) 第15回シンポジウム, オンライン, 2020年9月</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster]</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/yans2020_poster.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Poster]</a>
+                    </span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">旅行情報サイトのレビューを用いた抽象的な要求に対する根拠付き推薦文の生成</strong>
+                    <strong
+                        class="block text-lg font-medium text-gray-800 mb-1">旅行情報サイトのレビューを用いた抽象的な要求に対する根拠付き推薦文の生成</strong>
                     <span class="block text-sm text-gray-600 mt-1">叶内 晨, 根石 将人, 林部 祐太, 岡崎 直観</span>
                     <span class="block text-sm text-gray-600 mt-1">言語処理学会第26回年次大会, オンライン, 2020年3月</span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">英日翻訳タスクにおけるスワップモデルを通した seq2seq と Transformer の比較</strong>
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">英日翻訳タスクにおけるスワップモデルを通した seq2seq と
+                        Transformer の比較</strong>
                     <span class="block text-sm text-gray-600 mt-1">根石 将人, 吉永 直樹</span>
                     <span class="block text-sm text-gray-600 mt-1">言語処理学会第25回年次大会, 名古屋, 2019年3月</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster] [予稿論文の訂正]</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/nlp2019_poster.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Poster]</a>
+                        <a href="files/nlp2019_revision.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[予稿論文の訂正]</a>
+                    </span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">高性能なオートエンコーダとのマルチタスク学習を利用したニューラル機械翻訳</strong>
+                    <strong
+                        class="block text-lg font-medium text-gray-800 mb-1">高性能なオートエンコーダとのマルチタスク学習を利用したニューラル機械翻訳</strong>
                     <span class="block text-sm text-gray-600 mt-1">根石 将人, 吉永 直樹</span>
                     <span class="block text-sm text-gray-600 mt-1">NLP 若手の会(YANS) 第13回シンポジウム, 岡山, 2018年8月</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster]</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/yans2018_poster.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Poster]</a>
+                    </span>
                 </li>
                 <li class="mb-6">
-                    <strong class="block text-lg font-medium text-gray-800 mb-1">A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
-                    <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
-                    <span class="block text-sm text-gray-600 mt-1">The 4th Workshop on Asian Translation (WAT 2017), Taipei, November 2017.</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Poster] [Code]</span>
+                    <strong class="block text-lg font-medium text-gray-800 mb-1">A Bag of Useful Tricks for Practical
+                        Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</strong>
+                    <span class="block text-sm text-gray-600 mt-1">Masato Neishi, Jin Sakuma, Satoshi Tohda, Shonosuke
+                        Ishiwatari, Naoki Yoshinaga, Masashi Toyoda</span>
+                    <span class="block text-sm text-gray-600 mt-1">The 4th Workshop on Asian Translation (WAT 2017),
+                        Taipei, November 2017.</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/wat17_poster.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Poster]</a>
+                        <a href="https://github.com/nem6ishi/wat17" class="text-blue-600 hover:text-blue-800"
+                            target="_blank" rel="noopener noreferrer">[Code]</a>
+                    </span>
                 </li>
                 <li class="mb-6">
                     <strong class="block text-lg font-medium text-gray-800 mb-1">ニューラル機械翻訳における埋め込み層の教師なし事前学習</strong>
                     <span class="block text-sm text-gray-600 mt-1">根石 将人, 佐久間 仁, 遠田 哲史, 石渡 祥之佑, 吉永 直樹, 豊田 正史</span>
                     <span class="block text-sm text-gray-600 mt-1">第233回 自然言語処理研究会, 沖縄, 2017年10月</span>
-                    <span class="block text-blue-600 hover:text-blue-800 text-sm mt-1">[Slide]</span>
+                    <span class="block text-sm mt-1">
+                        <a href="files/nl233_slide.pdf" class="text-blue-600 hover:text-blue-800" target="_blank"
+                            rel="noopener noreferrer">[Slide]</a>
+                    </span>
                 </li>
             </ul>
         </section>
     </main>
 </body>
+
 </html>
