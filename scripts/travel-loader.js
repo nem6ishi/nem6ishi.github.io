@@ -10,58 +10,90 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         const travelData = await response.json();
 
-        // タイトルと説明を設定
-        renderHeader(travelData);
+        // 合計日数を設定
+        renderTotalDays(travelData.totalDays);
 
-        // 訪問国リストをレンダリング
-        renderCountries(travelData.countries);
+        // 旅行リストをレンダリング
+        renderTrips(travelData.trips);
     } catch (error) {
         console.error('Error loading travel data:', error);
     }
 });
 
 /**
- * ヘッダー部分をレンダリング
+ * 合計日数を表示
  */
-function renderHeader(data) {
-    const titleElement = document.getElementById('travel-title');
-    const descriptionElement = document.getElementById('travel-description');
-
-    if (titleElement) {
-        titleElement.textContent = data.title;
-    }
-
-    if (descriptionElement) {
-        descriptionElement.textContent = data.description;
+function renderTotalDays(totalDays) {
+    const element = document.getElementById('total-days');
+    if (element) {
+        element.textContent = `Total: ${totalDays} days`;
     }
 }
 
 /**
- * 訪問国リストをレンダリング
+ * 日付をフォーマット
  */
-function renderCountries(countries) {
-    const container = document.getElementById('countries-container');
+function formatDate(dateStr) {
+    return dateStr.replace(/-/g, '/');
+}
+
+/**
+ * 旅行リストをレンダリング
+ */
+function renderTrips(trips) {
+    const container = document.getElementById('trips-container');
     if (!container) return;
 
-    container.innerHTML = countries.map(country => `
-        <div class="card-hover bg-white p-6 rounded-xl border border-gray-200">
-            <h3 class="text-xl font-bold text-gray-900 mb-3">${country.name}</h3>
-            <div class="space-y-2 text-gray-600">
-                <div class="flex items-start">
-                    <svg class="w-5 h-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    <span><strong>訪問都市:</strong> ${country.cities.join(', ')}</span>
-                </div>
-                <div class="flex items-start">
-                    <svg class="w-5 h-5 mr-2 text-blue-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                    </svg>
-                    <span><strong>訪問時期:</strong> ${country.visits.join(', ')}</span>
-                </div>
-                <p class="mt-3">${country.description}</p>
+    container.innerHTML = trips.map(trip => {
+        const countryNames = trip.countries.map(c => c.name).join('、');
+        const countriesHtml = trip.countries.length === 1
+            ? renderSingleCountryCities(trip.countries[0])
+            : renderMultipleCountries(trip.countries);
+
+        const storyHtml = trip.story ? `
+            <div class="mt-3 ml-4 mb-3 border border-gray-100 rounded-md p-3 bg-gray-50 shadow-sm">
+                <p class="text-sm text-gray-600 leading-relaxed whitespace-pre-line">${trip.story}</p>
             </div>
+        ` : '';
+
+        return `
+            <li class="mb-6 border border-gray-200 rounded-lg p-4 card-hover">
+                <div class="mb-2">
+                    <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">
+                        ${formatDate(trip.startDate)} - ${formatDate(trip.endDate)} (${trip.days} days)
+                    </span>
+                    <h3 class="text-lg font-medium text-gray-800">${countryNames}</h3>
+                </div>
+                ${storyHtml}
+                ${countriesHtml}
+            </li>
+        `;
+    }).join('');
+}
+
+/**
+ * 単一国の都市リストをレンダリング
+ */
+function renderSingleCountryCities(country) {
+    return `
+        <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+            ${country.cities.map(city => `<li>${city}</li>`).join('')}
+        </ul>
+    `;
+}
+
+/**
+ * 複数国をレンダリング
+ */
+function renderMultipleCountries(countries) {
+    return `
+        <div>
+            ${countries.map(country => `
+                <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">${country.name}</h4>
+                <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                    ${country.cities.map(city => `<li>${city}</li>`).join('')}
+                </ul>
+            `).join('')}
         </div>
-    `).join('');
+    `;
 }
