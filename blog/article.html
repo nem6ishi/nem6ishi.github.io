@@ -7,52 +7,53 @@
     <title>記事タイトル - ブログ / Blog - 根石 将人</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="../components/loader.js"></script>
     <link rel="stylesheet" href="../common.css">
 </head>
 
 <body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
-    <!-- 固定ナビゲーションバー -->
-    <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
-        <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3">
-            <div class="flex items-center justify-start mb-2">
-                <div class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI
-                </div>
-                <img src="../images/profile.jpg" alt="根石 将人のプロフィール画像"
-                    class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
-            </div>
-            <div class="flex space-x-6 justify-start">
-                <a href="../index.html"
-                    class="nav-link text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-2">プロフィール</a>
-                <a href="../hobbies.html"
-                    class="nav-link text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-2">趣味</a>
-                <a href="../blog.html" class="nav-link active text-gray-600 font-medium text-base rounded-md px-3 py-2"
-                    aria-current="page">ブログ</a>
-            </div>
+    <!-- 固定ナビゲーションバー (JSによりcomponents/header.htmlが挿入されます) -->
+    <nav id="header" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+        <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3 animate-pulse">
+            <div class="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
+            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
         </div>
     </nav>
 
     <!-- ページ全体のコンテンツ -->
-    <div class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+    <div
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-12 bg-white p-6 sm:p-10 rounded-2xl shadow-xl ring-1 ring-gray-200/50 animate-fade-in">
         <!-- パンくずリスト -->
-        <nav class="text-sm mb-6 text-gray-500">
-            <a href="../index.html" class="hover:text-blue-600">トップ</a> &gt;
-            <a href="../blog.html" class="hover:text-blue-600">ブログ</a> &gt;
-            <span id="breadcrumb-article-title">記事タイトル</span>
+        <nav class="text-sm mb-8 text-gray-500">
+            <a href="../index.html" class="hover:text-blue-600 transition-colors">トップ</a>
+            <span class="mx-2 text-gray-300">/</span>
+            <a href="../blog.html" class="hover:text-blue-600 transition-colors">ブログ</a>
+            <span class="mx-2 text-gray-300">/</span>
+            <span id="breadcrumb-article-title" class="text-gray-400">記事タイトル</span>
         </nav>
 
-        <article class="prose lg:prose-xl max-w-none">
+        <article class="prose prose-slate lg:prose-lg max-w-none">
             <!-- 記事ヘッダー -->
-            <header class="mb-8">
-                <h1 id="article-title" class="text-xl sm:text-2xl font-bold text-gray-900 mb-3">記事を読み込んでいます...</h1>
-                <p id="article-meta" class="text-sm text-gray-500">
-                    公開日: <time id="article-date"></time>
-                    <!-- 更新日があれば -->
-                    <!-- | 更新日: <time datetime="2024-03-16">2024年3月16日</time> -->
-                </p>
+            <header class="mb-10 pb-8 border-b border-gray-100">
+                <h1 id="article-title"
+                    class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
+                    記事を読み込んでいます...</h1>
+                <div class="flex items-center text-sm text-gray-500">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    公開日: <time id="article-date" class="font-medium"></time>
+                </div>
             </header>
 
             <!-- 記事本文 -->
-            <div id="article-content"><!-- Markdownから変換されたHTMLがここに挿入されます --></div>
+            <div id="article-content" class="article-body">
+                <!-- Markdownから変換されたHTMLがここに挿入されます -->
+            </div>
         </article>
 
         <!-- (任意) 記事フッター: タグ、カテゴリ、ソーシャルシェアボタンなど -->
@@ -140,83 +141,29 @@
                     articleDateElement.textContent = article.date;
                     articleDateElement.datetime = article.date;
 
+                    // Meta情報の動的な更新（SEO対応）
+                    updateMetaTags(article.title, article.content.substring(0, 160).replace(/[#*`]/g, '') + '...');
+
                     marked.setOptions({
                         gfm: true,
                         breaks: true,
+                        highlight: function (code, lang) {
+                            if (lang && hljs.getLanguage(lang)) {
+                                return hljs.highlight(code, { language: lang }).value;
+                            }
+                            return hljs.highlightAuto(code).value;
+                        }
                     });
-                    // JSON内のcontentをMarkdownとしてパースします。
-                    // contentがHTMLの場合でもmarked.parseは概ねそのまま出力しますが、
-                    // 意図しない挙動を避けるため、JSONのcontentはMarkdown形式を推奨します。
+
                     articleContentElement.innerHTML = marked.parse(article.content);
 
-                    // 生成されたHTML内のulおよびli要素に特定のクラスを適用
-                    const uls = articleContentElement.querySelectorAll('ul');
-                    uls.forEach(ul => {
-                        ul.classList.add('list-disc', 'pl-5', 'mb-4');
-                    });
-                    const lis = articleContentElement.querySelectorAll('li');
-                    lis.forEach(li => {
-                        li.classList.add('mb-1');
+                    // コードハイライトの適用（手動実行が必要な場合用）
+                    document.querySelectorAll('pre code').forEach((el) => {
+                        hljs.highlightElement(el);
                     });
 
-                    // コードブロック (pre) にスタイルを適用
-                    const pres = articleContentElement.querySelectorAll('pre');
-                    pres.forEach(pre => {
-                        pre.classList.add('bg-gray-100', 'p-4', 'rounded-md', 'overflow-x-auto', 'text-sm', 'my-4', 'shadow');
-                        // pre内のcodeタグにもスタイルを適用したい場合はここで
-                        const codeInPre = pre.querySelector('code');
-                        if (codeInPre) {
-                            codeInPre.classList.add('font-mono'); // proseが既に適用している可能性あり
-                        }
-                    });
-
-                    // インラインコード (preの外にあるcode) にスタイルを適用
-                    // articleContentElement直下ではなく、pやliなどの中にあるcodeを対象にする
-                    const inlineCodes = articleContentElement.querySelectorAll(':not(pre) > code, li code, p code');
-                    inlineCodes.forEach(code => {
-                        // pre > code は除外する (既に上の pres.forEach で処理される可能性があるため)
-                        if (!code.closest('pre')) {
-                            code.classList.add('bg-pink-100', 'text-pink-700', 'px-1.5', 'py-0.5', 'rounded', 'font-mono', 'text-sm');
-                        }
-                    });
-
-                    // 引用 (blockquote) にスタイルを適用
-                    const blockquotes = articleContentElement.querySelectorAll('blockquote');
-                    blockquotes.forEach(bq => {
-                        bq.classList.add('border-l-4', 'border-blue-300', 'bg-blue-50', 'pl-4', 'pr-2', 'py-3', 'my-4', 'italic', 'text-gray-700', 'shadow-sm');
-                    });
-
-                    // 段落 (p) のスタイル調整
-                    // proseクラスが基本的なマージンや行間を提供します。
-                    // 必要に応じてここで追加・上書きします。
-                    const paragraphs = articleContentElement.querySelectorAll('p');
-                    paragraphs.forEach(p => {
-                        // 例: p.classList.add('mb-4'); // proseが既に適切なマージンを設定していることが多い
-                    });
-
-                    // 見出し (h1-h6) のスタイル調整
-                    // proseクラスが基本的なスタイルを提供しますが、ここでさらに詳細な調整が可能です。
-                    articleContentElement.querySelectorAll('h1').forEach(h1 => {
-                        h1.classList.add('text-3xl', 'font-bold', 'mt-8', 'mb-4'); // h1のフォントサイズを小さく
-                    });
-                    articleContentElement.querySelectorAll('h2').forEach(h2 => {
-                        h2.classList.add('text-3xl', 'font-bold', 'mt-8', 'mb-3', 'pb-2'); // border-b を削除
-                    });
-                    articleContentElement.querySelectorAll('h3').forEach(h3 => {
-                        h3.classList.add('text-2xl', 'font-semibold', 'mt-6', 'mb-2'); // 例: text-2xl で文字サイズを指定
-                    });
-                    articleContentElement.querySelectorAll('h4').forEach(h4 => {
-                        h4.classList.add('text-xl', 'font-semibold', 'mt-5', 'mb-1'); // 例: h4のスタイル
-                    });
-                    articleContentElement.querySelectorAll('h5').forEach(h5 => {
-                        h5.classList.add('text-lg', 'font-semibold', 'mt-4'); // 例: h5のスタイル
-                    });
-                    articleContentElement.querySelectorAll('h6').forEach(h6 => {
-                        h6.classList.add('text-base', 'font-semibold', 'mt-3'); // 例: h6のスタイル
-                    });
-                    // リンク (a) のスタイル調整
-                    // proseクラスが基本的なスタイルを提供しますが、ここでさらに調整が可能です。
-                    // 例: articleContentElement.querySelectorAll('a').forEach(a => a.classList.add('text-blue-700', 'hover:underline'));
+                    // 記事本文内のスタイル調整（Tailwindクラスの適用）
+                    setupArticleStyles(articleContentElement);
 
                 } else {
                     displayError(`記事データ「${articleId}」の形式が正しくありません。`);
@@ -226,20 +173,54 @@
                 displayError("記事の読み込みに失敗しました。詳細はコンソールを確認してください。");
             }
 
+            function updateMetaTags(title, description) {
+                const metaTitle = `document.querySelector('meta[property="og:title"]')`;
+                const metaDesc = `document.querySelector('meta[name="description"]')`;
+                const ogDesc = `document.querySelector('meta[property="og:description"]')`;
+
+                if (document.querySelector('meta[property="og:title"]')) document.querySelector('meta[property="og:title"]').content = title;
+                if (document.querySelector('meta[name="description"]')) document.querySelector('meta[name="description"]').content = description;
+                if (document.querySelector('meta[property="og:description"]')) document.querySelector('meta[property="og:description"]').content = description;
+            }
+
+            function setupArticleStyles(container) {
+                container.querySelectorAll('ul').forEach(ul => {
+                    if (!ul.closest('pre')) ul.classList.add('list-disc', 'pl-6', 'mb-6', 'space-y-2');
+                });
+                container.querySelectorAll('ol').forEach(ol => {
+                    ol.classList.add('list-decimal', 'pl-6', 'mb-6', 'space-y-2');
+                });
+                container.querySelectorAll('blockquote').forEach(bq => {
+                    bq.classList.add('border-l-4', 'border-blue-200', 'bg-blue-50/50', 'pl-6', 'py-4', 'my-8', 'italic', 'text-gray-700', 'rounded-r-lg');
+                });
+                container.querySelectorAll('h2').forEach(h2 => {
+                    h2.classList.add('text-2xl', 'font-bold', 'mt-12', 'mb-6', 'pb-2', 'border-b', 'border-gray-100');
+                });
+                container.querySelectorAll('h3').forEach(h3 => {
+                    h3.classList.add('text-xl', 'font-bold', 'mt-10', 'mb-4');
+                });
+                container.querySelectorAll('a').forEach(a => {
+                    a.classList.add('text-blue-600', 'hover:underline', 'underline-offset-4');
+                });
+                container.querySelectorAll('code:not(pre code)').forEach(code => {
+                    code.classList.add('bg-gray-100', 'text-blue-600', 'px-1.5', 'py-0.5', 'rounded', 'font-mono', 'text-sm');
+                });
+                container.querySelectorAll('pre').forEach(pre => {
+                    pre.classList.add('relative', 'my-8', 'shadow-sm', 'rounded-xl', 'overflow-hidden');
+                });
+            }
+
             function displayError(message) {
                 if (articleTitleElement) articleTitleElement.textContent = "エラー";
                 if (breadcrumbArticleTitleElement) breadcrumbArticleTitleElement.textContent = "エラー";
                 if (articleContentElement) {
                     articleContentElement.innerHTML = `<p class='text-red-600'>${message}</p>`;
-                } else {
-                    const errorDiv = document.createElement('div');
-                    errorDiv.classList.add('text-red-600');
-                    errorDiv.innerHTML = `<p>${message}</p>`;
-                    document.body.appendChild(errorDiv);
                 }
             }
         });
     </script>
+    <!-- フッター (JSによりcomponents/footer.htmlが挿入されます) -->
+    <footer id="footer"></footer>
 </body>
 
 </html>

@@ -1,98 +1,128 @@
-/* Interフォントを適用します */
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: rgba(37, 99, 235, 0.05);
+    --text-main: #1f2937;
+    --text-muted: #6b7280;
+    --bg-main: #f9fafb;
+    --card-bg: #ffffff;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interフォントを適用 */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
-/* スキップリンクのスタイル - アクセシビリティ向上 */
+/* スキップリンク */
 .skip-link {
     position: absolute;
-    top: -40px;
-    left: 0;
-    background: #1e40af;
+    top: -60px;
+    left: 1rem;
+    background: var(--primary);
     color: white;
-    padding: 8px 16px;
+    padding: 0.75rem 1.5rem;
     text-decoration: none;
     z-index: 100;
-    border-radius: 0 0 4px 0;
-    font-weight: 500;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-weight: 600;
+    transition: top 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 .skip-link:focus {
     top: 0;
 }
 
-/* フォーカススタイルの改善 - キーボードナビゲーション向上 */
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
+/* フォーカススタイル */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 4px;
 }
 
-/* リンクのスムーズなトランジション */
+/* リンク */
 a {
-    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    transition: var(--transition);
 }
 
-/* カードホバーエフェクト */
+/* カードエフェクト */
 .card-hover {
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    transition: var(--transition);
+    border: 1px solid #e5e7eb;
 }
 
 .card-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 20px -5px rgba(0, 0, 0, 0.1), 0 8px 8px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--primary);
 }
 
-/* ソーシャルリンクカードのホバーエフェクト */
-.social-card {
-    transition: all 0.2s ease;
-}
-
-.social-card:hover {
-    background-color: #f3f4f6;
-    border-color: #d1d5db;
-    transform: translateY(-1px);
-}
-
-/* ナビゲーションリンクのスタイル */
+/* ナビゲーション */
 .nav-link {
     position: relative;
-    display: inline-block;
-    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: 0.25rem;
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: currentColor;
-    transition: width 0.3s ease, left 0.3s ease;
+    background-color: var(--primary);
+    transition: var(--transition);
+    transform: translateX(-50%);
 }
 
-.nav-link:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-.nav-link:hover {
-    background-color: rgba(59, 130, 246, 0.05);
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 1.5rem;
 }
 
 .nav-link.active {
-    color: #2563eb;
-    font-weight: 600;
+    color: var(--primary);
+    background-color: var(--primary-light);
 }
 
-.nav-link.active::after {
-    width: 100%;
-    left: 0;
-    background-color: #2563eb;
+/* 趣味のカードデザイン */
+.hobby-card {
+    display: block;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: white;
+    border: 1px solid #f3f4f6;
+    transition: var(--transition);
+}
+
+.hobby-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
+}
+
+/* マイクロアニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* スケルトンパルス調整 */
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .5; }
 }
