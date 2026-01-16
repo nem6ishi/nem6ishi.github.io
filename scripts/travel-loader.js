@@ -51,7 +51,9 @@ function renderTrips(trips) {
     if (!container) return;
 
     container.innerHTML = trips.map(trip => {
-        const countryNames = trip.countries.map(c => c.name).join('、');
+        const countryNames = trip.countries.map(c => {
+            return c.nameEn ? `${c.name} / ${c.nameEn}` : c.name;
+        }).join('、');
         const countriesHtml = trip.countries.length === 1
             ? renderSingleCountryCities(trip.countries[0])
             : renderMultipleCountries(trip.countries);
@@ -94,12 +96,17 @@ function renderSingleCountryCities(country) {
 function renderMultipleCountries(countries) {
     return `
         <div>
-            ${countries.map(country => `
-                <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">${country.name}</h4>
-                <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
-                    ${country.cities.map(city => `<li>${city}</li>`).join('')}
-                </ul>
-            `).join('')}
+            ${countries.map(country => {
+        const displayName = country.nameEn
+            ? `${escapeHtml(country.name)} / ${escapeHtml(country.nameEn)}`
+            : escapeHtml(country.name);
+        return `
+                    <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">${displayName}</h4>
+                    <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
+                        ${country.cities.map(city => `<li>${escapeHtml(city)}</li>`).join('')}
+                    </ul>
+                `;
+    }).join('')}
         </div>
     `;
 }
