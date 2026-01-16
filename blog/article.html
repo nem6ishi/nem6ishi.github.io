@@ -80,9 +80,8 @@
             }
 
             try {
-                // JSONファイルは data フォルダにあると仮定
-                // このHTMLファイル (article-template.html) は blog ディレクトリにあるため、
-                // data ディレクトリへのパスは 'data/' となります。拡張子を .md に変更。
+                // blog/data/配下のMarkdownファイルを読み込みます
+                // 記事IDにサブディレクトリ（例: 2025/）が含まれている場合にも対応
                 const response = await fetch(`data/${articleId}.md`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status} for data/${articleId}.md`);
