@@ -10,11 +10,26 @@
                     "name": "フィリピン",
                     "nameEn": "Philippines",
                     "cities": [
-                        "ビガン",
-                        "サン・フアン, ラ・ウニオン",
-                        "バギオ",
-                        "マニラ",
-                        "セブ"
+                        {
+                            "name": "ビガン",
+                            "nameEn": "Vigan"
+                        },
+                        {
+                            "name": "サン・フアン, ラ・ウニオン",
+                            "nameEn": "San Juan, La Union"
+                        },
+                        {
+                            "name": "バギオ",
+                            "nameEn": "Baguio"
+                        },
+                        {
+                            "name": "マニラ",
+                            "nameEn": "Manila"
+                        },
+                        {
+                            "name": "セブ",
+                            "nameEn": "Cebu"
+                        }
                     ]
                 }
             ]
@@ -28,9 +43,18 @@
                     "name": "韓国",
                     "nameEn": "South Korea",
                     "cities": [
-                        "ソウル（首爾）",
-                        "スウォン（水原）",
-                        "チュンチョン（春川）"
+                        {
+                            "name": "ソウル（首爾）",
+                            "nameEn": "Seoul"
+                        },
+                        {
+                            "name": "スウォン（水原）",
+                            "nameEn": "Suwon"
+                        },
+                        {
+                            "name": "チュンチョン（春川）",
+                            "nameEn": "Chuncheon"
+                        }
                     ]
                 }
             ]
@@ -44,7 +68,10 @@
                     "name": "香港",
                     "nameEn": "Hong Kong",
                     "cities": [
-                        "香港"
+                        {
+                            "name": "香港",
+                            "nameEn": "Hong Kong"
+                        }
                     ]
                 }
             ]
@@ -58,7 +85,10 @@
                     "name": "ベトナム",
                     "nameEn": "Vietnam",
                     "cities": [
-                        "ホーチミン"
+                        {
+                            "name": "ホーチミン",
+                            "nameEn": "Ho Chi Minh City"
+                        }
                     ]
                 }
             ]
@@ -72,7 +102,10 @@
                     "name": "中国",
                     "nameEn": "China",
                     "cities": [
-                        "北京"
+                        {
+                            "name": "北京",
+                            "nameEn": "Beijing"
+                        }
                     ]
                 }
             ]
@@ -86,9 +119,18 @@
                     "name": "台湾",
                     "nameEn": "Taiwan",
                     "cities": [
-                        "高雄",
-                        "台南",
-                        "台北"
+                        {
+                            "name": "高雄",
+                            "nameEn": "Kaohsiung"
+                        },
+                        {
+                            "name": "台南",
+                            "nameEn": "Tainan"
+                        },
+                        {
+                            "name": "台北",
+                            "nameEn": "Taipei"
+                        }
                     ]
                 }
             ]
@@ -102,10 +144,22 @@
                     "name": "台湾",
                     "nameEn": "Taiwan",
                     "cities": [
-                        "台北",
-                        "彰化",
-                        "鹿港",
-                        "台中"
+                        {
+                            "name": "台北",
+                            "nameEn": "Taipei"
+                        },
+                        {
+                            "name": "彰化",
+                            "nameEn": "Changhua"
+                        },
+                        {
+                            "name": "鹿港",
+                            "nameEn": "Lukang"
+                        },
+                        {
+                            "name": "台中",
+                            "nameEn": "Taichung"
+                        }
                     ]
                 }
             ]
@@ -119,46 +173,94 @@
                     "name": "マレーシア",
                     "nameEn": "Malaysia",
                     "cities": [
-                        "クアラルンプール"
+                        {
+                            "name": "クアラルンプール",
+                            "nameEn": "Kuala Lumpur"
+                        }
                     ]
                 },
                 {
                     "name": "タイ",
                     "nameEn": "Thailand",
                     "cities": [
-                        "バンコク",
-                        "ナコーンラーチャシーマー",
-                        "ウボンラーチャターニー"
+                        {
+                            "name": "バンコク",
+                            "nameEn": "Bangkok"
+                        },
+                        {
+                            "name": "ナコーンラーチャシーマー",
+                            "nameEn": "Nakhon Ratchasima"
+                        },
+                        {
+                            "name": "ウボンラーチャターニー",
+                            "nameEn": "Ubon Ratchathani"
+                        }
                     ]
                 },
                 {
                     "name": "ラオス",
                     "nameEn": "Laos",
                     "cities": [
-                        "パークセー",
-                        "シーパンドン",
-                        "ヴィエンチャン",
-                        "ヴァンヴィエン",
-                        "ルアンパバーン"
+                        {
+                            "name": "パークセー",
+                            "nameEn": "Pakse"
+                        },
+                        {
+                            "name": "シーパンドン",
+                            "nameEn": "Si Phan Don"
+                        },
+                        {
+                            "name": "ヴィエンチャン",
+                            "nameEn": "Vientiane"
+                        },
+                        {
+                            "name": "ヴァンヴィエン",
+                            "nameEn": "Vang Vieng"
+                        },
+                        {
+                            "name": "ルアンパバーン",
+                            "nameEn": "Luang Prabang"
+                        }
                     ]
                 },
                 {
                     "name": "ベトナム",
                     "nameEn": "Vietnam",
                     "cities": [
-                        "ハノイ",
-                        "フエ",
-                        "ホイアン",
-                        "ニャチャン",
-                        "ホーチミン"
+                        {
+                            "name": "ハノイ",
+                            "nameEn": "Hanoi"
+                        },
+                        {
+                            "name": "フエ",
+                            "nameEn": "Hue"
+                        },
+                        {
+                            "name": "ホイアン",
+                            "nameEn": "Hoi An"
+                        },
+                        {
+                            "name": "ニャチャン",
+                            "nameEn": "Nha Trang"
+                        },
+                        {
+                            "name": "ホーチミン",
+                            "nameEn": "Ho Chi Minh City"
+                        }
                     ]
                 },
                 {
                     "name": "台湾",
                     "nameEn": "Taiwan",
                     "cities": [
-                        "台北",
-                        "花蓮"
+                        {
+                            "name": "台北",
+                            "nameEn": "Taipei"
+                        },
+                        {
+                            "name": "花蓮",
+                            "nameEn": "Hualien"
+                        }
                     ]
                 }
             ]
@@ -172,26 +274,50 @@
                     "name": "中国",
                     "nameEn": "China",
                     "cities": [
-                        "上海",
-                        "北京",
-                        "エレンホト"
+                        {
+                            "name": "上海",
+                            "nameEn": "Shanghai"
+                        },
+                        {
+                            "name": "北京",
+                            "nameEn": "Beijing"
+                        },
+                        {
+                            "name": "エレンホト",
+                            "nameEn": "Erenhot"
+                        }
                     ]
                 },
                 {
                     "name": "モンゴル",
                     "nameEn": "Mongolia",
                     "cities": [
-                        "ザミンウード",
-                        "ウランバートル"
+                        {
+                            "name": "ザミンウード",
+                            "nameEn": "Zamyn-Üüd"
+                        },
+                        {
+                            "name": "ウランバートル",
+                            "nameEn": "Ulaanbaatar"
+                        }
                     ]
                 },
                 {
                     "name": "ロシア",
                     "nameEn": "Russia",
                     "cities": [
-                        "イルクーツク",
-                        "リストヴャンカ",
-                        "ウラジオストク"
+                        {
+                            "name": "イルクーツク",
+                            "nameEn": "Irkutsk"
+                        },
+                        {
+                            "name": "リストヴャンカ",
+                            "nameEn": "Listvyanka"
+                        },
+                        {
+                            "name": "ウラジオストク",
+                            "nameEn": "Vladivostok"
+                        }
                     ]
                 }
             ]
@@ -205,11 +331,26 @@
                     "name": "台湾",
                     "nameEn": "Taiwan",
                     "cities": [
-                        "台北",
-                        "花蓮",
-                        "台東",
-                        "台南",
-                        "墾丁"
+                        {
+                            "name": "台北",
+                            "nameEn": "Taipei"
+                        },
+                        {
+                            "name": "花蓮",
+                            "nameEn": "Hualien"
+                        },
+                        {
+                            "name": "台東",
+                            "nameEn": "Taitung"
+                        },
+                        {
+                            "name": "台南",
+                            "nameEn": "Tainan"
+                        },
+                        {
+                            "name": "墾丁",
+                            "nameEn": "Kenting"
+                        }
                     ]
                 }
             ]
@@ -223,15 +364,24 @@
                     "name": "中国",
                     "nameEn": "China",
                     "cities": [
-                        "上海"
+                        {
+                            "name": "上海",
+                            "nameEn": "Shanghai"
+                        }
                     ]
                 },
                 {
                     "name": "バングラデシュ",
                     "nameEn": "Bangladesh",
                     "cities": [
-                        "ダッカ",
-                        "シレット"
+                        {
+                            "name": "ダッカ",
+                            "nameEn": "Dhaka"
+                        },
+                        {
+                            "name": "シレット",
+                            "nameEn": "Sylhet"
+                        }
                     ]
                 }
             ]
@@ -245,9 +395,18 @@
                     "name": "台湾",
                     "nameEn": "Taiwan",
                     "cities": [
-                        "台北",
-                        "台南",
-                        "南投"
+                        {
+                            "name": "台北",
+                            "nameEn": "Taipei"
+                        },
+                        {
+                            "name": "台南",
+                            "nameEn": "Tainan"
+                        },
+                        {
+                            "name": "南投",
+                            "nameEn": "Nantou"
+                        }
                     ]
                 }
             ]
@@ -261,13 +420,34 @@
                     "name": "台湾",
                     "nameEn": "Taiwan",
                     "cities": [
-                        "台北",
-                        "基隆",
-                        "蘇澳",
-                        "花蓮",
-                        "台東",
-                        "台南",
-                        "台中"
+                        {
+                            "name": "台北",
+                            "nameEn": "Taipei"
+                        },
+                        {
+                            "name": "基隆",
+                            "nameEn": "Keelung"
+                        },
+                        {
+                            "name": "蘇澳",
+                            "nameEn": "Su'ao"
+                        },
+                        {
+                            "name": "花蓮",
+                            "nameEn": "Hualien"
+                        },
+                        {
+                            "name": "台東",
+                            "nameEn": "Taitung"
+                        },
+                        {
+                            "name": "台南",
+                            "nameEn": "Tainan"
+                        },
+                        {
+                            "name": "台中",
+                            "nameEn": "Taichung"
+                        }
                     ]
                 }
             ]
@@ -281,22 +461,52 @@
                     "name": "インド",
                     "nameEn": "India",
                     "cities": [
-                        "ニューデリー",
-                        "アーグラ",
-                        "カジュラーホー",
-                        "バラナシ",
-                        "ガヤー",
-                        "コルカタ"
+                        {
+                            "name": "ニューデリー",
+                            "nameEn": "New Delhi"
+                        },
+                        {
+                            "name": "アーグラ",
+                            "nameEn": "Agra"
+                        },
+                        {
+                            "name": "カジュラーホー",
+                            "nameEn": "Khajuraho"
+                        },
+                        {
+                            "name": "バラナシ",
+                            "nameEn": "Varanasi"
+                        },
+                        {
+                            "name": "ガヤー",
+                            "nameEn": "Gaya"
+                        },
+                        {
+                            "name": "コルカタ",
+                            "nameEn": "Kolkata"
+                        }
                     ]
                 },
                 {
                     "name": "バングラデシュ",
                     "nameEn": "Bangladesh",
                     "cities": [
-                        "ジョソール",
-                        "クルナ",
-                        "モレルガンジ",
-                        "ダッカ"
+                        {
+                            "name": "ジョソール",
+                            "nameEn": "Jessore"
+                        },
+                        {
+                            "name": "クルナ",
+                            "nameEn": "Khulna"
+                        },
+                        {
+                            "name": "モレルガンジ",
+                            "nameEn": "Morrelganj"
+                        },
+                        {
+                            "name": "ダッカ",
+                            "nameEn": "Dhaka"
+                        }
                     ]
                 }
             ]
@@ -310,16 +520,28 @@
                     "name": "タイ",
                     "nameEn": "Thailand",
                     "cities": [
-                        "バンコク",
-                        "アランヤプラテート"
+                        {
+                            "name": "バンコク",
+                            "nameEn": "Bangkok"
+                        },
+                        {
+                            "name": "アランヤプラテート",
+                            "nameEn": "Aranyaprathet"
+                        }
                     ]
                 },
                 {
                     "name": "カンボジア",
                     "nameEn": "Cambodia",
                     "cities": [
-                        "ポイペト",
-                        "シェムリアップ"
+                        {
+                            "name": "ポイペト",
+                            "nameEn": "Poipet"
+                        },
+                        {
+                            "name": "シェムリアップ",
+                            "nameEn": "Siem Reap"
+                        }
                     ]
                 }
             ]
@@ -334,36 +556,72 @@
                     "name": "アメリカ",
                     "nameEn": "United States",
                     "cities": [
-                        "ロサンゼルス",
-                        "サンディエゴ"
+                        {
+                            "name": "ロサンゼルス",
+                            "nameEn": "Los Angeles"
+                        },
+                        {
+                            "name": "サンディエゴ",
+                            "nameEn": "San Diego"
+                        }
                     ]
                 },
                 {
                     "name": "メキシコ",
                     "nameEn": "Mexico",
                     "cities": [
-                        "ティファナ",
-                        "グアダラハラ",
-                        "グアナファト",
-                        "メキシコシティ",
-                        "サン・クリストバル・デ・ラス・カサス"
+                        {
+                            "name": "ティファナ",
+                            "nameEn": "Tijuana"
+                        },
+                        {
+                            "name": "グアダラハラ",
+                            "nameEn": "Guadalajara"
+                        },
+                        {
+                            "name": "グアナファト",
+                            "nameEn": "Guanajuato"
+                        },
+                        {
+                            "name": "メキシコシティ",
+                            "nameEn": "Mexico City"
+                        },
+                        {
+                            "name": "サン・クリストバル・デ・ラス・カサス",
+                            "nameEn": "San Cristóbal de las Casas"
+                        }
                     ]
                 },
                 {
                     "name": "グアテマラ",
                     "nameEn": "Guatemala",
                     "cities": [
-                        "ケツァルテナンゴ",
-                        "グアテマラシティ",
-                        "ホコタン"
+                        {
+                            "name": "ケツァルテナンゴ",
+                            "nameEn": "Quetzaltenango"
+                        },
+                        {
+                            "name": "グアテマラシティ",
+                            "nameEn": "Guatemala City"
+                        },
+                        {
+                            "name": "ホコタン",
+                            "nameEn": "Jocotan"
+                        }
                     ]
                 },
                 {
                     "name": "ホンジュラス",
                     "nameEn": "Honduras",
                     "cities": [
-                        "コパン・ルイナス",
-                        "ウティラ"
+                        {
+                            "name": "コパン・ルイナス",
+                            "nameEn": "Copán Ruinas"
+                        },
+                        {
+                            "name": "ウティラ",
+                            "nameEn": "Utila"
+                        }
                     ]
                 }
             ]
@@ -378,23 +636,38 @@
                     "name": "タイ",
                     "nameEn": "Thailand",
                     "cities": [
-                        "バンコク",
-                        "ノーンカーイ"
+                        {
+                            "name": "バンコク",
+                            "nameEn": "Bangkok"
+                        },
+                        {
+                            "name": "ノーンカーイ",
+                            "nameEn": "Nong Khai"
+                        }
                     ]
                 },
                 {
                     "name": "ラオス",
                     "nameEn": "Laos",
                     "cities": [
-                        "ヴィエンチャン",
-                        "ルアンパバーン"
+                        {
+                            "name": "ヴィエンチャン",
+                            "nameEn": "Vientiane"
+                        },
+                        {
+                            "name": "ルアンパバーン",
+                            "nameEn": "Luang Prabang"
+                        }
                     ]
                 },
                 {
                     "name": "タイ",
                     "nameEn": "Thailand",
                     "cities": [
-                        "バンコク"
+                        {
+                            "name": "バンコク",
+                            "nameEn": "Bangkok"
+                        }
                     ]
                 }
             ]

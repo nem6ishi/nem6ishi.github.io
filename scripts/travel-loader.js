@@ -85,7 +85,17 @@ function renderTrips(trips) {
 function renderSingleCountryCities(country) {
     return `
         <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
-            ${country.cities.map(city => `<li>${city}</li>`).join('')}
+            ${country.cities.map(city => {
+        // 文字列の場合（後方互換性）
+        if (typeof city === 'string') {
+            return `<li>${escapeHtml(city)}</li>`;
+        }
+        // オブジェクトの場合
+        const displayName = city.nameEn
+            ? `${escapeHtml(city.name)} / ${escapeHtml(city.nameEn)}`
+            : escapeHtml(city.name);
+        return `<li>${displayName}</li>`;
+    }).join('')}
         </ul>
     `;
 }
@@ -103,7 +113,17 @@ function renderMultipleCountries(countries) {
         return `
                     <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">${displayName}</h4>
                     <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
-                        ${country.cities.map(city => `<li>${escapeHtml(city)}</li>`).join('')}
+                        ${country.cities.map(city => {
+            // 文字列の場合（後方互換性）
+            if (typeof city === 'string') {
+                return `<li>${escapeHtml(city)}</li>`;
+            }
+            // オブジェクトの場合
+            const cityDisplayName = city.nameEn
+                ? `${escapeHtml(city.name)} / ${escapeHtml(city.nameEn)}`
+                : escapeHtml(city.name);
+            return `<li>${cityDisplayName}</li>`;
+        }).join('')}
                     </ul>
                 `;
     }).join('')}
