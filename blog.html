@@ -63,7 +63,7 @@
             <h1 class="text-2xl font-bold text-gray-800">ブログ / Blog</h1>
         </div>
 
-        <section id="articles-list" class="space-y-6">
+        <section id="articles-list">
             <!-- 記事一覧がJavaScriptで動的に挿入されます -->
             <div class="text-center py-12">
                 <p class="text-gray-500">記事を読み込み中...</p>
@@ -87,26 +87,16 @@
                     const sortedArticles = data.articles.sort((a, b) => new Date(b.date) - new Date(a.date));
 
                     articlesListElement.innerHTML = sortedArticles.map(article => `
-                        <article class="border border-gray-200 rounded-lg p-6 card-hover bg-white">
-                            <a href="blog/article.html?id=${article.id}" class="block">
-                                <h2 class="text-2xl font-bold text-gray-800 mb-2 hover:text-blue-600 transition-colors">
+                        <div class="py-3 border-b border-gray-100 last:border-0">
+                            <a href="blog/article.html?id=${article.id}" class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 group">
+                                <time class="text-sm text-gray-400 font-mono min-w-[100px]" datetime="${article.date}">
+                                    ${formatDateSimple(article.date)}
+                                </time>
+                                <span class="text-base sm:text-lg font-medium text-gray-800 group-hover:text-blue-600 transition-colors">
                                     ${article.title}
-                                </h2>
-                                <p class="text-sm text-gray-500 mb-3">
-                                    <time datetime="${article.date}">${formatDate(article.date)}</time>
-                                </p>
-                                <p class="text-gray-700 mb-3 line-clamp-2">
-                                    ${article.excerpt}
-                                </p>
-                                <div class="flex flex-wrap gap-2">
-                                    ${article.tags.map(tag => `
-                                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
-                                            ${tag}
-                                        </span>
-                                    `).join('')}
-                                </div>
+                                </span>
                             </a>
-                        </article>
+                        </div>
                     `).join('');
                 } else {
                     articlesListElement.innerHTML = `
@@ -124,12 +114,12 @@
                 `;
             }
 
-            function formatDate(dateString) {
+            function formatDateSimple(dateString) {
                 const date = new Date(dateString);
                 const year = date.getFullYear();
                 const month = String(date.getMonth() + 1).padStart(2, '0');
                 const day = String(date.getDate()).padStart(2, '0');
-                return `${year}年${month}月${day}日`;
+                return `${year}.${month}.${day}`;
             }
         });
     </script>
