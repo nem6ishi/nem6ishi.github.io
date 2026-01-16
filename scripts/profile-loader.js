@@ -3,10 +3,20 @@
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const containers = {
+        work: document.getElementById('work-experience-container'),
+        education: document.getElementById('education-container'),
+        refereed: document.getElementById('publications-refereed-container'),
+        nonRefereed: document.getElementById('publications-non-refereed-container')
+    };
+
+    // ローディング表示
+    Object.values(containers).forEach(c => c && showLoading(c));
+
     try {
         const response = await fetch('/data/profile.json');
         if (!response.ok) {
-            throw new Error(`Failed to load profile data: ${response.status}`);
+            throw new Error(`HTTPエラー: ${response.status}`);
         }
         const profileData = await response.json();
 
@@ -16,6 +26,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderPublications(profileData.publications);
     } catch (error) {
         console.error('Error loading profile data:', error);
+        // エラーメッセージを各コンテナに表示
+        Object.values(containers).forEach(c =>
+            c && showError(c, 'プロフィールデータを読み込めませんでした。')
+        );
     }
 });
 
@@ -29,10 +43,10 @@ function renderWorkExperience(workExperience) {
     container.innerHTML = workExperience.map(item => `
         <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
             <div class="text-xl font-semibold text-gray-800 mb-2">
-                ${item.title}
+                ${escapeHtml(item.title)}
             </div>
             <span class="inline-block px-3 py-1 ${item.current ? 'bg-blue-100 text-blue-800' : 'bg-gray-100 text-gray-800'} text-sm rounded-full">
-                ${item.period}
+                ${escapeHtml(item.period)}
             </span>
         </div>
     `).join('');
@@ -48,12 +62,12 @@ function renderEducation(education) {
     container.innerHTML = education.map(item => `
         <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
             <div class="text-xl font-semibold text-gray-800 mb-2">
-                ${item.institution}<span class="font-normal text-gray-600 ml-2">, ${item.degree}</span>
+                ${escapeHtml(item.institution)}<span class="font-normal text-gray-600 ml-2">, ${escapeHtml(item.degree)}</span>
             </div>
             <span class="inline-block px-3 py-1 bg-gray-100 text-gray-800 text-sm rounded-full mb-2">
-                ${item.period}
+                ${escapeHtml(item.period)}
             </span>
-            <div class="text-sm text-gray-600">(指導教員: ${item.advisor})</div>
+            <div class="text-sm text-gray-600">(指導教員: ${escapeHtml(item.advisor)})</div>
         </div>
     `).join('');
 }
@@ -92,10 +106,10 @@ function createPublicationCard(publication) {
     return `
         <div class="card-hover bg-white p-6 rounded-xl border border-gray-200">
             <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight">
-                ${publication.title}
+                ${escapeHtml(publication.title)}
             </h4>
-            <p class="text-sm text-gray-600 mb-2">${publication.authors}</p>
-            <p class="text-sm text-gray-500 ${linksHtml || acceptanceRateHtml ? 'mb-2' : 'mb-3'}">${publication.venue}</p>
+            <p class="text-sm text-gray-600 mb-2">${escapeHtml(publication.authors)}</p>
+            <p class="text-sm text-gray-500 ${linksHtml || acceptanceRateHtml ? 'mb-2' : 'mb-3'}">${escapeHtml(publication.venue)}</p>
             ${acceptanceRateHtml}
             ${linksHtml}
         </div>

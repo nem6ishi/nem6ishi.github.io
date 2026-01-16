@@ -3,10 +3,13 @@
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
+    const container = document.getElementById('trips-container');
+    if (container) showLoading(container);
+
     try {
         const response = await fetch('/data/travel.json');
         if (!response.ok) {
-            throw new Error(`Failed to load travel data: ${response.status}`);
+            throw new Error(`HTTPエラー: ${response.status}`);
         }
         const travelData = await response.json();
 
@@ -17,6 +20,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         renderTrips(travelData.trips);
     } catch (error) {
         console.error('Error loading travel data:', error);
+        if (container) {
+            showError(container, '旅行データを読み込めませんでした。');
+        }
     }
 });
 
@@ -52,7 +58,7 @@ function renderTrips(trips) {
 
         const storyHtml = trip.story ? `
             <div class="mt-3 ml-4 mb-3 border border-gray-100 rounded-md p-3 bg-gray-50 shadow-sm">
-                <p class="text-sm text-gray-600 leading-relaxed whitespace-pre-line">${trip.story}</p>
+                <p class="text-sm text-gray-600 leading-relaxed whitespace-pre-line">${escapeHtml(trip.story)}</p>
             </div>
         ` : '';
 
@@ -60,9 +66,9 @@ function renderTrips(trips) {
             <li class="mb-6 border border-gray-200 rounded-lg p-4 card-hover">
                 <div class="mb-2">
                     <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">
-                        ${formatDate(trip.startDate)} - ${formatDate(trip.endDate)} (${trip.days} days)
+                        ${escapeHtml(formatDate(trip.startDate))} - ${escapeHtml(formatDate(trip.endDate))} (${trip.days} days)
                     </span>
-                    <h3 class="text-lg font-medium text-gray-800">${countryNames}</h3>
+                    <h3 class="text-lg font-medium text-gray-800">${escapeHtml(countryNames)}</h3>
                 </div>
                 ${storyHtml}
                 ${countriesHtml}
