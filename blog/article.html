@@ -82,11 +82,15 @@
             try {
                 // blog/data/配下のMarkdownファイルを読み込みます
                 // 記事IDにサブディレクトリ（例: 2025/）が含まれている場合にも対応
-                const response = await fetch(`data/${articleId}.md`);
+                // キャッシュを回避するためにタイムスタンプを付与
+                const response = await fetch(`data/${articleId}.md?t=${new Date().getTime()}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status} for data/${articleId}.md`);
                 }
-                const rawText = await response.text();
+                let rawText = await response.text();
+
+                // BOM (Byte Order Mark) を除去し、前後の空白をトリミング
+                rawText = rawText.replace(/^\uFEFF/, '').trim();
 
                 // Front Matterと本文をパースする簡単な関数
                 function parseMarkdownWithFrontMatter(text) {
