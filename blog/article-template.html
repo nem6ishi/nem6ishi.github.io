@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,28 @@
     <!-- Marked.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- 共通スタイルシート -->
-    <link rel="stylesheet" href="../../common.css">
+    <link rel="stylesheet" href="../../styles/common.css">
     <!-- コードハイライト用のCSS (任意で有効化) -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css"> -->
 </head>
+
 <body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
     <!-- 固定ナビゲーションバー -->
     <nav class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
         <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3">
             <div class="flex items-center justify-start mb-2">
-                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI</h1>
-                <img src="../../images/profile.jpg" alt="プロフィール画像" class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
+                <h1 class="text-xl sm:text-2xl font-bold text-gray-800 whitespace-nowrap mr-4">根石 将人 / Masato NEISHI
+                </h1>
+                <img src="../../images/profile.jpg" alt="プロフィール画像"
+                    class="w-8 h-8 rounded-full object-cover border-2 border-blue-500 flex-shrink-0">
             </div>
             <div class="flex space-x-6 justify-start">
-                <a href="../../index.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
-                <a href="../../hobbies.html" class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
-                <a href="../../blog.html" class="text-blue-600 hover:text-blue-800 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">ブログ</a>
+                <a href="../../index.html"
+                    class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">プロフィール</a>
+                <a href="../../hobbies.html"
+                    class="text-gray-600 hover:text-blue-600 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">趣味</a>
+                <a href="../../blog.html"
+                    class="text-blue-600 hover:text-blue-800 font-medium text-base rounded-md px-3 py-1 transition-colors duration-200">ブログ</a>
             </div>
         </div>
     </nav>
@@ -55,7 +62,8 @@
 
         <!-- (任意) 記事フッター: タグ、カテゴリ、ソーシャルシェアボタンなど -->
         <footer class="mt-12 pt-6 border-t border-gray-200">
-            <p class="text-sm text-gray-500">カテゴリ: <a href="#" class="text-blue-600 hover:underline">技術</a>, <a href="#" class="text-blue-600 hover:underline">プログラミング</a></p>
+            <p class="text-sm text-gray-500">カテゴリ: <a href="#" class="text-blue-600 hover:underline">技術</a>, <a href="#"
+                    class="text-blue-600 hover:underline">プログラミング</a></p>
             <!-- ソーシャルシェアボタンなどをここに追加 -->
         </footer>
     </div>
@@ -120,7 +128,7 @@
                     pageTitleElement.textContent = `${article.title} - ブログ / Blog - 根石 将人`;
                     articleTitleElement.textContent = article.title;
                     if (breadcrumbArticleTitleElement) breadcrumbArticleTitleElement.textContent = article.title;
-                    
+
                     articleDateElement.textContent = article.date;
                     articleDateElement.datetime = article.date;
 
@@ -225,4 +233,5 @@
         });
     </script>
 </body>
+
 </html>
