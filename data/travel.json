@@ -1,0 +1,36 @@
+{
+    "title": "海外旅行 / Overseas travel",
+    "description": "これまでに訪れた国々の記録。各国で体験したことや印象に残った場所を記録しています。",
+    "countries": [
+        {
+            "name": "中国 / China",
+            "cities": [
+                "北京"
+            ],
+            "visits": [
+                "2018/10"
+            ],
+            "description": "AUAPAFでの研究発表のために訪問。万里の長城や故宮などの歴史的建造物を訪れました。"
+        },
+        {
+            "name": "台湾 / Taiwan",
+            "cities": [
+                "台北"
+            ],
+            "visits": [
+                "2017/11"
+            ],
+            "description": "WAT 2017での研究発表のために訪問。夜市の活気や台湾料理を楽しみました。"
+        },
+        {
+            "name": "香港 / Hong Kong",
+            "cities": [
+                "香港"
+            ],
+            "visits": [
+                "2019/11"
+            ],
+            "description": "CoNLL 2019での研究発表のために訪問。香港の夜景やビクトリアハーバーの美しさに感動しました。"
+        }
+    ]
+}
