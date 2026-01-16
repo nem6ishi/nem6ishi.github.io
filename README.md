@@ -74,7 +74,7 @@ date: 2025-06-15
 このサイトは静的HTMLで構成されているため、特別なビルドプロセスは不要です。
 
 ```bash
-# リポジリをクローン
+# リポジトリをクローン
 git clone https://github.com/nem6ishi/nem6ishi.github.io.git
 cd nem6ishi.github.io
 
