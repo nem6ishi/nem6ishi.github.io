@@ -70,7 +70,7 @@
         "links": [
           {
             "type": "poster",
-            "url": "files/conll2019_poster.pdf",
+            "url": "assets/papers/conll2019_poster.pdf",
             "label": "Poster"
           },
           {
@@ -87,7 +87,7 @@
         "links": [
           {
             "type": "slide",
-            "url": "files/auapaf2018_slide.pdf",
+            "url": "assets/papers/auapaf2018_slide.pdf",
             "label": "Slide"
           }
         ]
@@ -107,7 +107,7 @@
         "links": [
           {
             "type": "poster",
-            "url": "files/nlp2023_poster.pdf",
+            "url": "assets/papers/nlp2023_poster.pdf",
             "label": "Poster"
           }
         ]
@@ -125,7 +125,7 @@
         "links": [
           {
             "type": "poster",
-            "url": "files/yans2020_poster.pdf",
+            "url": "assets/papers/yans2020_poster.pdf",
             "label": "Poster"
           }
         ]
@@ -143,12 +143,12 @@
         "links": [
           {
             "type": "poster",
-            "url": "files/nlp2019_poster.pdf",
+            "url": "assets/papers/nlp2019_poster.pdf",
             "label": "Poster"
           },
           {
             "type": "document",
-            "url": "files/nlp2019_revision.pdf",
+            "url": "assets/papers/nlp2019_revision.pdf",
             "label": "予稿論文の訂正"
           }
         ]
@@ -160,7 +160,7 @@
         "links": [
           {
             "type": "poster",
-            "url": "files/yans2018_poster.pdf",
+            "url": "assets/papers/yans2018_poster.pdf",
             "label": "Poster"
           }
         ]
@@ -172,7 +172,7 @@
         "links": [
           {
             "type": "poster",
-            "url": "files/wat17_poster.pdf",
+            "url": "assets/papers/wat17_poster.pdf",
             "label": "Poster"
           },
           {
@@ -189,7 +189,7 @@
         "links": [
           {
             "type": "slide",
-            "url": "files/nl233_slide.pdf",
+            "url": "assets/papers/nl233_slide.pdf",
             "label": "Slide"
           }
         ]
