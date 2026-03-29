@@ -103,9 +103,8 @@ function createPublicationCard(publication) {
         <p class="text-xs text-gray-400 mb-3">Acceptance rate: ${publication.acceptanceRate}</p>
     ` : '';
 
-    const hasLinks = publication.links.some(l => l.url);
     return `
-        <div class="${hasLinks ? 'card-hover ' : ''}bg-white p-6 rounded-xl border border-gray-200">
+        <div class="bg-white p-6 rounded-xl border border-gray-200">
             <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight">
                 ${escapeHtml(publication.title)}
             </h4>
