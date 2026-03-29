@@ -41,7 +41,7 @@ function renderWorkExperience(workExperience) {
     if (!container) return;
 
     container.innerHTML = workExperience.map(item => `
-        <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+        <div class="border border-gray-200 rounded-lg p-4 bg-white">
             <div class="text-xl font-semibold text-gray-800 mb-2">
                 ${escapeHtml(item.title)}
             </div>
@@ -60,7 +60,7 @@ function renderEducation(education) {
     if (!container) return;
 
     container.innerHTML = education.map(item => `
-        <div class="border border-gray-200 rounded-lg p-4 card-hover bg-white">
+        <div class="border border-gray-200 rounded-lg p-4 bg-white">
             <div class="text-xl font-semibold text-gray-800 mb-2">
                 ${escapeHtml(item.institution)}<span class="font-normal text-gray-600 ml-2">, ${escapeHtml(item.degree)}</span>
             </div>
@@ -103,8 +103,9 @@ function createPublicationCard(publication) {
         <p class="text-xs text-gray-400 mb-3">Acceptance rate: ${publication.acceptanceRate}</p>
     ` : '';
 
+    const hasLinks = publication.links.some(l => l.url);
     return `
-        <div class="card-hover bg-white p-6 rounded-xl border border-gray-200">
+        <div class="${hasLinks ? 'card-hover ' : ''}bg-white p-6 rounded-xl border border-gray-200">
             <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight">
                 ${escapeHtml(publication.title)}
             </h4>
