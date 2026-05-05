@@ -137,7 +137,13 @@
         "title": "宿の推薦根拠説明システムにおける魅力度の考慮と実用を見据えた評価",
         "authors": "叶内 晨, 根石 将人, 林部 祐太, 大内 啓樹, 岡崎 直観",
         "venue": "言語処理学会第27回年次大会, オンライン, 2021年3月",
-        "links": []
+        "links": [
+          {
+            "type": "document",
+            "url": "https://www.anlp.jp/proceedings/annual_meeting/2021/pdf_dir/C3-1.pdf",
+            "label": "Paper"
+          }
+        ]
       },
       {
         "title": "宿推薦における抽象的な要求に対する根拠付き推薦文の生成のためのレビュー返信文の活用",
