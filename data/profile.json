@@ -56,6 +56,11 @@
         "acceptanceRate": "28.3%",
         "links": [
           {
+            "type": "document",
+            "url": "https://aclanthology.org/2020.aacl-main.89/",
+            "label": "Paper"
+          },
+          {
             "type": "dataset",
             "url": "https://github.com/megagonlabs/ebe-dataset",
             "label": "Dataset"
@@ -68,6 +73,11 @@
         "venue": "The 23rd Conference on Computational Natural Language Learning (CoNLL 2019), Hong Kong, November 2019.",
         "acceptanceRate": "22.66%",
         "links": [
+          {
+            "type": "document",
+            "url": "https://aclanthology.org/K19-1031/",
+            "label": "Paper"
+          },
           {
             "type": "poster",
             "url": "assets/papers/conll2019_poster.pdf",
@@ -106,6 +116,11 @@
         "venue": "言語処理学会第29回年次大会, 沖縄, 2023年3月",
         "links": [
           {
+            "type": "document",
+            "url": "https://www.anlp.jp/proceedings/annual_meeting/2023/pdf_dir/P10-6.pdf",
+            "label": "Paper"
+          },
+          {
             "type": "poster",
             "url": "assets/papers/nlp2023_poster.pdf",
             "label": "Poster"
@@ -134,13 +149,24 @@
         "title": "旅行情報サイトのレビューを用いた抽象的な要求に対する根拠付き推薦文の生成",
         "authors": "叶内 晨, 根石 将人, 林部 祐太, 岡崎 直観",
         "venue": "言語処理学会第26回年次大会, オンライン, 2020年3月",
-        "links": []
+        "links": [
+          {
+            "type": "document",
+            "url": "https://www.anlp.jp/proceedings/annual_meeting/2020/pdf_dir/P1-8.pdf",
+            "label": "Paper"
+          }
+        ]
       },
       {
         "title": "英日翻訳タスクにおけるスワップモデルを通した seq2seq と Transformer の比較",
         "authors": "根石 将人, 吉永 直樹",
         "venue": "言語処理学会第25回年次大会, 名古屋, 2019年3月",
         "links": [
+          {
+            "type": "document",
+            "url": "https://www.anlp.jp/proceedings/annual_meeting/2019/pdf_dir/P5-21.pdf",
+            "label": "Paper"
+          },
           {
             "type": "poster",
             "url": "assets/papers/nlp2019_poster.pdf",
@@ -171,6 +197,11 @@
         "venue": "The 4th Workshop on Asian Translation (WAT 2017), Taipei, November 2017.",
         "links": [
           {
+            "type": "document",
+            "url": "https://aclanthology.org/W17-5708/",
+            "label": "Paper"
+          },
+          {
             "type": "poster",
             "url": "assets/papers/wat17_poster.pdf",
             "label": "Poster"
@@ -187,6 +218,11 @@
         "authors": "根石 将人, 佐久間 仁, 遠田 哲史, 石渡 祥之佑, 吉永 直樹, 豊田 正史",
         "venue": "第233回 自然言語処理研究会, 沖縄, 2017年10月",
         "links": [
+          {
+            "type": "document",
+            "url": "http://id.nii.ac.jp/1001/00183695/",
+            "label": "Paper"
+          },
           {
             "type": "slide",
             "url": "assets/papers/nl233_slide.pdf",
