@@ -114,7 +114,13 @@
         "title": "日付入りLLM文書翻訳評価用データセット",
         "authors": "岩月憲一, 根石 将人",
         "venue": "言語処理学会第31回年次大会, 長崎, 2025年3月",
-        "links": []
+        "links": [
+          {
+            "type": "document",
+            "url": "https://www.anlp.jp/proceedings/annual_meeting/2025/pdf_dir/P7-16.pdf",
+            "label": "Paper"
+          }
+        ]
       },
       {
         "title": "ニューラル機械翻訳のためのノイズ寛容なアンカー学習",
