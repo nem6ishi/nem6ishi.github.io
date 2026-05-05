@@ -47,7 +47,13 @@
         "title": "Revisiting Pre-training of Embedding Layers in Transformer-based Neural Machine Translation",
         "authors": "Masato Neishi, Naoki Yoshinaga",
         "venue": "Journal of Natural Language Processing 31 (2), 534-567, 2024.",
-        "links": []
+        "links": [
+          {
+            "type": "document",
+            "url": "https://www.jstage.jst.go.jp/article/jnlp/31/2/31_534/_article",
+            "label": "Paper"
+          }
+        ]
       },
       {
         "title": "You May Like This Hotel Because ...: Identifying Evidence for Explainable Recommendations",
