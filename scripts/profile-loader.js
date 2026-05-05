@@ -130,9 +130,20 @@ function createLinkButton(link) {
 
     const icon = icons[link.type] || icons.document;
     const isExternal = link.url.startsWith('http');
-    const colorClass = link.type === 'code' || link.type === 'document'
-        ? 'bg-gray-50 text-gray-600 hover:bg-gray-100'
-        : 'bg-blue-50 text-blue-600 hover:bg-blue-100';
+    let colorClass = 'bg-gray-50 text-gray-600 hover:bg-gray-100';
+    switch (link.type) {
+        case 'document':
+            colorClass = 'bg-blue-50 text-blue-600 hover:bg-blue-100';
+            break;
+        case 'code':
+        case 'dataset':
+            colorClass = 'bg-green-50 text-green-600 hover:bg-green-100';
+            break;
+        case 'poster':
+        case 'slide':
+            colorClass = 'bg-purple-50 text-purple-600 hover:bg-purple-100';
+            break;
+    }
 
     // リンクがない場合（まだ公開されていないposterなど）
     if (!link.url) {
