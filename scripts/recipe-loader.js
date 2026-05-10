@@ -58,8 +58,65 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
             }
 
+            // 詳細（材料・作り方）
+            const detailsElement = document.createElement('details');
+            detailsElement.className = 'mt-2 mb-4 group';
+            
+            const summaryElement = document.createElement('summary');
+            summaryElement.className = 'text-sm text-blue-600 cursor-pointer hover:underline font-medium list-none flex items-center';
+            summaryElement.innerHTML = `レシピを見る <svg class="w-4 h-4 ml-1 transform transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>`;
+            detailsElement.appendChild(summaryElement);
+
+            const detailsContent = document.createElement('div');
+            detailsContent.className = 'mt-3 text-sm text-gray-700 bg-gray-50 p-4 rounded-md border border-gray-100';
+
+            let hasDetails = false;
+
+            if (recipe.ingredients && recipe.ingredients.length > 0) {
+                hasDetails = true;
+                const ingTitle = document.createElement('h4');
+                ingTitle.className = 'font-bold text-gray-800 mb-2';
+                ingTitle.textContent = '材料';
+                detailsContent.appendChild(ingTitle);
+
+                const ingList = document.createElement('ul');
+                ingList.className = 'list-disc list-inside mb-4 space-y-1';
+                recipe.ingredients.forEach(item => {
+                    const liItem = document.createElement('li');
+                    // HTMLタグを許可するかどうか。基本はテキスト
+                    liItem.innerHTML = item;
+                    ingList.appendChild(liItem);
+                });
+                detailsContent.appendChild(ingList);
+            }
+
+            if (recipe.instructions && recipe.instructions.length > 0) {
+                hasDetails = true;
+                const instTitle = document.createElement('h4');
+                instTitle.className = 'font-bold text-gray-800 mb-2';
+                instTitle.textContent = '作り方';
+                detailsContent.appendChild(instTitle);
+
+                const instList = document.createElement('ol');
+                instList.className = 'list-decimal list-inside space-y-2';
+                recipe.instructions.forEach(item => {
+                    const liItem = document.createElement('li');
+                    liItem.className = 'pl-1';
+                    liItem.innerHTML = item;
+                    instList.appendChild(liItem);
+                });
+                detailsContent.appendChild(instList);
+            }
+            
+            detailsElement.appendChild(detailsContent);
+
             li.appendChild(headerDiv);
             li.appendChild(descP);
+            
+            if (hasDetails) {
+                li.appendChild(detailsElement);
+            }
+            
             li.appendChild(tagsDiv);
             
             container.appendChild(li);
