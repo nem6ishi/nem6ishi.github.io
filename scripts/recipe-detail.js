@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Breadcrumb mapping
     const categoryMap = {
-        'cooking': { name: '料理', url: 'cooking.html' },
-        'sweets': { name: 'お菓子', url: 'sweets.html' }
+        'cooking': { name: 'レシピ（料理）', url: 'cooking.html' },
+        'sweets': { name: 'レシピ（お菓子）', url: 'sweets.html' }
     };
 
     if (!recipeType || !recipeId || !['cooking', 'sweets'].includes(recipeType)) {
