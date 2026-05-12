@@ -74,8 +74,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (recipe.ingredients && recipe.ingredients.length > 0) {
             recipe.ingredients.forEach(item => {
                 const li = document.createElement('li');
-                li.className = 'flex items-start pb-2 border-b border-orange-100 last:border-0 last:pb-0';
-                li.innerHTML = `<span class="mr-2 text-orange-400 mt-0.5">•</span> <span>${item}</span>`;
+                // 【】で囲まれた行は見出しとして太字表示
+                if (item.match(/^【.*】$/)) {
+                    li.className = 'font-bold text-gray-900 pt-3 first:pt-0';
+                    li.textContent = item;
+                } else {
+                    li.className = 'flex items-start pb-2 border-b border-orange-100 last:border-0 last:pb-0';
+                    li.innerHTML = `<span class="mr-2 text-orange-400 mt-0.5">•</span> <span>${item}</span>`;
+                }
                 ingContainer.appendChild(li);
             });
         } else {
@@ -110,6 +116,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         spinner.classList.add('hidden');
         content.classList.remove('hidden');
+
+        // 一覧へ戻るリンクを追加
+        const backLink = document.createElement('div');
+        backLink.className = 'mt-8 pt-6 border-t border-gray-200';
+        backLink.innerHTML = `<a href="${map[type].url}" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors"><svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>一覧に戻る</a>`;
+        content.appendChild(backLink);
     }
 
     function showError() {

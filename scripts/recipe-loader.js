@@ -16,11 +16,16 @@ document.addEventListener('DOMContentLoaded', async () => {
         // レシピ件数の表示
         const countElement = document.getElementById('recipe-count');
         if (countElement) {
-            countElement.textContent = `全 ${recipes.length} 件のレシピ`;
+            countElement.textContent = recipes.length > 0 ? `全 ${recipes.length} 件のレシピ` : '';
         }
 
         const container = document.getElementById('recipes-container');
         if (!container) return;
+
+        if (recipes.length === 0) {
+            container.innerHTML = '<li class="text-gray-500 text-center py-8">まだレシピが登録されていません。</li>';
+            return;
+        }
 
         recipes.forEach(recipe => {
             const li = document.createElement('li');
