@@ -52,26 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             headerDiv.appendChild(dateSpan);
             headerDiv.appendChild(titleH3);
 
-            // 説明文
-            const descP = document.createElement('p');
-            descP.className = 'text-sm text-gray-600 leading-relaxed flex-grow mb-4';
-            descP.textContent = recipe.description;
-
-            // タグ
-            const tagsDiv = document.createElement('div');
-            tagsDiv.className = 'flex flex-wrap gap-2 mt-auto';
-            if (recipe.tags && recipe.tags.length > 0) {
-                recipe.tags.forEach(tag => {
-                    const tagSpan = document.createElement('span');
-                    tagSpan.className = 'px-2 py-1 bg-gray-100 text-gray-600 text-xs rounded-full';
-                    tagSpan.textContent = `#${tag}`;
-                    tagsDiv.appendChild(tagSpan);
-                });
-            }
-
             linkWrapper.appendChild(headerDiv);
-            linkWrapper.appendChild(descP);
-            linkWrapper.appendChild(tagsDiv);
             
             li.appendChild(linkWrapper);
             
