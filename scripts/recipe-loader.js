@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         
         const data = await response.json();
-        const recipes = data.recipes || [];
+        const recipes = (data.recipes || []).sort((a, b) => b.date.localeCompare(a.date));
 
         // レシピ件数の表示
         const countElement = document.getElementById('recipe-count');
