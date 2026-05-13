@@ -29,38 +29,41 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         recipes.forEach(recipe => {
             const li = document.createElement('li');
-            li.className = 'h-full';
             
             const linkWrapper = document.createElement('a');
-            linkWrapper.className = 'block border border-gray-200 rounded-lg p-4 card-hover bg-white h-full flex flex-col group';
+            linkWrapper.className = 'block border border-gray-200 rounded-lg px-4 py-3 card-hover bg-white group';
             
             // データソースからtypeを判別 (e.g. "../data/sweets.json" -> "sweets")
             const typeMatch = config.dataSource.match(/data\/([^.]+)\.json/);
             const type = typeMatch ? typeMatch[1] : 'cooking';
             linkWrapper.href = `recipe.html?type=${type}&id=${recipe.id}`;
 
-            // 日付とタイトル
+            // 日付とタイトルを横並びに
             const headerDiv = document.createElement('div');
-            headerDiv.className = 'mb-2';
+            headerDiv.className = 'flex items-center justify-between';
             
+            const leftDiv = document.createElement('div');
+            leftDiv.className = 'flex items-center gap-3';
+
             const dateSpan = document.createElement('span');
-            dateSpan.className = 'text-xs text-gray-500 whitespace-nowrap block mb-1';
+            dateSpan.className = 'text-xs text-gray-400 whitespace-nowrap';
             dateSpan.textContent = recipe.date;
             
             const titleH3 = document.createElement('h3');
-            titleH3.className = 'text-lg font-medium text-gray-800 group-hover:text-blue-600 transition-colors flex justify-between items-center';
-            titleH3.innerHTML = `
-                ${recipe.title}
-                <svg class="w-4 h-4 text-gray-400 group-hover:text-blue-600 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            `;
+            titleH3.className = 'text-base font-medium text-gray-800 group-hover:text-blue-600 transition-colors';
+            titleH3.textContent = recipe.title;
 
-            headerDiv.appendChild(dateSpan);
-            headerDiv.appendChild(titleH3);
+            leftDiv.appendChild(dateSpan);
+            leftDiv.appendChild(titleH3);
+
+            const arrow = document.createElement('span');
+            arrow.innerHTML = `<svg class="w-4 h-4 text-gray-300 group-hover:text-blue-600 transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>`;
+
+            headerDiv.appendChild(leftDiv);
+            headerDiv.appendChild(arrow);
 
             linkWrapper.appendChild(headerDiv);
-            
             li.appendChild(linkWrapper);
-            
             container.appendChild(li);
         });
 
