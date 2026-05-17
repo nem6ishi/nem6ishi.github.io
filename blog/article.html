@@ -102,6 +102,14 @@
             }
 
             try {
+                // articles.jsonからメタデータを取得
+                const metaResponse = await fetch(`../data/blog/articles.json?t=${new Date().getTime()}`);
+                if (!metaResponse.ok) {
+                    throw new Error(`HTTP error! status: ${metaResponse.status} for articles.json`);
+                }
+                const metaData = await metaResponse.json();
+                const articleMeta = metaData.articles.find(a => a.id === articleId);
+
                 // blog/data/配下のMarkdownファイルを読み込みます
                 // 記事IDにサブディレクトリ（例: 2025/）が含まれている場合にも対応
                 // キャッシュを回避するためにタイムスタンプを付与
@@ -118,28 +126,16 @@
                 function parseMarkdownWithFrontMatter(text) {
                     const frontMatterRegex = /^---\s*([\s\S]*?)\s*---/;
                     const match = text.match(frontMatterRegex);
-                    let frontMatter = {};
                     let content = text;
 
                     if (match) {
-                        const yamlText = match[1];
                         content = text.substring(match[0].length).trimStart();
-                        // 簡単なYAML風のパース (titleとdateのみを想定)
-                        yamlText.split('\n').forEach(line => {
-                            const parts = line.split(':');
-                            if (parts.length >= 2) {
-                                const key = parts[0].trim();
-                                const value = parts.slice(1).join(':').trim();
-                                if (key === 'title' || key === 'date' || key === 'updatedAt') {
-                                    frontMatter[key] = value;
-                                }
-                            }
-                        });
                     }
-                    return { ...frontMatter, content };
+                    return content;
                 }
 
-                const article = parseMarkdownWithFrontMatter(rawText);
+                const content = parseMarkdownWithFrontMatter(rawText);
+                const article = articleMeta ? { ...articleMeta, content } : null;
 
                 if (article && article.title && article.date && article.content) {
                     pageTitleElement.textContent = `${article.title} - ブログ / Blog - 根石 将人`;
