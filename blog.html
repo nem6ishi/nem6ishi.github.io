@@ -91,6 +91,9 @@
                                         const value = parts.slice(1).join(':').trim();
                                         if (key === 'title') {
                                             article.title = value;
+                                        } else if (key === 'tags') {
+                                            let cleaned = value.replace(/^\[|\]$/g, '');
+                                            article.tags = cleaned.split(',').map(t => t.trim()).filter(t => t);
                                         }
                                     }
                                 });
