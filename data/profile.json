@@ -44,6 +44,18 @@
   "publications": {
     "refereed": [
       {
+        "title": "Further Compressing Distilled Language Models via Frequency-aware Partial Sparse Coding of Embeddings",
+        "authors": "Kohki Tamura, Naoki Yoshinaga, Masato Neishi",
+        "venue": "The 28th Conference on Computational Natural Language Learning (CoNLL 2024), Miami, November 2024.",
+        "links": [
+          {
+            "type": "document",
+            "url": "https://aclanthology.org/2024.conll-1.29/",
+            "label": "Paper"
+          }
+        ]
+      },
+      {
         "title": "Revisiting Pre-training of Embedding Layers in Transformer-based Neural Machine Translation",
         "authors": "Masato Neishi, Naoki Yoshinaga",
         "venue": "Journal of Natural Language Processing 31 (2), 534-567, 2024.",
