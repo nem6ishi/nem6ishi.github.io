@@ -126,16 +126,30 @@
                 function parseMarkdownWithFrontMatter(text) {
                     const frontMatterRegex = /^---\s*([\s\S]*?)\s*---/;
                     const match = text.match(frontMatterRegex);
+                    let frontMatter = {};
                     let content = text;
 
                     if (match) {
+                        const yamlText = match[1];
                         content = text.substring(match[0].length).trimStart();
+                        // 簡単なYAML風のパース (titleとdateのみを想定)
+                        yamlText.split('\n').forEach(line => {
+                            const parts = line.split(':');
+                            if (parts.length >= 2) {
+                                const key = parts[0].trim();
+                                const value = parts.slice(1).join(':').trim();
+                                if (key === 'title' || key === 'date' || key === 'updatedAt') {
+                                    frontMatter[key] = value;
+                                }
+                            }
+                        });
                     }
-                    return content;
+                    return { ...frontMatter, content };
                 }
 
-                const content = parseMarkdownWithFrontMatter(rawText);
-                const article = articleMeta ? { ...articleMeta, content } : null;
+                const mdData = parseMarkdownWithFrontMatter(rawText);
+                // JSONのデータをベースにしつつ、MarkdownのFront Matterがあればそれで上書きする
+                const article = articleMeta ? { ...articleMeta, ...mdData } : mdData;
 
                 if (article && article.title && article.date && article.content) {
                     pageTitleElement.textContent = `${article.title} - ブログ / Blog - 根石 将人`;

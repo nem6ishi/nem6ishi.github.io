@@ -73,6 +73,33 @@
                 const data = await response.json();
 
                 let allArticles = data.articles || [];
+
+                // MarkdownファイルからFront Matterを取得してタイトルを上書きする
+                await Promise.all(allArticles.map(async (article) => {
+                    try {
+                        const mdResponse = await fetch(`blog/data/${article.id}.md?t=${new Date().getTime()}`);
+                        if (mdResponse.ok) {
+                            const text = await mdResponse.text();
+                            const frontMatterRegex = /^---\s*([\s\S]*?)\s*---/;
+                            const match = text.match(frontMatterRegex);
+                            if (match) {
+                                const yamlText = match[1];
+                                yamlText.split('\n').forEach(line => {
+                                    const parts = line.split(':');
+                                    if (parts.length >= 2) {
+                                        const key = parts[0].trim();
+                                        const value = parts.slice(1).join(':').trim();
+                                        if (key === 'title') {
+                                            article.title = value;
+                                        }
+                                    }
+                                });
+                            }
+                        }
+                    } catch (e) {
+                        console.error(`Failed to load markdown for ${article.id}`, e);
+                    }
+                }));
                 let currentSortCol = 'date';
                 let currentSortDir = 'desc';
 
