@@ -225,6 +225,27 @@
                 container.querySelectorAll('pre').forEach(pre => {
                     pre.classList.add('relative', 'my-8', 'shadow-sm', 'rounded-xl', 'overflow-hidden');
                 });
+                container.querySelectorAll('table').forEach(table => {
+                    table.classList.add('w-full', 'text-left', 'border-collapse');
+                    if (!table.parentElement.classList.contains('overflow-x-auto')) {
+                        const wrapper = document.createElement('div');
+                        wrapper.classList.add('overflow-x-auto', 'my-8', 'shadow-sm', 'rounded-lg', 'ring-1', 'ring-gray-200');
+                        table.parentNode.insertBefore(wrapper, table);
+                        wrapper.appendChild(table);
+                    }
+                });
+                container.querySelectorAll('thead').forEach(thead => {
+                    thead.classList.add('bg-gray-50', 'border-b', 'border-gray-200');
+                });
+                container.querySelectorAll('th').forEach(th => {
+                    th.classList.add('py-3', 'px-4', 'font-semibold', 'text-gray-900', 'text-sm', 'whitespace-nowrap');
+                });
+                container.querySelectorAll('tbody tr').forEach(tr => {
+                    tr.classList.add('border-b', 'border-gray-100', 'hover:bg-gray-50/50', 'transition-colors', 'last:border-0');
+                });
+                container.querySelectorAll('td').forEach(td => {
+                    td.classList.add('py-3', 'px-4', 'text-sm', 'text-gray-700', 'align-middle');
+                });
             }
 
             function displayError(message) {
