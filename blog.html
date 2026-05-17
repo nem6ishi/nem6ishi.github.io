@@ -84,28 +84,45 @@
 
                 function renderArticles(articles) {
                     if (articles.length > 0) {
-                        articlesListElement.innerHTML = articles.map(article => {
+                        const tableHeader = `
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse min-w-full">
+                                    <thead>
+                                        <tr class="border-b-2 border-gray-200 text-gray-500 text-sm">
+                                            <th class="py-3 px-2 sm:px-4 font-medium">タイトル</th>
+                                            <th class="py-3 px-2 sm:px-4 font-medium whitespace-nowrap w-24 sm:w-32">公開日</th>
+                                            <th class="py-3 px-2 sm:px-4 font-medium whitespace-nowrap w-24 sm:w-32">更新日</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100">
+                        `;
+                        const tableRows = articles.map(article => {
                             const dateStr = formatDateSimple(article.date);
                             const updatedStr = article.updatedAt && article.updatedAt !== article.date 
-                                ? formatDateSimple(article.updatedAt) : '';
+                                ? formatDateSimple(article.updatedAt) : '-';
                             
-                            const timeDisplay = updatedStr 
-                                ? `<div class="flex flex-col"><time datetime="${article.date}">公開: ${dateStr}</time><time datetime="${article.updatedAt}" class="text-blue-500">更新: ${updatedStr}</time></div>`
-                                : `<time datetime="${article.date}" class="my-auto">公開: ${dateStr}</time>`;
-
                             return `
-                            <div class="py-3 border-b border-gray-100 last:border-0">
-                                <a href="blog/article.html?id=${article.id}" class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 group">
-                                    <div class="text-xs sm:text-sm text-gray-400 font-mono min-w-[130px]">
-                                        ${timeDisplay}
-                                    </div>
-                                    <span class="text-base sm:text-lg font-medium text-gray-800 group-hover:text-blue-600 transition-colors sm:self-center">
-                                        ${article.title}
-                                    </span>
-                                </a>
-                            </div>
+                                        <tr class="hover:bg-gray-50 transition-colors group">
+                                            <td class="py-3 px-2 sm:px-4 align-middle">
+                                                <a href="blog/article.html?id=${article.id}" class="text-sm sm:text-base font-medium text-gray-800 group-hover:text-blue-600 block">
+                                                    ${article.title}
+                                                </a>
+                                            </td>
+                                            <td class="py-3 px-2 sm:px-4 text-xs sm:text-sm text-gray-500 font-mono align-middle whitespace-nowrap">
+                                                <time datetime="${article.date}">${dateStr}</time>
+                                            </td>
+                                            <td class="py-3 px-2 sm:px-4 text-xs sm:text-sm text-gray-500 font-mono align-middle whitespace-nowrap">
+                                                ${updatedStr !== '-' ? `<time datetime="${article.updatedAt}">${updatedStr}</time>` : '-'}
+                                            </td>
+                                        </tr>
                             `;
                         }).join('');
+                        const tableFooter = `
+                                    </tbody>
+                                </table>
+                            </div>
+                        `;
+                        articlesListElement.innerHTML = tableHeader + tableRows + tableFooter;
                     } else {
                         articlesListElement.innerHTML = `
                             <div class="text-center py-12">
