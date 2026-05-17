@@ -49,8 +49,16 @@
             <a href="index.html" class="hover:text-blue-600">トップ</a> &gt;
             <span>ブログ</span>
         </nav>
-        <div class="mb-8 pb-2 border-b border-gray-200">
+        <div class="mb-8 pb-2 border-b border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-end gap-2">
             <h1 class="text-2xl font-bold text-gray-800">ブログ / Blog</h1>
+            <div class="text-sm flex items-center">
+                <label for="sort-select" class="text-gray-500 mr-2 whitespace-nowrap">並び替え:</label>
+                <select id="sort-select" class="border border-gray-300 rounded text-gray-700 bg-white py-1 px-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
+                    <option value="date-desc">初公開日 (新しい順)</option>
+                    <option value="date-asc">初公開日 (古い順)</option>
+                    <option value="updated-desc">最終更新日 (新しい順)</option>
+                </select>
+            </div>
         </div>
 
         <section id="articles-list">
@@ -72,28 +80,71 @@
                 }
                 const data = await response.json();
 
-                if (data.articles && data.articles.length > 0) {
-                    // 日付順にソート（新しい順）
-                    const sortedArticles = data.articles.sort((a, b) => new Date(b.date) - new Date(a.date));
+                let allArticles = data.articles || [];
 
-                    articlesListElement.innerHTML = sortedArticles.map(article => `
-                        <div class="py-3 border-b border-gray-100 last:border-0">
-                            <a href="blog/article.html?id=${article.id}" class="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 group">
-                                <time class="text-sm text-gray-400 font-mono min-w-[100px]" datetime="${article.date}">
-                                    ${formatDateSimple(article.date)}
-                                </time>
-                                <span class="text-base sm:text-lg font-medium text-gray-800 group-hover:text-blue-600 transition-colors">
-                                    ${article.title}
-                                </span>
-                            </a>
-                        </div>
-                    `).join('');
+                function renderArticles(articles) {
+                    if (articles.length > 0) {
+                        articlesListElement.innerHTML = articles.map(article => {
+                            const dateStr = formatDateSimple(article.date);
+                            const updatedStr = article.updatedAt && article.updatedAt !== article.date 
+                                ? formatDateSimple(article.updatedAt) : '';
+                            
+                            const timeDisplay = updatedStr 
+                                ? `<div class="flex flex-col"><time datetime="${article.date}">公開: ${dateStr}</time><time datetime="${article.updatedAt}" class="text-blue-500">更新: ${updatedStr}</time></div>`
+                                : `<time datetime="${article.date}" class="my-auto">公開: ${dateStr}</time>`;
+
+                            return `
+                            <div class="py-3 border-b border-gray-100 last:border-0">
+                                <a href="blog/article.html?id=${article.id}" class="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4 group">
+                                    <div class="text-xs sm:text-sm text-gray-400 font-mono min-w-[130px]">
+                                        ${timeDisplay}
+                                    </div>
+                                    <span class="text-base sm:text-lg font-medium text-gray-800 group-hover:text-blue-600 transition-colors sm:self-center">
+                                        ${article.title}
+                                    </span>
+                                </a>
+                            </div>
+                            `;
+                        }).join('');
+                    } else {
+                        articlesListElement.innerHTML = `
+                            <div class="text-center py-12">
+                                <p class="text-gray-500">記事がまだありません。</p>
+                            </div>
+                        `;
+                    }
+                }
+
+                function sortArticles(mode) {
+                    let sorted = [...allArticles];
+                    if (mode === 'date-desc') {
+                        sorted.sort((a, b) => new Date(b.date) - new Date(a.date));
+                    } else if (mode === 'date-asc') {
+                        sorted.sort((a, b) => new Date(a.date) - new Date(b.date));
+                    } else if (mode === 'updated-desc') {
+                        sorted.sort((a, b) => {
+                            const dateA = a.updatedAt ? new Date(a.updatedAt) : new Date(a.date);
+                            const dateB = b.updatedAt ? new Date(b.updatedAt) : new Date(b.date);
+                            // もし更新日が同じなら初公開日の新しい順
+                            if (dateB - dateA === 0) {
+                                return new Date(b.date) - new Date(a.date);
+                            }
+                            return dateB - dateA;
+                        });
+                    }
+                    renderArticles(sorted);
+                }
+
+                if (allArticles.length > 0) {
+                    const sortSelect = document.getElementById('sort-select');
+                    if (sortSelect) {
+                        sortSelect.addEventListener('change', (e) => sortArticles(e.target.value));
+                        sortArticles(sortSelect.value);
+                    } else {
+                        sortArticles('date-desc');
+                    }
                 } else {
-                    articlesListElement.innerHTML = `
-                        <div class="text-center py-12">
-                            <p class="text-gray-500">記事がまだありません。</p>
-                        </div>
-                    `;
+                    renderArticles([]);
                 }
             } catch (error) {
                 console.error('記事一覧の読み込みエラー:', error);

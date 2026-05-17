@@ -46,7 +46,13 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    公開日: <time id="article-date" class="font-medium"></time>
+                    <span class="mr-3">公開: <time id="article-date" class="font-medium"></time></span>
+                    <span id="article-updated-container" class="hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                        更新: <time id="article-updated" class="font-medium text-blue-500"></time>
+                    </span>
                 </div>
             </header>
 
@@ -80,6 +86,8 @@
         document.addEventListener('DOMContentLoaded', async function () {
             const articleTitleElement = document.getElementById('article-title');
             const articleDateElement = document.getElementById('article-date');
+            const articleUpdatedContainer = document.getElementById('article-updated-container');
+            const articleUpdatedElement = document.getElementById('article-updated');
             const articleContentElement = document.getElementById('article-content'); // IDで取得するように変更
             const pageTitleElement = document.querySelector('title');
             const breadcrumbArticleTitleElement = document.getElementById('breadcrumb-article-title');
@@ -122,7 +130,7 @@
                             if (parts.length >= 2) {
                                 const key = parts[0].trim();
                                 const value = parts.slice(1).join(':').trim();
-                                if (key === 'title' || key === 'date') {
+                                if (key === 'title' || key === 'date' || key === 'updatedAt') {
                                     frontMatter[key] = value;
                                 }
                             }
@@ -140,6 +148,12 @@
 
                     articleDateElement.textContent = article.date;
                     articleDateElement.datetime = article.date;
+                    
+                    if (article.updatedAt && article.updatedAt !== article.date) {
+                        articleUpdatedElement.textContent = article.updatedAt;
+                        articleUpdatedElement.datetime = article.updatedAt;
+                        articleUpdatedContainer.classList.remove('hidden');
+                    }
 
                     // Meta情報の動的な更新（SEO対応）
                     updateMetaTags(article.title, article.content.substring(0, 160).replace(/[#*`]/g, '') + '...');
