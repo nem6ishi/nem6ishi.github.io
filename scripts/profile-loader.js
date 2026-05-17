@@ -108,7 +108,7 @@ function createPublicationCard(publication) {
             <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight">
                 ${escapeHtml(publication.title)}
             </h4>
-            <p class="text-sm text-gray-600 mb-2">${escapeHtml(publication.authors)}</p>
+            <p class="text-sm text-gray-600 mb-2">${escapeHtml(publication.authors).replace(/Masato Neishi/g, '<strong>Masato Neishi</strong>').replace(/根石 将人/g, '<strong>根石 将人</strong>')}</p>
             <p class="text-sm text-gray-500 ${linksHtml || acceptanceRateHtml ? 'mb-2' : 'mb-3'}">${escapeHtml(publication.venue)}</p>
             ${acceptanceRateHtml}
             ${linksHtml}
