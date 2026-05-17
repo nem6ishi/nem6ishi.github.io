@@ -49,16 +49,8 @@
             <a href="index.html" class="hover:text-blue-600">トップ</a> &gt;
             <span>ブログ</span>
         </nav>
-        <div class="mb-8 pb-2 border-b border-gray-200 flex flex-col sm:flex-row sm:justify-between sm:items-end gap-2">
+        <div class="mb-8 pb-2 border-b border-gray-200">
             <h1 class="text-2xl font-bold text-gray-800">ブログ / Blog</h1>
-            <div class="text-sm flex items-center">
-                <label for="sort-select" class="text-gray-500 mr-2 whitespace-nowrap">並び替え:</label>
-                <select id="sort-select" class="border border-gray-300 rounded text-gray-700 bg-white py-1 px-2 focus:ring-blue-500 focus:border-blue-500 outline-none">
-                    <option value="date-desc">初公開日 (新しい順)</option>
-                    <option value="date-asc">初公開日 (古い順)</option>
-                    <option value="updated-desc">最終更新日 (新しい順)</option>
-                </select>
-            </div>
         </div>
 
         <section id="articles-list">
@@ -81,6 +73,23 @@
                 const data = await response.json();
 
                 let allArticles = data.articles || [];
+                let currentSortCol = 'date';
+                let currentSortDir = 'desc';
+
+                window.toggleSort = function(col) {
+                    if (currentSortCol === col) {
+                        currentSortDir = currentSortDir === 'desc' ? 'asc' : 'desc';
+                    } else {
+                        currentSortCol = col;
+                        currentSortDir = 'desc';
+                    }
+                    sortArticles();
+                };
+
+                function getSortIcon(col) {
+                    if (currentSortCol !== col) return '<span class="text-gray-300 ml-1">↕</span>';
+                    return currentSortDir === 'desc' ? '<span class="text-blue-500 ml-1">▼</span>' : '<span class="text-blue-500 ml-1">▲</span>';
+                }
 
                 function renderArticles(articles) {
                     if (articles.length > 0) {
@@ -90,8 +99,12 @@
                                     <thead>
                                         <tr class="border-b-2 border-gray-200 text-gray-500 text-sm">
                                             <th class="py-3 px-2 sm:px-4 font-medium">タイトル</th>
-                                            <th class="py-3 px-2 sm:px-4 font-medium whitespace-nowrap w-24 sm:w-32">公開日</th>
-                                            <th class="py-3 px-2 sm:px-4 font-medium whitespace-nowrap w-24 sm:w-32">更新日</th>
+                                            <th class="py-3 px-2 sm:px-4 font-medium whitespace-nowrap w-24 sm:w-32 cursor-pointer hover:bg-gray-50 select-none transition-colors" onclick="toggleSort('date')" title="公開日で並び替え">
+                                                公開日 ${getSortIcon('date')}
+                                            </th>
+                                            <th class="py-3 px-2 sm:px-4 font-medium whitespace-nowrap w-24 sm:w-32 cursor-pointer hover:bg-gray-50 select-none transition-colors" onclick="toggleSort('updatedAt')" title="更新日で並び替え">
+                                                更新日 ${getSortIcon('updatedAt')}
+                                            </th>
                                         </tr>
                                     </thead>
                                     <tbody class="divide-y divide-gray-100">
@@ -132,34 +145,29 @@
                     }
                 }
 
-                function sortArticles(mode) {
+                function sortArticles() {
                     let sorted = [...allArticles];
-                    if (mode === 'date-desc') {
-                        sorted.sort((a, b) => new Date(b.date) - new Date(a.date));
-                    } else if (mode === 'date-asc') {
-                        sorted.sort((a, b) => new Date(a.date) - new Date(b.date));
-                    } else if (mode === 'updated-desc') {
-                        sorted.sort((a, b) => {
-                            const dateA = a.updatedAt ? new Date(a.updatedAt) : new Date(a.date);
-                            const dateB = b.updatedAt ? new Date(b.updatedAt) : new Date(b.date);
-                            // もし更新日が同じなら初公開日の新しい順
-                            if (dateB - dateA === 0) {
-                                return new Date(b.date) - new Date(a.date);
+                    sorted.sort((a, b) => {
+                        let valA, valB;
+                        if (currentSortCol === 'updatedAt') {
+                            valA = a.updatedAt ? new Date(a.updatedAt) : new Date(a.date);
+                            valB = b.updatedAt ? new Date(b.updatedAt) : new Date(b.date);
+                            if (valB - valA === 0) {
+                                valA = new Date(a.date);
+                                valB = new Date(b.date);
                             }
-                            return dateB - dateA;
-                        });
-                    }
+                        } else {
+                            valA = new Date(a.date);
+                            valB = new Date(b.date);
+                        }
+                        
+                        return currentSortDir === 'desc' ? valB - valA : valA - valB;
+                    });
                     renderArticles(sorted);
                 }
 
                 if (allArticles.length > 0) {
-                    const sortSelect = document.getElementById('sort-select');
-                    if (sortSelect) {
-                        sortSelect.addEventListener('change', (e) => sortArticles(e.target.value));
-                        sortArticles(sortSelect.value);
-                    } else {
-                        sortArticles('date-desc');
-                    }
+                    sortArticles();
                 } else {
                     renderArticles([]);
                 }
