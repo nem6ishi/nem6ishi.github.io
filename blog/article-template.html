@@ -141,6 +141,12 @@
                     // 意図しない挙動を避けるため、JSONのcontentはMarkdown形式を推奨します。
                     articleContentElement.innerHTML = marked.parse(article.content);
 
+                    // 画像 (img) 要素に特定のクラスを適用
+                    const imgs = articleContentElement.querySelectorAll('img');
+                    imgs.forEach(img => {
+                        img.classList.add('max-w-[45%]', 'max-h-[250px]', 'sm:max-w-[380px]', 'sm:max-h-[380px]', 'object-contain', 'mx-auto', 'my-6', 'rounded-xl', 'shadow-md', 'border', 'border-gray-100', 'block');
+                    });
+
                     // 生成されたHTML内のulおよびli要素に特定のクラスを適用
                     const uls = articleContentElement.querySelectorAll('ul');
                     uls.forEach(ul => {
