@@ -57,7 +57,7 @@ tags: 思い出, 五月祭, 駒場祭
 ![2016年五月祭「WE WANT BEER!」のテント屋台](/images/blog/2026/20260517_may_festival/beer_stall_2016.jpg)
 ![2017年五月祭のクラフトビール販売カウンター](/images/blog/2026/20260517_may_festival/beer_counter_2017.jpg)
 ![2018年五月祭「BEER'S WAITING」特別出店のメニュー看板](/images/blog/2026/20260517_may_festival/beer_menu_2018.jpg)
-![氷水でキンキンに冷やしたクラフトビール](/images/blog/2026/20260517_may_festival/beer_cooler.jpg)
+![2019年五月祭の氷水で冷やすビール](/images/blog/2026/20260517_may_festival/beer_cooler_2019.jpg)
 
 ### 2020年
 出店をやめたきっかけが思い出せないと思ったが、新型コロナウイルスの影響だった。この年の第93回五月祭はオンライン開催となり、物理的な参加が不可能になった。
