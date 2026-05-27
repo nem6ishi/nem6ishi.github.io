@@ -211,6 +211,9 @@
             }
 
             function setupArticleStyles(container) {
+                container.querySelectorAll('img').forEach(img => {
+                    img.classList.add('max-w-full', 'sm:max-w-xl', 'mx-auto', 'my-8', 'rounded-xl', 'shadow-md', 'border', 'border-gray-100', 'block');
+                });
                 container.querySelectorAll('ul').forEach(ul => {
                     if (!ul.closest('pre')) ul.classList.add('list-disc', 'pl-6', 'mb-6', 'space-y-2');
                 });
