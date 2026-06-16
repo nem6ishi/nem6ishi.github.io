@@ -55,53 +55,64 @@
         </div>
 
         <section>
-            <ul id="restaurants-container">
-                <li class="mb-6 border border-gray-200 rounded-lg p-4 card-hover">
-                    <div class="mb-2">
-                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">那覇市</span>
-                        <h3 class="text-lg font-medium text-gray-800">
-                            <a href="https://www.google.com/maps/place/%E5%AE%89%E9%87%8C%E5%B1%8B%E3%81%99%E3%81%B0/@26.2185272,127.6944169,17z/data=!4m6!3m5!1s0x34e56963ecee4ee1:0x915096687c1484f3!8m2!3d26.2185385!4d127.6959824!16s%2Fg%2F11cn69bxhw?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
-                                安里屋すば
-                                <svg class="inline-block w-4 h-4 ml-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </h3>
-                    </div>
-                    <div class="mt-3 ml-4 mb-3 border border-gray-100 rounded-md p-3 bg-gray-50 shadow-sm">
-                        <p class="text-sm text-gray-600 leading-relaxed">
+            <ul id="restaurants-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 1. 安里屋すば -->
+                <li class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col group">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
+                            <span class="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-bold">🍜 沖縄そば</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">安里屋すば</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-100">
                             沖縄で一番好きな沖縄そば屋。立ち食いで5人程度しか入れないが、麺、スープ、ソーキ、かまぼこ、全てが美味しい。ソーキそばがおすすめ。
                         </p>
                     </div>
-                </li>
-                <li class="mb-6 border border-gray-200 rounded-lg p-4 card-hover">
-                    <div class="mb-2">
-                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">那覇市</span>
-                        <h3 class="text-lg font-medium text-gray-800">
-                            <a href="https://www.google.com/maps/place/MAHOWBREW/@26.2110529,127.6922962,16.71z/data=!3m1!5s0x34e5696f97357755:0x646ef301bf556c43!4m6!3m5!1s0x34e5695d166d1d4f:0x84d8eb471cdfbf3c!8m2!3d26.2125161!4d127.6937726!16s%2Fg%2F11w25kbr7y?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
-                                MAHOWBREW
-                                <svg class="inline-block w-4 h-4 ml-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </h3>
+                    <div class="px-5 pb-5 mt-auto">
+                        <a href="https://www.google.com/maps/place/%E5%AE%89%E9%87%8C%E5%B1%8B%E3%81%99%E3%81%B0/@26.2185272,127.6944169,17z/data=!4m6!3m5!1s0x34e56963ecee4ee1:0x915096687c1484f3!8m2!3d26.2185385!4d127.6959824!16s%2Fg%2F11cn69bxhw?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 px-4 bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg font-medium transition-colors duration-300">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Googleマップで見る
+                        </a>
                     </div>
-                    <div class="mt-3 ml-4 mb-3 border border-gray-100 rounded-md p-3 bg-gray-50 shadow-sm">
-                        <p class="text-sm text-gray-600 leading-relaxed">
+                </li>
+
+                <!-- 2. MAHOWBREW -->
+                <li class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col group">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
+                            <span class="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">🍺 クラフトビール</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">MAHOWBREW</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-100">
                             美味しいクラフトビールが楽しめるお店です。（説明文がありましたら教えてください）
                         </p>
                     </div>
-                </li>
-                <li class="mb-6 border border-gray-200 rounded-lg p-4 card-hover">
-                    <div class="mb-2">
-                        <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">那覇市</span>
-                        <h3 class="text-lg font-medium text-gray-800">
-                            <a href="https://www.google.com/maps/place/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9/@26.2127671,127.6760617,17.7z/data=!4m6!3m5!1s0x34e56999b06c66db:0x5a84f40a1e58fcf7!8m2!3d26.2128953!4d127.6724952!16s%2Fg%2F11b698x6dx?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">
-                                ジャッキーステーキハウス
-                                <svg class="inline-block w-4 h-4 ml-1 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-                            </a>
-                        </h3>
+                    <div class="px-5 pb-5 mt-auto">
+                        <a href="https://www.google.com/maps/place/MAHOWBREW/@26.2110529,127.6922962,16.71z/data=!3m1!5s0x34e5696f97357755:0x646ef301bf556c43!4m6!3m5!1s0x34e5695d166d1d4f:0x84d8eb471cdfbf3c!8m2!3d26.2125161!4d127.6937726!16s%2Fg%2F11w25kbr7y?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 px-4 bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg font-medium transition-colors duration-300">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Googleマップで見る
+                        </a>
                     </div>
-                    <div class="mt-3 ml-4 mb-3 border border-gray-100 rounded-md p-3 bg-gray-50 shadow-sm">
-                        <p class="text-sm text-gray-600 leading-relaxed">
+                </li>
+
+                <!-- 3. ジャッキーステーキハウス -->
+                <li class="bg-white border border-gray-100 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col group">
+                    <div class="p-5 flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
+                            <span class="inline-block px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-bold">🥩 ステーキ</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">ジャッキーステーキハウス</h3>
+                        <p class="text-sm text-gray-600 leading-relaxed bg-gray-50 p-4 rounded-lg border border-gray-100">
                             老舗のステーキハウスです。（説明文がありましたら教えてください）
                         </p>
+                    </div>
+                    <div class="px-5 pb-5 mt-auto">
+                        <a href="https://www.google.com/maps/place/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9/@26.2127671,127.6760617,17.7z/data=!4m6!3m5!1s0x34e56999b06c66db:0x5a84f40a1e58fcf7!8m2!3d26.2128953!4d127.6724952!16s%2Fg%2F11b698x6dx?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full py-2.5 px-4 bg-blue-50 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg font-medium transition-colors duration-300">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Googleマップで見る
+                        </a>
                     </div>
                 </li>
             </ul>
