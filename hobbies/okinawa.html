@@ -55,9 +55,18 @@
         </div>
 
         <section class="max-w-3xl mx-auto">
-            <ul id="restaurants-container" class="flex flex-col gap-4">
+            
+        <!-- Filter Tabs -->
+        <div class="mb-6 flex flex-wrap gap-2" id="filter-tabs">
+            <button class="filter-btn active px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-bold shadow-sm transition-colors" data-filter="all">すべて</button>
+            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="soba">🍜 沖縄そば</button>
+            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="beer">🍺 ビール</button>
+            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="izakaya">🏮 居酒屋・バー</button>
+            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="meat">🥩 肉系</button>
+        </div>
+        <ul id="restaurants-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                 <!-- 1. 安里屋すば -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="soba">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">安里屋すば</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -70,7 +79,7 @@
                 </li>
 
                 <!-- 2. MAHOWBREW -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">MAHOWBREW</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -83,7 +92,7 @@
                 </li>
 
                 <!-- 3. ジャッキーステーキハウス -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="meat">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ジャッキーステーキハウス</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -96,7 +105,7 @@
                 </li>
                 
                 <!-- 4. casual kitchen 翔 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">casual kitchen 翔</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -109,7 +118,7 @@
                 </li>
                 
                 <!-- 5. ビンビール酒場韋駄天 那覇久米店 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ビンビール酒場韋駄天 那覇久米店</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -122,7 +131,7 @@
                 </li>
 
                 <!-- 6. てぃしらじそば(汀志良次そば) -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="soba">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">てぃしらじそば(汀志良次そば)</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -135,7 +144,7 @@
                 </li>
                 
                 <!-- 7. スタンド藤八 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">スタンド藤八</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -147,7 +156,7 @@
                     </p>
                 </li>
                 <!-- 8. クラフトビアハウス麦BAKU -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">クラフトビアハウス麦BAKU</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -159,7 +168,7 @@
                     </p>
                 </li>
                 <!-- 9. かねひでクラフトブルワリー -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">かねひでクラフトブルワリー</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -172,7 +181,7 @@
                 </li>
                 
                 <!-- 10. El Patio -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">El Patio</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -184,7 +193,7 @@
                     </p>
                 </li>
                 <!-- 11. 東雲 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">東雲</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -196,7 +205,7 @@
                     </p>
                 </li>
                 <!-- 12. 鮮魚ふくむら -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">鮮魚ふくむら</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -208,7 +217,7 @@
                     </p>
                 </li>
                 <!-- 13. 小梅 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">小梅</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -221,7 +230,7 @@
                 </li>
 
                 <!-- 14. 泡盛酒場 ほたる橋 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">泡盛酒場 ほたる橋</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -237,6 +246,44 @@
         </section>
     </main>
     <footer id="footer"></footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('#restaurants-container li');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => {
+                        b.classList.remove('bg-blue-600', 'text-white', 'font-bold', 'shadow-sm', 'active');
+                        b.classList.add('bg-white', 'text-gray-600', 'border', 'border-gray-200', 'font-medium', 'hover:bg-gray-50');
+                    });
+                    btn.classList.add('bg-blue-600', 'text-white', 'font-bold', 'shadow-sm', 'active');
+                    btn.classList.remove('bg-white', 'text-gray-600', 'border', 'border-gray-200', 'font-medium', 'hover:bg-gray-50');
+
+                    const filter = btn.getAttribute('data-filter');
+
+                    items.forEach(item => {
+                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                            item.style.display = 'block';
+                            // small delay to let display block apply before opacity transition
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                                item.style.transform = 'scale(1)';
+                            }, 10);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
+
 
 </html>
