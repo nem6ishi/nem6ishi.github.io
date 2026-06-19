@@ -8,267 +8,23 @@
     <meta name="author" content="Masato NEISHI">
     <title>沖縄の飲食店 / Okinawa Restaurants - 根石 将人</title>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://nem6ishi.github.io/hobbies/okinawa.html">
-    <meta property="og:title" content="沖縄の飲食店 / Okinawa Restaurants - 根石 将人">
-    <meta property="og:description" content="沖縄の飲食店紹介ページ。">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary">
-    <meta property="twitter:url" content="https://nem6ishi.github.io/hobbies/okinawa.html">
-    <meta property="twitter:title" content="沖縄の飲食店 / Okinawa Restaurants - 根石 将人">
-    <meta property="twitter:description" content="沖縄の飲食店紹介ページ。">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../components/loader.js"></script>
-    <link rel="stylesheet" href="../styles/common.css">
-</head>
-
-<body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
-    <!-- スキップリンク -->
-    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-
-    <!-- 固定ナビゲーションバー -->
-    <nav id="header" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="navigation" aria-label="メインナビゲーション">
-        <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3 animate-pulse">
-            <div class="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
-            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
-        </div>
-    </nav>
-
-    <main id="main-content"
-        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
-        <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
-            <a href="../index.html" class="hover:text-blue-600">トップ</a> &gt;
-            <a href="../hobbies.html" class="hover:text-blue-600">趣味</a> &gt;
-            <span>沖縄の飲食店</span>
-        </nav>
-
-        <div class="mb-8 pb-2 border-b border-gray-200">
-            <h1 class="text-2xl font-bold text-gray-800">沖縄の飲食店 / Okinawa Restaurants</h1>
-        </div>
-
-        <section class="max-w-3xl mx-auto">
-            
-        <!-- Filter Tabs -->
-        <div class="mb-6 flex flex-wrap gap-2" id="filter-tabs">
-            <button class="filter-btn active px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-bold shadow-sm transition-colors" data-filter="all">すべて</button>
-            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="soba">🍜 沖縄そば</button>
-            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="reimen">🍜 盛岡冷麺</button>
-            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="beer">🍺 ビール</button>
-            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="izakaya">🏮 居酒屋・バー</button>
-            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="seafood">🐟 海鮮</button>
-            <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="meat">🥩 肉系</button>
-        </div>
-                <div id="restaurants-container">
-            <!-- 🍜 沖縄そば -->
-            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="soba">
+            <!-- 🏷️ その他 -->
+            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="other">
                 <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    🍜 沖縄そば
+                    🏷️ その他
                 </h2>
                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-                <!-- 1. 安里屋すば -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="soba">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">安里屋すば</h3>
+                <!-- 14. ジャッキーステーキハウス -->
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="other">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ジャッキーステーキハウス</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-bold">🍜 沖縄そば</span>
-                        <a href="https://www.google.com/maps/place/%E5%AE%89%E9%87%8C%E5%B1%8B%E3%81%99%E3%81%B0/@26.2185272,127.6944169,17z/data=!4m6!3m5!1s0x34e56963ecee4ee1:0x915096687c1484f3!8m2!3d26.2185385!4d127.6959824!16s%2Fg%2F11cn69bxhw?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
+                        <span class="inline-block px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-bold">🥩 ステーキ</span>
+                        <a href="https://www.google.com/maps/place/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9/@26.2127671,127.6760617,17.7z/data=!4m6!3m5!1s0x34e56999b06c66db:0x5a84f40a1e58fcf7!8m2!3d26.2128953!4d127.6724952!16s%2Fg%2F11b698x6dx?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
                     </div>
                 </li>
-                <!-- 亀そば わかさ店 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="soba">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">亀そば わかさ店</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-bold">🍜 沖縄そば</span>
-                        <a href="https://www.google.com/maps/place/%E4%BA%80%E3%81%9D%E3%81%B0+%E3%82%8F%E3%81%8B%E3%81%95%E5%BA%97/@26.2164073,127.6719421,17.44z/data=!4m6!3m5!1s0x34e5699ae0f4ffff:0x6ea6dc557e30cba4!8m2!3d26.2183858!4d127.6730776!16s%2Fg%2F11c5bpnf2x?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 2. てぃしらじそば(汀志良次そば) -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="soba">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">てぃしらじそば(汀志良次そば)</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-bold">🍜 沖縄そば</span>
-                        <a href="https://www.google.com/maps/place/%E3%81%A6%E3%81%83%E3%81%97%E3%82%89%E3%81%98%E3%81%9D%E3%81%B0(%E6%B1%80%E5%BF%97%E8%89%AF%E6%AC%A1%E3%81%9D%E3%81%B0)/@26.2212983,127.7216531,17.27z/data=!4m6!3m5!1s0x34e56bf8e6530f3d:0x6a7100827dc4c78b!8m2!3d26.2213152!4d127.7217076!16s%2Fg%2F1tcx4r__?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                </ul>
-            </div>
-            <!-- 🍜 盛岡冷麺 -->
-            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="reimen">
-                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    🍜 盛岡冷麺
-                </h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-                <!-- ちるり -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="reimen">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ちるり</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-rose-100 text-rose-700 text-xs rounded-full font-bold">🍜 盛岡冷麺</span>
-                        <a href="https://www.google.com/maps/place/%E3%81%A1%E3%82%8B%E3%82%8A/@26.2141478,127.6888648,19.44z/data=!4m6!3m5!1s0x34e5697089bda9e9:0xf1effacae31358ee!8m2!3d26.2139513!4d127.6890921!16s%2Fg%2F11cmb9200t?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                </ul>
-            </div>
-            <!-- 🍺 ビール -->
-            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="beer">
-                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    🍺 ビール
-                </h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-                <!-- 3. かねひでクラフトブルワリー -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">かねひでクラフトブルワリー</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">🍺 クラフトビール</span>
-                        <a href="https://www.google.com/maps/place/%E3%81%8B%E3%81%AD%E3%81%B2%E3%81%A7%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%83%96%E3%83%AB%E3%83%AF%E3%83%AA%E3%83%BC/@26.2109453,127.6792443,17.07z/data=!4m6!3m5!1s0x34e569d6cecb85d5:0xafc1760339d9c95e!8m2!3d26.2097001!4d127.6781936!16s%2Fg%2F11swd7mxy5?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 4. クラフトビアハウス麦BAKU -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">クラフトビアハウス麦BAKU</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">🍺 クラフトビール</span>
-                        <a href="https://www.google.com/maps/place/%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%83%93%E3%82%A2%E3%83%8F%E3%82%A6%E3%82%B9%E9%BA%A6BAKU/@26.2147918,127.6833126,17.04z/data=!3m1!5s0x34e5699d809f4a77:0x6b92e8a269c11853!4m6!3m5!1s0x34e5697a947a9435:0x3e47fac6d9c4fe30!8m2!3d26.2144993!4d127.6812057!16s%2Fg%2F1tcxxkql?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- クラフトビールダイナーバモス -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">クラフトビールダイナーバモス</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">🍺 クラフトビール</span>
-                        <a href="https://www.google.com/maps/place/%E3%82%AF%E3%83%A9%E3%83%95%E3%83%88%E3%83%93%E3%83%BC%E3%83%AB%E3%83%80%E3%82%A4%E3%83%8A%E3%83%BC%E3%83%90%E3%83%A2%E3%82%B9/@26.2166585,127.6813035,17.34z/data=!4m6!3m5!1s0x34e56950b0c95377:0x3b22ee7b5110366c!8m2!3d26.2167629!4d127.6834096!16s%2Fg%2F11kbpfgzjf?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- HEAVY SASORI BREWING -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">HEAVY SASORI BREWING</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">🍺 クラフトビール</span>
-                        <a href="https://www.google.com/maps/place/HEAVY+SASORI+BREWING/@26.2150905,127.6876231,17.6z/data=!4m5!3m4!1s0x34e5690042b80ea5:0x1749a31ebc2ce6d0!8m2!3d26.2160661!4d127.6901865?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 5. MAHOWBREW -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">MAHOWBREW</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-amber-100 text-amber-700 text-xs rounded-full font-bold">🍺 クラフトビール</span>
-                        <a href="https://www.google.com/maps/place/MAHOWBREW/@26.2110529,127.6922962,16.71z/data=!3m1!5s0x34e5696f97357755:0x646ef301bf556c43!4m6!3m5!1s0x34e5695d166d1d4f:0x84d8eb471cdfbf3c!8m2!3d26.2125161!4d127.6937726!16s%2Fg%2F11w25kbr7y?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                </ul>
-            </div>
-            <!-- 🏮 居酒屋・バー -->
-            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="izakaya">
-                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    🏮 居酒屋・バー
-                </h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-                <!-- 6. 泡盛酒場 ほたる橋 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">泡盛酒場 ほたる橋</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-bold">🍶 泡盛</span>
-                        <a href="https://www.google.com/maps/place/%E6%B3%A1%E7%9B%9B%E9%85%92%E5%A0%B4+%E3%81%BB%E3%81%9F%E3%82%8B%E6%A9%8B/@26.2140635,127.6954886,17.49z/data=!3m1!5s0x34e5696676cb447f:0xce38c4d587009f30!4m6!3m5!1s0x34e56966704da659:0x83bce19d675ca095!8m2!3d26.2138625!4d127.6975185!16s%2Fg%2F11c51w5_7w?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 7. El Patio -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">El Patio</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-bold">🍷 バル</span>
-                        <a href="https://www.google.com/maps/place/El+Patio/@26.2115361,127.6793484,17.75z/data=!3m1!5s0x34e5699e3705e6ff:0xcce4c1bd0e565d56!4m6!3m5!1s0x34e5699e37a8129d:0xa8547f065b1b0246!8m2!3d26.2105471!4d127.6800639!16s%2Fg%2F1tgh59nf?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 8. casual kitchen 翔 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">casual kitchen 翔</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-teal-100 text-teal-700 text-xs rounded-full font-bold">🍽️ ダイニング</span>
-                        <a href="https://www.google.com/maps/place/casual+kitchen+%E7%BF%94/@26.2227048,127.6834776,20.66z/data=!4m5!3m4!1s0x34e56907861d176d:0x328350d4c915f3f6!8m2!3d26.2226198!4d127.6834635?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 9. 小梅 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">小梅</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">🏮 居酒屋</span>
-                        <a href="https://www.google.com/maps/place/%E5%B0%8F%E6%A2%85/@26.2204745,127.6940765,17.08z/data=!4m6!3m5!1s0x34e569c70d428205:0x1d49eed2ba2ef332!8m2!3d26.2187988!4d127.694219!16s%2Fg%2F11q2jtr3gd?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 10. 東雲 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">東雲</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">🏮 居酒屋</span>
-                        <a href="https://www.google.com/maps/place/%E6%9D%B1%E9%9B%B2/@26.2123819,127.6747656,18.24z/data=!4m5!3m4!1s0x34e56999385d66ab:0x2156116cc9332dfb!8m2!3d26.212749!4d127.6751272?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 11. スタンド藤八 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">スタンド藤八</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">🏮 居酒屋</span>
-                        <a href="https://www.google.com/maps/place/%E3%82%B9%E3%82%BF%E3%83%B3%E3%83%89%E8%97%A4%E5%85%AB/@26.2168473,127.6976708,18.44z/data=!3m1!5s0x34e5696155cd54e5:0x743da9a418d47157!4m6!3m5!1s0x34e569b4677073f1:0x3fd55a67db93c7b7!8m2!3d26.217522!4d127.6974363!16s%2Fg%2F11xzmybb6j?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 大衆割烹五枝松 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">大衆割烹五枝松</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">🏮 居酒屋</span>
-                        <a href="https://www.google.com/maps/place/%E5%A4%A7%E8%A1%86%E5%89%B2%E7%83%B9%E4%BA%94%E6%9E%9D%E6%9D%BE/@26.2157646,127.6972371,19.67z/data=!4m5!3m4!1s0x34e56966a23c7bff:0x7d69f231222607d0!8m2!3d26.2156847!4d127.6972494?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- ビストログロワール（Bistro Gloire） -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ビストログロワール（Bistro Gloire）</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-bold">🍷 ビストロ</span>
-                        <a href="https://www.google.com/maps/place/%E3%83%93%E3%82%B9%E3%83%88%E3%83%AD%E3%82%B0%E3%83%AD%E3%83%AF%E3%83%BC%E3%83%AB%EF%BC%88Bistro+Gloire%EF%BC%89/@26.2168732,127.6973321,19.61z/data=!4m5!3m4!1s0x34e569632067eac1:0x3f79b60d061d7ae5!8m2!3d26.2165239!4d127.6969302?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                <!-- 13. ビンビール酒場韋駄天 那覇久米店 -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ビンビール酒場韋駄天 那覇久米店</h3>
-                    <div class="flex flex-wrap gap-2 mb-2">
-                        <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 text-xs rounded-full font-bold">🏮 居酒屋</span>
-                        <a href="https://www.google.com/maps/place/%E3%83%93%E3%83%B3%E3%83%93%E3%83%BC%E3%83%AB%E9%85%92%E5%A0%B4%E9%9F%8B%E9%A7%84%E5%A4%A9+%E9%82%A3%E8%A6%87%E4%B9%85%E7%B1%B3%E5%BA%97/@26.2144609,127.67289,17.78z/data=!4m6!3m5!1s0x34e569e8f90f7e63:0x31fa49b6f2898032!8m2!3d26.2147447!4d127.6724713!16s%2Fg%2F11q272wr45?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
-                    </div>
-                </li>
-                </ul>
-            </div>
-            <!-- 🐟 海鮮 -->
-            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="seafood">
-                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    🐟 海鮮
-                </h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                 <!-- 12. 鮮魚ふくむら -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="seafood">
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="other">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">鮮魚ふくむら</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
@@ -276,21 +32,13 @@
                         <a href="https://www.google.com/maps/place/%E9%AE%AE%E9%AD%9A%E3%81%B5%E3%81%8F%E3%82%80%E3%82%89/@26.2156021,127.6778111,17.41z/data=!4m5!3m4!1s0x34e569003044957f:0xffe30f0728c4c568!8m2!3d26.2159434!4d127.6761559?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
                     </div>
                 </li>
-                </ul>
-            </div>
-            <!-- 🥩 肉系 -->
-            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="meat">
-                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
-                    🥩 肉系
-                </h2>
-                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
-                <!-- 14. ジャッキーステーキハウス -->
-                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="meat">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ジャッキーステーキハウス</h3>
+                <!-- ちるり -->
+                <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="other">
+                    <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ちるり</h3>
                     <div class="flex flex-wrap gap-2 mb-2">
                         <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 text-xs rounded-full font-medium tracking-wide">📍 那覇市</span>
-                        <span class="inline-block px-3 py-1 bg-red-100 text-red-700 text-xs rounded-full font-bold">🥩 ステーキ</span>
-                        <a href="https://www.google.com/maps/place/%E3%82%B8%E3%83%A3%E3%83%83%E3%82%AD%E3%83%BC%E3%82%B9%E3%83%86%E3%83%BC%E3%82%AD%E3%83%8F%E3%82%A6%E3%82%B9/@26.2127671,127.6760617,17.7z/data=!4m6!3m5!1s0x34e56999b06c66db:0x5a84f40a1e58fcf7!8m2!3d26.2128953!4d127.6724952!16s%2Fg%2F11b698x6dx?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
+                        <span class="inline-block px-3 py-1 bg-rose-100 text-rose-700 text-xs rounded-full font-bold">🍜 盛岡冷麺</span>
+                        <a href="https://www.google.com/maps/place/%E3%81%A1%E3%82%8B%E3%82%8A/@26.2141478,127.6888648,19.44z/data=!4m6!3m5!1s0x34e5697089bda9e9:0xf1effacae31358ee!8m2!3d26.2139513!4d127.6890921!16s%2Fg%2F11cmb9200t?entry=ttu&g_ep=EgoyMDI2MDYxNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="inline-block px-3 py-1 bg-blue-50 text-blue-600 hover:bg-blue-100 hover:text-blue-700 text-xs rounded-full font-bold tracking-wide transition-colors">🗺️ Google Maps</a>
                     </div>
                 </li>
                 </ul>
