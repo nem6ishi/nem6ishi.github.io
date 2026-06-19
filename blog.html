@@ -75,7 +75,7 @@
             const articlesListElement = document.getElementById('articles-list');
 
             try {
-                const response = await fetch('data/blog/articles.json');
+                const response = await fetch(`data/blog/articles.json?t=${new Date().getTime()}`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
