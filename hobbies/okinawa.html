@@ -64,7 +64,13 @@
             <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="izakaya">🏮 居酒屋・バー</button>
             <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="meat">🥩 肉系</button>
         </div>
-        <ul id="restaurants-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
+                <div id="restaurants-container">
+            <!-- 🍜 沖縄そば -->
+            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="soba">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                    🍜 沖縄そば
+                </h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                 <!-- 1. 安里屋すば -->
                 <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="soba">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">安里屋すば</h3>
@@ -89,6 +95,14 @@
                         那覇市の沖縄そば屋さんです。
                     </p>
                 </li>
+                </ul>
+            </div>
+            <!-- 🍺 ビール -->
+            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="beer">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                    🍺 ビール
+                </h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                 <!-- 3. かねひでクラフトブルワリー -->
                 <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="beer">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">かねひでクラフトブルワリー</h3>
@@ -125,6 +139,14 @@
                         美味しいクラフトビールが楽しめるお店です。
                     </p>
                 </li>
+                </ul>
+            </div>
+            <!-- 🏮 居酒屋・バー -->
+            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="izakaya">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                    🏮 居酒屋・バー
+                </h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                 <!-- 6. 泡盛酒場 ほたる橋 -->
                 <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="izakaya">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">泡盛酒場 ほたる橋</h3>
@@ -221,6 +243,14 @@
                         那覇市の居酒屋です。
                     </p>
                 </li>
+                </ul>
+            </div>
+            <!-- 🥩 肉系 -->
+            <div class="category-section mb-10 transition-all duration-300 transform origin-top" data-category="meat">
+                <h2 class="text-xl font-bold text-gray-800 mb-4 border-b border-gray-200 pb-2">
+                    🥩 肉系
+                </h2>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 items-start">
                 <!-- 14. ジャッキーステーキハウス -->
                 <li class="bg-white border border-gray-100 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 relative group p-4" data-category="meat">
                     <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-blue-600 transition-colors">ジャッキーステーキハウス</h3>
@@ -233,7 +263,9 @@
                         老舗のステーキハウスです。
                     </p>
                 </li>
-            </ul>
+                </ul>
+            </div>
+        </div>
 
         </section>
     </main>
@@ -242,7 +274,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const filterBtns = document.querySelectorAll('.filter-btn');
-            const items = document.querySelectorAll('#restaurants-container li');
+            const sections = document.querySelectorAll('.category-section');
 
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -255,19 +287,19 @@
 
                     const filter = btn.getAttribute('data-filter');
 
-                    items.forEach(item => {
-                        if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                            item.style.display = 'block';
+                    sections.forEach(section => {
+                        if (filter === 'all' || section.getAttribute('data-category') === filter) {
+                            section.style.display = 'block';
                             // small delay to let display block apply before opacity transition
                             setTimeout(() => {
-                                item.style.opacity = '1';
-                                item.style.transform = 'scale(1)';
+                                section.style.opacity = '1';
+                                section.style.transform = 'scale(1)';
                             }, 10);
                         } else {
-                            item.style.opacity = '0';
-                            item.style.transform = 'scale(0.95)';
+                            section.style.opacity = '0';
+                            section.style.transform = 'scale(0.95)';
                             setTimeout(() => {
-                                item.style.display = 'none';
+                                section.style.display = 'none';
                             }, 300);
                         }
                     });
