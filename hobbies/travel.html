@@ -32,7 +32,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../components/loader.js"></script>
@@ -54,46 +54,21 @@
     </nav>
 
     <main id="main-content"
-        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-12 bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100 animate-fade-in">
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
         <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
-            <a href="../index.html" class="hover:text-blue-600 transition-colors">トップ</a> &gt;
-            <a href="../hobbies.html" class="hover:text-blue-600 transition-colors">趣味</a> &gt;
-            <span class="font-medium text-gray-700">海外旅行</span>
+            <a href="../index.html" class="hover:text-blue-600">トップ</a> &gt;
+            <a href="../hobbies.html" class="hover:text-blue-600">趣味</a> &gt;
+            <span>海外旅行</span>
         </nav>
 
-        <div class="mb-8 pb-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-            <div>
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900">海外旅行 / Overseas travel</h1>
-                <p id="total-days" class="text-sm text-blue-600 font-semibold mt-1">データを読み込み中...</p>
-            </div>
-        </div>
-
-        <!-- 検索・フィルターコントロール -->
-        <div class="mb-8 space-y-4">
-            <!-- 検索入力 -->
-            <div class="relative">
-                <input type="text" id="travel-search" placeholder="国名、都市名、エピソードで検索..."
-                    class="w-full px-4 py-2.5 pl-10 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all">
-                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                    🔍
-                </div>
-            </div>
-
-            <!-- 年代フィルタータブ -->
-            <div class="flex flex-wrap gap-2" id="travel-filter-tabs">
-                <button class="travel-filter-btn active px-4 py-1.5 bg-blue-600 text-white rounded-full text-xs font-bold shadow-xs transition-all" data-filter="all">すべて</button>
-                <button class="travel-filter-btn px-4 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-full text-xs font-medium hover:bg-gray-50 transition-all" data-filter="2020s">2020年代</button>
-                <button class="travel-filter-btn px-4 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-full text-xs font-medium hover:bg-gray-50 transition-all" data-filter="2010s">2010年代</button>
-            </div>
+        <div class="mb-8 pb-2 border-b border-gray-200">
+            <h1 class="text-2xl font-bold text-gray-800">海外旅行 / Overseas travel</h1>
+            <p id="total-days" class="text-sm text-gray-500 font-normal mt-1"><!-- JavaScriptで動的に挿入 --></p>
         </div>
 
         <section>
-            <ul id="trips-container" class="space-y-4">
-                <!-- JavaScript (travel-loader.js) で動的に挿入されます -->
-                <li class="p-6 border border-gray-200 rounded-xl animate-pulse">
-                    <div class="h-6 bg-gray-200 rounded w-1/3 mb-3"></div>
-                    <div class="h-4 bg-gray-100 rounded w-2/3"></div>
-                </li>
+            <ul id="trips-container">
+                <!-- JavaScriptで動的に挿入されます -->
             </ul>
         </section>
     </main>

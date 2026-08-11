@@ -13,7 +13,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="沖縄の飲食店紹介ページ。沖縄そば、クラフトビール、居酒屋、バーなどの厳選店舗。">
+    <meta name="description" content="沖縄の飲食店紹介ページ。">
     <meta name="author" content="Masato NEISHI">
     <title>沖縄の飲食店 / Okinawa Restaurants - 根石 将人</title>
 
@@ -21,18 +21,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nem6ishi.github.io/hobbies/okinawa.html">
     <meta property="og:title" content="沖縄の飲食店 / Okinawa Restaurants - 根石 将人">
-    <meta property="og:description" content="沖縄の飲食店紹介ページ。沖縄そば、クラフトビール、居酒屋、バーなどの厳選店舗。">
+    <meta property="og:description" content="沖縄の飲食店紹介ページ。">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://nem6ishi.github.io/hobbies/okinawa.html">
     <meta property="twitter:title" content="沖縄の飲食店 / Okinawa Restaurants - 根石 将人">
-    <meta property="twitter:description" content="沖縄の飲食店紹介ページ。沖縄そば、クラフトビール、居酒屋、バーなどの厳選店舗。">
+    <meta property="twitter:description" content="沖縄の飲食店紹介ページ。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../components/loader.js"></script>
@@ -54,50 +54,29 @@
     </nav>
 
     <main id="main-content"
-        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-12 bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-gray-100 animate-fade-in">
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
         <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
-            <a href="../index.html" class="hover:text-blue-600 transition-colors">トップ</a> &gt;
-            <a href="../hobbies.html" class="hover:text-blue-600 transition-colors">趣味</a> &gt;
-            <span class="font-medium text-gray-700">沖縄の飲食店</span>
+            <a href="../index.html" class="hover:text-blue-600">トップ</a> &gt;
+            <a href="../hobbies.html" class="hover:text-blue-600">趣味</a> &gt;
+            <span>沖縄の飲食店</span>
         </nav>
-        <div class="mb-8 pb-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
-            <div>
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900">沖縄の飲食店 / Okinawa Restaurants</h1>
-                <p id="restaurant-count" class="text-sm text-purple-600 font-semibold mt-1">店舗データを読み込み中...</p>
-            </div>
+
+        <div class="mb-8 pb-2 border-b border-gray-200">
+            <h1 class="text-2xl font-bold text-gray-800">沖縄の飲食店 / Okinawa Restaurants</h1>
         </div>
 
-        <!-- 検索・フィルターコントロール -->
-        <div class="mb-8 space-y-4">
-            <!-- 検索 & エリアドロップダウン -->
-            <div class="flex flex-col sm:flex-row gap-3">
-                <div class="relative flex-1">
-                    <input type="text" id="okinawa-search" placeholder="店名、キーワードで検索..."
-                        class="w-full px-4 py-2.5 pl-10 bg-gray-50 border border-gray-300 rounded-lg text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all">
-                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-400">
-                        🔍
-                    </div>
-                </div>
-
-                <select id="area-filter" class="px-4 py-2.5 bg-gray-50 border border-gray-300 rounded-lg text-sm font-medium focus:bg-white focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all cursor-pointer">
-                    <option value="all">📍 全エリア</option>
-                </select>
+        <section class="max-w-3xl mx-auto">
+            <!-- Filter Tabs -->
+            <div class="mb-6 flex flex-wrap gap-2" id="filter-tabs">
+                <button class="filter-btn active px-4 py-2 bg-blue-600 text-white rounded-full text-sm font-bold shadow-xs transition-colors" data-filter="all">すべて</button>
+                <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="soba">🍜 沖縄そば</button>
+                <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="beer">🍺 ビール</button>
+                <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="izakaya">🏮 居酒屋・バー</button>
+                <button class="filter-btn px-4 py-2 bg-white text-gray-600 border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 transition-colors" data-filter="other">🏷️ その他</button>
             </div>
 
-            <!-- カテゴリ切り替えタブ -->
-            <div class="flex flex-wrap gap-2" id="filter-tabs">
-                <button class="filter-btn active px-4 py-1.5 bg-blue-600 text-white rounded-full text-xs font-bold shadow-xs transition-all" data-filter="all">すべて</button>
-                <button class="filter-btn px-4 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-full text-xs font-medium hover:bg-gray-50 transition-all" data-filter="soba">🍜 沖縄そば</button>
-                <button class="filter-btn px-4 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-full text-xs font-medium hover:bg-gray-50 transition-all" data-filter="beer">🍺 ビール</button>
-                <button class="filter-btn px-4 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-full text-xs font-medium hover:bg-gray-50 transition-all" data-filter="izakaya">🏮 居酒屋・バー</button>
-                <button class="filter-btn px-4 py-1.5 bg-white text-gray-600 border border-gray-200 rounded-full text-xs font-medium hover:bg-gray-50 transition-all" data-filter="other">🏷️ その他</button>
-            </div>
-        </div>
-
-        <section id="restaurants-container">
-            <!-- JavaScript (okinawa-loader.js) で動的に挿入されます -->
-            <div class="text-center py-12">
-                <div class="animate-spin inline-block w-8 h-8 border-4 border-purple-500 border-t-transparent rounded-full"></div>
+            <div id="restaurants-container">
+                <!-- JavaScript (okinawa-loader.js) で動的に挿入されます -->
             </div>
         </section>
     </main>
@@ -107,4 +86,5 @@
 </body>
 
 </html>
+
 
