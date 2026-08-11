@@ -13,7 +13,7 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、レシピ（料理・お菓子）などの趣味について掲載。">
+    <meta name="description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、台湾華語学習、レシピ（料理・お菓子）、沖縄の飲食店などに関するコンテンツ。">
     <meta name="author" content="Masato NEISHI">
     <title>趣味 / Hobbies - 根石 将人</title>
 
@@ -21,18 +21,18 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nem6ishi.github.io/hobbies.html">
     <meta property="og:title" content="趣味 / Hobbies - 根石 将人">
-    <meta property="og:description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、レシピ（料理・お菓子）などの趣味について掲載。">
+    <meta property="og:description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、台湾華語学習、レシピ（料理・お菓子）、沖縄の飲食店などに関するコンテンツ。">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://nem6ishi.github.io/hobbies.html">
     <meta property="twitter:title" content="趣味 / Hobbies - 根石 将人">
-    <meta property="twitter:description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、レシピ（料理・お菓子）などの趣味について掲載。">
+    <meta property="twitter:description" content="根石将人の趣味紹介ページ。海外旅行、クラフトビール、台湾華語学習、レシピ（料理・お菓子）、沖縄の飲食店などに関するコンテンツ。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="components/loader.js"></script>
@@ -53,51 +53,165 @@
     </nav>
 
     <main id="main-content"
-        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-8 bg-white p-6 sm:p-8 rounded-xl shadow-lg">
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-12 bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-gray-100 animate-fade-in">
         <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
-            <a href="index.html" class="hover:text-blue-600">トップ</a> &gt;
-            <span>趣味</span>
+            <a href="index.html" class="hover:text-blue-600 transition-colors">トップ</a> &gt;
+            <span class="font-medium text-gray-700">趣味</span>
         </nav>
 
-        <div class="mb-8 pb-2 border-b border-gray-200">
-            <h1 class="text-2xl font-bold text-gray-800">趣味 / Hobbies</h1>
+        <div class="mb-8 pb-4 border-b border-gray-200 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+            <div>
+                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight">趣味 / Hobbies</h1>
+                <p class="text-gray-500 text-sm mt-1">個人プロジェクト、旅の記録、ライフワークやレシピのまとめ</p>
+            </div>
         </div>
 
-        <section class="mb-12">
-            <div class="grid grid-cols-1 gap-6">
-                <a href="hobbies/travel.html" class="hobby-card group">
-                    <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        海外旅行 / Overseas Travel
-                    </h2>
+        <!-- ハイライト・実績サマリー -->
+        <section class="mb-10 grid grid-cols-2 sm:grid-cols-4 gap-4" aria-label="趣味のハイライトサマリー">
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 rounded-xl border border-blue-100 text-center shadow-xs">
+                <div class="text-2xl mb-1">✈️</div>
+                <div class="text-2xl font-bold text-blue-900">250<span class="text-xs font-normal text-blue-700 ml-0.5">日</span></div>
+                <div class="text-xs text-blue-600 font-medium mt-0.5">海外旅行通算</div>
+            </div>
+            <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-4 rounded-xl border border-amber-100 text-center shadow-xs">
+                <div class="text-2xl mb-1">🍺</div>
+                <div class="text-2xl font-bold text-amber-900">App</div>
+                <div class="text-xs text-amber-600 font-medium mt-0.5">Craft Beer Alert</div>
+            </div>
+            <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-xl border border-emerald-100 text-center shadow-xs">
+                <div class="text-2xl mb-1">🍳</div>
+                <div class="text-2xl font-bold text-emerald-900">50+</div>
+                <div class="text-xs text-emerald-600 font-medium mt-0.5">オリジナルレシピ</div>
+            </div>
+            <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-xl border border-purple-100 text-center shadow-xs">
+                <div class="text-2xl mb-1">🌺</div>
+                <div class="text-2xl font-bold text-purple-900">Okinawa</div>
+                <div class="text-xs text-purple-600 font-medium mt-0.5">厳選飲食店リスト</div>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="sr-only">趣味・プロジェクト一覧</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                
+                <!-- 海外旅行 -->
+                <a href="hobbies/travel.html" class="hobby-card group flex flex-col justify-between border border-gray-200 hover:border-blue-500 rounded-xl p-6 transition-all duration-300 hover:shadow-lg bg-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl p-2 bg-blue-50 rounded-lg">✈️</span>
+                            <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full border border-blue-100">記録</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                            海外旅行 / Overseas Travel
+                        </h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            アジア・中南米などを中心とした計250日間の海外旅行記録。訪れた都市や各地のエピソード。
+                        </p>
+                    </div>
+                    <div class="flex items-center text-sm font-semibold text-blue-600 group-hover:translate-x-1 transition-transform">
+                        旅行記録を見る <span class="ml-1">&rarr;</span>
+                    </div>
                 </a>
-                <a href="https://craft-beer-alert-japan.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-card group">
-                    <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        クラフトビール / Craft Beer
-                    </h2>
+
+                <!-- クラフトビール (外部Webアプリ) -->
+                <a href="https://craft-beer-alert-japan.vercel.app/" target="_blank" rel="noopener noreferrer" class="hobby-card group flex flex-col justify-between border border-gray-200 hover:border-amber-500 rounded-xl p-6 transition-all duration-300 hover:shadow-lg bg-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl p-2 bg-amber-50 rounded-lg">🍺</span>
+                            <span class="text-xs font-semibold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-full border border-amber-200 flex items-center gap-1">
+                                Web App <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition-colors">
+                            クラフトビール / Craft Beer
+                        </h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            日本国内のクラフトビール情報をチェック・アラート通知するWebアプリケーション。
+                        </p>
+                    </div>
+                    <div class="flex items-center text-sm font-semibold text-amber-600 group-hover:translate-x-1 transition-transform">
+                        アプリを開く <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
                 </a>
-                <a href="https://nem6ishi.github.io/learn_taiwan_chinese/" target="_blank" rel="noopener noreferrer" class="hobby-card group">
-                    <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        🇹🇼 台湾華語学習 / Taiwan Chinese Learning App
-                    </h2>
-                    <p class="text-sm text-gray-600">
-                        注音符号（ボポモフォ）から挫折ゼロで学べる体系的学習アプリ。台湾華語の全37記号と単語・発音を網羅。
-                    </p>
+
+                <!-- 台湾華語学習アプリ (外部Webアプリ) -->
+                <a href="https://nem6ishi.github.io/learn_taiwan_chinese/" target="_blank" rel="noopener noreferrer" class="hobby-card group flex flex-col justify-between border border-gray-200 hover:border-red-500 rounded-xl p-6 transition-all duration-300 hover:shadow-lg bg-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl p-2 bg-red-50 rounded-lg">🇹🇼</span>
+                            <span class="text-xs font-semibold text-red-700 bg-red-50 px-2.5 py-1 rounded-full border border-red-200 flex items-center gap-1">
+                                Web App <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">
+                            台湾華語学習 / Taiwan Chinese App
+                        </h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            注音符号（ボポモフォ）から挫折ゼロで学べる体系的学習アプリ。全37記号と単語・発音を網羅。
+                        </p>
+                    </div>
+                    <div class="flex items-center text-sm font-semibold text-red-600 group-hover:translate-x-1 transition-transform">
+                        アプリを開く <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </div>
                 </a>
-                <a href="hobbies/cooking.html" class="hobby-card group">
-                    <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        レシピ（料理）/ Cooking Recipes
-                    </h2>
+
+                <!-- 沖縄の飲食店 -->
+                <a href="hobbies/okinawa.html" class="hobby-card group flex flex-col justify-between border border-gray-200 hover:border-purple-500 rounded-xl p-6 transition-all duration-300 hover:shadow-lg bg-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl p-2 bg-purple-50 rounded-lg">🌺</span>
+                            <span class="text-xs font-semibold text-purple-600 bg-purple-50 px-2.5 py-1 rounded-full border border-purple-100">グルメガイド</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                            沖縄の飲食店 / Okinawa Restaurants
+                        </h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            沖縄そば、クラフトビール、居酒屋・バー、ラーメンなど那覇エリアを中心としたおすすめ店舗。
+                        </p>
+                    </div>
+                    <div class="flex items-center text-sm font-semibold text-purple-600 group-hover:translate-x-1 transition-transform">
+                        お店リストを見る <span class="ml-1">&rarr;</span>
+                    </div>
                 </a>
-                <a href="hobbies/sweets.html" class="hobby-card group">
-                    <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        レシピ（お菓子）/ Sweets Recipes
-                    </h2>
+
+                <!-- レシピ（料理） -->
+                <a href="hobbies/cooking.html" class="hobby-card group flex flex-col justify-between border border-gray-200 hover:border-emerald-500 rounded-xl p-6 transition-all duration-300 hover:shadow-lg bg-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl p-2 bg-emerald-50 rounded-lg">🍳</span>
+                            <span class="text-xs font-semibold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-100">レシピ</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
+                            レシピ（料理）/ Cooking Recipes
+                        </h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            自作料理の再現レシピ集。材料、分量、調理手順をまとめたコレクション。
+                        </p>
+                    </div>
+                    <div class="flex items-center text-sm font-semibold text-emerald-600 group-hover:translate-x-1 transition-transform">
+                        レシピ一覧を見る <span class="ml-1">&rarr;</span>
+                    </div>
                 </a>
-                <a href="hobbies/okinawa.html" class="hobby-card group">
-                    <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
-                        沖縄の飲食店 / Okinawa Restaurants
-                    </h2>
+
+                <!-- レシピ（お菓子） -->
+                <a href="hobbies/sweets.html" class="hobby-card group flex flex-col justify-between border border-gray-200 hover:border-pink-500 rounded-xl p-6 transition-all duration-300 hover:shadow-lg bg-white">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-3xl p-2 bg-pink-50 rounded-lg">🍰</span>
+                            <span class="text-xs font-semibold text-pink-600 bg-pink-50 px-2.5 py-1 rounded-full border border-pink-100">スイーツ</span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors">
+                            レシピ（お菓子）/ Sweets Recipes
+                        </h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">
+                            焼き菓子やデザートの手作りレシピ集。詳細な材料と工程の記録。
+                        </p>
+                    </div>
+                    <div class="flex items-center text-sm font-semibold text-pink-600 group-hover:translate-x-1 transition-transform">
+                        スイーツ一覧を見る <span class="ml-1">&rarr;</span>
+                    </div>
                 </a>
+
             </div>
         </section>
     </main>
