@@ -9,24 +9,37 @@ tags: クラフトビール, ビール, イベント, メモ
 
 ![出店ブルワリー 所在地マップ](/images/blog/2026/20261026_beer_geek_festival/brewery_map.svg)
 
+<div class="flex flex-wrap gap-2 my-4">
+<a href="#brewery-1" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">1. Brujos <span class="ml-1 text-amber-600 font-bold">★4.38</span></a>
+<a href="#brewery-2" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">2. Root + Branch <span class="ml-1 text-amber-600 font-bold">★4.37</span></a>
+<a href="#brewery-3" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">3. Everywhere <span class="ml-1 text-amber-600 font-bold">★4.10</span></a>
+<a href="#brewery-4" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">4. The TEST <span class="ml-1 text-amber-600 font-bold">★4.15</span></a>
+<a href="#brewery-5" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">5. RAR <span class="ml-1 text-amber-600 font-bold">★4.08</span></a>
+<a href="#brewery-6" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">6. Messorem <span class="ml-1 text-amber-600 font-bold">★4.23</span></a>
+<a href="#brewery-7" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">7. Ghost Town <span class="ml-1 text-blue-600 font-bold">★3.95</span></a>
+<a href="#brewery-8" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-amber-50/80 hover:bg-amber-100 text-slate-900 border border-amber-300 transition-all shadow-2xs">8. Off Script <span class="ml-1 text-amber-600 font-bold">★4.49</span></a>
+<a href="#brewery-9" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">9. Lyric <span class="ml-1 text-amber-600 font-bold">★4.35</span></a>
+<a href="#brewery-10" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">10. Tall Trees <span class="ml-1 text-amber-600 font-bold">★4.34</span></a>
+</div>
+
 ---
 
 ## ブルワリー別 クイックリファレンス
 
 | ブルワリー | 拠点 | Untappd | 主な得意スタイル | 特徴・一言メモ |
 | :--- | :--- | :--- | :--- | :--- |
-| **Brujos Brewing** | オレゴン州ポートランド | **4.38** | Hazy DIPA / TIPA, Stout | 元Great NotionのSam。オカルト世界観と最高峰の濃厚ヘイジー＆スタウト。 |
-| **Root + Branch** | ニューヨーク州コピアグ | **4.37** | Hazy IPA (DIPA / TIPA) | 元歴史学修士＆名店Tørst出身。濁りとアロマを極めた全米最高峰Hazy。 |
-| **Everywhere Beer Co.** | カリフォルニア州オレンジ | **4.10** | Craft Lager, Modern IPA | 名門The Bruery出身ドリームチーム。洗練された極上ラガーとモダンIPA。 |
-| **The TEST Brewery** | ニューヨーク州ブルックリン | **4.15** | Experimental IPA, Wine/Oak | 元ミシュラン星「Blue Hill」シェフ。実験室コンセプトの洗練された少量醸造。 |
-| **RAR Brewing** | メリーランド州ケンブリッジ | **4.08** | Smoothie Sour (OOO), DIPA | フルーツピューレやマシュマロ等が入ったドロドロ系スムージーサワーの始祖。 |
-| **Messorem Bracitorium** | カナダ・モントリオール | **4.23** | Hazy IPA, Smoothie, BA Stout | 元メタルバンド出身。カナダ名門Auval出身ブルワーが造る怪物級ヘイジー＆サワー。 |
-| **Ghost Town Brewing** | カリフォルニア州オークランド | **3.95** | West Coast IPA, Pilsner | GABF 2022最優秀ブルワリー。「Nose Goblin」をはじめ極限までキレるWCIPA。 |
-| **Off Script Brewing** | コロラド州オーロラ | **4.49** | Saturated Hazy IPA / DIPA | タップルーム無しのナノブルワリー。CryoやKiefなど最新ホップ抽出物を限界投入。 |
-| **Lyric Brewing** | コロラド州デンバー | **4.35** | Hazy DIPA / TIPA | New Image等で委託醸造する極小ロットナノ。現地でも入手困難な高評価ヘイジー。 |
-| **Tall Trees Brewing** | オレゴン州ヒルズボロ | **4.34** | Hazy IPA, West Coast IPA | ホームブルー発祥の新鋭。オレゴン地元産ホップ＆原料にこだわった実力派。 |
+| [**1. Brujos Brewing**](#brewery-1) | オレゴン州ポートランド | **4.38** | Hazy DIPA / TIPA, Stout | 元Great NotionのSam。オカルト世界観と最高峰の濃厚ヘイジー＆スタウト。 |
+| [**2. Root + Branch**](#brewery-2) | ニューヨーク州コピアグ | **4.37** | Hazy IPA (DIPA / TIPA) | 元歴史学修士＆名店Tørst出身。濁りとアロマを極めた全米最高峰Hazy。 |
+| [**3. Everywhere Beer Co.**](#brewery-3) | カリフォルニア州オレンジ | **4.10** | Craft Lager, Modern IPA | 名門The Bruery出身ドリームチーム。洗練された極上ラガーとモダンIPA。 |
+| [**4. The TEST Brewery**](#brewery-4) | ニューヨーク州ブルックリン | **4.15** | Experimental IPA, Wine/Oak | 元ミシュラン星「Blue Hill」シェフ。実験室コンセプトの洗練された少量醸造。 |
+| [**5. RAR Brewing**](#brewery-5) | メリーランド州ケンブリッジ | **4.08** | Smoothie Sour (OOO), DIPA | フルーツピューレやマシュマロ等が入ったドロドロ系スムージーサワーの始祖。 |
+| [**6. Messorem Bracitorium**](#brewery-6) | カナダ・モントリオール | **4.23** | Hazy IPA, Smoothie, BA Stout | 元メタルバンド出身。カナダ名門Auval出身ブルワーが造る怪物級ヘイジー＆サワー。 |
+| [**7. Ghost Town Brewing**](#brewery-7) | カリフォルニア州オークランド | **3.95** | West Coast IPA, Pilsner | GABF 2022最優秀ブルワリー。「Nose Goblin」をはじめ極限までキレるWCIPA。 |
+| [**8. Off Script Brewing**](#brewery-8) | コロラド州オーロラ | **4.49** | Saturated Hazy IPA / DIPA | タップルーム無しのナノブルワリー。CryoやKiefなど最新ホップ抽出物を限界投入。 |
+| [**9. Lyric Brewing**](#brewery-9) | コロラド州デンバー | **4.35** | Hazy DIPA / TIPA | New Image等で委託醸造する極小ロットナノ。現地でも入手困難な高評価ヘイジー。 |
+| [**10. Tall Trees Brewing**](#brewery-10) | オレゴン州ヒルズボロ | **4.34** | Hazy IPA, West Coast IPA | ホームブルー発祥の新鋭。オレゴン地元産ホップ＆原料にこだわった実力派。 |
 
-> ※Untappd点数は執筆時点のブルワリー総合平均値（Untappdで4.0以上は全米・世界でも上位数%の超高評価帯）。
+> 💡 **操作ヒント**: 表の見出し（`Untappd` など）をタップすると点数順や名前順に並び替えられます。ブルワリー名をタップすると詳細カードへジャンプします。
 
 ---
 

@@ -49,21 +49,28 @@
                 <h1 id="article-title"
                     class="text-2xl sm:text-4xl font-extrabold text-gray-900 mb-4 tracking-tight leading-tight">
                     記事を読み込んでいます...</h1>
-                <div class="flex items-center text-sm text-gray-500">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <span class="mr-3">公開: <time id="article-date" class="font-medium"></time></span>
-                    <span id="article-updated-container" class="hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <div class="flex flex-wrap items-center text-sm text-gray-500 gap-y-2">
+                    <div class="flex items-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1.5 text-gray-400" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span>公開: <time id="article-date" class="font-medium text-gray-700"></time></span>
+                    </div>
+                    <span id="article-updated-container" class="hidden flex items-center mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-1 text-blue-500 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                         </svg>
-                        更新: <time id="article-updated" class="font-medium text-blue-500"></time>
+                        <span>更新: <time id="article-updated" class="font-medium text-blue-600"></time></span>
                     </span>
                 </div>
+                <!-- タグバッジ表示エリア -->
+                <div id="article-tags" class="flex flex-wrap gap-2 mt-4 hidden"></div>
             </header>
+
+            <!-- 自動生成目次 (TOC) 挿入エリア -->
+            <div id="article-toc" class="mb-8 hidden"></div>
 
             <!-- 記事本文 -->
             <div id="article-content" class="article-body">
@@ -177,6 +184,15 @@
                         articleUpdatedContainer.classList.remove('hidden');
                     }
 
+                    // タグバッジの表示
+                    const articleTagsContainer = document.getElementById('article-tags');
+                    if (articleTagsContainer && Array.isArray(article.tags) && article.tags.length > 0) {
+                        articleTagsContainer.innerHTML = article.tags.map(tag =>
+                            `<span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200/70 shadow-2xs">#${tag}</span>`
+                        ).join('');
+                        articleTagsContainer.classList.remove('hidden');
+                    }
+
                     // Meta情報の動的な更新（SEO対応）
                     updateMetaTags(article.title, article.content.substring(0, 160).replace(/[#*`]/g, '') + '...');
 
@@ -198,7 +214,7 @@
                         hljs.highlightElement(el);
                     });
 
-                    // 記事本文内のスタイル調整（Tailwindクラスの適用）
+                    // 記事本文内のスタイル調整・目次生成・カード化・ソート機能適用
                     setupArticleStyles(articleContentElement);
 
                 } else {
@@ -210,16 +226,95 @@
             }
 
             function updateMetaTags(title, description) {
-                const metaTitle = `document.querySelector('meta[property="og:title"]')`;
-                const metaDesc = `document.querySelector('meta[name="description"]')`;
-                const ogDesc = `document.querySelector('meta[property="og:description"]')`;
-
                 if (document.querySelector('meta[property="og:title"]')) document.querySelector('meta[property="og:title"]').content = title;
                 if (document.querySelector('meta[name="description"]')) document.querySelector('meta[name="description"]').content = description;
                 if (document.querySelector('meta[property="og:description"]')) document.querySelector('meta[property="og:description"]').content = description;
             }
 
+            function getUntappdBadgeHtml(scoreStr, labelPrefix = '') {
+                const numericMatch = scoreStr.match(/\d+\.\d+/);
+                const score = numericMatch ? parseFloat(numericMatch[0]) : 0;
+                let colorClasses = 'bg-slate-100 text-slate-800 border-slate-300';
+                if (score >= 4.30) {
+                    colorClasses = 'bg-amber-100 text-amber-950 border-amber-300 ring-1 ring-amber-400/40';
+                } else if (score >= 4.10) {
+                    colorClasses = 'bg-amber-50 text-amber-900 border-amber-200';
+                } else if (score > 0) {
+                    colorClasses = 'bg-blue-50 text-blue-900 border-blue-200';
+                }
+                const prefixHtml = labelPrefix ? `<span class="opacity-75 mr-1 font-medium">${labelPrefix}</span>` : '';
+                return `<span class="inline-flex items-center px-2 py-0.5 rounded-md text-xs sm:text-sm font-bold border ${colorClasses} whitespace-nowrap align-baseline mx-0.5">${prefixHtml}<span class="text-amber-500 mr-0.5">★</span>${scoreStr}</span>`;
+            }
+
             function setupArticleStyles(container) {
+                // 1. 見出しへのID付与と目次 (TOC) の自動生成
+                const headings = Array.from(container.querySelectorAll('h2, h3'));
+                headings.forEach((h, idx) => {
+                    if (!h.id) {
+                        const numMatch = h.textContent.trim().match(/^(\d+)\.\s+/);
+                        if (h.tagName === 'H3' && numMatch) {
+                            h.id = `brewery-${numMatch[1]}`;
+                        } else {
+                            h.id = `section-${idx}`;
+                        }
+                    }
+                    h.classList.add('scroll-mt-24');
+                });
+
+                const tocContainer = document.getElementById('article-toc');
+                if (tocContainer && headings.length >= 2) {
+                    const tocItems = headings.map(h => {
+                        const isH3 = h.tagName === 'H3';
+                        const indentClass = isH3
+                            ? 'ml-4 text-xs sm:text-sm text-slate-600 py-0.5'
+                            : 'font-bold text-sm sm:text-base text-slate-800 mt-1.5 py-0.5';
+                        const bullet = isH3
+                            ? '<span class="text-blue-400 mr-1.5">•</span>'
+                            : '<span class="text-blue-600 mr-1.5">▸</span>';
+                        return `<li class="${indentClass}">
+                            <a href="#${h.id}" class="hover:text-blue-600 transition-colors inline-flex items-center">${bullet}<span>${h.textContent}</span></a>
+                        </li>`;
+                    }).join('');
+
+                    tocContainer.innerHTML = `
+                        <details class="group bg-slate-50/90 border border-slate-200/90 rounded-xl p-4 sm:p-5 shadow-xs">
+                            <summary class="font-bold text-slate-800 cursor-pointer select-none flex items-center justify-between text-sm sm:text-base list-none">
+                                <span class="flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                                    </svg>
+                                    目次（タップで開閉）
+                                </span>
+                                <span class="text-slate-400 text-xs group-open:rotate-180 transition-transform duration-200">▼</span>
+                            </summary>
+                            <ul class="mt-3 pt-3 border-t border-slate-200/80 space-y-1">
+                                ${tocItems}
+                            </ul>
+                        </details>
+                    `;
+                    tocContainer.classList.remove('hidden');
+                }
+
+                // 2. h3 セクションのカード化（h3とそれに続く要素をカードコンテナでラップ）
+                const h3List = Array.from(container.querySelectorAll('h3'));
+                h3List.forEach(h3 => {
+                    if (h3.parentElement !== container) return;
+                    const card = document.createElement('div');
+                    card.className = 'h3-card bg-slate-50/50 border border-slate-200/90 rounded-xl p-5 sm:p-6 my-5 shadow-xs hover:shadow-md hover:border-blue-200 transition-all';
+                    container.insertBefore(card, h3);
+
+                    let curr = h3;
+                    while (curr) {
+                        const next = curr.nextElementSibling;
+                        card.appendChild(curr);
+                        if (!next || ['H1', 'H2', 'H3', 'HR'].includes(next.tagName)) {
+                            break;
+                        }
+                        curr = next;
+                    }
+                });
+
+                // 3. 画像のスタイル調整
                 container.querySelectorAll('img').forEach(img => {
                     const isMapOrFull = img.classList.contains('full-width') || 
                                         img.classList.contains('w-full') || 
@@ -230,26 +325,39 @@
                         img.classList.add('max-w-[45%]', 'max-h-[250px]', 'sm:max-w-[380px]', 'sm:max-h-[380px]', 'object-contain', 'mx-auto', 'my-6', 'rounded-xl', 'shadow-md', 'border', 'border-gray-100', 'block');
                     }
                 });
+
+                // 4. リスト階層のメリハリ強化
                 container.querySelectorAll('ul').forEach(ul => {
-                    if (!ul.closest('pre')) ul.classList.add('list-disc', 'pl-6', 'mb-6', 'space-y-2');
+                    if (ul.closest('pre') || ul.classList.contains('quick-jump-list')) return;
+                    if (ul.parentElement && ul.parentElement.tagName === 'LI') {
+                        ul.classList.add('list-[circle]', 'pl-5', 'mt-2', 'mb-2', 'space-y-1.5', 'text-slate-700');
+                    } else {
+                        ul.classList.add('list-disc', 'pl-5', 'mb-2', 'space-y-2', 'text-slate-800');
+                    }
                 });
                 container.querySelectorAll('ol').forEach(ol => {
-                    ol.classList.add('list-decimal', 'pl-6', 'mb-6', 'space-y-2');
+                    ol.classList.add('list-decimal', 'pl-6', 'mb-6', 'space-y-2.5', 'text-slate-800');
                 });
+
+                // 5. 引用・見出し・区切り線・リンク・コードのスタイル
                 container.querySelectorAll('blockquote').forEach(bq => {
-                    bq.classList.add('border-l-4', 'border-blue-200', 'bg-blue-50/50', 'pl-6', 'py-4', 'my-8', 'italic', 'text-gray-700', 'rounded-r-lg');
+                    bq.classList.add('border-l-4', 'border-blue-400', 'bg-blue-50/60', 'pl-4', 'pr-4', 'py-3', 'my-5', 'text-sm', 'text-slate-700', 'rounded-r-lg');
+                });
+                container.querySelectorAll('hr').forEach(hr => {
+                    hr.classList.add('my-10', 'border-t', 'border-slate-200');
                 });
                 container.querySelectorAll('h1').forEach(h1 => {
                     h1.classList.add('text-3xl', 'font-extrabold', 'mt-14', 'mb-8', 'pb-3', 'border-b-2', 'border-gray-200');
                 });
                 container.querySelectorAll('h2').forEach(h2 => {
-                    h2.classList.add('text-2xl', 'font-bold', 'mt-12', 'mb-6', 'pb-2', 'border-b', 'border-gray-100');
+                    h2.classList.add('text-xl', 'sm:text-2xl', 'font-extrabold', 'text-slate-900', 'mt-12', 'mb-6', 'pb-2.5', 'border-b-2', 'border-blue-500/20');
                 });
                 container.querySelectorAll('h3').forEach(h3 => {
-                    h3.classList.add('text-xl', 'font-bold', 'mt-10', 'mb-4');
+                    h3.classList.add('text-lg', 'sm:text-xl', 'font-bold', 'text-slate-900', 'mb-4', 'pb-2.5', 'border-b', 'border-slate-200/80', 'border-l-4', 'border-l-blue-600', 'pl-3');
                 });
                 container.querySelectorAll('a').forEach(a => {
-                    a.classList.add('text-blue-600', 'hover:underline', 'underline-offset-4');
+                    if (a.classList.contains('quick-jump-pill')) return;
+                    a.classList.add('text-blue-600', 'hover:text-blue-800', 'hover:underline', 'underline-offset-4', 'font-medium');
                 });
                 container.querySelectorAll('code:not(pre code)').forEach(code => {
                     code.classList.add('bg-gray-100', 'text-blue-600', 'px-1.5', 'py-0.5', 'rounded', 'font-mono', 'text-sm');
@@ -257,26 +365,115 @@
                 container.querySelectorAll('pre').forEach(pre => {
                     pre.classList.add('relative', 'my-8', 'shadow-sm', 'rounded-xl', 'overflow-hidden');
                 });
+
+                // 6. 本文中のUntappdスコア表記のバッジ化
+                container.querySelectorAll('li').forEach(li => {
+                    // 例: <strong>Untappd: 4.60</strong> や <strong>Untappd: 4.20〜4.35</strong>
+                    li.innerHTML = li.innerHTML.replace(
+                        /<strong>Untappd:\s*([0-9.〜~+]+)<\/strong>/g,
+                        (_, score) => getUntappdBadgeHtml(score, 'Untappd')
+                    );
+                    // 例: <strong>Untappd ブルワリー評価</strong>: <strong>4.38</strong>
+                    li.innerHTML = li.innerHTML.replace(
+                        /<strong>Untappd ブルワリー評価<\/strong>:\s*<strong>([0-9.]+)<\/strong>/g,
+                        (_, score) => `<strong class="text-slate-900">Untappd 総合評価</strong>: ${getUntappdBadgeHtml(score)}`
+                    );
+                });
+
+                // 7. テーブルのスタイル調整・Untappd列バッジ化・クリックソート機能
                 container.querySelectorAll('table').forEach(table => {
                     table.classList.add('w-full', 'text-left', 'border-collapse');
                     if (!table.parentElement.classList.contains('overflow-x-auto')) {
                         const wrapper = document.createElement('div');
-                        wrapper.classList.add('overflow-x-auto', 'my-8', 'shadow-sm', 'rounded-lg', 'ring-1', 'ring-gray-200');
+                        wrapper.classList.add('overflow-x-auto', 'my-6', 'shadow-sm', 'rounded-xl', 'ring-1', 'ring-slate-200');
                         table.parentNode.insertBefore(wrapper, table);
                         wrapper.appendChild(table);
                     }
+
+                    const headers = Array.from(table.querySelectorAll('thead th'));
+                    let untappdColIdx = -1;
+                    headers.forEach((th, idx) => {
+                        if (th.textContent.trim().toLowerCase().includes('untappd')) {
+                            untappdColIdx = idx;
+                        }
+                        th.classList.add('py-3', 'px-3', 'sm:px-4', 'font-bold', 'text-slate-800', 'text-xs', 'sm:text-sm', 'whitespace-nowrap', 'cursor-pointer', 'hover:bg-slate-200/60', 'select-none', 'transition-colors');
+                        th.title = 'クリックで並び替え';
+                        const icon = document.createElement('span');
+                        icon.className = 'sort-icon text-slate-400 ml-1 text-xs';
+                        icon.textContent = '↕';
+                        th.appendChild(icon);
+
+                        th.addEventListener('click', () => {
+                            const tbody = table.querySelector('tbody');
+                            if (!tbody) return;
+                            const rows = Array.from(tbody.querySelectorAll('tr'));
+                            const currentDir = th.dataset.sortDir === 'desc' ? 'asc' : 'desc';
+                            headers.forEach(h => {
+                                delete h.dataset.sortDir;
+                                const ic = h.querySelector('.sort-icon');
+                                if (ic) {
+                                    ic.textContent = '↕';
+                                    ic.className = 'sort-icon text-slate-400 ml-1 text-xs';
+                                }
+                            });
+                            th.dataset.sortDir = currentDir;
+                            const activeIcon = th.querySelector('.sort-icon');
+                            if (activeIcon) {
+                                activeIcon.textContent = currentDir === 'desc' ? '▼' : '▲';
+                                activeIcon.className = 'sort-icon text-blue-600 ml-1 text-xs font-bold';
+                            }
+
+                            rows.sort((rowA, rowB) => {
+                                const cellA = rowA.children[idx]?.textContent.replace(/[★\s]/g, '').trim() || '';
+                                const cellB = rowB.children[idx]?.textContent.replace(/[★\s]/g, '').trim() || '';
+                                const numA = parseFloat(cellA);
+                                const numB = parseFloat(cellB);
+                                if (!isNaN(numA) && !isNaN(numB)) {
+                                    return currentDir === 'desc' ? numB - numA : numA - numB;
+                                }
+                                return currentDir === 'desc'
+                                    ? cellB.localeCompare(cellA, 'ja')
+                                    : cellA.localeCompare(cellB, 'ja');
+                            });
+                            rows.forEach(r => tbody.appendChild(r));
+                        });
+                    });
+
+                    table.querySelectorAll('thead').forEach(thead => {
+                        thead.classList.add('bg-slate-100/90', 'border-b', 'border-slate-200');
+                    });
+
+                    table.querySelectorAll('tbody tr').forEach(tr => {
+                        tr.classList.add('border-b', 'border-slate-100', 'hover:bg-blue-50/40', 'transition-colors', 'last:border-0');
+                        if (untappdColIdx >= 0 && tr.children[untappdColIdx]) {
+                            const td = tr.children[untappdColIdx];
+                            const rawScore = td.textContent.trim();
+                            if (/^\d+\.\d+$/.test(rawScore)) {
+                                td.innerHTML = getUntappdBadgeHtml(rawScore);
+                            }
+                        }
+                    });
+
+                    table.querySelectorAll('td').forEach(td => {
+                        td.classList.add('py-3', 'px-3', 'sm:px-4', 'text-xs', 'sm:text-sm', 'text-slate-700', 'align-middle');
+                    });
                 });
-                container.querySelectorAll('thead').forEach(thead => {
-                    thead.classList.add('bg-gray-50', 'border-b', 'border-gray-200');
+            }
+
+            // 8. トップへ戻るフローティングボタンの制御
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 350) {
+                        backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+                        backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+                    } else {
+                        backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+                        backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+                    }
                 });
-                container.querySelectorAll('th').forEach(th => {
-                    th.classList.add('py-3', 'px-4', 'font-semibold', 'text-gray-900', 'text-sm', 'whitespace-nowrap');
-                });
-                container.querySelectorAll('tbody tr').forEach(tr => {
-                    tr.classList.add('border-b', 'border-gray-100', 'hover:bg-gray-50/50', 'transition-colors', 'last:border-0');
-                });
-                container.querySelectorAll('td').forEach(td => {
-                    td.classList.add('py-3', 'px-4', 'text-sm', 'text-gray-700', 'align-middle');
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             }
 
@@ -289,6 +486,15 @@
             }
         });
     </script>
+
+    <!-- トップへ戻るフローティングボタン -->
+    <button id="back-to-top" aria-label="ページ上部へ戻る" title="ページ上部へ戻る"
+        class="fixed bottom-6 right-6 z-40 p-3 rounded-full bg-blue-600 text-white shadow-lg hover:bg-blue-700 focus:outline-none transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
     <!-- フッター (JSによりcomponents/footer.htmlが挿入されます) -->
     <footer id="footer"></footer>
 </body>
