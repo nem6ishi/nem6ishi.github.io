@@ -1,7 +1,7 @@
 ---
 title: Beer Geek Festival 2026 出店ブルワリーまとめ
 date: 2026-10-26
-updatedAt: 2026-10-26
+updatedAt: 2026-10-28
 tags: クラフトビール, ビール, イベント, メモ
 ---
 
@@ -43,9 +43,34 @@ tags: クラフトビール, ビール, イベント, メモ
 
 ---
 
+## セッション時間割 ＆ 当日システム
+
+| 日程 | セッション | 時間帯 | 備考 |
+| :--- | :--- | :--- | :--- |
+| **Day 1: 10/31 (土)** | **Session 1** | **13:00 – 16:00** | 3時間（VIPは15分前先行入場） |
+| **Day 1: 10/31 (土)** | **Session 2** | **17:00 – 20:00** | 3時間（16:00–17:00は完全入替） |
+| **Day 2: 11/1 (日)** | **Session 3** | **12:00 – 15:00** | 3時間（Day 1より1時間早い開始） |
+| **Day 2: 11/1 (日)** | **Session 4** | **16:00 – 19:00** | 3時間（最終セッション） |
+
+### 会場・システム重要メモ
+* **会場**: **ADRIFT**（東京都世田谷区北沢3-9-23 / 下北沢駅 徒歩約5分）
+* **セッション別ビール入替制（Session-Specific Beers）**: 各ブルワリーとも**セッションごとに提供するビール（樽）が異なり、なくなり次第終了（Until beers run out）**。人気ブルワリーの限定樽はセッション前半のうちに押さえるのが鉄則。
+* **サーブ＆グラス**: 入場時に配布される**5oz（約150ml）のフェス限定グラス**でオールユーキャンドリンク（飲み放題）。Day 1とDay 2でグラスデザインが異なる。
+* **限定ボトル・グッズ販売**: 会場内ではフェス限定醸造の500mlボトルやオリジナルTシャツの販売あり。
+
+---
+
 ## ブルワリー詳細メモ
 
 ### 1. Brujos Brewing（ブルホス・ブルーイング）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/brujos.webp" alt="Brujos Brewing Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/BrujosBrewing" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/brujos_brewing/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: オレゴン州ポートランド
 * **創業年**: **2020年**（6年目 / ファントムブルワリーとして始動、2024年に実店舗オープン）
 * **創業者 / ブルワー**: Sam Zermeño（元Great Notion Brewing）
@@ -62,6 +87,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **Bruja Mayor**（Imperial Stout / **Untappd: 4.30**） / **Hostia**（Czech Pilsner / **Untappd: 4.10**）
 
 ### 2. Root + Branch Brewing（ルート・アンド・ブランチ）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/root_branch.jpeg" alt="Root + Branch Brewing Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/RootAndBranchBrewing" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/rootandbranchbrewing/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: ニューヨーク州コピアグ（ロングアイランド）
 * **創業年**: **2018年**（8年目 / ジプシーとして始動、2022年7月に自社タップルーム開業）
 * **創業者**: Anthony Sorice（元歴史学専攻修士、Threes Brewing / LIC Beer Project出身）、Ryan Mauban（NYの伝説的ビアバーTørst出身のCertified Cicerone）
@@ -76,6 +109,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **The Castle**（Hazy Pale Ale / 5.5% / **Untappd: 4.20**）: 低アルコールながらダブルIPA顔負けのフレーバー密度を誇る傑作ペールエール。
 
 ### 3. Everywhere Beer Co.（エブリウェア）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/everywhere.png" alt="Everywhere Beer Co. Logo" class="brewery-logo h-11 sm:h-12 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/everywhere_beer" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/everywherebeerco/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: カリフォルニア州オレンジ
 * **創業年**: **2022年**（4年目）
 * **創業者**: Jeremy Grinkey、Stefan Weber、Daniel Muñoz、Keith Pumilia
@@ -90,6 +131,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **irresistible**（German Pilsner / **Untappd: 4.00**）: ラガー・ピルスナーとしては異例の4.00評価。濁りビールの合間に挟むと感動するほど綺麗。
 
 ### 4. The TEST Brewery（テスト・ブルワリー）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/test.png" alt="The TEST Brewery Logo" class="brewery-logo h-11 sm:h-12 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/w/test/30888" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/thetestbrewery/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: ニューヨーク州ブルックリン（ウィリアムズバーグ）
 * **創業年**: **2023年**（3年目 / 2024年にウィリアムズバーグの実店舗オープン）
 * **創業者**: Ben Clayton（ミシュラン星付きレストラン「Blue Hill」出身）
@@ -104,6 +153,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **Cloud Messenger**（Hazy DIPA / **Untappd: 4.30**）
 
 ### 5. RAR Brewing（アールエーアール / Real Ale Revival）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/rar.webp" alt="RAR Brewing Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/RaRBrewing" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/rarbrew/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: メリーランド州ケンブリッジ
 * **創業年**: **2013年**（13年目）
 * **創業者**: Chris Brohawn, J.T. Merryweather
@@ -117,6 +174,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **Orange Crush**（Fruited Imperial IPA / **Untappd: 4.19**）: Finbackとのコラボによる1.2万件以上のレビューを集める名作フルーツIPA。
 
 ### 6. Messorem Bracitorium（メッソレム・ブラチトリウム）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/messorem.webp" alt="Messorem Bracitorium Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/Messorem" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/messorembracitorium/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: カナダ・ケベック州モントリオール
 * **創業年**: **2019年**（7年目）
 * **創業者**: Sébastien Chaput, Vincent Ménard, Marc-André Filion（全員メタル・ハードコアバンド出身）
@@ -131,6 +196,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **Canal Fatal**（Hazy IPA / 6.0% / **Untappd: 4.13**）
 
 ### 7. Ghost Town Brewing（ゴーストタウン・ブルーイング）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/ghost_town.webp" alt="Ghost Town Brewing Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/GhostTownBrewing" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/ghosttownbrewing/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: カリフォルニア州オークランド
 * **創業年**: **2012年**（14年目 / 参加10社の中で最古参）
 * **創業者**: Ryan Nosek, Sam Carr-Prindle, Jason Gehman, Adam Hill（ヘッドブルワー: Justin Burdt）
@@ -145,6 +218,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **Pena Smrti**（Czech Pilsner / 4.4% / **Untappd: 3.85**）: GABFメダル獲得の極上チェコピルスナー。
 
 ### 8. Off Script Brewing（オフスクリプト・ブルーイング）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/off_script.webp" alt="Off Script Brewing Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/OffScriptBrewing" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/offscriptbrewing/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: コロラド州オーロラ / ソーントン
 * **創業年**: **2023年**（3年目）
 * **創業者 / ブルワー**: Ryan Taylor
@@ -158,6 +239,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **We’re Not Worthy** / **Water Sucks, It Really Really Sucks**（Hazy DIPA・IPA / **Untappd: 4.40**）
 
 ### 9. Lyric Brewing（リリック・ブルーイング）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/lyric.webp" alt="Lyric Brewing Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/LyricBrewingCompany" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/lyric_brewing/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: コロラド州デンバーエリア
 * **創業年**: **2024年**（2年目 / 参加10社中で最若手）
 * **Untappd ブルワリー評価**: **4.35**（登録ビール数: **約44種**）
@@ -170,6 +259,14 @@ tags: クラフトビール, ビール, イベント, メモ
   * **Definitely Not Alone** / **Surging Magnitude**（Hazy DIPA / **Untappd: 4.30**）
 
 ### 10. Tall Trees Brew Lab / Tall Trees Brewing（トールツリーズ）
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
+<img src="/images/blog/2026/20261026_beer_geek_festival/logos/tall_trees.webp" alt="Tall Trees Brewing Logo" class="brewery-logo h-12 sm:h-14 w-auto max-w-[160px] object-contain" />
+<div class="flex items-center gap-2">
+<a href="https://untappd.com/TallTreesBrewLab" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.instagram.com/talltreesbrewlab/" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">📷 Instagram</a>
+</div>
+</div>
+
 * **拠点**: オレゴン州ヒルズボロ
 * **創業年**: **2019年**（7年目 / ホームブルーラボ始動、2022〜2023年より商用展開）
 * **創業者**: Dan Schlegel, Nathan Roszina

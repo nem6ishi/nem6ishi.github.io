@@ -316,6 +316,7 @@
 
                 // 3. 画像のスタイル調整
                 container.querySelectorAll('img').forEach(img => {
+                    if (img.classList.contains('brewery-logo')) return;
                     const isMapOrFull = img.classList.contains('full-width') || 
                                         img.classList.contains('w-full') || 
                                         (img.alt && (img.alt.includes('マップ') || img.alt.includes('地図')));
@@ -356,7 +357,7 @@
                     h3.classList.add('text-lg', 'sm:text-xl', 'font-bold', 'text-slate-900', 'mb-4', 'pb-2.5', 'border-b', 'border-slate-200/80', 'border-l-4', 'border-l-blue-600', 'pl-3');
                 });
                 container.querySelectorAll('a').forEach(a => {
-                    if (a.classList.contains('quick-jump-pill')) return;
+                    if (a.classList.contains('quick-jump-pill') || a.classList.contains('action-btn')) return;
                     a.classList.add('text-blue-600', 'hover:text-blue-800', 'hover:underline', 'underline-offset-4', 'font-medium');
                 });
                 container.querySelectorAll('code:not(pre code)').forEach(code => {
