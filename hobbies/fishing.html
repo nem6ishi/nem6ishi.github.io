@@ -13,21 +13,21 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="沖縄本島でのイカ釣り（エギング）情報まとめ。シルイチャー（アオリイカ）やクブシミ（コブシメ）を狙うための推奨タックル・道具、北部・中部・南部のおすすめ釣り場ポイント、リーフ攻略のコツを詳しく解説。">
+    <meta name="description" content="根石将人の釣りページ。沖縄本島の海を中心としたエギング（イカ釣り）、ルアーフィッシング、ライトゲーム等の記録やタックル・ポイント情報を紹介。">
     <meta name="author" content="Masato NEISHI">
-    <title>沖縄イカ釣り（エギング）/ Fishing in Okinawa - 根石 将人</title>
+    <title>釣り / Fishing - 根石 将人</title>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://nem6ishi.github.io/hobbies/fishing.html">
-    <meta property="og:title" content="沖縄イカ釣り（エギング）/ Fishing in Okinawa - 根石 将人">
-    <meta property="og:description" content="沖縄本島でのイカ釣り（エギング）情報まとめ。シルイチャーやクブシミを狙うための推奨タックル・道具、北部・中部・南部のおすすめ釣り場ポイント、リーフ攻略のコツを詳しく解説。">
+    <meta property="og:title" content="釣り / Fishing - 根石 将人">
+    <meta property="og:description" content="根石将人の釣りページ。沖縄本島の海を中心としたエギング（イカ釣り）、ルアーフィッシング等の記録やタックル・ポイント情報。">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary">
     <meta property="twitter:url" content="https://nem6ishi.github.io/hobbies/fishing.html">
-    <meta property="twitter:title" content="沖縄イカ釣り（エギング）/ Fishing in Okinawa - 根石 将人">
-    <meta property="twitter:description" content="沖縄本島でのイカ釣り（エギング）情報まとめ。推奨タックル、ポイント、シャローリーフ攻略法。">
+    <meta property="twitter:title" content="釣り / Fishing - 根石 将人">
+    <meta property="twitter:description" content="根石将人の釣りページ。沖縄本島の海を中心としたエギング（イカ釣り）、ルアーフィッシング等の記録やタックル・ポイント情報。">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,527 +58,141 @@
         <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
             <a href="../index.html" class="hover:text-blue-600 transition-colors">トップ</a> &gt;
             <a href="../hobbies.html" class="hover:text-blue-600 transition-colors">趣味</a> &gt;
-            <span class="font-medium text-gray-700">釣り（沖縄イカ釣り）</span>
+            <span class="font-medium text-gray-700">釣り</span>
         </nav>
 
         <!-- タイトルエリア -->
         <div class="mb-8 pb-5 border-b border-gray-200">
             <div class="flex items-center gap-3 mb-2">
-                <span class="text-3xl">🦑</span>
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">沖縄イカ釣り（エギング）/ Fishing in Okinawa</h1>
+                <span class="text-3xl">🎣</span>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">釣り / Fishing</h1>
             </div>
             <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-                沖縄本島のエメラルドグリーンの海で楽しむイカ釣り（エギング）の攻略ガイド。
-                巨大なシルイチャー（アオリイカ）やクブシミ（コブシメ）を狙うための「道具・タックル選び」「本島各地の実績ポイント」「沖縄特有のシャローリーフ攻略法」をまとめました。
+                沖縄本島の豊かな海を中心とした釣りの記録・攻略ガイド。
+                エギング（イカ釣り）をはじめ、ルアーフィッシングやライトゲームなど、ターゲットや釣り方別のタックル・ポイント情報をまとめています。
             </p>
         </div>
 
-        <!-- ナビゲーションタブ -->
-        <div class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 pb-4" id="tab-nav">
-            <button onclick="switchTab('tackle')" id="tab-btn-tackle" class="tab-btn active px-4 py-2 rounded-lg text-sm font-bold bg-cyan-600 text-white shadow-xs transition-all">
-                🎣 道具・タックル
-            </button>
-            <button onclick="switchTab('spots')" id="tab-btn-spots" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
-                📍 おすすめ釣り場
-            </button>
-            <button onclick="switchTab('squid')" id="tab-btn-squid" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
-                🦑 ターゲットと時期
-            </button>
-            <button onclick="switchTab('tips')" id="tab-btn-tips" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
-                💡 攻略のコツ＆マナー
-            </button>
-        </div>
-
-        <!-- タブ1: 道具・タックル -->
-        <div id="content-tackle" class="tab-content">
+        <!-- ジャンル・ターゲット別カテゴリー -->
+        <section class="mb-10">
             <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
                 <span class="w-2.5 h-6 bg-cyan-600 rounded-full inline-block"></span>
-                沖縄エギング推奨タックル・装備
-            </h2>
-            <p class="text-sm text-gray-600 mb-6">
-                沖縄は「遠浅のリーフ（サンゴ礁帯）」が多く、また本土以上に大型（2〜4kg超）がヒットする可能性があります。
-                根ズレ対策とルアーの沈下速度管理（シャロー対応）が釣果とトラブル回避の分かれ目です。
-            </p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                <!-- ロッド -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-gradient-to-br from-white to-gray-50">
-                    <div class="flex items-center justify-between mb-2">
-                        <div class="flex items-center gap-2">
-                            <span class="text-xl">🦯</span>
-                            <h3 class="font-bold text-gray-900">エギングロッド（竿）</h3>
-                        </div>
-                        <a href="#compact-rods" class="text-xs font-semibold text-cyan-700 bg-cyan-50 hover:bg-cyan-100 border border-cyan-200 px-2 py-0.5 rounded-full transition-colors">
-                            安くてコンパクトな竿 ↓
-                        </a>
-                    </div>
-                    <div class="text-sm space-y-2 text-gray-700">
-                        <p><span class="font-semibold text-gray-900">長さ：</span> 8.3ft 〜 8.6ft 前後</p>
-                        <p><span class="font-semibold text-gray-900">硬さ：</span> M（ミディアム）〜 MLクラス</p>
-                        <div class="bg-cyan-50 border-l-4 border-cyan-500 p-2.5 text-xs text-cyan-900 rounded-r">
-                            <strong>沖縄仕様のポイント：</strong> サンゴの根を素早くかわすリフトアップや、風の強い日・大型イカのジェット噴射に負けないよう、バットに張りのある<strong>Mパワー</strong>が安心です。
-                        </div>
-                    </div>
-                </div>
-
-                <!-- リール -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-gradient-to-br from-white to-gray-50">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="text-xl">⚙️</span>
-                        <h3 class="font-bold text-gray-900">スピニングリール</h3>
-                    </div>
-                    <div class="text-sm space-y-2 text-gray-700">
-                        <p><span class="font-semibold text-gray-900">番手：</span> 2500番 〜 C3000番</p>
-                        <p><span class="font-semibold text-gray-900">ギア比：</span> ハイギア（HG）または XG</p>
-                        <div class="bg-cyan-50 border-l-4 border-cyan-500 p-2.5 text-xs text-cyan-900 rounded-r">
-                            <strong>沖縄仕様のポイント：</strong> 浅場での根掛かりを防ぐため、エギの回収速度や余分な糸ふけ（ラインスラック）を素早く巻き取れる<strong>ハイギアモデル</strong>が極めて重宝します。
-                        </div>
-                    </div>
-                </div>
-
-                <!-- ライン・リーダー -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-gradient-to-br from-white to-gray-50">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="text-xl">🧵</span>
-                        <h3 class="font-bold text-gray-900">ライン ＆ ショックリーダー</h3>
-                    </div>
-                    <div class="text-sm space-y-2 text-gray-700">
-                        <p><span class="font-semibold text-gray-900">道糸（PE）：</span> 0.6号 〜 0.8号（150m〜200m）</p>
-                        <p><span class="font-semibold text-gray-900">リーダー：</span> フロロカーボン 2.5号 〜 3.0号（約1.5m）</p>
-                        <div class="bg-amber-50 border-l-4 border-amber-500 p-2.5 text-xs text-amber-900 rounded-r">
-                            <strong>根ズレ注意：</strong> 本土基準（1.75〜2号）より<strong>少し太めの2.5〜3号</strong>が推奨。鋭いサンゴや石灰岩に触れても即ラインブレイクしないよう長めに結束します。
-                        </div>
-                    </div>
-                </div>
-
-                <!-- エギ選び -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-gradient-to-br from-white to-gray-50">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="text-xl">🦐</span>
-                        <h3 class="font-bold text-gray-900">エギ（餌木）</h3>
-                    </div>
-                    <div class="text-sm space-y-2 text-gray-700">
-                        <p><span class="font-semibold text-gray-900">サイズ：</span> 3.0号 〜 3.5号（冬の大物期は3.5〜4.0号）</p>
-                        <p><span class="font-semibold text-gray-900">必須タイプ：</span> <strong>シャロー / スーパーシャロー</strong></p>
-                        <div class="bg-cyan-50 border-l-4 border-cyan-500 p-2.5 text-xs text-cyan-900 rounded-r">
-                            <strong>エギ選びの最重要点：</strong> 水深1〜3m前後の浅場が多いため、ノーマルエギだと即着底・根掛かりします。沈下速度が秒速5〜6秒以上のシャローモデル（例: ヤマシタ エギ王Kシャロー / シャローリーフSPなど）が主軸です。
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- おすすめコンパクト＆格安ロッド比較セクション -->
-            <div id="compact-rods" class="border border-cyan-200 bg-cyan-50/30 rounded-2xl p-5 sm:p-6 mb-8 scroll-mt-24">
-                <div class="flex items-center gap-2 mb-2">
-                    <span class="text-2xl">🎒</span>
-                    <h3 class="text-lg sm:text-xl font-bold text-gray-900">
-                        おすすめコンパクト＆格安ロッド（遠征・旅行・トランク常備に最適）
-                    </h3>
-                </div>
-                <p class="text-xs sm:text-sm text-gray-600 mb-5 leading-relaxed">
-                    「沖縄への旅行・遠征で荷物を減らしたい」「車のトランクやリュックに常時積んでおきたい」「なるべく低予算（アンダー1万円前後）で揃えたい」という方向けに、2.5〜3.5号のエギに対応した高コスパなモバイルロッドを厳選しました。
-                </p>
-
-                <!-- 比較テーブル -->
-                <div class="overflow-x-auto bg-white rounded-xl border border-gray-200 shadow-xs mb-6">
-                    <table class="w-full text-xs sm:text-sm text-left border-collapse">
-                        <thead>
-                            <tr class="bg-gray-100 text-gray-700 font-semibold border-b border-gray-200">
-                                <th class="p-3 whitespace-nowrap">ロッド名</th>
-                                <th class="p-3 whitespace-nowrap">タイプ</th>
-                                <th class="p-3 whitespace-nowrap">仕舞寸法</th>
-                                <th class="p-3 whitespace-nowrap">適合エギ</th>
-                                <th class="p-3 whitespace-nowrap">実売価格目安</th>
-                                <th class="p-3 min-w-[200px]">特徴・おすすめポイント</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200 text-gray-700">
-                            <tr class="hover:bg-cyan-50/40 transition-colors">
-                                <td class="p-3 font-bold text-cyan-900 whitespace-nowrap">
-                                    PROX エギンガーパックSE<br>
-                                    <span class="text-xs font-normal text-gray-500">805ML / 865ML</span>
-                                </td>
-                                <td class="p-3 whitespace-nowrap"><span class="px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-200 rounded text-xs font-medium">5本継 (並継)</span></td>
-                                <td class="p-3 font-semibold text-emerald-600 whitespace-nowrap">53.5〜57cm</td>
-                                <td class="p-3 whitespace-nowrap">2.0〜3.5号</td>
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">約7,000〜8,500円</td>
-                                <td class="p-3 text-xs leading-relaxed">
-                                    <strong>圧倒的最安＆超コンパクト。</strong> セミハードケース付属。スーツケースにもすっぽり入るエギング専用設計。
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-cyan-50/40 transition-colors">
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">
-                                    メジャークラフト ソルパラ 振出<br>
-                                    <span class="text-xs font-normal text-gray-500">SPXT-83M / SPXT-86M</span>
-                                </td>
-                                <td class="p-3 whitespace-nowrap"><span class="px-2 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 rounded text-xs font-medium">振出 (テレスコ)</span></td>
-                                <td class="p-3 font-semibold text-gray-700 whitespace-nowrap">71.5〜74cm</td>
-                                <td class="p-3 whitespace-nowrap">2.5〜3.5号</td>
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">約9,000〜10,000円</td>
-                                <td class="p-3 text-xs leading-relaxed">
-                                    <strong>1万円切り定番。</strong> エギをセットしたまま縮めて移動可能。沖縄のリーフに強い張りのあるMパワー。
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-cyan-50/40 transition-colors">
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">
-                                    AbuGarcia クロスフィールド<br>
-                                    <span class="text-xs font-normal text-gray-500">XRFS-835M-MB</span>
-                                </td>
-                                <td class="p-3 whitespace-nowrap"><span class="px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-200 rounded text-xs font-medium">5本継 (並継)</span></td>
-                                <td class="p-3 font-semibold text-emerald-600 whitespace-nowrap">54.0cm</td>
-                                <td class="p-3 whitespace-nowrap">2.5〜3.5号</td>
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">約10,000〜12,500円</td>
-                                <td class="p-3 text-xs leading-relaxed">
-                                    <strong>遠征・飛行機持ち込みに最適。</strong> Mパワーで強い引きにも安心。頑丈なセミハードケース付き。
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-cyan-50/40 transition-colors">
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">
-                                    DAIWA ルアーニスト モバイル<br>
-                                    <span class="text-xs font-normal text-gray-500">86ML-4</span>
-                                </td>
-                                <td class="p-3 whitespace-nowrap"><span class="px-2 py-0.5 bg-blue-50 text-blue-700 border border-blue-200 rounded text-xs font-medium">4本継 (並継)</span></td>
-                                <td class="p-3 font-semibold text-gray-700 whitespace-nowrap">71cm</td>
-                                <td class="p-3 whitespace-nowrap">2.5〜3.5号</td>
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">約10,000〜11,500円</td>
-                                <td class="p-3 text-xs leading-relaxed">
-                                    大手ダイワ製で1万円前後。自然な曲がりと強度でエギングからシーバス・ライトゲームまで幅広く活躍。
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-cyan-50/40 transition-colors">
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">
-                                    SHIMANO フリーゲーム<br>
-                                    <span class="text-xs font-normal text-gray-500">S80ML-4 / S86ML-4</span>
-                                </td>
-                                <td class="p-3 whitespace-nowrap"><span class="px-2 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 rounded text-xs font-medium">振出 (テレスコ)</span></td>
-                                <td class="p-3 font-semibold text-gray-700 whitespace-nowrap">70.5〜74cm</td>
-                                <td class="p-3 whitespace-nowrap">2.0〜3.5号</td>
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">約11,000〜12,500円</td>
-                                <td class="p-3 text-xs leading-relaxed">
-                                    シマノの万能振出ロッド。振出特有のダルさを抑えたシャープなブランクスで車のトランク常備に最適。
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-cyan-50/40 transition-colors">
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">
-                                    DAIWA モバイルパック<br>
-                                    <span class="text-xs font-normal text-gray-500">806TMS</span>
-                                </td>
-                                <td class="p-3 whitespace-nowrap"><span class="px-2 py-0.5 bg-amber-50 text-amber-800 border border-amber-200 rounded text-xs font-medium">振出 (テレスコ)</span></td>
-                                <td class="p-3 font-semibold text-emerald-600 whitespace-nowrap">52cm</td>
-                                <td class="p-3 whitespace-nowrap">2.5〜3.5号相当</td>
-                                <td class="p-3 font-bold text-gray-900 whitespace-nowrap">約11,000〜13,000円</td>
-                                <td class="p-3 text-xs leading-relaxed">
-                                    振出（テレスコ）でありながら仕舞寸法が驚異の52cm。デイパックやビジネスバッグにも収まる小継設計。
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- 選び方の指針 -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs sm:text-sm">
-                    <div class="bg-white p-3.5 rounded-xl border border-gray-200">
-                        <strong class="text-cyan-800 block mb-1">🥇 とにかく安さ＆コンパクトさ重視なら</strong>
-                        <p class="text-gray-600">
-                            <strong>PROX エギンガーパックSE</strong>（約7,000円台）。専用ケース付きで53.5cm〜57cmまで縮むため、スーツケースにすっぽり収まるコスパNo.1モデル。
-                        </p>
-                    </div>
-                    <div class="bg-white p-3.5 rounded-xl border border-gray-200">
-                        <strong class="text-cyan-800 block mb-1">⚡ 移動の手軽さ＆根ズレ対策なら</strong>
-                        <p class="text-gray-600">
-                            <strong>メジャークラフト ソルパラ 振出</strong>（約9,000円台）。糸を通したまま縮めて移動可能。沖縄のリーフに強いMパワーの張りがあります。
-                        </p>
-                    </div>
-                    <div class="bg-white p-3.5 rounded-xl border border-gray-200">
-                        <strong class="text-cyan-800 block mb-1">✈️ 本格的な遠征＆大物にも備えるなら</strong>
-                        <p class="text-gray-600">
-                            <strong>AbuGarcia クロスフィールド XRFS-835M-MB</strong>（約1万円強）。仕舞54cm・Mパワー・セミハードケース付きで遠征派の本命。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 必須・推奨ギア一覧 -->
-            <div class="bg-gray-50 rounded-xl p-5 border border-gray-200">
-                <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm sm:text-base">
-                    <span>🛡️</span> エギング必携ギア・装備品チェックリスト
-                </h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs sm:text-sm">
-                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                        <strong class="text-gray-900 block mb-1">🕶️ 偏光サングラス（最重要）</strong>
-                        沖縄の強い日差し対策だけでなく、リーフの切れ目（ポケット）や追尾してくる見えイカの視認に不可欠です。
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                        <strong class="text-gray-900 block mb-1">🕸️ ランディングネット / ギャフ</strong>
-                        堤防の高さがある場所や、キロアップの抜き上げはロッド破損の原因に。5m前後のタモ網またはギャフを携行。
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                        <strong class="text-gray-900 block mb-1">🦺 フローティングベスト</strong>
-                        安全第一。特にリーフ際や夜間の漁港では必須装備です。
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                        <strong class="text-gray-900 block mb-1">🔪 イカ絞めピック</strong>
-                        鮮度を保って美味しく持ち帰るための必須ツール。急所を突いて一瞬で白化させます。
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                        <strong class="text-gray-900 block mb-1">💡 ヘッドライト（夜釣用）</strong>
-                        夜間や朝夕マズメの足元確認・ルアー交換用。赤色LED切替ができるとイカに警戒心を与えません。
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-gray-200">
-                        <strong class="text-gray-900 block mb-1">👟 フェルトスパイクシューズ</strong>
-                        リーフやゴロタ石、濡れたテトラに入る場合は滑落防止のため専用ソールが必須です。
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- タブ2: おすすめ釣り場 -->
-        <div id="content-spots" class="tab-content hidden">
-            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span class="w-2.5 h-6 bg-cyan-600 rounded-full inline-block"></span>
-                沖縄本島 おすすめイカ釣りポイント
-            </h2>
-            <p class="text-sm text-gray-600 mb-6">
-                アクセスしやすく実績の高い主要な漁港・防波堤を中心に、北部・中部・南部それぞれの特徴をまとめました。
-            </p>
-
-            <!-- 北部エリア -->
-            <div class="mb-8">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-md">北部エリア</span>
-                    <h3 class="font-bold text-gray-900">水質クリア＆プレッシャーの低い自然美エリア</h3>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">古宇利漁港（今帰仁村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">古宇利島内 / ドライブ・観光も兼ねられる</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            透明度抜群の海。港内での見えイカ狙いや、外海側のリーフエッジへの遠投で大型アオリイカの実績多数。潮が澄んでいる時はナチュラルカラーが効果的。
-                        </p>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">塩屋湾周辺（大宜味村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">塩屋大橋周辺 / 波穏やかな内海</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            外海が荒れている時でも比較的穏やか。橋脚周りの潮流の変化やスロープ周りにイカが回遊してきます。夜間の常夜灯周りも狙い目。
-                        </p>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">浜田漁港（金武町）</h4>
-                        <p class="text-xs text-gray-500 mb-2">東海岸 / 足場が良くファミリーにも</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            適度な水深があり、足場が安定している人気港。港内に群れが入るとサイトフィッシングで連続ヒットすることも。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 中部エリア -->
-            <div class="mb-8">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-md">中部エリア</span>
-                    <h3 class="font-bold text-gray-900">アクセス抜群＆実績多数のハイプレッシャー激戦区</h3>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">都屋漁港（読谷村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">西海岸 / 本島屈指の超有名実績場</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            外海への潮通しが抜群で、大型シルイチャーや数キロ超のクブシミが狙える定番ポイント。水深もあるためディープからシャローまで探れます。
-                        </p>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">海中道路・伊計島周辺（うるま市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">桃原漁港・伊計島防波堤など</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            広大なシャローリーフと漁港が連なるエギング天国。水路やカケアガリ、藻場周りをシャローエギでテンポよく探るのがコツ。
-                        </p>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">浜漁港（中城村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">東海岸 / 駐車しやすく足場良好</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            堤防が整備されており安全に釣りができるポイント。外海側テトラ周りや港内船道狙い。冬場のタチウオやイカの実績が高いです。
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 南部エリア -->
-            <div class="mb-4">
-                <div class="flex items-center gap-2 mb-3">
-                    <span class="px-2.5 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-md">南部エリア</span>
-                    <h3 class="font-bold text-gray-900">那覇近郊・短時間釣行や初心者にも向いたエリア</h3>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">三重城漁港（那覇市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">那覇市内中心部至近 / 足場良好</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            空港や市内中心部から車ですぐ。足場が良く、外海向きの潮通しが良いポイントではキロオーバーのシルイチャー実績もしっかりあります。
-                        </p>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">奥武島（南城市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">橋で渡れる島 / 島全体がポイント</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            周囲に藻場やリーフが点在し、秋の数釣りから春の大物まで幅広く楽しめます。天ぷらを食べながらののんびりランガンにも最適。
-                        </p>
-                    </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">海野漁港 / 馬天港（南城市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">南部東海岸 / 潮通しの良い港湾部</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            海野漁港は堤防先端の潮通しが良く、回遊イカ狙いに適しています。馬天港も敷地が広く、港内スロープや係留船周りを探れます。
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- タブ3: ターゲットと時期 -->
-        <div id="content-squid" class="tab-content hidden">
-            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span class="w-2.5 h-6 bg-cyan-600 rounded-full inline-block"></span>
-                沖縄で狙えるイカの種類とシーズンカレンダー
+                ターゲット・釣り方別ガイド
             </h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                <!-- シルイチャー -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-white">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">🦑</span>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg">シルイチャー（アオリイカ）</h3>
-                            <span class="text-xs text-cyan-600 font-semibold">沖縄を代表するエギングの主役</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <!-- 沖縄イカ釣り（エギング） -->
+                <a href="fishing/squid.html" class="group border border-gray-200 hover:border-cyan-500 rounded-xl p-5 bg-white transition-all duration-300 hover:shadow-md flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-2xl">🦑</span>
+                            <span class="text-xs font-semibold text-cyan-700 bg-cyan-50 px-2.5 py-0.5 rounded-full border border-cyan-200">
+                                公開中
+                            </span>
                         </div>
+                        <h3 class="text-lg font-bold text-gray-900 group-hover:text-cyan-600 transition-colors mb-2">
+                            沖縄イカ釣り（エギング）
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-4">
+                            シルイチャー（アオリイカ）やクブシミ（コブシメ）を狙うエギング攻略。推奨タックル、安くてコンパクトなロッド比較、本島おすすめ釣り場（北部・中部・南部）、シャローリーフ攻略法。
+                        </p>
                     </div>
-                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3">
-                        本土のアオリイカとは異なり、沖縄には主に3タイプの型が存在します。特に「アカイカ系」は深場から接岸すると3〜5kgを超えるモンスターサイズに育ちます。
-                    </p>
-                    <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside bg-gray-50 p-3 rounded-lg">
-                        <li><strong>アカイカ系（レッドモンスター）：</strong> 冬〜春に接岸。3kg〜5kg超の巨大サイズ。引きは強烈。</li>
-                        <li><strong>シロイカ系：</strong> 漁港やリーフで年中出会える標準型。1kg〜2kgクラス。</li>
-                        <li><strong>クワイカ系：</strong> 小型（数百グラム程度）で群れで回遊。サイトで数釣りが楽しめる。</li>
-                    </ul>
-                </div>
+                    <div class="flex items-center text-xs font-bold text-cyan-600 group-hover:translate-x-1 transition-transform">
+                        ガイドを見る &rarr;
+                    </div>
+                </a>
 
-                <!-- クブシミ -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-white">
-                    <div class="flex items-center gap-2 mb-3">
-                        <span class="text-2xl">🐙</span>
-                        <div>
-                            <h3 class="font-bold text-gray-900 text-lg">クブシミ（コブシメ）</h3>
-                            <span class="text-xs text-purple-600 font-semibold">巨大なコウイカ類・最大10kg級</span>
+                <!-- ライトショアジギング・ルアー（Coming Soon） -->
+                <div class="border border-gray-200 rounded-xl p-5 bg-gray-50/60 opacity-80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-2xl">🐟</span>
+                            <span class="text-xs font-medium text-gray-500 bg-gray-200 px-2.5 py-0.5 rounded-full">
+                                準備中
+                            </span>
                         </div>
+                        <h3 class="text-lg font-bold text-gray-700 mb-2">
+                            沖縄ライトショアジギング・ルアー
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-500 leading-relaxed mb-4">
+                            防波堤やサーフ、リーフからメタルジグやプラグでミーバイ（ハタ類）、ガーラ（ヒラアジ類）、タチウオなどを狙うライトルアーゲーム。
+                        </p>
                     </div>
-                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-3">
-                        コウイカの仲間で、南西諸島に多く生息。底付近の砂地やサンゴ礁の隙間に潜んでエビやカニ、小魚を狙っています。
-                    </p>
-                    <ul class="text-xs text-gray-600 space-y-1.5 list-disc list-inside bg-gray-50 p-3 rounded-lg">
-                        <li><strong>ファイト：</strong> 「根掛かりか？」と思うほどの重量感と、強烈な噴射が特徴。</li>
-                        <li><strong>狙い方：</strong> エギを海底付近でじっくりステイさせたり、ボトム付近をゆっくり引くと抱いてきます。</li>
-                        <li><strong>味：</strong> 肉厚でもっちりとした食感で、刺身や天ぷらにすると絶品です。</li>
-                    </ul>
+                    <div class="text-xs text-gray-400 font-medium">
+                        Coming Soon
+                    </div>
                 </div>
-            </div>
 
-            <!-- シーズンカレンダー -->
-            <div class="border border-gray-200 rounded-xl p-5 bg-white">
-                <h3 class="font-bold text-gray-900 mb-3 flex items-center gap-2 text-sm sm:text-base">
-                    <span>📅</span> 年間シーズナルパターン
-                </h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-xs sm:text-sm text-left border-collapse">
-                        <thead>
-                            <tr class="bg-gray-100 text-gray-700">
-                                <th class="p-3 border border-gray-200">時期</th>
-                                <th class="p-3 border border-gray-200">ターゲット状況</th>
-                                <th class="p-3 border border-gray-200">釣りの特徴・おすすめエギ</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700 divide-y divide-gray-200">
-                            <tr>
-                                <td class="p-3 font-semibold bg-gray-50 border border-gray-200">10月〜11月<br><span class="text-xs text-gray-500 font-normal">秋</span></td>
-                                <td class="p-3 border border-gray-200">新子シルイチャー（数釣り期）</td>
-                                <td class="p-3 border border-gray-200">2.5〜3.0号のエギで広範囲をテンポよくチェック。見えイカも多くエギング入門に最適。</td>
-                            </tr>
-                            <tr class="bg-cyan-50/40">
-                                <td class="p-3 font-semibold bg-cyan-100/60 border border-gray-200 text-cyan-950">12月〜3月<br><span class="text-xs font-bold text-cyan-700">冬（最盛期）</span></td>
-                                <td class="p-3 border border-gray-200 font-medium">大型シルイチャー（キロアップ〜モンスター）＆ クブシミ</td>
-                                <td class="p-3 border border-gray-200">3.5〜4.0号のシャローエギでじっくり探る。北風を避けられる風裏の漁港やリーフが狙い目。</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold bg-gray-50 border border-gray-200">4月〜5月<br><span class="text-xs text-gray-500 font-normal">春</span></td>
-                                <td class="p-3 border border-gray-200">産卵期の大型個体（シャロー接岸）</td>
-                                <td class="p-3 border border-gray-200">藻場やシャローリーフに産卵のためペアで入ってくる。サイトフィッシングやスローな誘いが有効。</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold bg-gray-50 border border-gray-200">6月〜9月<br><span class="text-xs text-gray-500 font-normal">夏</span></td>
-                                <td class="p-3 border border-gray-200">オフ〜小型回遊</td>
-                                <td class="p-3 border border-gray-200">水温が高くショアからは難易度アップ。朝夕マズメや夜釣り、深場狙いに絞ると好釣果も。</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- 打ち込み・フカセ釣り（Coming Soon） -->
+                <div class="border border-gray-200 rounded-xl p-5 bg-gray-50/60 opacity-80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-2xl">🌊</span>
+                            <span class="text-xs font-medium text-gray-500 bg-gray-200 px-2.5 py-0.5 rounded-full">
+                                準備中
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-700 mb-2">
+                            打ち込み・フカセ釣り
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-500 leading-relaxed mb-4">
+                            沖縄伝統のタマン（ハマフエフキ）狙いの打ち込み夜釣りや、湾内・防波堤でのチヌ（黒鯛）・カーエー（ゴマアイゴ）狙いのウキフカセ釣り。
+                        </p>
+                    </div>
+                    <div class="text-xs text-gray-400 font-medium">
+                        Coming Soon
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- タブ4: 攻略のコツ＆マナー -->
-        <div id="content-tips" class="tab-content hidden">
-            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <span class="w-2.5 h-6 bg-cyan-600 rounded-full inline-block"></span>
-                沖縄エギング特有のテクニック＆マナー
+                <!-- 釣行記・ログ（Coming Soon） -->
+                <div class="border border-gray-200 rounded-xl p-5 bg-gray-50/60 opacity-80 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-2xl">📝</span>
+                            <span class="text-xs font-medium text-gray-500 bg-gray-200 px-2.5 py-0.5 rounded-full">
+                                準備中
+                            </span>
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-700 mb-2">
+                            釣行記録・フィールドレポート
+                        </h3>
+                        <p class="text-xs sm:text-sm text-gray-500 leading-relaxed mb-4">
+                            日々の釣果データ、潮汐や天候コンディションとヒットパターンの考察・振り返りログ。
+                        </p>
+                    </div>
+                    <div class="text-xs text-gray-400 font-medium">
+                        Coming Soon
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 沖縄の海釣り 共通マナーと安全対策 -->
+        <section class="bg-gray-50 rounded-xl p-5 sm:p-6 border border-gray-200">
+            <h2 class="text-base sm:text-lg font-bold text-gray-900 mb-3 flex items-center gap-2">
+                <span>🛡️</span> 沖縄釣行の基本ルール・安全対策
             </h2>
-
-            <div class="space-y-4 mb-8">
-                <!-- テクニック1 -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-white">
-                    <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2 text-sm sm:text-base">
-                        <span>🎯</span> 1. 「底まで落とさない」シャローの水平スイミング
-                    </h3>
-                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                        本土のエギングでは「底を取る（ボトム着底）」が基本ですが、沖縄のリーフ帯でそれをやると<strong>100%根掛かりしてエギをロスト</strong>します。<br>
-                        キャスト後はカウント3〜5秒程度でシャクリを入れ、竿先を少し高めに保って<strong>「水面下50cm〜1.5mのレンジを水平にスーッと泳がせる」</strong>イメージで誘うのがヒットへの近道です。
-                    </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-gray-700">
+                <div class="bg-white p-3.5 rounded-lg border border-gray-200">
+                    <strong class="text-gray-900 block mb-1">🌊 潮位と干満差の確認</strong>
+                    沖縄は最大で2m近い干満差があります。満潮時の水没や急流（リーフカレント）による事故を防ぐため、釣行前には必ずタイドグラフを確認しましょう。
                 </div>
-
-                <!-- テクニック2 -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-white">
-                    <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2 text-sm sm:text-base">
-                        <span>🔎</span> 2. サンゴの切れ目「ポケット（砂地）」を狙い撃つ
-                    </h3>
-                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                        偏光グラス越しに見ると、リーフの中に白く抜けた砂地や溝（スリット・ポケット）が見えます。
-                        イカはサンゴの陰に身を潜めて獲物を待ち構えているため、そのポケットの上を通すか、砂地にエギを一時的にフォールさせると飛び出してきます。
-                    </p>
+                <div class="bg-white p-3.5 rounded-lg border border-gray-200">
+                    <strong class="text-gray-900 block mb-1">🦺 ライフジャケットの着用</strong>
+                    堤防・磯・リーフを問わず、落水時の生存率を大きく高めるためにライフジャケット（フローティングベスト）を必ず着用しましょう。
                 </div>
-
-                <!-- テクニック3 -->
-                <div class="border border-gray-200 rounded-xl p-5 bg-white">
-                    <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2 text-sm sm:text-base">
-                        <span>🌊</span> 3. 潮の干満差とウェーディングの危険管理
-                    </h3>
-                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                        沖縄は潮の干満差が最大で2m近くになります。干潮時に歩いてリーフエッジ（アウトリーフ）まで出た場合、満潮になると帰り道が水没し、急流（カレント）が発生して戻れなくなる海難事故が多発しています。
-                        潮位表（タイドグラフ）を必ず確認し、<strong>満潮の2時間前には陸へ戻る</strong>ルールを徹底しましょう。
-                    </p>
+                <div class="bg-white p-3.5 rounded-lg border border-gray-200">
+                    <strong class="text-gray-900 block mb-1">⚓ 漁港利用マナーの遵守</strong>
+                    漁港は漁師の方々の職場です。作業船の係留ロープ付近を避け、駐車ルールを守り、ゴミは必ず持ち帰りましょう。
+                </div>
+                <div class="bg-white p-3.5 rounded-lg border border-gray-200">
+                    <strong class="text-gray-900 block mb-1">☀️ 強烈な紫外線・日差し対策</strong>
+                    偏光グラスによる目の保護に加え、日焼け止めや帽子、水分補給など熱中症・紫外線対策を万全に整えましょう。
                 </div>
             </div>
-
-            <!-- マナー・注意喚起 -->
-            <div class="border-2 border-red-200 bg-red-50/50 rounded-xl p-5">
-                <h3 class="font-bold text-red-900 mb-3 flex items-center gap-2 text-sm sm:text-base">
-                    <span>⚠️</span> 釣り場を守るための重要マナー
-                </h3>
-                <ul class="text-xs sm:text-sm text-red-800 space-y-2 list-disc list-inside">
-                    <li><strong>漁港は漁業関係者の職場：</strong> 船のロープや作業スペースには近づかない、駐車禁止場所に停めないなどマナーを厳守してください。</li>
-                    <li><strong>ゴミの持ち帰り・スミ跡の清掃：</strong> 釣り糸やパッケージの放置は厳禁です。堤防にイカのスミが付いた場合は、海水で洗い流すのがエチケットです。</li>
-                    <li><strong>立ち入り禁止エリアの厳守：</strong> 近年、マナー悪化により釣り禁止になる港が増えています。現地の看板の指示に従いましょう。</li>
-                    <li><strong>サンゴへの配慮：</strong> サンゴを踏みつけたり折ったりしないよう、足元には細心の注意を払いましょう。</li>
-                </ul>
-            </div>
-        </div>
+        </section>
 
         <!-- 戻るリンク -->
         <div class="mt-10 pt-6 border-t border-gray-200 text-center">
@@ -588,33 +202,6 @@
         </div>
 
     </main>
-
-    <!-- タブ切り替えスクリプト -->
-    <script>
-        function switchTab(tabId) {
-            // タブコンテンツの切り替え
-            const contents = document.querySelectorAll('.tab-content');
-            contents.forEach(content => content.classList.add('hidden'));
-            
-            const activeContent = document.getElementById('content-' + tabId);
-            if (activeContent) {
-                activeContent.classList.remove('hidden');
-            }
-
-            // タブボタンのスタイル切り替え
-            const buttons = document.querySelectorAll('.tab-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active', 'bg-cyan-600', 'text-white', 'shadow-xs');
-                btn.classList.add('bg-gray-100', 'text-gray-700');
-            });
-
-            const activeBtn = document.getElementById('tab-btn-' + tabId);
-            if (activeBtn) {
-                activeBtn.classList.remove('bg-gray-100', 'text-gray-700');
-                activeBtn.classList.add('active', 'bg-cyan-600', 'text-white', 'shadow-xs');
-            }
-        }
-    </script>
 
     <!-- フッター (JSによりcomponents/footer.htmlが挿入されます) -->
     <footer id="footer"></footer>
