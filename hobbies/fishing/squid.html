@@ -477,73 +477,172 @@
 
         <!-- タブ2: おすすめ釣り場 -->
         <div id="content-spots" class="tab-content hidden">
-            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+            <h2 class="text-xl font-bold text-gray-900 mb-3 flex items-center gap-2">
                 <span class="w-2.5 h-6 bg-cyan-600 rounded-full inline-block"></span>
-                沖縄本島 おすすめイカ釣りポイント
+                沖縄本島 おすすめ釣り場ポイント詳細ガイド
             </h2>
-            <p class="text-sm text-gray-600 mb-6">
-                アクセスしやすく実績の高い主要な漁港・防波堤を中心に、北部・中部・南部それぞれの特徴をまとめました。
+            <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                アオリイカ（シルイチャー・クブシミ）やタチウオ、ライトショアジギングの実績が高い主要ポイントをWebの最新釣果・現地情報をもとに厳選。各釣り場の地形、狙い方、設備、参考ソース（Web情報元）をまとめました。
             </p>
 
+            <!-- ⚠️ 最新の立ち入り規制・釣り禁止情報アラート -->
+            <div class="mb-8 border-2 border-amber-300 bg-amber-50 rounded-2xl p-4 sm:p-5 text-xs sm:text-sm text-amber-950">
+                <div class="flex items-center gap-2 font-bold text-amber-900 text-sm sm:text-base mb-2">
+                    <span>⚠️</span> 釣行前の重要確認：立ち入り制限・最新の釣り禁止エリア
+                </div>
+                <p class="mb-2 leading-relaxed text-amber-900">
+                    近年、ゴミ問題や作業妨害により釣りが制限される漁港が増えています。トラブルを避けるため、現地の最新看板を必ず確認してください。
+                </p>
+                <ul class="space-y-1.5 list-disc list-inside text-amber-800">
+                    <li><strong>都屋漁港（読谷村）：</strong> 以前はエギングの超有名場でしたが、<strong>現在は敷地内全面「釣り禁止」</strong>の看板が設置されており釣行不可となっています。</li>
+                    <li><strong>泡瀬漁港（沖縄市）：</strong> <strong>漁港内（船だまり）は釣り禁止</strong>です。釣りが許可されている外海側の護岸や新夢咲公園側を利用してください。</li>
+                    <li><strong>三重城港（那覇市）：</strong> <strong>漁港内（小船だまり）は釣り禁止</strong>です。隣接する「波の上うみそら公園」側フェンスなどの許可エリアで竿を出しましょう。</li>
+                </ul>
+            </div>
+
             <!-- 北部エリア -->
-            <div class="mb-8">
+            <div class="mb-10">
                 <div class="flex items-center gap-2 mb-3">
                     <span class="px-2.5 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-md">北部エリア</span>
-                    <h3 class="font-bold text-gray-900">水質クリア＆プレッシャーの低い自然美エリア</h3>
+                    <h3 class="font-bold text-gray-900 text-base sm:text-lg">水深・潮通し抜群！大物実績が高い本島北部</h3>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">古宇利漁港（今帰仁村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">古宇利島内 / ドライブ・観光も兼ねられる</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            透明度抜群の海。港内での見えイカ狙いや、外海側のリーフエッジへの遠投で大型アオリイカの実績多数。潮が澄んでいる時はナチュラルカラーが効果的。
-                        </p>
+                    
+                    <!-- 本部港 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">本部港（本部町）</h4>
+                                <span class="text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-200 font-medium">大物実績</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">伊江島フェリー発着港 / 水深があり潮通し抜群</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> シルイチャー、クブシミ、タチウオ、ガーラ</p>
+                                <p><strong>特徴・攻め方：</strong> 水深が深く本流が当たる超一級ポイント。春の親イカ期や冬に外海向きの潮目をディープまで探る。夕マズメにミジュン（小魚）が入るとタチウオやガーラも連発。</p>
+                                <p><strong>設備：</strong> 足場良好、駐車スペース・トイレあり。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-emerald-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://fishcast.jp/" target="_blank" rel="noopener noreferrer" class="hover:underline">Fishcast (本部港)</a> / 
+                            <a href="https://okinawa-navi.jp/" target="_blank" rel="noopener noreferrer" class="hover:underline">沖縄ナビ</a>
+                        </div>
                     </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">塩屋湾周辺（大宜味村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">塩屋大橋周辺 / 波穏やかな内海</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            外海が荒れている時でも比較的穏やか。橋脚周りの潮流の変化やスロープ周りにイカが回遊してきます。夜間の常夜灯周りも狙い目。
-                        </p>
+
+                    <!-- 名護漁港 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">名護漁港（名護市）</h4>
+                                <span class="text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-200 font-medium">夜釣り◎</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">名護湾奥 / テラス整備で足場抜群</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> タチウオ（夜間）、シルイチャー、チヌ</p>
+                                <p><strong>特徴・攻め方：</strong> 防波堤にテラスが整備され安全。夕マズメ〜夜間に港口の防波堤から外向きにワインドやメタルジグ、バイブレーションを投げてタチウオを狙う定番。表層の早巻きが有効。</p>
+                                <p><strong>設備：</strong> 駐車場・トイレ完備で初心者にも安心。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-emerald-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://fukase-fishing-info.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">フカセ釣り入門</a> / 
+                            <a href="https://angler-rent.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">アングラーレント</a>
+                        </div>
                     </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">浜田漁港（金武町）</h4>
-                        <p class="text-xs text-gray-500 mb-2">東海岸 / 足場が良くファミリーにも</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            適度な水深があり、足場が安定している人気港。港内に群れが入るとサイトフィッシングで連続ヒットすることも。
-                        </p>
+
+                    <!-- 古宇利島・古宇利漁港 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-emerald-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">古宇利島（今帰仁村）</h4>
+                                <span class="text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded border border-emerald-200 font-medium">サイト◎</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">古宇利大橋周辺・港内 / 透明度最高</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> アオリイカ、クブシミ、ミーバイ</p>
+                                <p><strong>特徴・攻め方：</strong> 海の透明度が非常に高い。偏光グラス越しに見える「見えイカ」を狙うサイトエギングが人気。潮が澄んでいる時はケイムラやナチュラル系（ブルー・オリーブ）のエギが強い。</p>
+                                <p><strong>設備：</strong> 観光地のため駐車場・トイレ・飲食店多数。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-emerald-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://www.ana.co.jp/" target="_blank" rel="noopener noreferrer" class="hover:underline">ANA 沖縄エギング特集</a>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
             <!-- 中部エリア -->
-            <div class="mb-8">
+            <div class="mb-10">
                 <div class="flex items-center gap-2 mb-3">
                     <span class="px-2.5 py-1 bg-blue-100 text-blue-800 text-xs font-bold rounded-md">中部エリア</span>
-                    <h3 class="font-bold text-gray-900">アクセス抜群＆実績多数のハイプレッシャー激戦区</h3>
+                    <h3 class="font-bold text-gray-900 text-base sm:text-lg">イカとタチウオの二大聖地が集まるハイ実績エリア</h3>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">都屋漁港（読谷村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">西海岸 / 本島屈指の超有名実績場</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            外海への潮通しが抜群で、大型シルイチャーや数キロ超のクブシミが狙える定番ポイント。水深もあるためディープからシャローまで探れます。
-                        </p>
+                    
+                    <!-- 海中道路・浜比嘉島・伊計島 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">海中道路・各離島（うるま市）</h4>
+                                <span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded border border-blue-200 font-medium">エギング聖地</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">浜比嘉島・伊計島・海の駅あやはし館</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> 大型シルイチャー、クブシミ、タチウオ</p>
+                                <p><strong>特徴・攻め方：</strong> 本島屈指のイカのストック量を誇る聖地。浜比嘉島の比嘉港や伊計島漁港外向きが有名。広大なシャローリーフが広がるため、沈下速度の遅い<strong>シャロータイプのエギが必須</strong>。</p>
+                                <p><strong>設備：</strong> 各所に駐車スペース・トイレあり。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-blue-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://fishing-step.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">ステップ (海中道路情報)</a> / 
+                            <a href="https://fishcast.jp/" target="_blank" rel="noopener noreferrer" class="hover:underline">Fishcast</a>
+                        </div>
                     </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">海中道路・伊計島周辺（うるま市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">桃原漁港・伊計島防波堤など</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            広大なシャローリーフと漁港が連なるエギング天国。水路やカケアガリ、藻場周りをシャローエギでテンポよく探るのがコツ。
-                        </p>
+
+                    <!-- 泡瀬漁港 外海護岸 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">泡瀬漁港 外海護岸（沖縄市）</h4>
+                                <span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded border border-blue-200 font-medium">タチウオ聖地</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">新夢咲公園側護岸 / 中城湾に面した砂地</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> <strong>タチウオ（超実績）</strong>、チヌ、ミーバイ</p>
+                                <p><strong>特徴・攻め方：</strong> 沖縄を代表するショアタチウオのメッカ。海底が砂地主体のため根掛かりが少ない。秋〜冬の夕マズメ〜夜間に14gワインドやメタルジグ、テンヤで狙うアングラー多数。</p>
+                                <p><strong>注意：</strong> 港内は釣り禁止。外海側護岸でのみ釣行可能。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-blue-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://fishcast.jp/" target="_blank" rel="noopener noreferrer" class="hover:underline">Fishcast (泡瀬漁港)</a> / 
+                            <a href="https://fishing-step.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">ステップ</a>
+                        </div>
                     </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">浜漁港（中城村）</h4>
-                        <p class="text-xs text-gray-500 mb-2">東海岸 / 駐車しやすく足場良好</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            堤防が整備されており安全に釣りができるポイント。外海側テトラ周りや港内船道狙い。冬場のタチウオやイカの実績が高いです。
-                        </p>
+
+                    <!-- 中城浜漁港 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-blue-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">中城浜漁港（中城村）</h4>
+                                <span class="text-xs bg-blue-50 text-blue-700 px-2 py-0.5 rounded border border-blue-200 font-medium">アクセス◎</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">東海岸 / 左右の堤防・足場良好</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> タチウオ、アオリイカ、キス、メッキ</p>
+                                <p><strong>特徴・攻め方：</strong> 堤防が整備されアプローチしやすい。水深が浅めのため<strong>満潮前後2時間の潮位が高い時間帯</strong>が狙い目。夜間にタチウオや回遊イカが入ってきます。</p>
+                                <p><strong>注意：</strong> 浅場のため干潮時は底が露出します。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-blue-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://fukase-fishing-info.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">フカセ釣り入門 (浜漁港)</a>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -551,30 +650,73 @@
             <div class="mb-4">
                 <div class="flex items-center gap-2 mb-3">
                     <span class="px-2.5 py-1 bg-purple-100 text-purple-800 text-xs font-bold rounded-md">南部エリア</span>
-                    <h3 class="font-bold text-gray-900">那覇近郊・短時間釣行や初心者にも向いたエリア</h3>
+                    <h3 class="font-bold text-gray-900 text-base sm:text-lg">那覇近郊・短時間釣行＆夜釣りに強いエリア</h3>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">三重城漁港（那覇市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">那覇市内中心部至近 / 足場良好</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            空港や市内中心部から車ですぐ。足場が良く、外海向きの潮通しが良いポイントではキロオーバーのシルイチャー実績もしっかりあります。
-                        </p>
+                    
+                    <!-- 奥武島 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">奥武島（南城市）</h4>
+                                <span class="text-xs bg-purple-50 text-purple-700 px-2 py-0.5 rounded border border-purple-200 font-medium">万能・観光◎</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">天ぷらで有名な島 / 港内＆南側リーフ</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> アオリイカ、タチウオ、ミーバイ、タマン</p>
+                                <p><strong>特徴・攻め方：</strong> 港内の堤防・スロープ周りでは夜釣りのタチウオ（ワインド・テンヤ）やエギング。南側の浅いサーフ・リーフでは干潮前後にシャローエギングやスプーンでミーバイ。</p>
+                                <p><strong>設備：</strong> 駐車場・トイレ多数。天ぷら巡りも可能。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-purple-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://fukase-fishing-info.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">フカセ釣り入門 (奥武島)</a> / 
+                            <a href="https://okinawa-navi.jp/" target="_blank" rel="noopener noreferrer" class="hover:underline">沖縄ナビ</a>
+                        </div>
                     </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">奥武島（南城市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">橋で渡れる島 / 島全体がポイント</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            周囲に藻場やリーフが点在し、秋の数釣りから春の大物まで幅広く楽しめます。天ぷらを食べながらののんびりランガンにも最適。
-                        </p>
+
+                    <!-- 那覇港・泊ふ頭・安謝周辺 -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">那覇港・泊ふ頭周辺（那覇市）</h4>
+                                <span class="text-xs bg-purple-50 text-purple-700 px-2 py-0.5 rounded border border-purple-200 font-medium">夜タチウオ</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">那覇市街地至近 / 常夜灯多数</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> タチウオ（夜間）、ガーラ</p>
+                                <p><strong>特徴・攻め方：</strong> 那覇市内からすぐアクセスできる夜釣りスポット。常夜灯の明暗部に小魚が集まるため、夕マズメ〜夜間にワインドやミノーのただ巻きでタチウオを狙うアングラー多数。</p>
+                                <p><strong>注意：</strong> 港湾関係者の作業エリアには立ち入らないこと。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-purple-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://turido.net/" target="_blank" rel="noopener noreferrer" class="hover:underline">ツリード (那覇港タチウオ)</a> / 
+                            <a href="https://okitabi.net/" target="_blank" rel="noopener noreferrer" class="hover:underline">オキタビ</a>
+                        </div>
                     </div>
-                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-colors">
-                        <h4 class="font-bold text-gray-900 mb-1">海野漁港 / 馬天港（南城市）</h4>
-                        <p class="text-xs text-gray-500 mb-2">南部東海岸 / 潮通しの良い港湾部</p>
-                        <p class="text-xs text-gray-700 leading-relaxed">
-                            海野漁港は堤防先端の潮通しが良く、回遊イカ狙いに適しています。馬天港も敷地が広く、港内スロープや係留船周りを探れます。
-                        </p>
+
+                    <!-- 三重城港（うみそら公園護岸） -->
+                    <div class="border border-gray-200 rounded-xl p-4 bg-white hover:border-purple-500 transition-all shadow-xs flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-1">
+                                <h4 class="font-bold text-gray-900">三重城・うみそら公園側（那覇市）</h4>
+                                <span class="text-xs bg-purple-50 text-purple-700 px-2 py-0.5 rounded border border-purple-200 font-medium">那覇空港至近</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mb-2">波の上うみそら公園隣接 / 潮通し良好</p>
+                            <div class="text-xs text-gray-700 space-y-1.5 mb-3 leading-relaxed">
+                                <p><strong>ターゲット：</strong> シルイチャー、タチウオ、ガーラ、タマン</p>
+                                <p><strong>特徴・攻め方：</strong> 空港から車で10分。外海向きの潮通しが良い護岸からエギングで良型イカや、ルアーでタチウオ・回遊魚を狙える。</p>
+                                <p><strong>注意：</strong> 漁港内は釣り禁止。必ず公園側の許可フェンス沿いで釣行。有料駐車場・トイレあり。</p>
+                            </div>
+                        </div>
+                        <div class="pt-2 border-t border-gray-100 text-xs text-purple-700">
+                            <span class="text-gray-400">参考：</span>
+                            <a href="https://fukase-fishing-info.com/" target="_blank" rel="noopener noreferrer" class="hover:underline">フカセ釣り入門 (三重城)</a> / 
+                            <a href="https://fishcast.jp/" target="_blank" rel="noopener noreferrer" class="hover:underline">Fishcast</a>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
