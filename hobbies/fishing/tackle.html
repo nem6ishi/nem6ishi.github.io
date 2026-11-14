@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C295QK2Y0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5C295QK2Y0');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="現在所有している釣り竿（ロッド）とリールのスペック一覧・導入検討中のタックルまとめ。エギング、打ち込み釣り、遠投カゴ、サビキ、穴釣りまで対応。">
+    <meta name="author" content="Masato NEISHI">
+    <title>所持タックル一覧 / My Tackle - 根石 将人</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nem6ishi.github.io/hobbies/fishing/tackle.html">
+    <meta property="og:title" content="所持タックル一覧 / My Tackle - 根石 将人">
+    <meta property="og:description" content="所有しているロッド（竿）とリール、および導入検討中のタックルスペック一覧。">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://nem6ishi.github.io/hobbies/fishing/tackle.html">
+    <meta property="twitter:title" content="所持タックル一覧 / My Tackle - 根石 将人">
+    <meta property="twitter:description" content="所有しているロッド（竿）とリールのスペック一覧まとめ。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../components/loader.js"></script>
+    <link rel="stylesheet" href="../../styles/common.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+    <!-- 固定ナビゲーションバー (JSによりcomponents/header.htmlが挿入されます) -->
+    <nav id="header" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="navigation" aria-label="メインナビゲーション">
+        <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3 animate-pulse">
+            <div class="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
+            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+        </div>
+    </nav>
+
+    <main id="main-content"
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-12 bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-gray-100 animate-fade-in">
+
+        <!-- パンくずナビゲーション -->
+        <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
+            <a href="../../index.html" class="hover:text-blue-600 transition-colors">トップ</a> &gt;
+            <a href="../../hobbies.html" class="hover:text-blue-600 transition-colors">趣味</a> &gt;
+            <a href="../fishing.html" class="hover:text-blue-600 transition-colors">釣り</a> &gt;
+            <span class="font-medium text-gray-700">所持タックル一覧</span>
+        </nav>
+
+        <!-- タイトルエリア -->
+        <div class="mb-8 pb-5 border-b border-gray-200">
+            <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">🎒</span>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">所持タックル一覧 / My Tackle</h1>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                現在所有している竿（ロッド）とリール、および導入検討中のタックルのスペック一覧。
+                ターゲットやフィールドに合わせて自由に組み合わせて使います。
+            </p>
+        </div>
+
+        <!-- 表示切り替えフィルタ -->
+        <div class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 pb-4">
+            <button onclick="filterTackle('all')" id="btn-all" class="filter-btn px-4 py-2 rounded-lg text-sm font-bold bg-cyan-600 text-white shadow-xs transition-all">
+                📋 すべて表示
+            </button>
+            <button onclick="filterTackle('rods')" id="btn-rods" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                🎣 ロッド（竿）のみ
+            </button>
+            <button onclick="filterTackle('reels')" id="btn-reels" class="filter-btn px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                🎡 リールのみ
+            </button>
+        </div>
+
+        <!-- ロッド（竿）一覧 -->
+        <section id="section-rods" class="mb-10">
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span class="w-2.5 h-6 bg-cyan-600 rounded-full inline-block"></span>
+                <span>🎣</span> ロッド（竿）
+            </h2>
+            <div class="overflow-x-auto border border-gray-200 rounded-xl bg-white shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[760px]">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-200 text-gray-700">
+                            <th class="py-3 px-4 font-bold min-w-[180px]">ロッド名</th>
+                            <th class="py-3 px-3 font-bold text-center w-20">状態</th>
+                            <th class="py-3 px-3 font-bold whitespace-nowrap">全長 / 仕舞</th>
+                            <th class="py-3 px-3 font-bold whitespace-nowrap">継数・方式</th>
+                            <th class="py-3 px-3 font-bold whitespace-nowrap">自重</th>
+                            <th class="py-3 px-3 font-bold whitespace-nowrap">適合オモリ / ルアー</th>
+                            <th class="py-3 px-4 font-bold min-w-[260px]">主な用途・得意なターゲット</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <!-- アブガルシア SFS-865ML-MB -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors bg-cyan-50/10">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                アブガルシア<br>
+                                <span class="text-cyan-700 font-semibold">ソルティーフィールド SFS-865ML-MB</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                2.59m (8.6ft)<br>
+                                <span class="text-xs text-gray-500 font-mono">仕舞 55cm</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                5本<br><span class="text-xs text-gray-500">(並継マルチピース)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-mono">151g</td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-cyan-800">
+                                3〜30g / エギ〜3.5号
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">陸っぱり万能遠征【並継・エギング＆ライトルアー】</div>
+                                <div class="text-gray-500">アオリイカ、コブシメ、タチウオ、青物（下巻きゼロ・沖縄大物対応）</div>
+                            </td>
+                        </tr>
+
+                        <!-- プロマリン スペシャルサーフ 25-420 -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                プロマリン<br>
+                                <span class="text-blue-700 font-semibold">スペシャルサーフ 25-420</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                4.20m<br>
+                                <span class="text-xs text-gray-500 font-mono">仕舞 約116cm</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                4本<br><span class="text-xs text-gray-500">(振出テレスコ)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-mono">約385g</td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-gray-800">
+                                オモリ 15〜25号 (最大30号)
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">サーフ大遠投・夜の本格ぶっこみ釣り</div>
+                                <div class="text-gray-500">タマン（ハマフエフキ）、ホシギス大遠投、コロダイ、大物置き竿</div>
+                            </td>
+                        </tr>
+
+                        <!-- NFT パワーループ スーパー大磯 3-530PTS -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                NFT (現シマノ)<br>
+                                <span class="text-amber-800 font-semibold">スーパー大磯 3-530PTS</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                5.30m<br>
+                                <span class="text-xs text-gray-500 font-mono">仕舞 約104cm</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                6本<br><span class="text-xs text-gray-500">(振出テレスコ)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-mono">約390g</td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-gray-800">
+                                オモリ 5〜10号 (ハリス3〜7号)
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">防波堤・磯【遠投カゴ釣り＆泳がせ大物】</div>
+                                <div class="text-gray-500">遠投ウキサビキ、小魚泳がせ（ガーラ・青物・ヒラメ）、夜タチウオ</div>
+                            </td>
+                        </tr>
+
+                        <!-- ファンシーパック 270 -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                プロマリン<br>
+                                <span class="text-emerald-600 font-semibold">ファンシーパック 270</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                2.70m<br>
+                                <span class="text-xs text-gray-500 font-mono">仕舞 67cm</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                6本<br><span class="text-xs text-gray-500">(振出テレスコ)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-mono">197g</td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-gray-800">
+                                オモリ 6〜15号
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">堤防サビキ＆天秤ちょい投げ（エサ釣り用）</div>
+                                <div class="text-gray-500">ミジュン、ガチュン、キス、チン（黒鯛）、ウキ釣り</div>
+                            </td>
+                        </tr>
+
+                        <!-- PG 剛掌テトラ 90ML -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                プロマリン<br>
+                                <span class="text-indigo-600 font-semibold">PG 剛掌テトラ 90ML</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                0.90m<br>
+                                <span class="text-xs text-gray-500 font-mono">仕舞 57cm</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                2本<br><span class="text-xs text-gray-500">(バットジョイント)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-mono">133g</td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-gray-800">
+                                オモリ 3〜25号
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">堤防テトラ帯の穴釣り・際釣り専用</div>
+                                <div class="text-gray-500">ミーバイ（ハタ類）、オジサン、根魚狙い</div>
+                            </td>
+                        </tr>
+
+                        <!-- アブガルシア STCS-554LS-PB -->
+                        <tr class="bg-gray-50/40 hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                アブガルシア<br>
+                                <span class="text-pink-600 font-semibold">ソルティースタイル カラーズ STCS-554LS</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                                    導入検討
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                1.65m (5.5ft)<br>
+                                <span class="text-xs text-gray-500 font-mono">仕舞 45cm</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                4本<br><span class="text-xs text-gray-500">(並継マルチピース)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-mono">92g</td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-pink-700">
+                                0.2〜5g (ジグ単特化)
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">漁港・常夜灯【ジグ単・超フィネスライトゲーム】</div>
+                                <div class="text-gray-500">アジ、メッキ、小魚五目（ソリッド穂先・仕舞45cm超コンパクト）</div>
+                            </td>
+                        </tr>
+
+                        <!-- ダイワ モバイルX 73 H-180 -->
+                        <tr class="bg-gray-50/40 hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                ダイワ<br>
+                                <span class="text-purple-700 font-semibold">モバイルX 73 H-180</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                                    導入検討
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                1.80m<br>
+                                <span class="text-xs text-gray-500 font-mono">仕舞 50cm</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                4本<br><span class="text-xs text-gray-500">(並継マルチピース)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-mono">111g</td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-purple-800">
+                                オモリ 30〜100号
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">本格沖釣り・船釣り遠征【オモリ30〜100号】</div>
+                                <div class="text-gray-500">グルクンサビキ ＆ 泳がせ大物（アカジン・ミーバイ）</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-2 text-right">
+                <span class="text-[11px] text-gray-400">※ 表は横にスクロールしてご確認いただけます</span>
+            </div>
+        </section>
+
+        <!-- リール一覧 -->
+        <section id="section-reels" class="mb-6">
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span class="w-2.5 h-6 bg-blue-600 rounded-full inline-block"></span>
+                <span>🎡</span> リール
+            </h2>
+            <div class="overflow-x-auto border border-gray-200 rounded-xl bg-white shadow-sm">
+                <table class="w-full text-left text-xs sm:text-sm border-collapse min-w-[760px]">
+                    <thead>
+                        <tr class="bg-gray-50 border-b border-gray-200 text-gray-700">
+                            <th class="py-3 px-4 font-bold min-w-[200px]">リール名</th>
+                            <th class="py-3 px-3 font-bold text-center w-20">状態</th>
+                            <th class="py-3 px-3 font-bold whitespace-nowrap">タイプ・番手</th>
+                            <th class="py-3 px-3 font-bold whitespace-nowrap">ライン仕様</th>
+                            <th class="py-3 px-4 font-bold min-w-[260px]">主な組み合わせロッド・用途</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <!-- ダイワ 23レガリス LT3000-CXH -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors bg-cyan-50/10">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                ダイワ<br>
+                                <span class="text-cyan-700 font-semibold">23レガリス LT3000-CXH</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                スピニング<br>
+                                <span class="text-xs text-gray-500">3000番・ハイギア</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-cyan-800">
+                                PE 1.0号 (200m)<br>
+                                <span class="text-[11px] text-gray-500 font-normal">下巻き不要</span>
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">ソルティーフィールド SFS-865ML-MB</div>
+                                <div class="text-gray-500">エギング、ライトルアー、タチウオ、青物（沖縄遠征万能）</div>
+                            </td>
+                        </tr>
+
+                        <!-- ダイワ プロシューター ST-850 -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                ダイワ<br>
+                                <span class="text-blue-700 font-semibold">プロシューター ST-850</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                スピニング (遠投スプール)<br>
+                                <span class="text-xs text-gray-500">当時850番 (現行3000〜4000番相当)</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-blue-800">
+                                ダイワ ジャストロン 6号 (約120m)<br>
+                                <span class="text-[11px] text-gray-500 font-normal">比重1.14 サスペンド</span>
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">スペシャルサーフ 25-420 / スーパー大磯 3-530PTS</div>
+                                <div class="text-gray-500">防波堤・漁港の打ち込み釣り（タマン・コロダイ）、遠投カゴ・泳がせ</div>
+                            </td>
+                        </tr>
+
+                        <!-- シマノ スーパーエアロ 7000 -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                シマノ<br>
+                                <span class="text-amber-800 font-semibold">スーパーエアロ 7000</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                投げ専用遠投大型スピニング<br>
+                                <span class="text-xs text-gray-500">大口径スプール</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap text-gray-600">
+                                ライン仕様 要確認
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">スペシャルサーフ 25-420</div>
+                                <div class="text-gray-500">サーフ大遠投、本格大物置き竿（遠投用・予備）</div>
+                            </td>
+                        </tr>
+
+                        <!-- プロマリン エルザスピン EL3000 -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                プロマリン<br>
+                                <span class="text-emerald-600 font-semibold">エルザスピン EL3000</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                スピニング<br>
+                                <span class="text-xs text-gray-500">3000番</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-gray-800">
+                                ナイロン 4号糸付き
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">ファンシーパック 270</div>
+                                <div class="text-gray-500">堤防サビキ、天秤ちょい投げ（ミジュン・ガチュン・キス）</div>
+                            </td>
+                        </tr>
+
+                        <!-- ダイワ クラブデミ 15 -->
+                        <tr class="hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-900 whitespace-nowrap">
+                                ダイワ<br>
+                                <span class="text-indigo-600 font-semibold">クラブデミ 15</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    所持中
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                小型両軸リール<br>
+                                <span class="text-xs text-gray-500">穴釣り用</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap font-semibold text-gray-800">
+                                フロロカーボン 3号直通
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">PG 剛掌テトラ 90ML</div>
+                                <div class="text-gray-500">堤防テトラ帯の穴釣り・際釣り（ミーバイ・根魚）</div>
+                            </td>
+                        </tr>
+
+                        <!-- 導入検討：ライトゲーム用スピニング -->
+                        <tr class="bg-gray-50/40 hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-700 whitespace-nowrap">
+                                ライトゲーム用スピニング<br>
+                                <span class="text-pink-600 font-semibold">1000〜2000番クラス</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                                    導入検討
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                スピニング<br>
+                                <span class="text-xs text-gray-500">1000〜2000番</span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap text-gray-600">
+                                PE 0.3号 / エステル 0.3号
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">ソルティースタイル カラーズ STCS-554LS</div>
+                                <div class="text-gray-500">漁港・常夜灯（ジグ単・超フィネスライトゲーム）</div>
+                            </td>
+                        </tr>
+
+                        <!-- 導入検討：船釣り用両軸ベイト -->
+                        <tr class="bg-gray-50/40 hover:bg-cyan-50/30 transition-colors">
+                            <td class="py-3.5 px-4 font-bold text-gray-700 whitespace-nowrap">
+                                船釣り用両軸ベイト<br>
+                                <span class="text-purple-700 font-semibold">小型手巻き / 電動</span>
+                            </td>
+                            <td class="py-3.5 px-3 text-center whitespace-nowrap">
+                                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                                    導入検討
+                                </span>
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap">
+                                両軸ベイト
+                            </td>
+                            <td class="py-3.5 px-3 whitespace-nowrap text-gray-600">
+                                船釣りターゲットに合わせて選定
+                            </td>
+                            <td class="py-3.5 px-4 text-xs leading-relaxed">
+                                <div class="font-semibold text-gray-800 mb-0.5">モバイルX 73 H-180</div>
+                                <div class="text-gray-500">本格沖釣り・船釣り遠征（グルクンサビキ・泳がせ大物）</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-2 text-right">
+                <span class="text-[11px] text-gray-400">※ 表は横にスクロールしてご確認いただけます</span>
+            </div>
+        </section>
+
+        <!-- 戻るリンク -->
+        <div class="mt-10 pt-6 border-t border-gray-200 flex flex-wrap justify-center gap-4 text-sm font-semibold">
+            <a href="../fishing.html" class="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-800 transition-colors">
+                &larr; 釣りトップに戻る
+            </a>
+            <span class="text-gray-300">|</span>
+            <a href="../../hobbies.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors">
+                趣味一覧に戻る
+            </a>
+        </div>
+
+    </main>
+
+    <!-- 表示切り替えスクリプト -->
+    <script>
+        function filterTackle(type) {
+            const rods = document.getElementById('section-rods');
+            const reels = document.getElementById('section-reels');
+
+            if (type === 'all') {
+                rods.classList.remove('hidden');
+                reels.classList.remove('hidden');
+            } else if (type === 'rods') {
+                rods.classList.remove('hidden');
+                reels.classList.add('hidden');
+            } else if (type === 'reels') {
+                rods.classList.add('hidden');
+                reels.classList.remove('hidden');
+            }
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('bg-cyan-600', 'text-white', 'font-bold', 'shadow-xs');
+                btn.classList.add('bg-gray-100', 'text-gray-700', 'font-medium');
+            });
+
+            const activeBtn = document.getElementById('btn-' + type);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-gray-100', 'text-gray-700', 'font-medium');
+                activeBtn.classList.add('bg-cyan-600', 'text-white', 'font-bold', 'shadow-xs');
+            }
+        }
+    </script>
+
+    <!-- フッター (JSによりcomponents/footer.htmlが挿入されます) -->
+    <footer id="footer"></footer>
+</body>
+
+</html>
