@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5C295QK2Y0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5C295QK2Y0');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="沖縄での打ち込み釣り（ぶっこみ釣り）攻略ガイド。タマン（ハマフエフキ）やコロダイを狙うための使用タックル、中通し基本仕掛け、エサ選び、夜釣り・置き竿の安全対策をまとめました。">
+    <meta name="author" content="Masato NEISHI">
+    <title>沖縄打ち込み釣り（ぶっこみ）ガイド / Uchikomi Fishing - 根石 将人</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nem6ishi.github.io/hobbies/fishing/uchikomi.html">
+    <meta property="og:title" content="沖縄打ち込み釣り（ぶっこみ）ガイド / Uchikomi Fishing - 根石 将人">
+    <meta property="og:description" content="タマンやコロダイを狙う沖縄の打ち込み釣り（ぶっこみ釣り）のタックル、中通し基本仕掛け、エサ、現場チェックリストまとめ。">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:url" content="https://nem6ishi.github.io/hobbies/fishing/uchikomi.html">
+    <meta property="twitter:title" content="沖縄打ち込み釣り（ぶっこみ）ガイド / Uchikomi Fishing - 根石 将人">
+    <meta property="twitter:description" content="タマンやコロダイを狙う沖縄の打ち込み釣りのタックル・基本仕掛けまとめ。">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../components/loader.js"></script>
+    <link rel="stylesheet" href="../../styles/common.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 flex flex-col items-center min-h-screen">
+    <!-- スキップリンク -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+    <!-- 固定ナビゲーションバー (JSによりcomponents/header.htmlが挿入されます) -->
+    <nav id="header" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50" role="navigation" aria-label="メインナビゲーション">
+        <div class="max-w-4xl w-11/12 md:w-full mx-auto px-4 md:px-0 py-3 animate-pulse">
+            <div class="h-8 bg-gray-200 rounded w-1/3 mb-2"></div>
+            <div class="h-4 bg-gray-200 rounded w-1/2"></div>
+        </div>
+    </nav>
+
+    <main id="main-content"
+        class="max-w-4xl w-11/12 md:w-full mx-auto mt-28 mb-12 bg-white p-6 sm:p-10 rounded-2xl shadow-xl border border-gray-100 animate-fade-in">
+
+        <!-- パンくずナビゲーション -->
+        <nav class="text-sm mb-6 text-gray-500" aria-label="パンくずナビゲーション">
+            <a href="../../index.html" class="hover:text-blue-600 transition-colors">トップ</a> &gt;
+            <a href="../../hobbies.html" class="hover:text-blue-600 transition-colors">趣味</a> &gt;
+            <a href="../fishing.html" class="hover:text-blue-600 transition-colors">釣り</a> &gt;
+            <span class="font-medium text-gray-700">沖縄打ち込み釣り（ぶっこみ）</span>
+        </nav>
+
+        <!-- タイトルエリア -->
+        <div class="mb-8 pb-5 border-b border-gray-200">
+            <div class="flex items-center gap-3 mb-2">
+                <span class="text-3xl">🌊</span>
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">沖縄打ち込み釣り（ぶっこみ）/ Uchikomi Fishing</h1>
+            </div>
+            <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                沖縄の夜の防波堤・漁港でタマン（ハマフエフキ）やコロダイなどの大物を狙う伝統の「打ち込み釣り（ぶっこみ釣り）」の攻略メモ。
+                現在の使用タックル・中通し基本仕掛け・エサ選び・置き竿の安全対策をまとめました。
+            </p>
+        </div>
+
+        <!-- ナビゲーションタブ -->
+        <div class="flex flex-wrap gap-2 mb-8 border-b border-gray-200 pb-4" id="tab-nav">
+            <button onclick="switchTab('rig')" id="tab-btn-rig" class="tab-btn active px-4 py-2 rounded-lg text-sm font-bold bg-blue-600 text-white shadow-xs transition-all">
+                🪢 基本仕掛け・タックル
+            </button>
+            <button onclick="switchTab('target')" id="tab-btn-target" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                🐟 ターゲットとエサ
+            </button>
+            <button onclick="switchTab('tips')" id="tab-btn-tips" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 transition-all">
+                💡 攻略のコツ＆安全管理
+            </button>
+        </div>
+
+        <!-- タブ1: 基本仕掛け・タックル -->
+        <div id="content-rig" class="tab-content">
+            <!-- 使用タックル概要 -->
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span class="w-2.5 h-6 bg-blue-600 rounded-full inline-block"></span>
+                使用タックル構成 / My Tackle
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-xs">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-bold text-gray-900 flex items-center gap-2">
+                            <span>🎣</span> ロッド（竿）
+                        </h3>
+                        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">メイン</span>
+                    </div>
+                    <p class="font-bold text-blue-700 text-base mb-1">プロマリン スペシャルサーフ 25-420</p>
+                    <ul class="text-xs sm:text-sm text-gray-600 space-y-1">
+                        <li>• 全長 4.20m / 仕舞 約116cm（4本振出）</li>
+                        <li>• 適合オモリ：15〜25号（最大30号）</li>
+                        <li>• 防波堤からのぶっこみ・置き竿にちょうど良いパワーと長さ</li>
+                    </ul>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-5 bg-white shadow-xs">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-bold text-gray-900 flex items-center gap-2">
+                            <span>🎡</span> リール・道糸
+                        </h3>
+                        <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">メイン</span>
+                    </div>
+                    <p class="font-bold text-blue-700 text-base mb-1">ダイワ プロシューター ST-850</p>
+                    <ul class="text-xs sm:text-sm text-gray-600 space-y-1">
+                        <li>• 遠投スプール（当時850番≒現行3000〜4000番クラス）</li>
+                        <li>• 道糸：<strong>ダイワ ジャストロン 6号</strong>（約120m）</li>
+                        <li>• ※サーフ大遠投用予備：シマノ スーパーエアロ 7000</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 基本仕掛け図 -->
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span class="w-2.5 h-6 bg-blue-600 rounded-full inline-block"></span>
+                打ち込み釣り 基本仕掛け / My Rig
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-600 mb-5">
+                タマン（ハマフエフキ）やコロダイ等を狙う、防波堤・漁港向けの中通し打ち込み（ぶっこみ）仕掛けの標準セッティング。
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-5">
+                <!-- 左側：仕掛け図フロー -->
+                <div class="lg:col-span-7 bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-gray-900 mb-4 flex items-center gap-2">
+                        <span class="px-2 py-0.5 text-[11px] font-bold bg-blue-100 text-blue-800 rounded">中通し仕掛け</span>
+                        ライン・パーツ構成図
+                    </h3>
+
+                    <div class="relative pl-6 border-l-2 border-blue-200 space-y-4 text-xs sm:text-sm">
+                        <!-- リール -->
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-0.5 w-4 h-4 rounded-full bg-blue-600 border-2 border-white shadow"></span>
+                            <div class="font-bold text-gray-900">リール：ダイワ プロシューター ST-850</div>
+                            <div class="text-xs text-gray-500">竿：プロマリン スペシャルサーフ 25-420</div>
+                        </div>
+
+                        <!-- 道糸 -->
+                        <div class="relative bg-blue-50/60 border border-blue-100 rounded-lg p-3">
+                            <span class="absolute -left-[31px] top-3.5 w-3.5 h-3.5 rounded-full bg-blue-400 border-2 border-white"></span>
+                            <div class="font-bold text-blue-900">道糸：ダイワ ジャストロン 6号（ナイロン）</div>
+                            <div class="text-xs text-gray-600 mt-0.5">
+                                比重 1.14（サスペンド）／スプールエッジ約2mm手前まで（約110〜120m）巻く
+                            </div>
+                        </div>
+
+                        <!-- 中通しオモリ -->
+                        <div class="relative bg-gray-50 border border-gray-200 rounded-lg p-3">
+                            <span class="absolute -left-[31px] top-3.5 w-3.5 h-3.5 rounded-full bg-gray-600 border-2 border-white"></span>
+                            <div class="font-bold text-gray-900">中通しオモリ：六角オモリ 15号・20号</div>
+                            <div class="text-xs text-gray-600 mt-0.5">
+                                道糸に直接通す（通常は15号、潮が速い・遠投したい場合は20号）
+                            </div>
+                        </div>
+
+                        <!-- クッション -->
+                        <div class="relative bg-amber-50/60 border border-amber-100 rounded-lg p-3">
+                            <span class="absolute -left-[31px] top-3.5 w-3.5 h-3.5 rounded-full bg-amber-400 border-2 border-white"></span>
+                            <div class="font-bold text-amber-900">クッション：ゴム管 または 夜光シモリ玉（ソフト）</div>
+                            <div class="text-xs text-gray-600 mt-0.5">
+                                道糸に通し、オモリによるサルカン結び目の損傷・噛み込みを防止
+                            </div>
+                        </div>
+
+                        <!-- サルカン -->
+                        <div class="relative bg-gray-50 border border-gray-200 rounded-lg p-3">
+                            <span class="absolute -left-[31px] top-3.5 w-3.5 h-3.5 rounded-full bg-gray-500 border-2 border-white"></span>
+                            <div class="font-bold text-gray-900">接続：タル型サルカン 3号 または 4号</div>
+                            <div class="text-xs text-gray-600 mt-0.5">
+                                道糸の先端に結束（オモリ穴を通り抜けないサイズを使用）
+                            </div>
+                        </div>
+
+                        <!-- ハリス -->
+                        <div class="relative bg-emerald-50/60 border border-emerald-100 rounded-lg p-3">
+                            <span class="absolute -left-[31px] top-3.5 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></span>
+                            <div class="font-bold text-emerald-900">ハリス：フロロカーボン 5号（長さ 60〜70cm）</div>
+                            <div class="text-xs text-gray-600 mt-0.5">
+                                根掛かり時にハリス側が切れてオモリを回収できる強度バランス（予備代用：ジャストロン 6号）
+                            </div>
+                        </div>
+
+                        <!-- ハリ -->
+                        <div class="relative bg-red-50/60 border border-red-100 rounded-lg p-3">
+                            <span class="absolute -left-[31px] top-3.5 w-3.5 h-3.5 rounded-full bg-red-500 border-2 border-white"></span>
+                            <div class="font-bold text-red-900">ハリ：タマン針 16号</div>
+                            <div class="text-xs text-gray-600 mt-0.5">
+                                エサ例：サンマ・サバ切り身、イカ短冊、キビナゴ、ヤドカリ・カニ等
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右側：運用ポイント・持ち物メモ -->
+                <div class="lg:col-span-5 flex flex-col gap-4">
+                    <div class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
+                        <h3 class="text-sm font-bold text-gray-900 mb-3 flex items-center gap-1.5">
+                            <span>⚙️</span> セッティングのポイント
+                        </h3>
+                        <ul class="space-y-2.5 text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-600 font-bold mt-0.5">•</span>
+                                <span><strong>道糸6号 ＞ ハリス5号</strong>：根掛かり時に道糸やオモリごとロストするのを防ぐ黄金バランス。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-600 font-bold mt-0.5">•</span>
+                                <span><strong>ダイワ ジャストロン 6号採用</strong>：比重1.14（サスペンド）で水なじみが良く、しなやかでライントラブルやキャスト切れを抑えやすい。</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-600 font-bold mt-0.5">•</span>
+                                <span><strong>ボビン500mの運用</strong>：ST-850（6号120m）約4回分。傷んだら気軽に巻き替え可能で、緊急時の予備ハリスにも流用できる。</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-amber-50/50 border border-amber-200 rounded-xl p-5">
+                        <h3 class="text-sm font-bold text-amber-900 mb-2.5 flex items-center gap-1.5">
+                            <span>🎒</span> 現場チェック・置き竿グッズ
+                        </h3>
+                        <ul class="space-y-1.5 text-xs sm:text-sm text-amber-900/90">
+                            <li>✓ 竿受け（三脚 or ピトン）＆ 尻手ロープ（海ポチャ防止）</li>
+                            <li>✓ 竿先ライト（ケミホタル／ぎょぎょライト）＆ 鈴</li>
+                            <li>✓ オモリ予備（根掛かり対策で15・20号を各数個多めに）</li>
+                            <li>✓ ST-850 のドラグ固着・ラインローラー回転の事前確認</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- タブ2: ターゲットとエサ -->
+        <div id="content-target" class="tab-content hidden">
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span class="w-2.5 h-6 bg-blue-600 rounded-full inline-block"></span>
+                主なターゲット＆定番エサ
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+                <div class="border border-gray-200 rounded-xl p-5 bg-white">
+                    <h3 class="font-bold text-gray-900 mb-2">🐠 タマン（ハマフエフキ）</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        沖縄の打ち込み釣りの本命。夜間に浅場のサンゴ礁や砂地の境目を回遊します。掛かった瞬間の強烈な突っ込みが特徴で、竿を持っていかれないようドラグ調整と尻手ロープが必須です。
+                    </p>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-5 bg-white">
+                    <h3 class="font-bold text-gray-900 mb-2">🐟 コロダイ・ミーバイ・ガーラ</h3>
+                    <p class="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                        漁港のミオ筋（船道）や堤防の駆け上がりではコロダイやミーバイ（ハタ類）、回遊があればガーラ（ヒラアジ類）や大型のチヌ（ミナミクロダイ）もヒットします。
+                    </p>
+                </div>
+            </div>
+
+            <h3 class="text-base font-bold text-gray-900 mb-3">🦐 エサの使い分け</h3>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                    <thead>
+                        <tr class="bg-gray-100 text-gray-700 border-b border-gray-200">
+                            <th class="p-3">エサの種類</th>
+                            <th class="p-3">特徴・アピール</th>
+                            <th class="p-3">おすすめの付け方</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="p-3 font-semibold bg-gray-50">サンマ・サバの切り身</td>
+                            <td class="p-3">脂と匂いが強く夜釣りの定番。安価で入手しやすい。</td>
+                            <td class="p-3">皮側から通し刺し（エサ持ちを良くするため塩締めも有効）</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-semibold bg-gray-50">イカ短冊（シガヤー等）</td>
+                            <td class="p-3">エサ持ちが抜群に良く、エサ取りが多いときに強い。</td>
+                            <td class="p-3">タマン針16号に1回〜2回縫い刺しして垂らしを残す</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 font-semibold bg-gray-50">キビナゴ</td>
+                            <td class="p-3">食い込みが良く、根魚やガーラにも効果的。</td>
+                            <td class="p-3">2〜3匹の房掛け、または身切れ防止にエサ巻き糸を併用</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- タブ3: 攻略のコツ＆安全管理 -->
+        <div id="content-tips" class="tab-content hidden">
+            <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <span class="w-2.5 h-6 bg-blue-600 rounded-full inline-block"></span>
+                打ち込み釣りのコツ＆夜釣りの安全管理
+            </h2>
+
+            <div class="space-y-4 mb-6">
+                <div class="border border-gray-200 rounded-xl p-5 bg-white">
+                    <h3 class="font-bold text-gray-900 mb-2 text-sm sm:text-base">🎯 1. 置き竿時のドラグ調整</h3>
+                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                        投入後は糸フケを取り、<strong>「強めに引っ張るとジリッと糸が出る程度」</strong>にドラグを少し緩めておきます。
+                        大物が走ったときに竿ごと海へ引き込まれるのを防ぎ、ヒット後にドラグを締めながらやり取りします。
+                    </p>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-5 bg-white">
+                    <h3 class="font-bold text-gray-900 mb-2 text-sm sm:text-base">⚓ 2. 根掛かりを減らす「砂地・ミオ筋」狙い</h3>
+                    <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                        昼間の明るい時間帯や干潮時に、サンゴの根が少ない砂地のポケットや船道（ミオ筋）の位置を確認しておくと、夜間のオモリロストを大幅に減らせます。
+                    </p>
+                </div>
+            </div>
+
+            <div class="border-2 border-red-200 bg-red-50/50 rounded-xl p-5">
+                <h3 class="font-bold text-red-900 mb-3 flex items-center gap-2 text-sm sm:text-base">
+                    <span>⚠️</span> 夜釣り・置き竿の安全対策
+                </h3>
+                <ul class="text-xs sm:text-sm text-red-800 space-y-2 list-disc list-inside">
+                    <li><strong>ライフジャケット・ヘッドライト（予備電池含む）の携行</strong>を徹底する。</li>
+                    <li><strong>尻手ロープの装着</strong>：竿受けだけに頼らず、必ず尻手ロープでクーラーボックス等と繋いでおく。</li>
+                    <li><strong>ウツボ・毒魚への注意</strong>：夜釣りではウツボやゴンズイ、アイゴ（カーエー）等も掛かるため、素手で掴まずフィッシュグリップとプライヤーを使用する。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 戻るリンク -->
+        <div class="mt-10 pt-6 border-t border-gray-200 flex flex-wrap justify-center gap-4 text-sm font-semibold">
+            <a href="../fishing.html" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors">
+                &larr; 釣りトップに戻る
+            </a>
+            <span class="text-gray-300">|</span>
+            <a href="../../hobbies.html" class="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 transition-colors">
+                趣味一覧に戻る
+            </a>
+        </div>
+
+    </main>
+
+    <!-- タブ切り替えスクリプト -->
+    <script>
+        function switchTab(tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            const activeContent = document.getElementById('content-' + tabId);
+            if (activeContent) {
+                activeContent.classList.remove('hidden');
+            }
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600', 'text-white', 'shadow-xs');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
+            });
+
+            const activeBtn = document.getElementById('tab-btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.remove('bg-gray-100', 'text-gray-700');
+                activeBtn.classList.add('active', 'bg-blue-600', 'text-white', 'shadow-xs');
+            }
+        }
+    </script>
+
+    <!-- フッター (JSによりcomponents/footer.htmlが挿入されます) -->
+    <footer id="footer"></footer>
+</body>
+
+</html>
