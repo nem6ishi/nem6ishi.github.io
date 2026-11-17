@@ -18,6 +18,9 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
     <script src="../components/loader.js"></script>
     <link rel="stylesheet" href="../styles/common.css">
 </head>
@@ -207,7 +210,23 @@
                         }
                     });
 
-                    articleContentElement.innerHTML = marked.parse(article.content);
+                    // 数式（$$...$$, $...$）をmarked.jsのパースから保護して退避
+                    const mathPlaceholders = [];
+                    function protectMath(markdown) {
+                        // コードブロックとインラインコードはそのまま残しつつ数式だけ退避
+                        return markdown.replace(/(```[\s\S]*?```|`[^`\n]+`)|(\$\$[\s\S]+?\$\$)|(?<!\\)\$([^\n$]+?)(?<!\\)\$/g, (match, code, blockMath, inlineMath) => {
+                            if (code) return code;
+                            const idx = mathPlaceholders.length;
+                            mathPlaceholders.push(blockMath ? blockMath : `$${inlineMath}$`);
+                            return `@@MATH_PLACEHOLDER_${idx}@@`;
+                        });
+                    }
+                    function restoreMath(html) {
+                        return html.replace(/@@MATH_PLACEHOLDER_(\d+)@@/g, (_, idx) => mathPlaceholders[Number(idx)]);
+                    }
+
+                    const protectedContent = protectMath(article.content);
+                    articleContentElement.innerHTML = restoreMath(marked.parse(protectedContent));
 
                     // コードハイライトの適用（手動実行が必要な場合用）
                     document.querySelectorAll('pre code').forEach((el) => {
@@ -216,6 +235,17 @@
 
                     // 記事本文内のスタイル調整・目次生成・カード化・ソート機能適用
                     setupArticleStyles(articleContentElement);
+
+                    // KaTeXによるLaTeX数式レンダリング
+                    if (typeof renderMathInElement === 'function') {
+                        renderMathInElement(articleContentElement, {
+                            delimiters: [
+                                { left: '$$', right: '$$', display: true },
+                                { left: '$', right: '$', display: false }
+                            ],
+                            throwOnError: false
+                        });
+                    }
 
                 } else {
                     displayError(`記事データ「${articleId}」の形式が正しくありません。`);

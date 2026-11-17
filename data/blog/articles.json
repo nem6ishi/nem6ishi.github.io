@@ -1,6 +1,11 @@
 {
     "articles": [
         {
+            "id": "2026/20261117_tea_brewing_science",
+            "date": "2026-11-17",
+            "updatedAt": "2026-11-17"
+        },
+        {
             "id": "2026/20261026_beer_geek_festival",
             "date": "2026-10-26",
             "updatedAt": "2026-10-28"
