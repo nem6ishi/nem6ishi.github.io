@@ -62,11 +62,16 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
 ### 1. 混沌酿造 (Chaosbrewing) — 本土 #1（長沙市）
 <div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
 <span class="font-bold text-slate-800 text-sm sm:text-base">📍 湖南省長沙市 / Nano Brewery</span>
+<div class="flex items-center gap-2">
 <a href="https://untappd.com/ChangShaChaobrewing" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-amber-500 hover:bg-amber-600 text-white shadow-2xs transition-colors">🍺 Untappd</a>
+<a href="https://www.chaobrewing.cn/men-dian" target="_blank" rel="noopener noreferrer" class="action-btn inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold bg-slate-800 hover:bg-slate-900 text-white shadow-2xs transition-colors">🌐 公式店舗案内</a>
+</div>
 </div>
 
 * **Untappd ブルワリー評価**: **4.123**（105種 / 1,120件）
-* **直営タップルーム**: **あり**（長沙市内：五一広場店・黄土嶺店 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=%E6%B7%B7%E6%B2%8C%E9%85%BF%E9%80%A0+%E4%BA%94%E4%B8%80%E5%B9%BF%E5%9C%BA+%E9%95%BF%E6%B2%99) / [🍺 Untappd](https://untappd.com/ChangShaChaobrewing)）。五一広場店は繁華街にあり湖南料理と合わせやすい。
+* **直営タップルーム**: **あり**（長沙市内2店舗 / [🍺 Untappd](https://untappd.com/ChangShaChaobrewing) / [🌐 公式案内](https://www.chaobrewing.cn/men-dian)）
+  * **五一広場店**: 湖南省長沙市開福区黄興北路111号（上城金都后街）— 繁華街近くで湖南料理と合わせやすい（[📍 Google Map](https://www.google.com/maps/search/?api=1&query=%E6%B9%96%E5%8D%97%E7%9C%81%E9%95%BF%E6%B2%99%E5%B8%82%E5%BC%80%E7%A6%8F%E5%8C%BA%E9%BB%84%E5%85%B4%E5%8C%97%E8%B7%AF111%E5%8F%B7)）
+  * **黄土嶺店**: 湖南省長沙市雨花区建発中央公園9棟西側駐車場入口旁（[📍 Google Map](https://www.google.com/maps/search/?api=1&query=%E6%B9%96%E5%8D%97%E7%9C%81%E9%95%BF%E6%B2%99%E5%B8%82%E9%9B%A8%E8%8A%B1%E5%8C%BA%E5%BB%BA%E5%8F%91%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9B%AD9%E6%A0%8B)）
 * **特徴・スタイル**: 本土1位（唯一の4.1点台）。ジューシーな Hazy IPA や Double / Triple IPA などホップ主体のビールで熱狂的な支持を集める。
 * **代表・高評価ビール**:
   * **藤影 (Vine Soul)**（Imperial Hazy IPA / **Untappd: 4.4**）
