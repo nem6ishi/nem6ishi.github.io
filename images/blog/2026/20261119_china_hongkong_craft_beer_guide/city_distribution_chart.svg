@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" class="w-full h-auto rounded-2xl shadow-xl overflow-hidden font-sans select-none" style="background: linear-gradient(145deg, #090e17 0%, #0f172a 100%);">
+  <defs>
+    <filter id="bar-shadow" x="-5%" y="-10%" width="110%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <text x="36" y="42" fill="#f8fafc" font-size="18" font-weight="800">都市・地域別 ブルワリー分布（中国本土 Top 50 ＋ 香港 全19軒）</text>
+  <text x="36" y="64" fill="#94a3b8" font-size="12.5" font-weight="500">香港・北京・上海の3大都市で全体の過半数（38軒 / 55.1%）を占め、広州・杭州・西安が続く構図</text>
+
+  <!-- Vertical Grid Lines (x = 180 is 0, scale = 30px per brewery) -->
+  <g stroke="#1e293b" stroke-width="1">
+    <line x1="180" y1="88" x2="180" y2="465" stroke="#475569" stroke-width="1.5" />
+    <line x1="330" y1="88" x2="330" y2="465" stroke-dasharray="3,4" />
+    <line x1="480" y1="88" x2="480" y2="465" stroke-dasharray="3,4" />
+    <line x1="630" y1="88" x2="630" y2="465" stroke-dasharray="3,4" />
+    <line x1="780" y1="88" x2="780" y2="465" stroke-dasharray="3,4" />
+  </g>
+  <g fill="#64748b" font-size="11" font-weight="600" text-anchor="middle">
+    <text x="180" y="484">0</text>
+    <text x="330" y="484">5</text>
+    <text x="480" y="484">10</text>
+    <text x="630" y="484">15</text>
+    <text x="780" y="484">20</text>
+  </g>
+
+  <!-- Bars (Row height 34px, bar height 22px) -->
+  <!-- 1. 香港: 18 craft + 1 macro = 19 (570px) -->
+  <g transform="translate(0, 96)">
+    <text x="168" y="16" fill="#fef3c7" font-size="13" font-weight="700" text-anchor="end">香港</text>
+    <rect x="180" y="0" width="540" height="22" rx="4" fill="#fbbf24" filter="url(#bar-shadow)" />
+    <rect x="720" y="0" width="30" height="22" rx="4" fill="#64748b" />
+    <text x="760" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">19軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(クラフト18 + Macro 1)</tspan></text>
+  </g>
+
+  <!-- 2. 北京: 11 (330px) -->
+  <g transform="translate(0, 130)">
+    <text x="168" y="16" fill="#e0f2fe" font-size="13" font-weight="700" text-anchor="end">北京</text>
+    <rect x="180" y="0" width="330" height="22" rx="4" fill="#38bdf8" filter="url(#bar-shadow)" />
+    <text x="520" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">11軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(最高位 #7 Beer Guys / ★3.853)</tspan></text>
+  </g>
+
+  <!-- 3. 上海: 8 (240px) -->
+  <g transform="translate(0, 164)">
+    <text x="168" y="16" fill="#d1fae5" font-size="13" font-weight="700" text-anchor="end">上海</text>
+    <rect x="180" y="0" width="240" height="22" rx="4" fill="#34d399" filter="url(#bar-shadow)" />
+    <text x="430" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">8軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(最高位 #24 Mingri / ★3.644)</tspan></text>
+  </g>
+
+  <!-- 4. 広州: 4 (120px) -->
+  <g transform="translate(0, 198)">
+    <text x="168" y="16" fill="#fef3c7" font-size="13" font-weight="700" text-anchor="end">広州</text>
+    <rect x="180" y="0" width="120" height="22" rx="4" fill="#fbbf24" filter="url(#bar-shadow)" />
+    <text x="310" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">4軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(#2 Dr. Lab・#3 Crazy Bear)</tspan></text>
+  </g>
+
+  <!-- 5. 杭州: 3 (90px) -->
+  <g transform="translate(0, 232)">
+    <text x="168" y="16" fill="#d1fae5" font-size="13" font-weight="700" text-anchor="end">杭州</text>
+    <rect x="180" y="0" width="90" height="22" rx="4" fill="#34d399" filter="url(#bar-shadow)" />
+    <text x="280" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">3軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(#15 Hop Fan・#19 Paper Plane)</tspan></text>
+  </g>
+
+  <!-- 6. 西安: 3 (90px) -->
+  <g transform="translate(0, 266)">
+    <text x="168" y="16" fill="#f3e8ff" font-size="13" font-weight="700" text-anchor="end">西安</text>
+    <rect x="180" y="0" width="90" height="22" rx="4" fill="#c084fc" filter="url(#bar-shadow)" />
+    <text x="280" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">3軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(#4 Fever Ales・#9 Wumu)</tspan></text>
+  </g>
+
+  <!-- 7. 天津: 2 (60px) -->
+  <g transform="translate(0, 300)">
+    <text x="168" y="16" fill="#e0f2fe" font-size="13" font-weight="700" text-anchor="end">天津</text>
+    <rect x="180" y="0" width="60" height="22" rx="4" fill="#38bdf8" filter="url(#bar-shadow)" />
+    <text x="250" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">2軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(#21 EASTGATE・#23 Trueman)</tspan></text>
+  </g>
+
+  <!-- 8. 武漢: 2 (60px) -->
+  <g transform="translate(0, 334)">
+    <text x="168" y="16" fill="#f3e8ff" font-size="13" font-weight="700" text-anchor="end">武漢</text>
+    <rect x="180" y="0" width="60" height="22" rx="4" fill="#c084fc" filter="url(#bar-shadow)" />
+    <text x="250" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">2軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(#12 Derive・#22 NO.18)</tspan></text>
+  </g>
+
+  <!-- 9. 成都: 2 (60px) -->
+  <g transform="translate(0, 368)">
+    <text x="168" y="16" fill="#f3e8ff" font-size="13" font-weight="700" text-anchor="end">成都</text>
+    <rect x="180" y="0" width="60" height="22" rx="4" fill="#c084fc" filter="url(#bar-shadow)" />
+    <text x="250" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">2軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(#18 Wild West・#32 DaoBrew)</tspan></text>
+  </g>
+
+  <!-- 10. その他15都市 (各1軒) -->
+  <g transform="translate(0, 402)">
+    <text x="168" y="16" fill="#ffe4e6" font-size="12.5" font-weight="700" text-anchor="end">その他 15都市</text>
+    <rect x="180" y="0" width="450" height="22" rx="4" fill="#fb7185" fill-opacity="0.85" filter="url(#bar-shadow)" />
+    <text x="640" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">各1軒（計15軒）</text>
+  </g>
+  <text x="185" y="446" fill="#cbd5e1" font-size="11" font-weight="500">長沙(#1)・揚州(#5)・石家荘(#6)・合肥(#8)・海南(#10)・桂林(#11)・南京(#14)・嘉興(#16)・フフホト(#20)・廈門(#25)・貴陽(#28)・深圳(#30)・蕪湖(#31)・重慶(#34)・紹興(#35)</text>
+
+  <!-- Legend -->
+  <g transform="translate(36, 504)" font-size="11" font-weight="600">
+    <rect x="0" y="0" width="12" height="12" rx="3" fill="#fbbf24" />
+    <text x="18" y="10" fill="#fef3c7">華南ベイエリア</text>
+    <rect x="120" y="0" width="12" height="12" rx="3" fill="#34d399" />
+    <text x="138" y="10" fill="#d1fae5">華東・長江デルタ</text>
+    <rect x="252" y="0" width="12" height="12" rx="3" fill="#38bdf8" />
+    <text x="270" y="10" fill="#e0f2fe">華北・京津</text>
+    <rect x="355" y="0" width="12" height="12" rx="3" fill="#c084fc" />
+    <text x="373" y="10" fill="#f3e8ff">内陸グルメ＆ディープ</text>
+    <rect x="510" y="0" width="12" height="12" rx="3" fill="#fb7185" />
+    <text x="528" y="10" fill="#ffe4e6">地方都市（各1軒）</text>
+    <rect x="650" y="0" width="12" height="12" rx="3" fill="#64748b" />
+    <text x="668" y="10" fill="#cbd5e1">Macro (San Miguel HK)</text>
+  </g>
+</svg>
