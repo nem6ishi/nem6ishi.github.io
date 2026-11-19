@@ -6,8 +6,8 @@
   </defs>
 
   <!-- Header -->
-  <text x="36" y="42" fill="#f8fafc" font-size="18" font-weight="800">都市・地域別 ブルワリー分布（中国本土 Top 50 ＋ 香港 全19軒）</text>
-  <text x="36" y="64" fill="#94a3b8" font-size="12.5" font-weight="500">香港・北京・上海の3大都市で全体の過半数（38軒 / 55.1%）を占め、広州・杭州・西安が続く構図</text>
+  <text x="36" y="42" fill="#f8fafc" font-size="18" font-weight="800">都市・地域別 ブルワリー分布（Untappd ★3.40以上：本土49軒＋香港15軒）</text>
+  <text x="36" y="64" fill="#94a3b8" font-size="12.5" font-weight="500">香港・北京・上海の3大都市で全体の過半数（33軒 / 51.6%）を占め、広州・杭州・西安が続く構図</text>
 
   <!-- Vertical Grid Lines (x = 180 is 0, scale = 30px per brewery) -->
   <g stroke="#1e293b" stroke-width="1">
@@ -26,19 +26,18 @@
   </g>
 
   <!-- Bars (Row height 34px, bar height 22px) -->
-  <!-- 1. 香港: 18 craft + 1 macro = 19 (570px) -->
+  <!-- 1. 香港: 15 (450px) -->
   <g transform="translate(0, 96)">
     <text x="168" y="16" fill="#fef3c7" font-size="13" font-weight="700" text-anchor="end">香港</text>
-    <rect x="180" y="0" width="540" height="22" rx="4" fill="#fbbf24" filter="url(#bar-shadow)" />
-    <rect x="720" y="0" width="30" height="22" rx="4" fill="#64748b" />
-    <text x="760" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">19軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(クラフト18 + Macro 1)</tspan></text>
+    <rect x="180" y="0" width="450" height="22" rx="4" fill="#fbbf24" filter="url(#bar-shadow)" />
+    <text x="640" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">15軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(最高位 #1 Yardley / ★3.748)</tspan></text>
   </g>
 
-  <!-- 2. 北京: 11 (330px) -->
+  <!-- 2. 北京: 10 (300px) -->
   <g transform="translate(0, 130)">
     <text x="168" y="16" fill="#e0f2fe" font-size="13" font-weight="700" text-anchor="end">北京</text>
-    <rect x="180" y="0" width="330" height="22" rx="4" fill="#38bdf8" filter="url(#bar-shadow)" />
-    <text x="520" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">11軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(最高位 #7 Beer Guys / ★3.853)</tspan></text>
+    <rect x="180" y="0" width="300" height="22" rx="4" fill="#38bdf8" filter="url(#bar-shadow)" />
+    <text x="490" y="16" fill="#f8fafc" font-size="12.5" font-weight="700">10軒 <tspan fill="#94a3b8" font-weight="500" font-size="11">(最高位 #7 Beer Guys / ★3.853)</tspan></text>
   </g>
 
   <!-- 3. 上海: 8 (240px) -->
@@ -110,7 +109,5 @@
     <text x="373" y="10" fill="#f3e8ff">内陸グルメ＆ディープ</text>
     <rect x="510" y="0" width="12" height="12" rx="3" fill="#fb7185" />
     <text x="528" y="10" fill="#ffe4e6">地方都市（各1軒）</text>
-    <rect x="650" y="0" width="12" height="12" rx="3" fill="#64748b" />
-    <text x="668" y="10" fill="#cbd5e1">Macro (San Miguel HK)</text>
   </g>
 </svg>

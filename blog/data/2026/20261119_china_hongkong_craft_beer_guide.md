@@ -7,7 +7,7 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 
 中国本土と香港のクラフトビールシーンは、この数年で劇的な進化を遂げています。かつては北京や上海の外国人街を中心としたパブ文化が主流でしたが、現在は**中国全土の地方都市から世界基準の Hazy IPA やサワー、中国茶・スパイスを巧みに使ったローカルクラフトが次々と生まれる群雄割拠の時代**に入っています。
 
-本記事では、**2026年11月19日時点の Untappd ランキングデータ**（中国本土 Top 50 ＋ 香港 全19軒）をもとに、旅行者が高鉄（高速鉄道）で効率よく巡れる**「4つの周遊エリア」**に整理して徹底解説します。
+本記事では、**2026年11月19日時点の Untappd ランキングデータ**から公平に比較するため **平均評価 ★3.40 以上** に基準を統一した **計64軒（中国本土 49軒 ＋ 香港 15軒）** をもとに、旅行者が高鉄（高速鉄道）で効率よく巡れる**「4つの周遊エリア」**に整理して徹底解説します。
 
 <div class="flex flex-wrap gap-2 my-4">
 <a href="#overview" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">📊 全体像・マップ</a>
@@ -17,7 +17,7 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 <a href="#area-4" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-purple-50 hover:bg-purple-100 text-purple-900 border border-purple-200 hover:border-purple-300 transition-all shadow-2xs">④ 内陸グルメ（西安・成都・重慶・武漢）</a>
 <a href="#regional-column" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-rose-50 hover:bg-rose-100 text-rose-900 border border-rose-200 hover:border-rose-300 transition-all shadow-2xs">🌏 地方注目ブルワリー</a>
 <a href="#travel-tips" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">🚆 旅行者向けTips</a>
-<a href="#appendix-data" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">📋 全69軒データ表</a>
+<a href="#appendix-data" class="quick-jump-pill inline-flex items-center px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold bg-slate-100 hover:bg-blue-50 text-slate-800 hover:text-blue-700 border border-slate-200 hover:border-blue-300 transition-all shadow-2xs">📋 全64軒データ表</a>
 </div>
 
 > **💡 この記事の操作ヒント**: 表のヘッダー（`Untappd`・`ビール数`・`評価数` など）をクリックすると昇順・降順で並び替えられます。ブルワリー名をクリックすると Untappd ページへ移動します。
@@ -32,13 +32,13 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 
 <img src="/images/blog/2026/20261119_china_hongkong_craft_beer_guide/city_distribution_chart.svg" alt="都市・地域別 ブルワリー分布グラフ" class="full-width" />
 
-中国本土 Top 50 と香港 19軒（うちクラフト系 18軒・Macro 1軒）を俯瞰すると、大きく **3つのトレンド** が浮かび上がります。
+Untappd 平均評価 **★3.40 以上** に揃えた中国本土 49軒と香港 15軒（計64軒）を俯瞰すると、大きく **3つのトレンド** が浮かび上がります。
 
 1. **香港・北京・上海の3大都市で過半数、しかしトップ層は「地方都市」が席巻**
-   - 軒数ベースでは香港（19軒）・北京（11軒）・上海（8軒）の3都市で全体の **55.1%（38/69軒）** を占めます。
+   - 軒数ベースでは香港（15軒）・北京（10軒）・上海（8軒）の3都市で全体の **51.6%（33/64軒）** を占めます。
    - 一方で、本土ランキング **Top 10 のうち7軒は北京・上海以外の都市**（長沙 #1、広州 #2/#3、西安 #4、揚州 #5、石家荘 #6、合肥 #8、海南 #10）。近年は地方の気鋭ブルワリーが圧倒的な高評価を獲得しています。
 2. **Nano Brewery（極小規模醸造所）の躍進**
-   - 本土 Top 50 のうち **11軒が Nano Brewery** に分類され、しかも #1 混沌酿造（長沙 / ★4.123）、#4 Fever Ales（西安 / ★3.934）、#6 YE Brewing（石家荘 / ★3.867）と超上位に食い込んでいます。直営タップルームを持たず委託醸造や都市部のセレクトビアバーへ樽・缶を卸すスタイルも多く、飲み歩きには事前の情報収集が鍵になります。
+   - 本土 49軒のうち **11軒が Nano Brewery** に分類され、しかも #1 混沌酿造（長沙 / ★4.123）、#4 Fever Ales（西安 / ★3.934）、#6 YE Brewing（石家荘 / ★3.867）と超上位に食い込んでいます。直営タップルームを持たず委託醸造や都市部のセレクトビアバーへ樽・缶を卸すスタイルも多く、飲み歩きには事前の情報収集が鍵になります。
 3. **「老舗パイオニア（評価数1万超）」と「新世代ハイスコア勢」の二極化**
    - 北京の **Jing A（27,338件）**、**Great Leap（25,109件）**、**Slowboat（14,588件）**、上海の **Boxing Cat（27,612件）**、香港の **Gweilo（84,936件）**・**Young Master（58,314件）** は圧倒的な知名度と店舗網を持つ王道です。
    - 対して平均評価 **3.8〜4.1超** の新世代は、濃厚な Hazy IPA やフルーツ／ペイストリーサワー、洗練されたラガーなどを小ロットで仕込むギーク向けブルワリーが中心です。
@@ -50,7 +50,7 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 ## 2. エリア①【華南ベイエリア】香港 ⇄ 深圳 ⇄ 広州（＋長沙）
 
 ### エリア特徴と移動目安
-* **収録数**: 香港 18軒（＋Macro 1軒）＋ 広州 4軒 ＋ 深圳 1軒（＋延泊で長沙 1軒）
+* **収録数**: 香港 15軒 ＋ 広州 4軒 ＋ 深圳 1軒（＋延泊で長沙 1軒）
 * **高鉄移動の目安**:
   * 香港（西九龍） ⇄ 深圳（福田／深圳北）: **約15〜20分**
   * 深圳 ⇄ 広州（広州南／広州東）: **約30〜40分**
@@ -201,11 +201,11 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 ## 4. エリア③【華北・京津】北京 ⇄ 天津（＋石家荘）
 
 ### エリア特徴と移動目安
-* **収録数**: 北京 11軒 ＋ 天津 2軒（＋延泊で石家荘 1軒）＝ **計14軒**
+* **収録数**: 北京 10軒 ＋ 天津 2軒（＋延泊で石家荘 1軒）＝ **計13軒**
 * **高鉄移動の目安**:
   * 北京（北京南） ⇄ 天津: **約30分**
   * 北京（北京西） ⇄ 石家荘: **約1〜1.5時間**
-* **エリアの個性**: 中国クラフトビール発祥の地であり、本土最多の11軒が集中する**絶対的中心地**。胡同（フートン）の四合院を改装した **Great Leap** や **Arrow Factory**、鼓楼周辺の **Beer Guys** や **Wild Kite**、三里屯の **Slowboat** など、伝統的な北京の街並みと現代クラフトが融合した名店が揃います。さらに天津・石家荘のトップブルワリーも北京内にタップルームや強い流通網を持っており、北京滞在だけでも華北の精鋭をほぼ網羅可能です。
+* **エリアの個性**: 中国クラフトビール発祥の地であり、本土最多の10軒が集中する**絶対的中心地**。胡同（フートン）の四合院を改装した **Great Leap** や **Arrow Factory**、鼓楼周辺の **Beer Guys** や **Wild Kite**、三里屯の **Slowboat** など、伝統的な北京の街並みと現代クラフトが融合した名店が揃います。さらに天津・石家荘のトップブルワリーも北京内にタップルームや強い流通網を持っており、北京滞在だけでも華北の精鋭をほぼ網羅可能です。
 
 ### 注目ブルワリーピックアップ
 
@@ -250,7 +250,7 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
   * **NBeer（牛啤堂）**: 中国ローカルクラフトの独立性を掲げる先駆者。挑戦的なアジャンクションやサワーに加え、中国各地の独立ブルワリーのタップを多数繋ぐフラッグシップ店舗が圧巻。
   * **Jing A（京A）**: 都心各所に洗練された大型タップルームを展開し、初めてでも入りやすい雰囲気とローカル素材のシーズナルビールが魅力。
 
-### エリア③ ブルワリー一覧（全14軒）
+### エリア③ ブルワリー一覧（全13軒）
 
 | 順位 | ブルワリー名 | 都市・地域 | タイプ | Untappd | ビール数 | 評価数 |
 |---:|---|---|---|---:|---:|---:|
@@ -267,7 +267,6 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 | #40 | [Beersmith 鲜啤吧](https://untappd.com/BeersmithBeijing) | 北京市 | Brew Pub | 3.489 | 167 | 1,805 |
 | #41 | [Great Leap Brewing (大跃啤酒)](https://untappd.com/greatleapbeer) | 北京市 | Micro Brewery | 3.482 | 287 | 25,109 |
 | #47 | [Red Ears Brewing (赤耳酿造)](https://untappd.com/w/red-ears-brewing/470312) | 北京市 | Nano Brewery | 3.410 | 118 | 2,705 |
-| #50 | [Peiping Machine Brewing (北平机器)](https://untappd.com/PeipingMachineBrewing) | 北京市 | Regional Brewery | 3.398 | 62 | 8,331 |
 
 ---
 
@@ -380,13 +379,13 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 
 <span id="appendix-data"></span>
 
-## 8. 付録：完全データテーブル（全69軒）
+## 8. 付録：完全データテーブル（全64軒 / ★3.40以上）
 
-記事執筆時点（2026年11月19日）の Untappd ランキング全データを折りたたみテーブルにまとめました。見出し行をクリックして都市別・評価別・評価数別などにソートしてご活用ください。
+記事執筆時点（2026年11月19日）の Untappd ランキングから **平均評価 ★3.40 以上** の全データを折りたたみテーブルにまとめました。見出し行をクリックして都市別・評価別・評価数別などにソートしてご活用ください。
 
 <details class="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-5 my-6 shadow-xs">
 <summary class="font-bold text-slate-800 cursor-pointer select-none text-sm sm:text-base">
-📋 A. 中国本土 Top 50 全リスト（クリックで展開 / ヘッダークリックでソート可能）
+📋 A. 中国本土（★3.40以上：49軒）リスト（クリックで展開 / ヘッダークリックでソート可能）
 </summary>
 
 | 順位 | ブルワリー名 | 都市・地域 | タイプ | Untappd | ビール数 | 評価数 |
@@ -440,13 +439,12 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 | 47 | [Red Ears Brewing (赤耳酿造)](https://untappd.com/w/red-ears-brewing/470312) | 北京市 | Nano Brewery | 3.410 | 118 | 2,705 |
 | 48 | [申爱 Shanghai Love](https://untappd.com/w/shanghai-love/287560) | 上海市 | Micro Brewery | 3.406 | 25 | 1,326 |
 | 49 | [Taste Room (忒斯特)](https://untappd.com/w/taste-room/333875) | 杭州市 (浙江省) | Nano Brewery | 3.404 | 86 | 1,908 |
-| 50 | [Peiping Machine Brewing (北平机器)](https://untappd.com/PeipingMachineBrewing) | 北京市 | Regional Brewery | 3.398 | 62 | 8,331 |
 
 </details>
 
 <details class="bg-slate-50 border border-slate-200 rounded-xl p-4 sm:p-5 my-6 shadow-xs">
 <summary class="font-bold text-slate-800 cursor-pointer select-none text-sm sm:text-base">
-📋 B. 香港 全19軒リスト（クリックで展開 / ヘッダークリックでソート可能）
+📋 B. 香港（★3.40以上：15軒）リスト（クリックで展開 / ヘッダークリックでソート可能）
 </summary>
 
 | 順位 | ブルワリー名 | エリア | タイプ | Untappd | ビール数 | 評価数 |
@@ -466,9 +464,5 @@ tags: クラフトビール, ビール, 中国, 香港, 旅行
 | 13 | [YAU](https://untappd.com/HKYAU) | 新界 | Micro Brewery | 3.458 | 6 | 3,136 |
 | 14 | [Lion Rock Brewery](https://untappd.com/LionRockBrewery) | 新界 | Micro Brewery | 3.437 | 76 | 5,028 |
 | 15 | [Kowloon Bay Brewery](https://untappd.com/KowloonBayBrewery) | 新界 | Micro Brewery | 3.431 | 29 | 1,905 |
-| 16 | [Hong Kong Whistle 吹啤啤](https://untappd.com/HongKongWhistle) | 新界 | Micro Brewery | 3.396 | 49 | 1,430 |
-| 17 | [Mak's Beer](https://untappd.com/w/maks-beer/207176) | 新界 (荃湾) | Micro Brewery | 3.337 | 78 | 2,481 |
-| 18 | [Tai Wai Brewery](https://untappd.com/taiwaibrewery) | 新界 | Nano Brewery | 3.320 | 25 | 1,081 |
-| 19 | [San Miguel Brewery (Hong Kong)](https://untappd.com/w/san-miguel-brewery-hong-kong/6509) | 新界 | Macro Brewery | 2.781 | 11 | 5,147 |
 
 </details>
