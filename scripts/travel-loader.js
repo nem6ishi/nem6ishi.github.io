@@ -4,6 +4,8 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     const container = document.getElementById('trips-container');
+    const upcomingSection = document.getElementById('upcoming-section');
+    const upcomingContainer = document.getElementById('upcoming-trips-container');
 
     try {
         const response = await fetch('/data/travel.json');
@@ -11,13 +13,20 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error(`HTTPエラー: ${response.status}`);
         }
         const travelData = await response.json();
+        const upcomingTrips = travelData.upcomingTrips || [];
         const trips = travelData.trips || [];
 
         // 合計日数を設定
         renderTotalDays(travelData.totalDays);
 
-        // 旅行リストをレンダリング
-        renderTrips(trips);
+        // 今後の予定をレンダリング
+        if (upcomingSection && upcomingContainer && upcomingTrips.length > 0) {
+            upcomingSection.classList.remove('hidden');
+            renderTrips(upcomingTrips, upcomingContainer, { isUpcoming: true });
+        }
+
+        // 過去の旅行リストをレンダリング
+        renderTrips(trips, container, { isUpcoming: false });
     } catch (error) {
         console.error('Error loading travel data:', error);
         if (container) {
@@ -46,14 +55,21 @@ function formatDate(dateStr) {
 /**
  * 旅行リストをレンダリング
  */
-function renderTrips(trips) {
-    const container = document.getElementById('trips-container');
+function renderTrips(trips, container = document.getElementById('trips-container'), { isUpcoming = false } = {}) {
     if (!container) return;
 
     if (trips.length === 0) {
         container.innerHTML = `<li class="text-gray-500 text-center py-8">旅行記録がありません。</li>`;
         return;
     }
+
+    const cardClass = isUpcoming
+        ? 'mb-6 border border-blue-200 rounded-lg p-4 card-hover bg-blue-50/20'
+        : 'mb-6 border border-gray-200 rounded-lg p-4 card-hover bg-white';
+
+    const badgeHtml = isUpcoming
+        ? `<span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 mr-2">予定 / Upcoming</span>`
+        : '';
 
     container.innerHTML = trips.map(trip => {
         const countryNames = trip.countries.map(c => {
@@ -70,11 +86,14 @@ function renderTrips(trips) {
         ` : '';
 
         return `
-            <li class="mb-6 border border-gray-200 rounded-lg p-4 card-hover bg-white">
+            <li class="${cardClass}">
                 <div class="mb-2">
-                    <span class="text-xs text-gray-500 whitespace-nowrap block mb-1">
-                        ${escapeHtml(formatDate(trip.startDate))} - ${escapeHtml(formatDate(trip.endDate))} (${trip.days} days)
-                    </span>
+                    <div class="flex items-center flex-wrap gap-y-1 mb-1">
+                        ${badgeHtml}
+                        <span class="text-xs text-gray-500 whitespace-nowrap">
+                            ${escapeHtml(formatDate(trip.startDate))} - ${escapeHtml(formatDate(trip.endDate))} (${trip.days} days)
+                        </span>
+                    </div>
                     <h3 class="text-lg font-medium text-gray-800">${escapeHtml(countryNames)}</h3>
                 </div>
                 ${storyHtml}
@@ -85,20 +104,27 @@ function renderTrips(trips) {
 }
 
 /**
+ * 都市の表示名を生成
+ */
+function formatCityName(city) {
+    if (typeof city === 'string') {
+        return escapeHtml(city);
+    }
+    const baseName = city.nameEn
+        ? `${escapeHtml(city.name)} / ${escapeHtml(city.nameEn)}`
+        : escapeHtml(city.name);
+    return city.dates
+        ? `${baseName} <span class="text-xs text-gray-400 ml-1">(${escapeHtml(city.dates)})</span>`
+        : baseName;
+}
+
+/**
  * 単一国の都市リストをレンダリング
  */
 function renderSingleCountryCities(country) {
     return `
         <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
-            ${country.cities.map(city => {
-                if (typeof city === 'string') {
-                    return `<li>${escapeHtml(city)}</li>`;
-                }
-                const displayName = city.nameEn
-                    ? `${escapeHtml(city.name)} / ${escapeHtml(city.nameEn)}`
-                    : escapeHtml(city.name);
-                return `<li>${displayName}</li>`;
-            }).join('')}
+            ${country.cities.map(city => `<li>${formatCityName(city)}</li>`).join('')}
         </ul>
     `;
 }
@@ -116,15 +142,7 @@ function renderMultipleCountries(countries) {
                 return `
                     <h4 class="text-md font-medium text-gray-700 mt-3 mb-1">${displayName}</h4>
                     <ul class="list-disc list-inside pl-1 text-sm text-gray-600 leading-relaxed space-y-1">
-                        ${country.cities.map(city => {
-                            if (typeof city === 'string') {
-                                return `<li>${escapeHtml(city)}</li>`;
-                            }
-                            const cityDisplayName = city.nameEn
-                                ? `${escapeHtml(city.name)} / ${escapeHtml(city.nameEn)}`
-                                : escapeHtml(city.name);
-                            return `<li>${cityDisplayName}</li>`;
-                        }).join('')}
+                        ${country.cities.map(city => `<li>${formatCityName(city)}</li>`).join('')}
                     </ul>
                 `;
             }).join('')}

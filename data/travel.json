@@ -1,5 +1,46 @@
 {
     "totalDays": 272,
+    "upcomingTrips": [
+        {
+            "startDate": "2026-12-25",
+            "endDate": "2027-01-08",
+            "days": 15,
+            "story": "年末年始の15日間、那覇から高雄イン・桃園アウトで台湾を北上する予定。台南で年越し。",
+            "countries": [
+                {
+                    "name": "台湾",
+                    "nameEn": "Taiwan",
+                    "cities": [
+                        {
+                            "name": "高雄",
+                            "nameEn": "Kaohsiung",
+                            "dates": "12/25 - 12/29"
+                        },
+                        {
+                            "name": "台南",
+                            "nameEn": "Tainan",
+                            "dates": "12/29 - 01/02"
+                        },
+                        {
+                            "name": "嘉義",
+                            "nameEn": "Chiayi",
+                            "dates": "01/02 - 01/05"
+                        },
+                        {
+                            "name": "台中",
+                            "nameEn": "Taichung",
+                            "dates": "01/05 - 01/07"
+                        },
+                        {
+                            "name": "台北",
+                            "nameEn": "Taipei",
+                            "dates": "01/07 - 01/08"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
     "trips": [
         {
             "startDate": "2025-12-20",
