@@ -66,7 +66,7 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
 </div>
 
 * **Untappd ブルワリー評価**: **4.123**（105種 / 1,120件）
-* **直営タップルーム**: **あり**（長沙市内：五一広場店・黄土嶺店。五一広場店は繁華街にあり湖南料理と合わせやすい）
+* **直営タップルーム**: **あり**（長沙市内：五一広場店・黄土嶺店 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=%E6%B7%B7%E6%B2%8C%E9%85%BF%E9%80%A0+%E4%BA%94%E4%B8%80%E5%B9%BF%E5%9C%BA+%E9%95%BF%E6%B2%99) / [🍺 Untappd](https://untappd.com/ChangShaChaobrewing)）。五一広場店は繁華街にあり湖南料理と合わせやすい。
 * **特徴・スタイル**: 本土1位（唯一の4.1点台）。ジューシーな Hazy IPA や Double / Triple IPA などホップ主体のビールで熱狂的な支持を集める。
 * **代表・高評価ビール**:
   * **藤影 (Vine Soul)**（Imperial Hazy IPA / **Untappd: 4.4**）
@@ -84,7 +84,9 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
 * **Untappd ブルワリー評価**:
   * **Dr. Lab**: **4.047**（178種 / 1,562件）
   * **Crazy Bear Industry**: **3.937**（171種 / 5,913件）
-* **直営タップルーム**: **2軒ともあり**（ともに**広州市海珠区**の近接エリアにあり、1晩でハシゴ可能。Crazy Bear Lab は怡安路152号）
+* **直営タップルーム**: **2軒ともあり**（ともに**広州市海珠区**の近接エリアで1晩にハシゴ可能）
+  * **Dr. Lab**: [📍 Google Map](https://www.google.com/maps/search/?api=1&query=DR+LAB+%E7%B2%BE%E9%85%BF%E5%95%A4%E9%85%92%E5%B7%A5%E4%BD%9C%E5%AE%A4+%E5%B9%BF%E5%B7%9E%E6%B5%B7%E7%8F%A0) / [🍺 Untappd](https://untappd.com/w/dr-lab/522484)
+  * **Crazy Bear Lab**: 怡安路152号（[📍 Google Map](https://www.google.com/maps/search/?api=1&query=Crazy+Bear+Lab+%E5%B9%BF%E5%B7%9E%E5%B8%82%E6%B5%B7%E7%8F%A0%E5%8C%BA%E6%80%A1%E5%AE%89%E8%B7%AF152%E5%8F%B7) / [🍺 Untappd](https://untappd.com/CBIB)）
 * **特徴・スタイル**: **Dr. Lab** は隠れ家的な空間で、フルーツ／ハーブ系やハウスサイダー、限定タップを提供。**Crazy Bear** は2018年に海珠区で創業（醸造所は東莞）し、IPA やスタウトを幅広く展開。
 * **代表・高評価ビール**:
   * **Dr. Lab**: *P01 进击的二筒*（Porter）、*C20 茉语青藤*（Herbed Cider）等の実験的シリーズが **Untappd: 4.0〜4.2+**
@@ -105,9 +107,9 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
   * **Carbon Brews（香港 #2）**: **3.688**（164種 / 17,124件）
   * **Young Master Brewery 少爺啤（香港 #5）**: **3.639**（325種 / 58,314件）
 * **直営タップルーム ＆ 代表ビール**:
-  * **Yardley Brothers**: **直営あり**（中環 Soho *Yardleys Taproom*・ラマ島 *The Beer Shack*）。代表作 *Hong Kong Bastard*（IIPA・7.8% / **Untappd: 3.82** / Beertopia Best in Show）。
-  * **Carbon Brews**: **直営なし（ビアバー・ボトルショップ流通中心）**。人気作 *Crazy Rich Lupulins*（Imperial Hazy IPA / **Untappd: 3.8**）、*Earth People*（Light Lager / **Untappd: 3.6**）。
-  * **Young Master 少爺啤**: **直営あり**（中環 *BaseHall 01* 等）。定番 *Cha Chaan Teng Gose (鹹檸啤)*（Fruited Gose / **Untappd: 3.53**・3,300件超）。
+  * **Yardley Brothers**: **直営あり**（中環 Soho *Yardleys Taproom*・ラマ島 *The Beer Shack* / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=Yardleys+Taproom+Central+Hong+Kong) / [🍺 Untappd](https://untappd.com/YardleyBrothers)）。代表作 *Hong Kong Bastard*（IIPA・7.8% / **Untappd: 3.82** / Beertopia Best in Show）。
+  * **Carbon Brews**: **直営なし（ビアバー・ボトルショップ流通中心）**（[🍺 Untappd](https://untappd.com/CarbonBrews)）。人気作 *Crazy Rich Lupulins*（Imperial Hazy IPA / **Untappd: 3.8**）、*Earth People*（Light Lager / **Untappd: 3.6**）。
+  * **Young Master 少爺啤**: **直営あり**（中環 *BaseHall 01* 等 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=Young+Master+Central+BaseHall+Hong+Kong) / [🍺 Untappd](https://untappd.com/YoungMasterAles)）。定番 *Cha Chaan Teng Gose (鹹檸啤)*（Fruited Gose / **Untappd: 3.53**・3,300件超）。
 
 ### エリア① ブルワリー一覧（本土 Top 50 該当分＋香港上位抜粋）
 
@@ -184,8 +186,8 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
   * **Mingri Brewing (明日酿造)**: **3.644**（299種 / 6,150件）
   * **Liquid Laundry**: **3.519**（119種 / 3,146件）
 * **直営タップルーム ＆ 代表ビール**:
-  * **Mingri**: **直営あり**（蘇州河沿い：黄浦区新閘路356号）。*北境之光*（IPA / **Untappd: 3.9**）、*超级物种酒花甄选版*（Imperial Hazy IPA / **Untappd: 3.8**）、看板 *Hazy Dream (朦胧的梦)*（Hazy IPA / **Untappd: 3.7**・600件超）。
-  * **Liquid Laundry**: **直営あり（ブルーパブ）**（淮海中路）。人気作 *Breast Wishes Milk Stout*（Milk Stout / **Untappd: 3.7**）と窯焼きピザのペアリングが定番。
+  * **Mingri**: **直営あり**（蘇州河沿い：黄浦区新閘路356号 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=%E6%98%8E%E6%97%A5%E9%85%BF%E9%80%A0+%E4%B8%8A%E6%B5%B7%E5%B8%82%E9%BB%84%E6%B5%A6%E5%8C%BA%E6%96%B0%E9%97%B8%E8%B7%AF356%E5%8F%B7) / [🍺 Untappd](https://untappd.com/MingriBrewing)）。*北境之光*（IPA / **Untappd: 3.9**）、*超级物种酒花甄选版*（Imperial Hazy IPA / **Untappd: 3.8**）、看板 *Hazy Dream (朦胧的梦)*（Hazy IPA / **Untappd: 3.7**・600件超）。
+  * **Liquid Laundry**: **直営あり（ブルーパブ）**（淮海中路 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=Liquid+Laundry+Shanghai) / [🍺 Untappd](https://untappd.com/LiquidLaundry)）。人気作 *Breast Wishes Milk Stout*（Milk Stout / **Untappd: 3.7**）と窯焼きピザのペアリングが定番。
 
 ### エリア② ブルワリー一覧（全15軒）
 
@@ -229,7 +231,7 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
 </div>
 
 * **Untappd ブルワリー評価**: **3.867**（293種 / 9,881件）
-* **直営タップルーム**: **あり**（石家荘に加え、北京に *Ye Brewing Beijing Taproom / 野鹅微醺公园* あり）
+* **直営タップルーム**: **あり**（石家荘に加え、北京に *Ye Brewing Beijing Taproom / 野鹅微醺公园* あり / [📍 Google Map（北京店）](https://www.google.com/maps/search/?api=1&query=%E9%87%8E%E9%B9%85%E5%BE%AE%E9%86%BA+%E5%8C%97%E4%BA%AC) / [🍺 Untappd](https://untappd.com/YEBrewing)）
 * **特徴・代表ビール**: 濃厚な Hazy IPA とスタウトの評価が極めて高く、評価数は1万件目前。
   * *云雾之湾 (Cloudy Bay)*（Imperial NEIPA / **Untappd: 4.1**） / *夜莺四周年特别款*（Imperial Stout / **Untappd: 4.1**）
   * *Nighting-Ale (夜莺)*（Imperial Pastry Stout / **Untappd: 4.0**・650件超） / *橙多多*（Hazy IPA / **Untappd: 3.8**）
@@ -247,8 +249,8 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
   * **Beer Guys (啤酒帮)**: **3.853**（62種 / 1,420件）
   * **Quadraft Brewing (分野酿造)**: **3.777**（159種 / 3,163件）
 * **直営タップルーム ＆ 代表ビール**:
-  * **Beer Guys**: **直営あり**（東城区・旧鼓楼大街91号のビアバー）。自社銘柄に加え各地のゲストタップが充実。*松枝 IPA (Pine Branch IPA)*（**Untappd: 3.9**）、*糯香 (Nuoxiang)*（English Pale Ale / **Untappd: 3.9**）。
-  * **Quadraft**: **直営なし（北京等のビアバー中心）**。*El Nido* や *Companion Taproom（伴饮酒馆）* 等で提供。*美洲豹 (Jaguar)*（Mexican Lager / **Untappd: 3.8**）、*红蜻蜓 (Red Dragonfly)*（German Pilsner / **Untappd: 3.8**）、*大象 (Elephant)*（Sour IPA / **Untappd: 3.8**）。
+  * **Beer Guys**: **直営あり**（東城区・旧鼓楼大街91号 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=Beer+Guys+%E5%8C%97%E4%BA%AC%E5%B8%82%E4%B8%9C%E5%9F%8E%E5%8C%BA%E6%97%A7%E9%BC%93%E6%A5%BC%E5%A4%A7%E8%A1%9791%E5%8F%B7) / [🍺 Untappd](https://untappd.com/w/beer-guys/408472)）。自社銘柄に加え各地のゲストタップが充実。*松枝 IPA (Pine Branch IPA)*（**Untappd: 3.9**）、*糯香 (Nuoxiang)*（English Pale Ale / **Untappd: 3.9**）。
+  * **Quadraft**: **直営なし（北京等のビアバー中心）**（[🍺 Untappd](https://untappd.com/w/quadraft-brewing/525913)）。*El Nido* や *Companion Taproom（伴饮酒馆）* 等で提供。*美洲豹 (Jaguar)*（Mexican Lager / **Untappd: 3.8**）、*红蜻蜓 (Red Dragonfly)*（German Pilsner / **Untappd: 3.8**）、*大象 (Elephant)*（Sour IPA / **Untappd: 3.8**）。
 
 ### 3. 北京パイオニア四天王：Jing A / Slowboat / NBeer / Great Leap
 <div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
@@ -263,10 +265,10 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
 
 * **Untappd ブルワリー評価**: Jing A (**3.616** / 27,338件)、Slowboat (**3.579** / 14,588件)、NBeer (**3.537** / 8,911件)、Great Leap (**3.482** / 25,109件)
 * **直営タップルーム ＆ 代表ビール**（**全4軒とも北京市内に直営あり**）:
-  * **Great Leap（大跃啤酒）**: 2010年創業。*豆角胡同6号（Hutong #6）* の四合院が聖地。名物 *Honey Ma Gold (甫子啤酒)*（花椒・蜂蜜 / **Untappd: 3.4**・2,590件超）。
-  * **Slowboat（悠航鲜啤）**: 三里屯の大型ブルーパブが定番。看板 *Monkey's Fist IPA (猴拳IPA)*（**Untappd: 3.69**・1,620件超 / Imperial版は **Untappd: 3.8**）。
-  * **NBeer（牛啤堂）**: 自社醸造に加え各地の独立ブルワリーを多数繋ぐ。人気作 *Beijing Gose Modern (帝都海盐)*（**Untappd: 3.6**・1,300件超）。
-  * **Jing A（京A）**: 都心各所に大型タップルームを展開。*Airpocalypse (空气大爆表)*（IIPA / **Untappd: 3.8**・1,190件超）、*Worker's Pale Ale (工人)*（**Untappd: 3.5**・2,630件超）。
+  * **Great Leap（大跃啤酒）**: 2010年創業。*豆角胡同6号（Hutong #6）* の四合院が聖地（[📍 Google Map](https://www.google.com/maps/search/?api=1&query=Great+Leap+Brewing+No.6+Doujiao+Hutong+Beijing) / [🍺 Untappd](https://untappd.com/greatleapbeer)）。名物 *Honey Ma Gold (甫子啤酒)*（花椒・蜂蜜 / **Untappd: 3.4**・2,590件超）。
+  * **Slowboat（悠航鲜啤）**: 三里屯の大型ブルーパブが定番（[📍 Google Map](https://www.google.com/maps/search/?api=1&query=Slow+Boat+Brewery+Sanlitun+Beijing) / [🍺 Untappd](https://untappd.com/slowboatbrewery)）。看板 *Monkey's Fist IPA (猴拳IPA)*（**Untappd: 3.69**・1,620件超 / Imperial版は **Untappd: 3.8**）。
+  * **NBeer（牛啤堂）**: 自社醸造に加え各地の独立ブルワリーを多数繋ぐ（[📍 Google Map](https://www.google.com/maps/search/?api=1&query=NBeer+Pub+Beijing) / [🍺 Untappd](https://untappd.com/NBeerPub)）。人気作 *Beijing Gose Modern (帝都海盐)*（**Untappd: 3.6**・1,300件超）。
+  * **Jing A（京A）**: 都心各所に大型タップルームを展開（[📍 Google Map](https://www.google.com/maps/search/?api=1&query=Jing+A+Taproom+Beijing) / [🍺 Untappd](https://untappd.com/JingABrewingCo)）。*Airpocalypse (空气大爆表)*（IIPA / **Untappd: 3.8**・1,190件超）、*Worker's Pale Ale (工人)*（**Untappd: 3.5**・2,630件超）。
 
 ### エリア③ ブルワリー一覧（全13軒）
 
@@ -315,8 +317,8 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
   * **Fever Ales**: **3.934**（281種 / **10,706件**）
   * **Wumu Craft Beer (勿幕精酿)**: **3.831**（179種 / 3,257件）
 * **直営タップルーム ＆ 代表ビール**:
-  * **Fever Ales**: **直営なし（西安市内や全国のビアバー流通中心）**。実験的セゾンやラガーが高評価。*以酒为舟*（Saison / **Untappd: 4.3**）、*白拉格 Lager De Blanc*（**Untappd: 4.0**）、*春狩*（Wild Ale / **Untappd: 4.0**）、*全明*（Helles / **Untappd: 3.9**）。
-  * **Wumu**: **直営あり（ブルーパブ）**（西安城壁南門・小南門エリア）。*克里特·草药*（IPL / **Untappd: 3.8**）、*烟熏乌梅*（Porter / **Untappd: 3.7**）。
+  * **Fever Ales**: **直営なし（西安市内や全国のビアバー流通中心）**（[🍺 Untappd](https://untappd.com/FeverAles)）。実験的セゾンやラガーが高評価。*以酒为舟*（Saison / **Untappd: 4.3**）、*白拉格 Lager De Blanc*（**Untappd: 4.0**）、*春狩*（Wild Ale / **Untappd: 4.0**）、*全明*（Helles / **Untappd: 3.9**）。
+  * **Wumu**: **直営あり（ブルーパブ）**（西安城壁南門・小南門エリア / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=%E5%8B%BF%E5%B9%95%E7%B2%BE%E9%85%BF+%E8%A5%BF%E5%AE%89%E5%B0%8F%E5%8D%97%E9%97%A8) / [🍺 Untappd](https://untappd.com/w/wumu-craft-beer/383025)）。*克里特·草药*（IPL / **Untappd: 3.8**）、*烟熏乌梅*（Porter / **Untappd: 3.7**）。
 
 ### 2. Derive Brewery (蔓延酿造) / NO.18 BREWING & CO. (拾捌精酿) — 本土 #12・#22（武漢市）
 <div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
@@ -331,8 +333,8 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
   * **Derive Brewery (蔓延酿造)**: **3.784**（85種 / 1,791件）
   * **NO.18 BREWING & CO. (拾捌精酿)**: **3.664**（176種 / **12,625件**）
 * **直営タップルーム ＆ 代表ビール**:
-  * **Derive Brewery**: **直営なし（武漢・上海・北京等のビアバー卸売中心）**。独自の酵母バンクでクラシックを再編集。*背向的站姿*（IPA / **Untappd: 4.0**）、*Lima (利马)*（Imperial Hazy IPA / **Untappd: 3.9**・118件超）、*貌似通用的筹码*（Pilsner / **Untappd: 3.7**）。
-  * **NO.18**: **直営あり（武漢市内にブルーパブ）**。*Ling Bo Men (凌波门)*（Hazy IPA / **Untappd: 3.8**）、*全明星2025五星上将*（IPA / **Untappd: 3.8**）、*No Criticism (不接受批评)*（Session IPA / **Untappd: 3.5**）。
+  * **Derive Brewery**: **直営なし（武漢・上海・北京等のビアバー卸売中心）**（[🍺 Untappd](https://untappd.com/DeriveBrewery)）。独自の酵母バンクでクラシックを再編集。*背向的站姿*（IPA / **Untappd: 4.0**）、*Lima (利马)*（Imperial Hazy IPA / **Untappd: 3.9**・118件超）、*貌似通用的筹码*（Pilsner / **Untappd: 3.7**）。
+  * **NO.18**: **直営あり（武漢市内にブルーパブ）**（江漢区京漢大道923号 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=%E6%8B%BE%E6%8D%8C%E7%B2%BE%E9%85%BF+%E6%AD%A6%E6%B1%89%E5%B8%82%E6%B1%9F%E6%B1%89%E5%8C%BA%E4%BA%AC%E6%B1%89%E5%A4%A7%E9%81%93923%E5%8F%B7) / [🍺 Untappd](https://untappd.com/NO18BREWINGCO)）。*Ling Bo Men (凌波门)*（Hazy IPA / **Untappd: 3.8**）、*全明星2025五星上将*（IPA / **Untappd: 3.8**）、*No Criticism (不接受批评)*（Session IPA / **Untappd: 3.5**）。
 
 ### 3. Wild West Brewing (美西) / Hopscraft (立吞) — 本土 #18（成都）・#34（重慶）
 <div class="flex flex-wrap items-center justify-between gap-3 mb-4 p-3 bg-white rounded-lg border border-slate-200/80 shadow-2xs">
@@ -345,8 +347,8 @@ Untappd **★3.40 以上** の本土 49軒＋香港 15軒（計64軒）を俯瞰
 
 * **Untappd ブルワリー評価**: Wild West (**3.733** / 8,601件)、Hopscraft (**3.552** / 1,676件)
 * **直営タップルーム ＆ 代表ビール**（**2軒とも直営あり**）:
-  * **Wild West**: **直営あり**（成都・錦里／玉林エリア等）。*Extravagant (繁花落锦)*（Triple Hazy IPA / **Untappd: 4.0**）、*Cloud 9*（Hazy IPA / **Untappd: 3.9**）、*黑麦威力*（Rye IPA / **Untappd: 3.8**）。
-  * **Hopscraft（立吞）**: **直営あり（立ち飲みブルーパブ）**（重慶）。*紫苏日本柚子西打*（Yuzu & Perilla Cider / **Untappd: 3.7**）、重慶特産の茶葉を使った *老鹰茶 (Eagle Tea Lager)*（**Untappd: 3.5**）、*Japanese Rice Oak Lager*（**Untappd: 3.5**）。
+  * **Wild West**: **直営あり**（成都・武侯区玉林中路32号 等 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=Wild+West+Brewing+%E6%88%90%E9%83%BD%E5%B8%82%E6%AD%A6%E4%BE%AF%E5%8C%BA%E7%8E%89%E6%9E%97%E4%B8%AD%E8%B7%AF32%E5%8F%B7) / [🍺 Untappd](https://untappd.com/Wild_West_Brewing)）。*Extravagant (繁花落锦)*（Triple Hazy IPA / **Untappd: 4.0**）、*Cloud 9*（Hazy IPA / **Untappd: 3.9**）、*黑麦威力*（Rye IPA / **Untappd: 3.8**）。
+  * **Hopscraft（立吞）**: **直営あり（立ち飲みブルーパブ）**（重慶・渝中区嘉賓路272号 / [📍 Google Map](https://www.google.com/maps/search/?api=1&query=Hopscraft+%E9%87%8D%E5%BA%86%E5%B8%82%E6%B8%9D%E4%B8%AD%E5%8C%BA%E5%98%89%E5%AE%BE%E8%B7%AF272%E5%8F%B7) / [🍺 Untappd](https://untappd.com/w/hopscraft/430416)）。*紫苏日本柚子西打*（Yuzu & Perilla Cider / **Untappd: 3.7**）、重慶特産の茶葉を使った *老鹰茶 (Eagle Tea Lager)*（**Untappd: 3.5**）、*Japanese Rice Oak Lager*（**Untappd: 3.5**）。
 
 ### エリア④ ブルワリー一覧（全8軒）
 
